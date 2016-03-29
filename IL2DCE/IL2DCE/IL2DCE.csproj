@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22442D49-0A77-4CBE-A1F3-9806958C10AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IL2DCE</RootNamespace>
+    <AssemblyName>IL2DCE</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\IL2DCE\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\parts\IL2DCE\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AircraftInfo.cs" />
+    <Compile Include="AircraftLoadoutInfo.cs" />
+    <Compile Include="AircraftParametersInfo.cs" />
+    <Compile Include="AirGroup.cs" />
+    <Compile Include="AirGroupInfo.cs" />
+    <Compile Include="AirGroupWaypoint.cs" />
+    <Compile Include="BriefingFile.cs" />
+    <Compile Include="Career.cs" />
+    <Compile Include="CampaignInfo.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="Generator\AirOperationCover.cs" />
+    <Compile Include="Generator\Generator.cs" />
+    <Compile Include="Generator\AirOperation.cs" />
+    <Compile Include="GroundGroupSubWaypoint.cs" />
+    <Compile Include="Properties\GlobalAssemblyInfo.cs" />
+    <Compile Include="GroundGroup.cs" />
+    <Compile Include="GroundGroupWaypoint.cs" />
+    <Compile Include="IGame.cs" />
+    <Compile Include="IGameServer.cs" />
+    <Compile Include="IGameSingle.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stationary.cs" />
+    <Compile Include="Waterway.cs" />
+    <Compile Include="World.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="core">
+      <HintPath>..\..\..\..\core\core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="gamePages">
+      <HintPath>..\..\..\..\core\gamePages.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="gamePlay">
+      <HintPath>..\..\..\..\core\gamePlay.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="gameWorld">
+      <HintPath>..\..\..\..\core\gameWorld.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="WSteam, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8b6839725e48404f, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\core\WSteam.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_ClassDiagram.cd" />
+    <None Include="conf.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="IL2DCE.Inst.nsi" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Release copy "$(ProjectDir)\IL2DCE.Inst.nsi" "$(TargetDir)..\..\IL2DCE.Inst.nsi"
+</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

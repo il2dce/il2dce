@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="IL2DCE.Pages.CareerIntro"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" xmlns:my="clr-namespace:maddox.game.page;assembly=gamePages" xmlns:my1="clr-namespace:maddox.game.play;assembly=gamePages" Height="914" Width="1672">
+    <Grid Height="897" Width="1652" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Label Content="Career Intro" Height="138" HorizontalAlignment="Left" Margin="12,12,0,0" Name="labelCareerInto" VerticalAlignment="Top" Width="640" FontSize="64" FontWeight="Bold" Foreground="#FF791313" />
+        <my1:ButtonAsMenuItem Content="Start" Height="77" HorizontalAlignment="Left" Margin="1434,808,0,0" Name="Start" VerticalAlignment="Top" Width="206" />
+        <my1:ButtonAsMenuItem Content="Back" Height="77" HorizontalAlignment="Left" Margin="12,808,0,0" Name="Back" VerticalAlignment="Top" Width="206" />
+        <ComboBox Height="63" HorizontalAlignment="Left" Margin="34,226,0,0" Name="comboBoxSelectArmy" VerticalAlignment="Top" Width="617" FontSize="28" Foreground="#FFA0854A">
+            <ComboBox.Background>
+                <SolidColorBrush />
+            </ComboBox.Background>
+        </ComboBox>
+        <Label Content="Select Army:" Height="64" Margin="34,156,1000,0" Name="labelSelectArmy" VerticalAlignment="Top" FontSize="28" Foreground="#FFA0854A" />
+        <ComboBox Height="63" HorizontalAlignment="Left" Margin="34,365,0,0" Name="comboBoxSelectRank" VerticalAlignment="Top" Width="618" FontSize="28" Foreground="#FFA0854A">
+            <ComboBox.Background>
+                <SolidColorBrush />
+            </ComboBox.Background>
+        </ComboBox>
+        <Label Content="Select Rank:" Height="64" HorizontalAlignment="Left" Margin="34,295,0,0" Name="labelSelectRank" VerticalAlignment="Top" Width="617" FontSize="28" Foreground="#FFA0854A" />
+        <TextBox FontSize="28" Foreground="#FFA0854A" Height="63" HorizontalAlignment="Left" Margin="34,504,0,0" Name="textBoxPilotName" VerticalAlignment="Top" Width="618"></TextBox>
+        <Label Content="Enter Pilot Name:" FontSize="28" Foreground="#FFA0854A" Height="64" HorizontalAlignment="Left" Margin="33,434,0,0" Name="labelEnterPilotName" VerticalAlignment="Top" Width="617" />
+    </Grid>
+</UserControl>

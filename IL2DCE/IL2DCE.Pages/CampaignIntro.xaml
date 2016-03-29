@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="IL2DCE.Pages.CampaignIntro"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" xmlns:my="clr-namespace:maddox.game.page;assembly=gamePages" xmlns:my1="clr-namespace:maddox.game.play;assembly=gamePages" Height="914" Width="1672">
+    <Grid Height="897" Width="1652" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Label Content="Campaign Intro" Height="138" HorizontalAlignment="Left" Margin="12,12,0,0" Name="labelCampaignInto" VerticalAlignment="Top" Width="640" FontSize="64" FontWeight="Bold" Foreground="#FF791313" />
+        <my1:ButtonAsMenuItem Content="Start" Height="77" HorizontalAlignment="Left" Margin="68,218,0,0" Name="Start" VerticalAlignment="Top" Width="206" />
+        <my1:ButtonAsMenuItem Content="Back" Height="77" HorizontalAlignment="Left" Margin="68,301,0,0" Name="Back" VerticalAlignment="Top" Width="206" />
+        <ComboBox Height="63" HorizontalAlignment="Left" Margin="331,288,0,0" Name="comboBoxSelectAirGroup" VerticalAlignment="Top" Width="618" FontSize="28" Foreground="#FFA0854A">
+            <ComboBox.Background>
+                <SolidColorBrush />
+            </ComboBox.Background>
+        </ComboBox>
+        <Label Content="Select air group:" Height="64" HorizontalAlignment="Left" Margin="331,218,0,0" Name="labelSelectAirGroup" VerticalAlignment="Top" Width="617" FontSize="28" Foreground="#FFA0854A" />
+    </Grid>
+</UserControl>

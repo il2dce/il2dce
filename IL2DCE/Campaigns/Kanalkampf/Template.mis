@@ -1,0 +1,191 @@
+﻿[PARTS]
+  core.100
+  bob.100
+[MAIN]
+  MAP Land$English_Channel_1940
+  BattleArea 166130 195011 144493 98048 10000
+  TIME 12
+  WeatherIndex 0
+  CloudsHeight 1000
+  BreezeActivity 10
+  ThermalActivity 10
+[GlobalWind_0]
+  Power 3.000 0.000 0.000
+  BottomBound 0.00
+  TopBound 1500.00
+  GustPower 5
+  GustAngle 45
+[splines]
+[AirGroups]
+  BoB_LW_LG1_IV.37
+  BoB_LW_ErprGr210.11
+  BoB_RAF_F_41Sqn_Early.01
+  BoB_RAF_F_32Sqn_Early.01
+  BoB_LW_KG51_III.37
+  BoB_LW_JG51_II.31
+  BoB_LW_KG53_II.17
+  BoB_RAF_B_88Sqn.03
+  BoB_LW_JG2_I.07
+  BoB_LW_ZG26_I.13
+[BoB_LW_LG1_IV.37]
+  Flight0  A B C
+  Flight1  D E F
+  Flight2  21 22 23
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 3
+  Fuel 100
+  Weapons 1
+  SetOnPark 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_LG1_IV.37_Way]
+  TAKEOFF 278866.09 207351.75 0 0
+[BoB_LW_ErprGr210.11]
+  Flight0  A B C D
+  Class Aircraft.Bf-110C-7
+  Formation FINGERFOUR
+  CallSign 21
+  Fuel 100
+  Weapons 1 1 1 2
+  SetOnPark 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ErprGr210.11_Way]
+  TAKEOFF 275980.59 207376.73 0 0
+[BoB_RAF_F_41Sqn_Early.01]
+  Flight0  1 2 3 4 5 6
+  Class Aircraft.SpitfireMkIa
+  Formation VIC3
+  CallSign 27
+  Fuel 100
+  Weapons 1
+  SetOnPark 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_41Sqn_Early.01_Way]
+  TAKEOFF 248048.43 259000.26 0 0
+[BoB_RAF_F_32Sqn_Early.01]
+  Flight0  1 2 3 4 5 6
+  Class Aircraft.HurricaneMkI
+  Formation VIC3
+  CallSign 31
+  Fuel 100
+  Weapons 1
+  SetOnPark 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_32Sqn_Early.01_Way]
+  TAKEOFF 234918.76 232613.24 0 0
+[BoB_LW_KG51_III.37]
+  Flight0  1 2 3
+  Flight1  11 12 13
+  Flight2  21 22 23
+  Class Aircraft.Ju-88A-1
+  Formation VIC3
+  CallSign 33
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG51_III.37_Way]
+  TAKEOFF 296285.72 217259.51 0 0
+[BoB_LW_JG51_II.31]
+  Flight0  1 2 3 4
+  Class Aircraft.Bf-109E-1
+  Formation FINGERFOUR
+  CallSign 26
+  Fuel 100
+  Weapons 1 1
+  SetOnPark 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG51_II.31_Way]
+  TAKEOFF 276971.34 209427.57 0 0
+[BoB_LW_KG53_II.17]
+  Flight0  1 2 3
+  Flight1  11 12 13
+  Flight2  21 22 23
+  Class Aircraft.He-111H-2
+  Formation VIC3
+  CallSign 26
+  Fuel 100
+  Weapons 1 1 1 1 1 1 1
+  SetOnPark 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG53_II.17_Way]
+  TAKEOFF 291075.91 216228.27 0 0
+[BoB_RAF_B_88Sqn.03]
+  Flight0  1 2 3 4 5 6
+  Flight1  11 12 13 14 15 16
+  Class Aircraft.BlenheimMkIV
+  Formation LINEABREAST
+  CallSign 30
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_B_88Sqn.03_Way]
+  TAKEOFF 225120.93 228006.16 0 0
+[BoB_LW_JG2_I.07]
+  Flight0  1 2 3 4
+  Flight1  11 12 13 14
+  Flight2  21 22 23 24
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 20
+  Fuel 100
+  Weapons 1 1
+  SetOnPark 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG2_I.07_Way]
+  TAKEOFF 284010.46 205122.95 0 0
+[BoB_LW_ZG26_I.13]
+  Flight0  1 2 3 4
+  Flight1  11 12 13 14
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 26
+  Fuel 100
+  Weapons 1
+  SetOnPark 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ZG26_I.13_Way]
+  TAKEOFF 281154.25 212993.50 0 0
+[CustomChiefs]
+[Chiefs]
+  0_Chief Ship.Tanker_Medium1 gb /sleep 0/skill 2/slowfire 1
+  1_Chief Ship.Tanker_Medium1 gb /sleep 0/skill 2/slowfire 1
+  2_Chief Ship.Tanker_Medium1 gb /sleep 0/skill 2/slowfire 1
+  3_Chief Ship.Tanker_Medium1 gb /sleep 0/skill 2/slowfire 1
+  4_Chief Ship.Minensuchboote de /sleep 0/skill 2/slowfire 1
+  5_Chief Ship.Minensuchboote de /sleep 0/skill 2/slowfire 1
+[0_Chief_Road]
+  204996.14 203541.05 38.40  0 2 5.56
+  206147.45 203789.34 38.40
+[1_Chief_Road]
+  235543.20 216314.50 38.40  0 2 5.56
+  236675.25 217635.22 38.40
+[2_Chief_Road]
+  257429.53 235182.03 38.40  0 2 5.56
+  255825.80 233672.63 38.40
+[3_Chief_Road]
+  222815.42 268629.06 38.40  0 2 5.56
+  224641.44 268629.06 38.40
+[4_Chief_Road]
+  264962.09 210835.45 38.40  0 2 5.56
+  267822.41 212442.80 38.40
+[5_Chief_Road]
+  297523.91 225061.11 38.40  0 2 5.56
+  294732.28 224691.14 38.40
+[Stationary]
+  Static2 Stationary.Radar.EnglishRadar1 gb 206100.70 212405.80 94.00 
+  Static0 Stationary.Radar.EnglishRadar1 gb 246758.55 235781.94 -77.00 
+  Static5 Stationary.Radar.EnglishRadar1 gb 240479.50 249608.66 124.00 
+  Static1 Stationary.Radar.EnglishRadar1 gb 217627.77 251506.53 71.00 
+  Static11 Stationary.Radar.EnglishRadar1 gb 203391.09 287593.25 125.00 
+[Buildings]
+[BuildingsLinks]
+[FrontMarker]
+  FrontMarker0 246249.31 234205.68 1
+  FrontMarker1 237639.14 229168.58 1
+  FrontMarker2 177580.49 268505.19 1
+  FrontMarker3 192161.87 201595.90 1
+  FrontMarker4 229265.99 261395.10 1
+  FrontMarker5 189029.99 261455.02 1
+  FrontMarker6 265724.53 190303.22 2
+  FrontMarker7 283658.10 217310.47 2
+  FrontMarker8 307152.61 224075.37 2

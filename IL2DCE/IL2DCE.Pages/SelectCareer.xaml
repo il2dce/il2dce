@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="IL2DCE.Pages.SelectCareer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" xmlns:my="clr-namespace:maddox.game.page;assembly=gamePages" xmlns:my1="clr-namespace:maddox.game.play;assembly=gamePages" Height="914" Width="1672">
+    <Grid Height="897" Width="1652" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Label Content="Select Career" Height="138" HorizontalAlignment="Left" Margin="12,12,0,0" Name="labelSelectCareer" VerticalAlignment="Top" Width="640" FontSize="64" FontWeight="Bold" Foreground="#FF791313" />
+        <my1:ButtonAsMenuItem Content="Continue" Height="77" HorizontalAlignment="Left" Margin="1434,808,0,0" Name="Continue" VerticalAlignment="Top" Width="206" />
+        <my1:ButtonAsMenuItem Content="New" Height="77" HorizontalAlignment="Left" Margin="1010,808,0,0" Name="New" VerticalAlignment="Top" Width="206" />
+        <my1:ButtonAsMenuItem Content="Delete" Height="77" HorizontalAlignment="Left" Margin="1222,808,0,0" Name="Delete" VerticalAlignment="Top" Width="206" />
+        <my1:ButtonAsMenuItem Content="Back" Height="77" HorizontalAlignment="Left" Margin="34,808,0,0" Name="Back" VerticalAlignment="Top" Width="206" />
+        <ListBox Height="646" HorizontalAlignment="Left" Margin="34,0,0,95" Name="ListCareer" VerticalAlignment="Bottom" Width="552" FontSize="28" Foreground="#FFA0854A" BorderBrush="#FF707070">
+            <ListBox.Background>
+                <SolidColorBrush />
+            </ListBox.Background>
+        </ListBox>
+    </Grid>
+</UserControl>

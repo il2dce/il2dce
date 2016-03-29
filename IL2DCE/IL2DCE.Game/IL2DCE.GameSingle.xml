@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<addin>
+  <game server="false" name="IL2DCEGameSingle">
+    <assembly type="IL2DCE.Game.GameSingle" path="$home/parts/IL2DCE/IL2DCE.Game.dll"/>
+    <title text="IL2DCE Single"/>
+  </game>
+</addin>

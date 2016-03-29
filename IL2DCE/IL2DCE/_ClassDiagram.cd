@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="IL2DCE.Core">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="CampaignInfos" Type="IL2DCE.CampaignInfo" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="2.71" />
+        <Point X="4.875" Y="2.71" />
+        <Point X="4.875" Y="5.5" />
+        <Point X="2.5" Y="5.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgAIAAAgAlIAAACCAAoAgAAAIAAAAAwAAAAAAAQQEEA=</HashCode>
+      <FileName>Core.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Config" />
+      <Property Name="CurrentCareer" />
+      <Property Name="World" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="AvailableCareers" />
+      <Property Name="CampaignInfos" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="IL2DCE.Generator">
+    <Position X="7.25" Y="6.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="World" Type="IL2DCE.World" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.75" Y="7.312" />
+        <Point X="10.125" Y="7.312" />
+        <Point X="10.125" Y="1.81" />
+        <Point X="10.5" Y="1.81" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gACRgIAAAhMIECIgACBAAAIEgAQAAQAEAkCAQEAQAEA=</HashCode>
+      <FileName>Generator\Generator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="World" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="IL2DCE.World">
+    <Position X="10.5" Y="0.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAAEEAQIAAQAAABAAAoACQBAYYAAIAAAwEAgICABFA=</HashCode>
+      <FileName>World.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Waterways" />
+      <Property Name="AirGroups" />
+      <Property Name="GroundGroups" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="IL2DCE.Career">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gIAAEAAIAAABAAAWBAAAEAEAAAQAAAAhAQAAABAgQFA=</HashCode>
+      <FileName>Career.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IL2DCE.AircraftInfo">
+    <Position X="13.5" Y="10.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACCAAAAAAAAAAAAAAAAAAAAAAIAAAAIAAAAAAAACACA=</HashCode>
+      <FileName>AircraftInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IL2DCE.AirGroup">
+    <Position X="10.75" Y="7.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAgCgAAFgIgUACI0AQIAy0oFAAcUAoCkIyQBgikyIFQ=</HashCode>
+      <FileName>AirGroup.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AircraftInfo" />
+      <Property Name="MissionType" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Waypoints" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="IL2DCE.AircraftLoadoutInfo">
+    <Position X="16.75" Y="9.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAEAAAABA=</HashCode>
+      <FileName>AircraftLoadoutInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IL2DCE.AircraftParametersInfo">
+    <Position X="16.75" Y="12.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAACCAgAAgAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AircraftParametersInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IL2DCE.AirGroupWaypoint">
+    <Position X="13.5" Y="7.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="IL2DCE.AirGroupWaypoint.AirGroupWaypointTypes" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>AirGroupWaypoint.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAACAAAAAAAAAAAQAAAAAQYAE=</HashCode>
+      <FileName>AirGroupWaypoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IL2DCE.BriefingFile">
+    <Position X="4.25" Y="6.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="IL2DCE.BriefingFile.Text" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BriefingFile.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAIAgAAAAgAAAEAACAAAQAAAAEAgAAAAAAAAAAAIA=</HashCode>
+      <FileName>BriefingFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IL2DCE.CampaignInfo">
+    <Position X="1" Y="4.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAiAQAAAAAAIQoEAABAAAQhAAAECAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>CampaignInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IL2DCE.Config">
+    <Position X="7.75" Y="2.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAACICAQAAAAAEAQQAAAAAUAAEEAIAQAAA=</HashCode>
+      <FileName>Config.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IL2DCE.GroundGroup">
+    <Position X="16.5" Y="3" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAgCAAAAAAAAAAAgAAJAAgAAAAIAAAAgAQAAgABAAQA=</HashCode>
+      <FileName>GroundGroup.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="Country" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Waypoints" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="IL2DCE.GroundGroupSubWaypoint">
+    <Position X="24.25" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAADAAAA=</HashCode>
+      <FileName>GroundGroupSubWaypoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IL2DCE.GroundGroupWaypoint">
+    <Position X="21.5" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAABAAAgAAAAAAQYgE=</HashCode>
+      <FileName>GroundGroupWaypoint.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="SubWaypoints" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="IL2DCE.Stationary">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAgAABAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Stationary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IL2DCE.Waterway">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAoAAAAAACAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Waterway.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="IL2DCE.EMissionType">
+    <Position X="13.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAMgAAAAAABAgAAEAIggAAAAAAAAAJAAAAAAAAAA=</HashCode>
+      <FileName>AircraftInfo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="IL2DCE.EGroundGroupCountry">
+    <Position X="19.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAgAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GroundGroup.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="IL2DCE.EGroundGroupType">
+    <Position X="19.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABACAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>GroundGroup.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
