@@ -24,14 +24,10 @@ namespace IL2DCE
 {
     public class AirGroup
     {
-        CampaignInfo _campaignInfo;
-
         #region Public constructors
 
-        public AirGroup(ISectionFile sectionFile, string id, CampaignInfo campaignInfo)
+        public AirGroup(ISectionFile sectionFile, string id)
         {
-            _campaignInfo = campaignInfo;
-
             // airGroupId = <airGroupKey>.<squadronIndex><flightMask>
 
             // AirGroupKey
@@ -288,19 +284,11 @@ namespace IL2DCE
             }
         }
         
-        public AircraftInfo AircraftInfo
-        {
-            get
-            {
-                return _campaignInfo.GetAircraftInfo(Class);
-            }
-        }
-
         public AirGroupInfo AirGroupInfo
         {
             get
             {
-                return IL2DCE.AirGroupInfo.GetAirGroupInfo(AirGroupKey);
+                return AirGroupInfo.GetAirGroupInfo(AirGroupKey);
             }
         }
 
@@ -312,6 +300,78 @@ namespace IL2DCE
             }
         }
         IList<AirGroupWaypoint> _waypoints = new List<AirGroupWaypoint>();
+        
+        public double? Altitude
+        {
+            get
+            {
+                return this._altitude;
+            }
+            set
+            {
+                this._altitude = value;
+            }
+        }
+
+        public AirGroup EscortAirGroup
+        {
+            get
+            {
+                return _escortAirGroup;
+            }
+            set
+            {
+                _escortAirGroup = value;
+            }
+        }
+
+        public Stationary TargetStationary
+        {
+            get
+            {
+                return _targetStationary;
+            }
+            set
+            {
+                _targetStationary = value;
+            }
+        }
+
+        public GroundGroup TargetGroundGroup
+        {
+            get
+            {
+                return _targetGroundGroup;
+            }
+            set
+            {
+                _targetGroundGroup = value;
+            }
+        }
+
+        public AirGroup TargetAirGroup
+        {
+            get
+            {
+                return _targetAirGroup;
+            }
+            set
+            {
+                _targetAirGroup = value;
+            }
+        }
+
+        public Point2d? TargetArea
+        {
+            get
+            {
+                return _targetArea;
+            }
+            set
+            {
+                _targetArea = value;
+            }
+        }
 
         #endregion
 
@@ -418,7 +478,6 @@ namespace IL2DCE
         {
             Waypoints.Clear();
 
-            this._missionType = null;
             this._altitude = null;
             this.EscortAirGroup = null;
             this.TargetAirGroup = null;
@@ -532,7 +591,6 @@ namespace IL2DCE
         public void Transfer(EMissionType missionType, double altitude, AiAirport landingAirport = null)
         {
             this.reset();
-            this.MissionType = missionType;
             this.Altitude = altitude;
 
             createStartWaypoints();
@@ -546,7 +604,6 @@ namespace IL2DCE
         public void Cover(EMissionType missionType, GroundGroup targetGroundGroup, double altitude, AiAirport landingAirport = null)
         {
             this.reset();
-            this.MissionType = missionType;
             this.Altitude = altitude;
             this.TargetGroundGroup = targetGroundGroup;
 
@@ -578,7 +635,6 @@ namespace IL2DCE
         public void Cover(EMissionType missionType, Stationary targetStationary, double altitude, AiAirport landingAirport = null)
         {
             this.reset();
-            this.MissionType = missionType;
             this.Altitude = altitude;
             this.TargetStationary = targetStationary;
 
@@ -606,7 +662,6 @@ namespace IL2DCE
         public void Cover(EMissionType missionType, Point2d targetArea, double altitude, AiAirport landingAirport = null)
         {
             this.reset();
-            this.MissionType = missionType;
             this.Altitude = altitude;
             this.TargetArea = targetArea;
 
@@ -634,7 +689,6 @@ namespace IL2DCE
         public void Hunting(EMissionType missionType, Point2d targetArea, double altitude, AiAirport landingAirport = null)
         {
             this.reset();
-            this.MissionType = missionType;
             this.Altitude = altitude;
             this.TargetArea = targetArea;
 
@@ -652,7 +706,6 @@ namespace IL2DCE
         public void GroundAttack(EMissionType missionType, Point2d targetArea, double altitude, AirGroup escortAirGroup = null, AiAirport landingAirport = null)
         {
             this.reset();
-            this.MissionType = missionType;
             this.Altitude = altitude;
             this.TargetArea = targetArea;
             this.EscortAirGroup = escortAirGroup;
@@ -688,7 +741,6 @@ namespace IL2DCE
         public void GroundAttack(EMissionType missionType, Stationary targetStationary, double altitude, AirGroup escortAirGroup = null, AiAirport landingAirport = null)
         {
             this.reset();
-            this.MissionType = missionType;
             this.Altitude = altitude;
             this.TargetStationary = targetStationary;
             this.EscortAirGroup = escortAirGroup;
@@ -724,7 +776,6 @@ namespace IL2DCE
         public void GroundAttack(EMissionType missionType, GroundGroup targetGroundGroup, double altitude, AirGroup escortAirGroup = null, AiAirport landingAirport = null)
         {
             this.reset();
-            this.MissionType = missionType;
             this.Altitude = altitude;
             this.TargetGroundGroup= targetGroundGroup;
             this.EscortAirGroup = escortAirGroup;
@@ -783,7 +834,6 @@ namespace IL2DCE
         public void Recon(EMissionType missionType, Point2d targetArea, double altitude, AiAirport landingAirport = null)
         {
             this.reset();
-            this.MissionType = missionType;
             this.Altitude = altitude;
             this.TargetArea = targetArea;
 
@@ -801,7 +851,6 @@ namespace IL2DCE
         public void Recon(EMissionType missionType, GroundGroup targetGroundGroup, double altitude, AirGroup escortAirGroup = null, AiAirport landingAirport = null)
         {
             this.reset();
-            this.MissionType = missionType;
             this.Altitude = altitude;
             this.TargetGroundGroup = targetGroundGroup;
             this.EscortAirGroup = escortAirGroup;
@@ -862,7 +911,6 @@ namespace IL2DCE
         public void Escort(EMissionType missionType, AirGroup targetAirGroup, AiAirport landingAirport = null)
         {
             this.reset();
-            this.MissionType = missionType;
             this.Altitude = targetAirGroup.Altitude;
             this.TargetAirGroup = targetAirGroup;
 
@@ -882,7 +930,6 @@ namespace IL2DCE
         public void Intercept(EMissionType missionType, AirGroup targetAirGroup, AiAirport landingAirport = null)
         {
             this.reset();
-            this.MissionType = missionType;
             this.Altitude = targetAirGroup.Altitude;
             this.TargetAirGroup = targetAirGroup;
 
@@ -955,94 +1002,9 @@ namespace IL2DCE
         }
         
         #endregion        
-
-        public EMissionType? MissionType
-        {
-            get
-            {
-                return this._missionType;
-            }
-            set
-            {
-                this._missionType = value;
-            }
-        }
-
-        public double? Altitude
-        {
-            get
-            {
-                return this._altitude;
-            }
-            set
-            {
-                this._altitude = value;
-            }
-        }
-
-        public AirGroup EscortAirGroup
-        {
-            get
-            {
-                return _escortAirGroup;
-            }
-            set
-            {
-                _escortAirGroup = value;
-            }
-        }
-
-        public Stationary TargetStationary
-        {
-            get
-            {
-                return _targetStationary;
-            }
-            set
-            {
-                _targetStationary = value;
-            }
-        }
-
-        public GroundGroup TargetGroundGroup
-        {
-            get
-            {
-                return _targetGroundGroup;
-            }
-            set
-            {
-                _targetGroundGroup = value;
-            }
-        }
-
-        public AirGroup TargetAirGroup
-        {
-            get
-            {
-                return _targetAirGroup;
-            }
-            set
-            {
-                _targetAirGroup = value;
-            }
-        }
-
-        public Point2d? TargetArea
-        {
-            get
-            {
-                return _targetArea;
-            }
-            set
-            {
-                _targetArea = value;
-            }
-        }
-
+        
         #region Fields
 
-        private EMissionType? _missionType = null;
         private double? _altitude = null;
         private AirGroup _escortAirGroup = null;
         private Stationary _targetStationary = null;

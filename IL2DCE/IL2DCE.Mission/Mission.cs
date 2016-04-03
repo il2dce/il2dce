@@ -32,6 +32,32 @@ namespace IL2DCE
             {
                 get;
             }
+
+            /// <summary>
+            /// React on the AircraftTookOff event.
+            /// </summary>
+            /// <param name="missionNumber"></param>
+            /// <param name="shortName"></param>
+            /// <param name="aircraft"></param>
+            /// <remarks>
+            /// Remove the player from the aircraft for a few ms. This is a workaround needed so that AI aicraft do not stay on the ground after the human player took off.
+            /// </remarks>
+            public override void OnAircraftTookOff(int missionNumber, string shortName, AiAircraft aircraft)
+            {
+                base.OnAircraftTookOff(missionNumber, shortName, aircraft);
+
+                if (aircraft.Player(0) != null)
+                {
+                    Player player = aircraft.Player(0);
+
+                    player.PlaceLeave(0);
+
+                    Timeout(0.1, () =>
+                    {
+                        player.PlaceEnter(aircraft, 0);
+                    });
+                }
+            }
         }
     }
 }

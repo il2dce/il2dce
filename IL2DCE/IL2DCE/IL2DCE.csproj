@@ -38,31 +38,31 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AircraftInfo.cs" />
-    <Compile Include="AircraftLoadoutInfo.cs" />
-    <Compile Include="AircraftParametersInfo.cs" />
-    <Compile Include="AirGroup.cs" />
-    <Compile Include="AirGroupInfo.cs" />
-    <Compile Include="AirGroupWaypoint.cs" />
-    <Compile Include="BriefingFile.cs" />
+    <Compile Include="Generator\AircraftInfo.cs" />
+    <Compile Include="Generator\AircraftLoadoutInfo.cs" />
+    <Compile Include="Generator\AircraftParametersInfo.cs" />
+    <Compile Include="Generator\GeneratorBriefing.cs" />
+    <Compile Include="Generator\GeneratorAirOperation.cs" />
+    <Compile Include="Generator\GeneratorGroundOperation.cs" />
+    <Compile Include="MissionObjectModel\AirGroup.cs" />
+    <Compile Include="MissionObjectModel\AirGroupInfo.cs" />
+    <Compile Include="MissionObjectModel\AirGroupWaypoint.cs" />
+    <Compile Include="MissionObjectModel\BriefingFile.cs" />
     <Compile Include="Career.cs" />
     <Compile Include="CampaignInfo.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Core.cs" />
-    <Compile Include="Generator\AirOperationCover.cs" />
     <Compile Include="Generator\Generator.cs" />
-    <Compile Include="Generator\AirOperation.cs" />
-    <Compile Include="GroundGroupSubWaypoint.cs" />
+    <Compile Include="MissionObjectModel\GroundGroupSubWaypoint.cs" />
     <Compile Include="Properties\GlobalAssemblyInfo.cs" />
-    <Compile Include="GroundGroup.cs" />
-    <Compile Include="GroundGroupWaypoint.cs" />
+    <Compile Include="MissionObjectModel\GroundGroup.cs" />
+    <Compile Include="MissionObjectModel\GroundGroupWaypoint.cs" />
     <Compile Include="IGame.cs" />
-    <Compile Include="IGameServer.cs" />
     <Compile Include="IGameSingle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stationary.cs" />
-    <Compile Include="Waterway.cs" />
-    <Compile Include="World.cs" />
+    <Compile Include="MissionObjectModel\Stationary.cs" />
+    <Compile Include="MissionObjectModel\Waterway.cs" />
+    <Compile Include="MissionObjectModel\MissionFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="core">
@@ -100,6 +100,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if $(ConfigurationName) == Release copy "$(ProjectDir)\IL2DCE.Inst.nsi" "$(TargetDir)..\..\IL2DCE.Inst.nsi"

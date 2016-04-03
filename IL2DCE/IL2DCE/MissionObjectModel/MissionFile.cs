@@ -23,9 +23,9 @@ using System.Text;
 
 namespace IL2DCE
 {
-    public class World
+    public class MissionFile
     {
-        public World(ISectionFile templateFile, CampaignInfo campaignInfo)
+        public MissionFile(ISectionFile file)
         {
             _roads.Clear();
             _waterways.Clear();
@@ -40,11 +40,11 @@ namespace IL2DCE
             _redStationaries.Clear();
             _blueStationaries.Clear();
 
-            for (int i = 0; i < templateFile.lines("Stationary"); i++)
+            for (int i = 0; i < file.lines("Stationary"); i++)
             {
                 string key;
                 string value;
-                templateFile.get("Stationary", i, out key, out value);
+                file.get("Stationary", i, out key, out value);
 
                 // Radar
                 string[] valueParts = value.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
@@ -62,11 +62,11 @@ namespace IL2DCE
                 }
             }
 
-            for (int i = 0; i < templateFile.lines("FrontMarker"); i++)
+            for (int i = 0; i < file.lines("FrontMarker"); i++)
             {
                 string key;
                 string value;
-                templateFile.get("FrontMarker", i, out key, out value);
+                file.get("FrontMarker", i, out key, out value);
 
                 string[] valueParts = value.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 if (valueParts.Length == 3)
@@ -95,13 +95,13 @@ namespace IL2DCE
             }
 
 
-            for (int i = 0; i < templateFile.lines("AirGroups"); i++)
+            for (int i = 0; i < file.lines("AirGroups"); i++)
             {
                 string key;
                 string value;
-                templateFile.get("AirGroups", i, out key, out value);
+                file.get("AirGroups", i, out key, out value);
 
-                AirGroup airGroup = new AirGroup(templateFile, key, campaignInfo);
+                AirGroup airGroup = new AirGroup(file, key);
 
                 if (AirGroupInfo.GetAirGroupInfo(1, airGroup.AirGroupKey) != null)
                 {
@@ -114,13 +114,13 @@ namespace IL2DCE
             }
 
 
-            for (int i = 0; i < templateFile.lines("Chiefs"); i++)
+            for (int i = 0; i < file.lines("Chiefs"); i++)
             {
                 string key;
                 string value;
-                templateFile.get("Chiefs", i, out key, out value);
+                file.get("Chiefs", i, out key, out value);
 
-                GroundGroup groundGroup = new GroundGroup(templateFile, key);
+                GroundGroup groundGroup = new GroundGroup(file, key);
 
                 if (groundGroup.Army == 1)
                 {
@@ -132,7 +132,7 @@ namespace IL2DCE
                 }
                 else
                 {
-                    Waterway road = new Waterway(templateFile, key);
+                    Waterway road = new Waterway(file, key);
                     if (value.StartsWith("Vehicle") || value.StartsWith("Armor"))
                     {
                         _roads.Add(road);

@@ -144,14 +144,14 @@ namespace IL2DCE
             "Aircraft.HurricaneMkI_dH5-20",
             "Aircraft.HurricaneMkI",
             "Aircraft.SpitfireMkI",
-            //"Aircraft.SpitfireMkI_Heartbreaker",
+            "Aircraft.SpitfireMkI_Heartbreaker",
             "Aircraft.SpitfireMkIa",
             "Aircraft.SpitfireMkIIa",
         };
 
         private List<string> airGroupKeys = new List<string>
         {
-            //"gb01", /* Generic Fighter Command Early */
+            "gb01", /* Generic Fighter Command Early */
             "BoB_RAF_F_1Sqn_Early",
             "BoB_RAF_F_1_RCAF_Early",
             "BoB_RAF_F_111Sqn_Early",
@@ -218,7 +218,7 @@ namespace IL2DCE
             "BoB_RAF_F_85Sqn_Early",
             "BoB_RAF_F_87Sqn_Early",
             "BoB_RAF_F_92Sqn_Early",
-            //"BoB_RAF_F_FatCat_Early", /* Fiction Early */
+            "BoB_RAF_F_FatCat_Early", /* Fiction Early */
         };
 
         #endregion
@@ -271,14 +271,14 @@ namespace IL2DCE
             "Aircraft.HurricaneMkI_dH5-20",
             "Aircraft.HurricaneMkI",
             "Aircraft.SpitfireMkI",
-            //"Aircraft.SpitfireMkI_Heartbreaker",
+            "Aircraft.SpitfireMkI_Heartbreaker",
             "Aircraft.SpitfireMkIa",
             "Aircraft.SpitfireMkIIa",
         };
 
         private List<string> airGroupKeys = new List<string>
         {
-            //"gb01_Late", /* Generic Fighter Command Late */
+            "gb01_Late", /* Generic Fighter Command Late */
             "BoB_RAF_F_1Sqn_Late",
             "BoB_RAF_F_1_RCAF_Late",
             "BoB_RAF_F_111Sqn_Late",
@@ -345,7 +345,7 @@ namespace IL2DCE
             "BoB_RAF_F_85Sqn_Late",
             "BoB_RAF_F_87Sqn_Late",
             "BoB_RAF_F_92Sqn_Late",
-            //"BoB_RAF_F_FatCat_Late", /* Fiction Early */
+            "BoB_RAF_F_FatCat_Late", /* Fiction Early */
         };
 
         #endregion
@@ -395,14 +395,14 @@ namespace IL2DCE
             "Aircraft.AnsonMkI",
             "Aircraft.BlenheimMkI",
             "Aircraft.BlenheimMkIV",
-            //"Aircraft.SunderlandMkI",
-            //"Aircraft.WalrusMkI",
+            "Aircraft.SunderlandMkI",
+            "Aircraft.WalrusMkI",
             "Aircraft.WellingtonMkIc",
         };
 
         private List<string> airGroupKeys = new List<string>
         {
-            //"gb02", /* Generic Command Bomber */
+            "gb02", /* Generic Command Bomber */
             "BoB_RAF_B_10Sqn",
             "BoB_RAF_B_101Sqn",
             "BoB_RAF_B_102Sqn",
@@ -672,8 +672,8 @@ namespace IL2DCE
 
         private List<string> fighterAirGroupKeys = new List<string>
         {
-            //"g01", /* Generic Fighter */
-            //"g04", /* Generic Fighter Bomber */
+            "g01", /* Generic Fighter */
+            "g04", /* Generic Fighter Bomber */
             "BoB_LW_ErprGr210F",
             "BoB_LW_LG2_I",
             "BoB_LW_JG2_I",
@@ -922,7 +922,7 @@ namespace IL2DCE
 
         private List<string> airGroupKeys = new List<string>
         {
-            //"g03", /* Generic Stuka */
+            "g03", /* Generic Stuka */
             "BoB_LW_StG1_I",
             "BoB_LW_StG2_I",
             "BoB_LW_StG3_I",
@@ -1066,9 +1066,9 @@ namespace IL2DCE
 
         private List<string> airGroupKeys = new List<string>
         {
-            //"g02", /* Generic Bomber */
-            //"g05", /* Generic Training */
-            //"g06", /* Generic Transport */
+            "g02", /* Generic Bomber */
+            "g05", /* Generic Training */
+            "g06", /* Generic Transport */
             "BoB_LW_KG1_I",
             "BoB_LW_KG2_I",
             "BoB_LW_KG26_I",
@@ -1289,7 +1289,7 @@ namespace IL2DCE
 
         private List<string> airGroupKeys = new List<string>
         {
-            //"it02", /* Generic Fighter */
+            "it02", /* Generic Fighter */
             "BoB_RA_56St_18Gruppo_83Sq",
             "BoB_RA_56St_18Gruppo_85Sq",
             "BoB_RA_56St_18Gruppo_95Sq",
@@ -1347,7 +1347,7 @@ namespace IL2DCE
 
         private List<string> airGroupKeys = new List<string>
         {
-            //"it01", /* Generic Bomber */
+            "it01", /* Generic Bomber */
             "BoB_RA_13St_11Gruppo_1Sq",
             "BoB_RA_13St_11Gruppo_4Sq",
             "BoB_RA_13St_43Gruppo_3Sq",

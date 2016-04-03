@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" xmlns:my="clr-namespace:maddox.game.page;assembly=gamePages" xmlns:my1="clr-namespace:maddox.game.play;assembly=gamePages" Height="914" Width="1672">
     <Grid Height="897" Width="1652" HorizontalAlignment="Left" VerticalAlignment="Top">
-        <Label Content="Career Intro" Height="138" HorizontalAlignment="Left" Margin="12,12,0,0" Name="labelCareerInto" VerticalAlignment="Top" Width="640" FontSize="64" FontWeight="Bold" Foreground="#FF791313" />
+        <Label Content="Career Intro" Height="138" HorizontalAlignment="Left" Margin="12,12,0,0" Name="labelCareerIntro" VerticalAlignment="Top" Width="640" FontSize="64" FontWeight="Bold" Foreground="#FF791313" />
         <my1:ButtonAsMenuItem Content="Start" Height="77" HorizontalAlignment="Left" Margin="1434,808,0,0" Name="Start" VerticalAlignment="Top" Width="206" />
         <my1:ButtonAsMenuItem Content="Back" Height="77" HorizontalAlignment="Left" Margin="12,808,0,0" Name="Back" VerticalAlignment="Top" Width="206" />
         <ComboBox Height="63" HorizontalAlignment="Left" Margin="34,226,0,0" Name="comboBoxSelectArmy" VerticalAlignment="Top" Width="617" FontSize="28" Foreground="#FFA0854A">

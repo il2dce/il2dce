@@ -93,7 +93,7 @@ namespace IL2DCE
             {
                 Game.Core.InitCampaign();
 
-                Game.gameInterface.PageChange(new CampaignIntoPage(), null);
+                Game.gameInterface.PageChange(new CampaignIntroPage(), null);
             }
 
             private void bContinue_Click(object sender, System.Windows.RoutedEventArgs e)

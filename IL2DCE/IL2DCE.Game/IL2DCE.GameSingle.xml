@@ -2,6 +2,6 @@
 <addin>
   <game server="false" name="IL2DCEGameSingle">
     <assembly type="IL2DCE.Game.GameSingle" path="$home/parts/IL2DCE/IL2DCE.Game.dll"/>
-    <title text="IL2DCE Single"/>
+    <title text="IL2DCE"/>
   </game>
 </addin>

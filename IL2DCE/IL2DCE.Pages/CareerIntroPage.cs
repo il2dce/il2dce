@@ -29,7 +29,7 @@ namespace IL2DCE
         public class CareerIntroPage : PageDefImpl
         {
             public CareerIntroPage()
-                : base("Career Into", new CareerIntro())
+                : base("Career Intro", new CareerIntro())
             {
                 FrameworkElement.Start.Click += new System.Windows.RoutedEventHandler(Start_Click);
                 FrameworkElement.Back.Click += new System.Windows.RoutedEventHandler(Back_Click);

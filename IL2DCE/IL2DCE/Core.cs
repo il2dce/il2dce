@@ -124,6 +124,12 @@ namespace IL2DCE
             
             ISectionFile careerFile = GamePlay.gpCreateSectionFile();
 
+            if(game.gameInterface.BattleIsRun())
+            {
+                // Stop the currntly running battle.
+                game.gameInterface.BattleStop();
+            }
+
             // Preload mission file for path calculation.
             game.gameInterface.MissionLoad(CurrentCareer.CampaignInfo.TemplateFilePath);
 
@@ -165,7 +171,6 @@ namespace IL2DCE
                 System.IO.File.Copy(scriptSourceFileSystemPath, this._debugFolderSystemPath + "\\IL2DCEDebug.cs", true);
             }
 #endif
-
             CurrentCareer.MissionFileName = missionFileName;
             CurrentCareer.WriteTo(careerFile);
             careerFile.save(careerFileName);
@@ -174,7 +179,7 @@ namespace IL2DCE
         public void InitCampaign()
         {
             ISectionFile templateFile = GamePlay.gpLoadSectionFile(CurrentCareer.CampaignInfo.TemplateFilePath);
-            _world = new World(templateFile, CurrentCareer.CampaignInfo);
+            _missionTemplate = new MissionFile(templateFile);
         }
         
         public void DeleteCareer(Career career)
@@ -243,11 +248,11 @@ namespace IL2DCE
             }
         }
 
-        public World World
+        public MissionFile MissionTemplate
         {
             get
             {
-                return _world;
+                return _missionTemplate;
             }
         }
 
@@ -266,7 +271,7 @@ namespace IL2DCE
         private Career _currentCareer;
         private IList<Career> _availableCareers = new List<Career>();
         private IList<CampaignInfo> _campaigns = new List<CampaignInfo>();
-        private World _world;
+        private MissionFile _missionTemplate;
         private IGamePlay _gamePlay;
     }
 }
