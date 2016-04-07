@@ -60,12 +60,19 @@ namespace IL2DCE
                 {
                     foreach (AirGroup airGroup in Game.Core.MissionTemplate.RedAirGroups)
                     {
-                        if (Game.Core.CurrentCareer.CampaignInfo.GetAircraftInfo(airGroup.Class).IsFlyable)
+                        if (Game.Core.CurrentCareer.AirForceIndex == 1 && (airGroup.AirGroupInfo is RafBomberCommandAirGroupInfo
+                                || airGroup.AirGroupInfo is RafFighterCommandEarlyAirGroupInfo
+                                || airGroup.AirGroupInfo is RafFighterCommandLateAirGroupInfo
+                                || airGroup.AirGroupInfo is RafFlyingTrainingSchoolEarlyAirGroupInfo
+                                || airGroup.AirGroupInfo is RafFlyingTrainingSchoolLateAirGroupInfo))
                         {
-                            System.Windows.Controls.ComboBoxItem itemAirGroup = new System.Windows.Controls.ComboBoxItem();
-                            itemAirGroup.Content = airGroup.AirGroupKey + "." + airGroup.SquadronIndex + "(" + Game.Core.CurrentCareer.CampaignInfo.GetAircraftInfo(airGroup.Class).Aircraft.Remove(0, 9) + ")";
-                            itemAirGroup.Tag = airGroup;
-                            FrameworkElement.comboBoxSelectAirGroup.Items.Add(itemAirGroup);
+                            if (Game.Core.CurrentCareer.CampaignInfo.GetAircraftInfo(airGroup.Class).IsFlyable)
+                            {
+                                System.Windows.Controls.ComboBoxItem itemAirGroup = new System.Windows.Controls.ComboBoxItem();
+                                itemAirGroup.Content = airGroup.AirGroupKey + "." + airGroup.SquadronIndex + "(" + Game.Core.CurrentCareer.CampaignInfo.GetAircraftInfo(airGroup.Class).Aircraft.Remove(0, 9) + ")";
+                                itemAirGroup.Tag = airGroup;
+                                FrameworkElement.comboBoxSelectAirGroup.Items.Add(itemAirGroup);
+                            }
                         }
                     }
                 }
@@ -73,12 +80,29 @@ namespace IL2DCE
                 {
                     foreach (AirGroup airGroup in Game.Core.MissionTemplate.BlueAirGroups)
                     {
-                        if (Game.Core.CurrentCareer.CampaignInfo.GetAircraftInfo(airGroup.Class).IsFlyable)
+                        if ((Game.Core.CurrentCareer.AirForceIndex == 1 &&
+                                (airGroup.AirGroupInfo is LwBomberAirGroupInfo
+                                || airGroup.AirGroupInfo is LwBomberStabAirGroupInfo
+                                || airGroup.AirGroupInfo is LwFighterAirGroupInfo
+                                || airGroup.AirGroupInfo is LwFighterStabAirGroupInfo
+                                || airGroup.AirGroupInfo is LwReconAirGroupInfo
+                                || airGroup.AirGroupInfo is LwStukaAirGroupInfo
+                                || airGroup.AirGroupInfo is LwStukaStabAirGroupInfo
+                                || airGroup.AirGroupInfo is LwTransportAirGroupInfo
+                                || airGroup.AirGroupInfo is LwZerstoererAirGroupInfo
+                                || airGroup.AirGroupInfo is LwZerstoererStabAirGroupInfo)
+                            ) || (Game.Core.CurrentCareer.AirForceIndex == 2 &&
+                                (airGroup.AirGroupInfo is RaBomberAirGroupInfo
+                                || airGroup.AirGroupInfo is RaFighterAirGroupInfo))
+                           )
                         {
-                            System.Windows.Controls.ComboBoxItem itemAirGroup = new System.Windows.Controls.ComboBoxItem();
-                            itemAirGroup.Content = airGroup.AirGroupKey + "." + airGroup.SquadronIndex + "(" + Game.Core.CurrentCareer.CampaignInfo.GetAircraftInfo(airGroup.Class).Aircraft.Remove(0, 9) + ")";
-                            itemAirGroup.Tag = airGroup;
-                            FrameworkElement.comboBoxSelectAirGroup.Items.Add(itemAirGroup);
+                            if (Game.Core.CurrentCareer.CampaignInfo.GetAircraftInfo(airGroup.Class).IsFlyable)
+                            {
+                                System.Windows.Controls.ComboBoxItem itemAirGroup = new System.Windows.Controls.ComboBoxItem();
+                                itemAirGroup.Content = airGroup.AirGroupKey + "." + airGroup.SquadronIndex + "(" + Game.Core.CurrentCareer.CampaignInfo.GetAircraftInfo(airGroup.Class).Aircraft.Remove(0, 9) + ")";
+                                itemAirGroup.Tag = airGroup;
+                                FrameworkElement.comboBoxSelectAirGroup.Items.Add(itemAirGroup);
+                            }
                         }
                     }
                 }

@@ -41,10 +41,20 @@ namespace IL2DCE
             "Oberst",
         };
 
-        public Career(string pilotName, int armyIndex, int rankIndex)
+        public static List<string> RaRanks = new List<string> {
+            "Sottotenente",
+            "Tenente",
+            "Capitano",
+            "Maggiore",
+            "Tenente Colonnello",
+            "Colonnello",
+        };
+
+        public Career(string pilotName, int armyIndex, int airForceIndex, int rankIndex)
         {
             _pilotName = pilotName;
-            _armyIndex = armyIndex;            
+            _armyIndex = armyIndex;
+            _airForceIndex = airForceIndex;
             _rankIndex = rankIndex;
             _experience = 0;
 
@@ -64,6 +74,7 @@ namespace IL2DCE
                 && careerFile.exist("Main", "experience"))
             {
                 _armyIndex = int.Parse(careerFile.get("Main", "armyIndex"));
+                _airForceIndex = int.Parse(careerFile.get("Main", "airForceIndex"));
                 _rankIndex = int.Parse(careerFile.get("Main", "rankIndex"));
                 _experience = int.Parse(careerFile.get("Main", "experience"));
             }
@@ -98,13 +109,17 @@ namespace IL2DCE
 
         public override string ToString()
         {
-            if(ArmyIndex == 1)
+            if(ArmyIndex == 1 && AirForceIndex == 1)
             {
                 return RafRanks[RankIndex] + " " + PilotName;
             }
-            else if (ArmyIndex == 2)
+            else if (ArmyIndex == 2 && AirForceIndex == 1)
             {
                 return LwRanks[RankIndex] + " " + PilotName;
+            }
+            else if (ArmyIndex == 2 && AirForceIndex == 2)
+            {
+                return RaRanks[RankIndex] + " " + PilotName;
             }
             else
             {
@@ -137,6 +152,19 @@ namespace IL2DCE
             }
         }
         private int _armyIndex;
+
+        public int AirForceIndex
+        {
+            get
+            {
+                return _airForceIndex;
+            }
+            set
+            {
+                _airForceIndex = value;
+            }
+        }
+        private int _airForceIndex;
 
         public int RankIndex
         {
@@ -222,6 +250,7 @@ namespace IL2DCE
         public void WriteTo(ISectionFile careerFile)
         {
             careerFile.add("Main", "armyIndex", ArmyIndex.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
+            careerFile.add("Main", "airForceIndex", AirForceIndex.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
             careerFile.add("Main", "rankIndex", RankIndex.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
             careerFile.add("Main", "experience", Experience.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
 

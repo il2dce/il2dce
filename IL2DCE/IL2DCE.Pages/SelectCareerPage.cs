@@ -48,7 +48,11 @@ namespace IL2DCE
 
                 _game = play as IGame;
 
-                FrameworkElement.ListCareer.ItemsSource = Game.Core.AvailableCareers;
+                FrameworkElement.ListCareer.Items.Clear();
+                foreach (Career career in Game.Core.AvailableCareers)
+                {
+                    FrameworkElement.ListCareer.Items.Add(career);
+                }
 
                 if (FrameworkElement.ListCareer.Items.Count > 0)
                 {
@@ -112,7 +116,21 @@ namespace IL2DCE
             void Delete_Click(object sender, System.Windows.RoutedEventArgs e)
             {
                 Game.Core.DeleteCareer(Game.Core.CurrentCareer);
-                FrameworkElement.ListCareer.Items.RemoveAt(FrameworkElement.ListCareer.SelectedIndex);
+
+                FrameworkElement.ListCareer.Items.Clear();
+                foreach (Career career in Game.Core.AvailableCareers)
+                {
+                    FrameworkElement.ListCareer.Items.Add(career);
+                }
+
+                if (FrameworkElement.ListCareer.Items.Count > 0)
+                {
+                    FrameworkElement.ListCareer.SelectedIndex = 0;
+                }
+                else
+                {
+                    FrameworkElement.ListCareer.SelectedIndex = -1;
+                }
 
                 FrameworkElement.ListCareer.Items.Refresh();
             }
