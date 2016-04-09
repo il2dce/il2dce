@@ -87,6 +87,83 @@ namespace IL2DCE
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="missionType"></param>
+        /// <returns></returns>
+        /// <remarks>
+        ///     // Tweaked AI settings http://bobgamehub.blogspot.de/2012/03/ai-settings-in-cliffs-of-dover.html
+        ///
+        ///     // Fighter (the leading space is important)
+        ///     string frookie = " 0.30 0.11 0.78 0.40 0.64 0.85 0.85 0.21";
+        ///     string faverage = " 0.32 0.12 0.87 0.60 0.74 0.90 0.90 0.31";
+        ///     string fexperienced = " 0.52 0.13 0.89 0.70 0.74 0.95 0.92 0.31";
+        ///     string fveteran = " 0.73 0.14 0.92 0.80 0.74 1 0.95 0.41";
+        ///     string face = " 0.93 0.15 0.96 0.92 0.84 1 1 0.51";
+        ///
+        ///     // Fighter Bomber (the leading space is important)
+        ///     string xrookie = " 0.30 0.11 0.78 0.30 0.74 0.85 0.90 0.40";
+        ///     string xaverage = " 0.32 0.12 0.87 0.35 0.74 0.90 0.95 0.52";
+        ///     string xexperienced = " 0.52 0.13 0.89 0.38 0.74 0.92 0.95 0.52";
+        ///     string xveteran = " 0.73 0.14 0.92 0.40 0.74 0.95 0.95 0.55";
+        ///     string xace = " 0.93 0.15 0.96 0.45 0.74 1 1 0.65";
+        ///
+        ///     // Bomber (the leading space is important)
+        ///     string brookie = " 0.30 0.11 0.78 0.20 0.74 0.85 0.90 0.88";
+        ///     string baverage = " 0.32 0.12 0.87 0.25 0.74 0.90 0.95 0.91";
+        ///     string bexperienced = " 0.52 0.13 0.89 0.28 0.74 0.92 0.95 0.91";
+        ///     string bveteran = " 0.73 0.14 0.92 0.30 0.74 0.95 0.95 0.95";
+        ///     string bace = " 0.93 0.15 0.96 0.35 0.74 1 1 0.97";
+        /// 
+        /// </remarks>
+        private string getRandomSkill(EMissionType missionType)
+        {
+            int level = rand.Next(0, 6);
+
+            if(missionType == EMissionType.COVER || missionType == EMissionType.ESCORT
+                || missionType == EMissionType.INTERCEPT)
+            {
+                // Fighter
+                string[] skills = new string[] {
+                    "0.30 0.11 0.78 0.40 0.64 0.85 0.85 0.21",
+                    "0.32 0.12 0.87 0.60 0.74 0.90 0.90 0.31",
+                    "0.52 0.13 0.89 0.70 0.74 0.95 0.92 0.31",
+                    "0.73 0.14 0.92 0.80 0.74 1 0.95 0.41",
+                    "0.93 0.15 0.96 0.92 0.84 1 1 0.51",
+                };
+
+                return skills[level];
+            }
+            // TODO: Find a way to identify that aircraft is fighter bomber.
+            //else if()
+            //{
+            //    // FighterBomber
+            //    string[] skills = new string[] {
+            //        "0.30 0.11 0.78 0.30 0.74 0.85 0.90 0.40",
+            //        "0.32 0.12 0.87 0.35 0.74 0.90 0.95 0.52",
+            //        "0.52 0.13 0.89 0.38 0.74 0.92 0.95 0.52",
+            //        "0.73 0.14 0.92 0.40 0.74 0.95 0.95 0.55",
+            //        "0.93 0.15 0.96 0.45 0.74 1 1 0.6",
+            //    };
+
+            //    return skills[level];
+            //}
+            else
+            {
+                // Bomber
+                string[] skills = new string[] {
+                    "0.30 0.11 0.78 0.20 0.74 0.85 0.90 0.88",
+                    "0.32 0.12 0.87 0.25 0.74 0.90 0.95 0.91",
+                    "0.52 0.13 0.89 0.28 0.74 0.92 0.95 0.91",
+                    "0.73 0.14 0.92 0.30 0.74 0.95 0.95 0.95",
+                    "0.93 0.15 0.96 0.35 0.74 1 1 0.97",
+                };
+
+                return skills[level];
+            }
+        }
+
         private void getRandomFlightSize(AirGroup airGroup, EMissionType missionType)
         {
             airGroup.Flights.Clear();
@@ -362,6 +439,7 @@ namespace IL2DCE
                 }
 
                 getRandomFlightSize(airGroup, missionType);
+                airGroup.Skill = getRandomSkill(missionType);
                 Generator.GeneratorBriefing.CreateBriefing(briefingFile, airGroup, missionType, escortAirGroup);
                 airGroup.WriteTo(sectionFile, Config);
 
@@ -378,6 +456,7 @@ namespace IL2DCE
                     escortAirGroup.Escort(airGroup);
 
                     getRandomFlightSize(escortAirGroup, EMissionType.ESCORT);
+                    escortAirGroup.Skill = getRandomSkill(EMissionType.ESCORT);
                     Generator.GeneratorBriefing.CreateBriefing(briefingFile, escortAirGroup, EMissionType.ESCORT, null);
                     escortAirGroup.WriteTo(sectionFile, Config);
                 }
@@ -400,6 +479,7 @@ namespace IL2DCE
                             interceptAirGroup.Intercept(airGroup);
 
                             getRandomFlightSize(interceptAirGroup, EMissionType.INTERCEPT);
+                            interceptAirGroup.Skill = getRandomSkill(EMissionType.INTERCEPT);
                             Generator.GeneratorBriefing.CreateBriefing(briefingFile, interceptAirGroup, EMissionType.INTERCEPT, null);
                             interceptAirGroup.WriteTo(sectionFile, Config);
                         }

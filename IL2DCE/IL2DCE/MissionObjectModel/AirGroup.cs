@@ -94,7 +94,7 @@ namespace IL2DCE
             // TODO: Parse belt
 
             // Skill
-            // TODO: Parse skill
+            Skill = sectionFile.get(id, "Skill");
 
             // Waypoints            
             for (int i = 0; i < sectionFile.lines(Id + "_Way"); i++)
@@ -156,6 +156,12 @@ namespace IL2DCE
         }
 
         public string Formation
+        {
+            get;
+            set;
+        }
+
+        public string Skill
         {
             get;
             set;
@@ -541,31 +547,7 @@ namespace IL2DCE
                     sectionFile.add(Id, "SetOnPark", "0");
                 }
 
-
-                // TODO: Use tweaked AI settings http://bobgamehub.blogspot.de/2012/03/ai-settings-in-cliffs-of-dover.html
-                //
-                //      // Fighter (the leading space is important)
-                //      string frookie = " 0.30 0.11 0.78 0.40 0.64 0.85 0.85 0.21";
-                //      string faverage = " 0.32 0.12 0.87 0.60 0.74 0.90 0.90 0.31";
-                //      string fexperienced = " 0.52 0.13 0.89 0.70 0.74 0.95 0.92 0.31";
-                //      string fveteran = " 0.73 0.14 0.92 0.80 0.74 1 0.95 0.41";
-                //      string face = " 0.93 0.15 0.96 0.92 0.84 1 1 0.51";
-
-                //      // Fighter Bomber (the leading space is important)
-                //      string xrookie = " 0.30 0.11 0.78 0.30 0.74 0.85 0.90 0.40";
-                //      string xaverage = " 0.32 0.12 0.87 0.35 0.74 0.90 0.95 0.52";
-                //      string xexperienced = " 0.52 0.13 0.89 0.38 0.74 0.92 0.95 0.52";
-                //      string xveteran = " 0.73 0.14 0.92 0.40 0.74 0.95 0.95 0.55";
-                //      string xace = " 0.93 0.15 0.96 0.45 0.74 1 1 0.65";
-
-                //      // Bomber (the leading space is important)
-                //      string brookie = " 0.30 0.11 0.78 0.20 0.74 0.85 0.90 0.88";
-                //      string baverage = " 0.32 0.12 0.87 0.25 0.74 0.90 0.95 0.91";
-                //      string bexperienced = " 0.52 0.13 0.89 0.28 0.74 0.92 0.95 0.91";
-                //      string bveteran = " 0.73 0.14 0.92 0.30 0.74 0.95 0.95 0.95";
-                //      string bace = " 0.93 0.15 0.96 0.35 0.74 1 1 0.97";
-
-                sectionFile.add(Id, "Skill", "0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3");
+                sectionFile.add(Id, "Skill", Skill);
 
                 foreach (AirGroupWaypoint waypoint in Waypoints)
                 {
