@@ -37,7 +37,7 @@ namespace IL2DCE
             {
                 this.loadoutId = parameters[0];
                 minAltitude = double.Parse(parameters[1]);
-                minAltitude = double.Parse(parameters[2]);
+                maxAltitude = double.Parse(parameters[2]);
             }
             else
             {
