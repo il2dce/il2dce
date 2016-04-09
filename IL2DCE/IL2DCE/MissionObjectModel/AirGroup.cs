@@ -361,17 +361,17 @@ namespace IL2DCE
             }
         }
 
-        public Point2d? TargetArea
-        {
-            get
-            {
-                return _targetArea;
-            }
-            set
-            {
-                _targetArea = value;
-            }
-        }
+        //public Point2d? TargetArea
+        //{
+        //    get
+        //    {
+        //        return _targetArea;
+        //    }
+        //    set
+        //    {
+        //        _targetArea = value;
+        //    }
+        //}
 
         #endregion
 
@@ -483,7 +483,7 @@ namespace IL2DCE
             this.TargetAirGroup = null;
             this.TargetGroundGroup = null;
             this.TargetStationary = null;
-            this.TargetArea = null;
+            //this.TargetArea = null;
         }
 
         #endregion
@@ -588,20 +588,20 @@ namespace IL2DCE
             return AirGroupKey + "." + SquadronIndex;
         }
 
-        public void Transfer(EMissionType missionType, double altitude, AiAirport landingAirport = null)
-        {
-            this.reset();
-            this.Altitude = altitude;
+        //public void Transfer(double altitude, AiAirport landingAirport = null)
+        //{
+        //    this.reset();
+        //    this.Altitude = altitude;
 
-            createStartWaypoints();
+        //    createStartWaypoints();
 
-            Point3d target = new Point3d(Position.x, Position.y, altitude);
-            createEndInbetweenPoints(target, landingAirport);
+        //    Point3d target = new Point3d(Position.x, Position.y, altitude);
+        //    createEndInbetweenPoints(target, landingAirport);
 
-            createEndWaypoints(landingAirport);
-        }
+        //    createEndWaypoints(landingAirport);
+        //}
 
-        public void Cover(EMissionType missionType, GroundGroup targetGroundGroup, double altitude, AiAirport landingAirport = null)
+        public void Cover(GroundGroup targetGroundGroup, double altitude, AiAirport landingAirport = null)
         {
             this.reset();
             this.Altitude = altitude;
@@ -632,7 +632,7 @@ namespace IL2DCE
             }
         }
 
-        public void Cover(EMissionType missionType, Stationary targetStationary, double altitude, AiAirport landingAirport = null)
+        public void Cover(Stationary targetStationary, double altitude, AiAirport landingAirport = null)
         {
             this.reset();
             this.Altitude = altitude;
@@ -659,86 +659,86 @@ namespace IL2DCE
             createEndWaypoints(landingAirport);
         }
 
-        public void Cover(EMissionType missionType, Point2d targetArea, double altitude, AiAirport landingAirport = null)
-        {
-            this.reset();
-            this.Altitude = altitude;
-            this.TargetArea = targetArea;
+        //public void Cover(Point2d targetArea, double altitude, AiAirport landingAirport = null)
+        //{
+        //    this.reset();
+        //    this.Altitude = altitude;
+        //    this.TargetArea = targetArea;
 
-            createStartWaypoints();
+        //    createStartWaypoints();
 
-            Point3d p = new Point3d(targetArea.x, targetArea.y, altitude);
-            createStartInbetweenPoints(p);
+        //    Point3d p = new Point3d(targetArea.x, targetArea.y, altitude);
+        //    createStartInbetweenPoints(p);
 
-            Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.COVER, targetArea.x, targetArea.y, altitude, 300.0));
-            AirGroupWaypoint start = Waypoints[Waypoints.Count - 1];
+        //    Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.COVER, targetArea.x, targetArea.y, altitude, 300.0));
+        //    AirGroupWaypoint start = Waypoints[Waypoints.Count - 1];
 
-            while (distanceBetween(start, Waypoints[Waypoints.Count - 1]) < 200000.0)
-            {
-                Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.COVER, targetArea.x + 5000.0, targetArea.y + 5000.0, altitude, 300.0));
-                Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.COVER, targetArea.x + 5000.0, targetArea.y - 5000.0, altitude, 300.0));
-                Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.COVER, targetArea.x - 5000.0, targetArea.y - 5000.0, altitude, 300.0));
-                Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.COVER, targetArea.x - 5000.0, targetArea.y + 5000.0, altitude, 300.0));
-            }
+        //    while (distanceBetween(start, Waypoints[Waypoints.Count - 1]) < 200000.0)
+        //    {
+        //        Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.COVER, targetArea.x + 5000.0, targetArea.y + 5000.0, altitude, 300.0));
+        //        Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.COVER, targetArea.x + 5000.0, targetArea.y - 5000.0, altitude, 300.0));
+        //        Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.COVER, targetArea.x - 5000.0, targetArea.y - 5000.0, altitude, 300.0));
+        //        Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.COVER, targetArea.x - 5000.0, targetArea.y + 5000.0, altitude, 300.0));
+        //    }
 
-            createEndInbetweenPoints(p, landingAirport);
+        //    createEndInbetweenPoints(p, landingAirport);
 
-            createEndWaypoints(landingAirport);
-        }
+        //    createEndWaypoints(landingAirport);
+        //}
 
-        public void Hunting(EMissionType missionType, Point2d targetArea, double altitude, AiAirport landingAirport = null)
-        {
-            this.reset();
-            this.Altitude = altitude;
-            this.TargetArea = targetArea;
+        //public void Hunting(Point2d targetArea, double altitude, AiAirport landingAirport = null)
+        //{
+        //    this.reset();
+        //    this.Altitude = altitude;
+        //    this.TargetArea = targetArea;
 
-            createStartWaypoints();
+        //    createStartWaypoints();
 
-            Point3d p = new Point3d(targetArea.x, targetArea.y, altitude);
-            createStartInbetweenPoints(p);
+        //    Point3d p = new Point3d(targetArea.x, targetArea.y, altitude);
+        //    createStartInbetweenPoints(p);
 
-            Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.HUNTING, targetArea.x, targetArea.y, altitude, 300.0));
+        //    Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.HUNTING, targetArea.x, targetArea.y, altitude, 300.0));
 
-            createEndInbetweenPoints(p, landingAirport);
-            createEndWaypoints(landingAirport);
-        }
+        //    createEndInbetweenPoints(p, landingAirport);
+        //    createEndWaypoints(landingAirport);
+        //}
 
-        public void GroundAttack(EMissionType missionType, Point2d targetArea, double altitude, AirGroup escortAirGroup = null, AiAirport landingAirport = null)
-        {
-            this.reset();
-            this.Altitude = altitude;
-            this.TargetArea = targetArea;
-            this.EscortAirGroup = escortAirGroup;
+        //public void GroundAttack(Point2d targetArea, double altitude, AirGroup escortAirGroup = null, AiAirport landingAirport = null)
+        //{
+        //    this.reset();
+        //    this.Altitude = altitude;
+        //    this.TargetArea = targetArea;
+        //    this.EscortAirGroup = escortAirGroup;
 
-            Point3d? rendevouzPosition = null;
-            if (EscortAirGroup != null)
-            {
-                rendevouzPosition = new Point3d(Position.x + 0.50 * (EscortAirGroup.Position.x - Position.x), Position.y + 0.50 * (EscortAirGroup.Position.y - Position.y), altitude);
-            }
+        //    Point3d? rendevouzPosition = null;
+        //    if (EscortAirGroup != null)
+        //    {
+        //        rendevouzPosition = new Point3d(Position.x + 0.50 * (EscortAirGroup.Position.x - Position.x), Position.y + 0.50 * (EscortAirGroup.Position.y - Position.y), altitude);
+        //    }
 
-            Waypoints.Clear();
+        //    Waypoints.Clear();
 
-            createStartWaypoints();
+        //    createStartWaypoints();
 
-            Point3d p = new Point3d(targetArea.x, targetArea.y, altitude);
-            if (rendevouzPosition != null && rendevouzPosition.HasValue)
-            {
-                Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.NORMFLY, rendevouzPosition.Value, 300.0));
+        //    Point3d p = new Point3d(targetArea.x, targetArea.y, altitude);
+        //    if (rendevouzPosition != null && rendevouzPosition.HasValue)
+        //    {
+        //        Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.NORMFLY, rendevouzPosition.Value, 300.0));
                 
-                createInbetweenWaypoints(rendevouzPosition.Value, p);
-            }
-            else
-            {
-                createStartInbetweenPoints(p);
-            }
+        //        createInbetweenWaypoints(rendevouzPosition.Value, p);
+        //    }
+        //    else
+        //    {
+        //        createStartInbetweenPoints(p);
+        //    }
 
-            Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.GATTACK_POINT, targetArea.x, targetArea.y, altitude, 300.0));
+        //    Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.GATTACK_POINT, targetArea.x, targetArea.y, altitude, 300.0));
 
-            createEndInbetweenPoints(p, landingAirport);
-            createEndWaypoints(landingAirport);
-        }
+        //    createEndInbetweenPoints(p, landingAirport);
+        //    createEndWaypoints(landingAirport);
+        //}
 
-        public void GroundAttack(EMissionType missionType, Stationary targetStationary, double altitude, AirGroup escortAirGroup = null, AiAirport landingAirport = null)
+        public void GroundAttack(Stationary targetStationary, double altitude, AirGroup escortAirGroup = null, AiAirport landingAirport = null)
         {
             this.reset();
             this.Altitude = altitude;
@@ -773,7 +773,7 @@ namespace IL2DCE
             createEndWaypoints(landingAirport);
         }
 
-        public void GroundAttack(EMissionType missionType, GroundGroup targetGroundGroup, double altitude, AirGroup escortAirGroup = null, AiAirport landingAirport = null)
+        public void GroundAttack(GroundGroup targetGroundGroup, double altitude, AirGroup escortAirGroup = null, AiAirport landingAirport = null)
         {
             this.reset();
             this.Altitude = altitude;
@@ -831,24 +831,24 @@ namespace IL2DCE
             }
         }
 
-        public void Recon(EMissionType missionType, Point2d targetArea, double altitude, AiAirport landingAirport = null)
-        {
-            this.reset();
-            this.Altitude = altitude;
-            this.TargetArea = targetArea;
+        //public void Recon(Point2d targetArea, double altitude, AiAirport landingAirport = null)
+        //{
+        //    this.reset();
+        //    this.Altitude = altitude;
+        //    this.TargetArea = targetArea;
 
-            Point3d p = new Point3d(targetArea.x, targetArea.y, altitude);
+        //    Point3d p = new Point3d(targetArea.x, targetArea.y, altitude);
 
-            createStartWaypoints();
-            createStartInbetweenPoints(p);
+        //    createStartWaypoints();
+        //    createStartInbetweenPoints(p);
 
-            Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.RECON, targetArea.x, targetArea.y, altitude, 300.0));
+        //    Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.RECON, targetArea.x, targetArea.y, altitude, 300.0));
 
-            createEndInbetweenPoints(p, landingAirport);
-            createEndWaypoints(landingAirport);
-        }
+        //    createEndInbetweenPoints(p, landingAirport);
+        //    createEndWaypoints(landingAirport);
+        //}
 
-        public void Recon(EMissionType missionType, GroundGroup targetGroundGroup, double altitude, AirGroup escortAirGroup = null, AiAirport landingAirport = null)
+        public void Recon(GroundGroup targetGroundGroup, double altitude, AirGroup escortAirGroup = null, AiAirport landingAirport = null)
         {
             this.reset();
             this.Altitude = altitude;
@@ -908,7 +908,7 @@ namespace IL2DCE
             }
         }
 
-        public void Escort(EMissionType missionType, AirGroup targetAirGroup, AiAirport landingAirport = null)
+        public void Escort(AirGroup targetAirGroup, AiAirport landingAirport = null)
         {
             this.reset();
             this.Altitude = targetAirGroup.Altitude;
@@ -927,7 +927,7 @@ namespace IL2DCE
             createEndWaypoints(landingAirport);
         }
 
-        public void Intercept(EMissionType missionType, AirGroup targetAirGroup, AiAirport landingAirport = null)
+        public void Intercept(AirGroup targetAirGroup, AiAirport landingAirport = null)
         {
             this.reset();
             this.Altitude = targetAirGroup.Altitude;
@@ -1010,7 +1010,7 @@ namespace IL2DCE
         private Stationary _targetStationary = null;
         private GroundGroup _targetGroundGroup = null;
         private AirGroup _targetAirGroup = null;
-        private Point2d? _targetArea = null;
+        //private Point2d? _targetArea = null;
 
         #endregion
     }
