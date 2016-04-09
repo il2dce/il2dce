@@ -32,38 +32,39 @@ namespace IL2DCE
         private Random rand = new Random();
 
         public IList<GroundGroup> AvailableGroundGroups = new List<GroundGroup>();
-
-        private Core _core;
         
         private MissionFile MissionTemplate
         {
-            get
-            {
-                return _core.MissionTemplate;
-            }
+            get;
+            set;
         }
 
         private IGamePlay GamePlay
         {
-            get
-            {
-                return _core.GamePlay;
-            }
+            get;
+            set;
         }
 
         private Config Config
         {
-            get
-            {
-                return _core.Config;
-            }
+            get;
+            set;
 
         }
 
-        public GeneratorGroundOperation(Core core, Generator generator)
+        public GeneratorGroundOperation(Generator generator, CampaignInfo campaignInfo, MissionFile missionTemplate, IGamePlay gamePlay, Config config)
         {
-            _core = core;
             Generator = generator;
+            GamePlay = gamePlay;
+            MissionTemplate = missionTemplate;
+            Config = config;
+
+            AvailableGroundGroups.Clear();
+
+            foreach (GroundGroup groundGroup in MissionTemplate.GroundGroups)
+            {
+                AvailableGroundGroups.Add(groundGroup);
+            }
         }
         
         private void findPath(GroundGroup groundGroup, Point2d start, Point2d end)

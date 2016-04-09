@@ -49,6 +49,10 @@
       <DependentUpon>CampaignIntro.xaml</DependentUpon>
     </Compile>
     <Compile Include="CampaignIntroPage.cs" />
+    <Compile Include="QuickMissionPage.cs" />
+    <Compile Include="QuickMission.xaml.cs">
+      <DependentUpon>QuickMission.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CareerIntro.xaml.cs">
       <DependentUpon>CareerIntro.xaml</DependentUpon>
     </Compile>
@@ -87,6 +91,10 @@
     <Page Include="CampaignIntro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuickMission.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="CareerIntro.xaml">
       <Generator>MSBuild:Compile</Generator>

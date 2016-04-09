@@ -43,6 +43,7 @@
     <Compile Include="..\IL2DCE\Properties\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="GameQuickMission.cs" />
     <Compile Include="GameSingle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -77,13 +78,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="IL2DCE.QuickMission.xml" />
     <Content Include="IL2DCE.GameSingle.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>mkdir "$(TargetDir)..\..\AddIns"
 
-copy "$(ProjectDir)IL2DCE.GameSingle.xml" "$(TargetDir)..\..\AddIns\IL2DCE.GameSingle.xml"</PostBuildEvent>
+copy "$(ProjectDir)IL2DCE.GameSingle.xml" "$(TargetDir)..\..\AddIns\IL2DCE.GameSingle.xml"
+copy "$(ProjectDir)IL2DCE.QuickMission.xml" "$(TargetDir)..\..\AddIns\IL2DCE.QuickMission.xml"</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>

@@ -58,15 +58,7 @@ namespace IL2DCE
                 return _core;
             }
         }
-
-        private MissionFile MissionTemplate
-        {
-            get
-            {
-                return _core.MissionTemplate;
-            }
-        }
-
+        
         private IGamePlay GamePlay
         {
             get
@@ -99,23 +91,10 @@ namespace IL2DCE
 
         public void Generate(string templateFileName, string missionId, out ISectionFile missionFile, out BriefingFile briefingFile)
         {
-            GeneratorAirOperation = new GeneratorAirOperation(Core, this);
-            GeneratorGroundOperation = new GeneratorGroundOperation(Core, this);
+            GeneratorAirOperation = new GeneratorAirOperation(this, Career.CampaignInfo, Core.MissionTemplate, Core.GamePlay, Core.Config);
+            GeneratorGroundOperation = new GeneratorGroundOperation(this, Career.CampaignInfo, Core.MissionTemplate, Core.GamePlay, Core.Config);
             GeneratorBriefing = new GeneratorBriefing(Core, this);
-
-            GeneratorAirOperation.AvailableAirGroups.Clear();
-            GeneratorGroundOperation.AvailableGroundGroups.Clear();
-
-            foreach (AirGroup airGroup in MissionTemplate.AirGroups)
-            {
-                GeneratorAirOperation.AvailableAirGroups.Add(airGroup);
-            }
-
-            foreach (GroundGroup groundGroup in MissionTemplate.GroundGroups)
-            {
-                GeneratorGroundOperation.AvailableGroundGroups.Add(groundGroup);
-            }
-
+            
             missionFile = GamePlay.gpLoadSectionFile(templateFileName);
             briefingFile = new BriefingFile();
 
@@ -123,9 +102,10 @@ namespace IL2DCE
             briefingFile.MissionDescription = "";
 
             // Delete everything from the template file.
+            
             if (missionFile.exist("AirGroups"))
             {
-
+                // Delete all air groups from the template file.
                 for (int i = 0; i < missionFile.lines("AirGroups"); i++)
                 {
                     string key;
@@ -152,6 +132,7 @@ namespace IL2DCE
 
             for (int i = 0; i < missionFile.lines("MAIN"); i++)
             {
+                // Delete player from the template file.
                 string key;
                 string value;
                 missionFile.get("MAIN", i, out key, out value);
@@ -194,68 +175,14 @@ namespace IL2DCE
 
             // Create a air operation for the player.
 
-            foreach (AirGroup airGroup in MissionTemplate.GetAirGroups(Career.ArmyIndex))
+            foreach (AirGroup airGroup in GeneratorAirOperation.AvailableAirGroups)
             {
-                if ((airGroup.AirGroupKey + "." + airGroup.SquadronIndex.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat)) == Career.AirGroup)
+                if ((airGroup.ArmyIndex == Career.ArmyIndex) && (airGroup.AirGroupKey + "." + airGroup.SquadronIndex.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat)) == Career.AirGroup)
                 {
                     GeneratorAirOperation.CreateRandomAirOperation(missionFile, briefingFile, airGroup);
 
                     // Determine the aircraft that is controlled by the player.
-
-                    List<string> aircraftOrder = new List<string>();
-                    if (airGroup.AirGroupInfo.FlightSize % 3 == 0)
-                    {
-                        for (int i = 0; i < 3; i++)
-                        {
-                            foreach (int key in airGroup.Flights.Keys)
-                            {
-                                if (airGroup.Flights[key].Count > i)
-                                {
-                                    aircraftOrder.Add(key.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + i.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
-                                }
-                            }
-
-                            foreach (int key in airGroup.Flights.Keys)
-                            {
-                                if (airGroup.Flights[key].Count > i + 3)
-                                {
-                                    aircraftOrder.Add(key.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + (i + 3).ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
-                                }
-                            }
-                        }
-                    }
-                    else if (airGroup.AirGroupInfo.FlightSize % 2 == 0)
-                    {
-                        for (int i = 0; i < 2; i++)
-                        {
-                            foreach (int key in airGroup.Flights.Keys)
-                            {
-                                if (airGroup.Flights[key].Count > i)
-                                {
-                                    aircraftOrder.Add(key.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + i.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
-                                }
-                            }
-
-                            foreach (int key in airGroup.Flights.Keys)
-                            {
-                                if (airGroup.Flights[key].Count > i + 2)
-                                {
-                                    aircraftOrder.Add(key.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + (i + 2).ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
-                                }
-                            }
-                        }
-                    }
-                    else if (airGroup.AirGroupInfo.FlightSize % 1 == 0)
-                    {
-                        foreach (int key in airGroup.Flights.Keys)
-                        {
-                            if (airGroup.Flights[key].Count == 1)
-                            {
-                                aircraftOrder.Add(key.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + "0");
-                            }
-                        }
-                    }
-
+                    List<string> aircraftOrder = BuildAircraftOrder(airGroup);
 
                     string playerAirGroupKey = airGroup.AirGroupKey;
                     int playerSquadronIndex = airGroup.SquadronIndex;
@@ -313,8 +240,64 @@ namespace IL2DCE
                 }
             }
         }
-        
 
-        
+        private static List<string> BuildAircraftOrder(AirGroup airGroup)
+        {
+            List<string> aircraftOrder = new List<string>();
+            if (airGroup.AirGroupInfo.FlightSize % 3 == 0)
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    foreach (int key in airGroup.Flights.Keys)
+                    {
+                        if (airGroup.Flights[key].Count > i)
+                        {
+                            aircraftOrder.Add(key.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + i.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
+                        }
+                    }
+
+                    foreach (int key in airGroup.Flights.Keys)
+                    {
+                        if (airGroup.Flights[key].Count > i + 3)
+                        {
+                            aircraftOrder.Add(key.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + (i + 3).ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
+                        }
+                    }
+                }
+            }
+            else if (airGroup.AirGroupInfo.FlightSize % 2 == 0)
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    foreach (int key in airGroup.Flights.Keys)
+                    {
+                        if (airGroup.Flights[key].Count > i)
+                        {
+                            aircraftOrder.Add(key.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + i.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
+                        }
+                    }
+
+                    foreach (int key in airGroup.Flights.Keys)
+                    {
+                        if (airGroup.Flights[key].Count > i + 2)
+                        {
+                            aircraftOrder.Add(key.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + (i + 2).ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
+                        }
+                    }
+                }
+            }
+            else if (airGroup.AirGroupInfo.FlightSize % 1 == 0)
+            {
+                foreach (int key in airGroup.Flights.Keys)
+                {
+                    if (airGroup.Flights[key].Count == 1)
+                    {
+                        aircraftOrder.Add(key.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + "0");
+                    }
+                }
+            }
+
+            return aircraftOrder;
+        }
     }
 }

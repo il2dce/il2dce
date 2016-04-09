@@ -13,6 +13,6 @@
                 <SolidColorBrush />
             </ComboBox.Background>
         </ComboBox>
-        <Label Content="Select air group:" Height="64" HorizontalAlignment="Left" Margin="331,218,0,0" Name="labelSelectAirGroup" VerticalAlignment="Top" Width="617" FontSize="28" Foreground="#FFA0854A" />
+        <Label Content="Select Air Group:" Height="64" HorizontalAlignment="Left" Margin="331,218,0,0" Name="labelSelectAirGroup" VerticalAlignment="Top" Width="617" FontSize="28" Foreground="#FFA0854A" />
     </Grid>
 </UserControl>
