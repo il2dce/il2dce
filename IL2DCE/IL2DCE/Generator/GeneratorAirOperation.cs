@@ -87,12 +87,8 @@ namespace IL2DCE
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="missionType"></param>
-        /// <returns></returns>
         /// <remarks>
+        /// 
         ///     // Tweaked AI settings http://bobgamehub.blogspot.de/2012/03/ai-settings-in-cliffs-of-dover.html
         ///
         ///     // Fighter (the leading space is important)
@@ -117,10 +113,8 @@ namespace IL2DCE
         ///     string bace = " 0.93 0.15 0.96 0.35 0.74 1 1 0.97";
         /// 
         /// </remarks>
-        private string getRandomSkill(EMissionType missionType)
+        private string getTweakedSkill(EMissionType missionType, int level)
         {
-            int level = rand.Next(0, 6);
-
             if(missionType == EMissionType.COVER || missionType == EMissionType.ESCORT
                 || missionType == EMissionType.INTERCEPT)
             {
@@ -162,6 +156,13 @@ namespace IL2DCE
 
                 return skills[level];
             }
+        }
+
+        private string getRandomSkill(EMissionType missionType)
+        {
+            int randomLevel = rand.Next(0, 5);
+
+            return getTweakedSkill(missionType, randomLevel);
         }
 
         private void getRandomFlightSize(AirGroup airGroup, EMissionType missionType)
