@@ -234,6 +234,14 @@ namespace IL2DCE
         }
         private string _missionFileName;
 
+        public string MissionTemplateFileName
+        {
+            get
+            {
+                return MissionFileName.Replace(".mis", "_Template.mis");
+            }            
+        }
+
         public string AirGroup
         {
             get

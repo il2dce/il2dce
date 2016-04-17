@@ -89,13 +89,74 @@ namespace IL2DCE
             _core = core;
         }
 
-        public void Generate(string templateFileName, string missionId, out ISectionFile missionFile, out BriefingFile briefingFile)
+        /// <summary>
+        /// Generates the next mission template based on the previous mission template. 
+        /// </summary>
+        /// <param name="campaignTemplateFileName"></param>
+        /// <param name="missionTemplateFile"></param>
+        /// <remarks>
+        /// For now it has a simplified implementaiton. It only generated random supply ships and air groups.
+        /// </remarks>
+        public void GenerateMissionTemplate(string campaignTemplateFileName, out ISectionFile missionTemplateFile)
         {
-            GeneratorAirOperation = new GeneratorAirOperation(this, Career.CampaignInfo, Core.MissionTemplate, Core.GamePlay, Core.Config);
-            GeneratorGroundOperation = new GeneratorGroundOperation(this, Career.CampaignInfo, Core.MissionTemplate, Core.GamePlay, Core.Config);
+            MissionFile campaignTemplateFile = new MissionFile(GamePlay.gpLoadSectionFile(campaignTemplateFileName));
+
+            // Use the campaign template to initialise the mission template.
+            missionTemplateFile = GamePlay.gpLoadSectionFile(campaignTemplateFileName);
+
+            // Remove the ground groups but keep the air groups.
+            if (missionTemplateFile.exist("Chiefs"))
+            {
+                // Delete all ground groups from the template file.
+                for (int i = 0; i < missionTemplateFile.lines("Chiefs"); i++)
+                {
+                    string key;
+                    string value;
+                    missionTemplateFile.get("Chiefs", i, out key, out value);
+                    missionTemplateFile.delete(key + "_Road");
+                }
+                missionTemplateFile.delete("Chiefs");
+            }
+
+            // Generate supply for every waterway in the template.
+
+            // For now generate a random supply ship on one of the routes to a harbour.
+            int chiefIndex = 0;
+            
+            // TODO: Only create a random (or decent) amount of supply ships.
+            foreach (Waterway waterway in campaignTemplateFile.Waterways)
+            {
+                if (GamePlay.gpFrontArmy(waterway.End.X, waterway.End.Y) == 1)
+                {
+                    string id = chiefIndex.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + "_Chief";
+                    chiefIndex++;
+
+                    // For red army
+                    GroundGroup supplyShip = new GroundGroup(id, "Ship.Tanker_Medium1", EGroundGroupCountry.gb, "/sleep 0/skill 2/slowfire 1", waterway.Waypoints);
+                    supplyShip.WriteTo(missionTemplateFile);
+                }
+                else if(GamePlay.gpFrontArmy(waterway.End.X, waterway.End.Y) == 2)
+                {
+                    string id = chiefIndex.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + "_Chief";
+                    chiefIndex++;
+
+                    // For blue army
+                    GroundGroup supplyShip = new GroundGroup(id, "Ship.Tanker_Medium1", EGroundGroupCountry.de, "/sleep 0/skill 2/slowfire 1", waterway.Waypoints);
+
+                    supplyShip.WriteTo(missionTemplateFile);
+                }
+            }            
+        }
+
+        public void GenerateMission(string missionTemplateFileName, string missionId, out ISectionFile missionFile, out BriefingFile briefingFile)
+        {
+            MissionFile missionTemplateFile = new MissionFile(GamePlay.gpLoadSectionFile(missionTemplateFileName));
+
+            GeneratorAirOperation = new GeneratorAirOperation(this, Career.CampaignInfo, missionTemplateFile, Core.GamePlay, Core.Config);
+            GeneratorGroundOperation = new GeneratorGroundOperation(this, Career.CampaignInfo, missionTemplateFile, Core.GamePlay, Core.Config);
             GeneratorBriefing = new GeneratorBriefing(Core, this);
             
-            missionFile = GamePlay.gpLoadSectionFile(templateFileName);
+            missionFile = GamePlay.gpLoadSectionFile(missionTemplateFileName);
             briefingFile = new BriefingFile();
 
             briefingFile.MissionName = missionId;
@@ -182,7 +243,7 @@ namespace IL2DCE
                     GeneratorAirOperation.CreateRandomAirOperation(missionFile, briefingFile, airGroup);
 
                     // Determine the aircraft that is controlled by the player.
-                    List<string> aircraftOrder = BuildAircraftOrder(airGroup);
+                    List<string> aircraftOrder = determineAircraftOrder(airGroup);
 
                     string playerAirGroupKey = airGroup.AirGroupKey;
                     int playerSquadronIndex = airGroup.SquadronIndex;
@@ -241,7 +302,7 @@ namespace IL2DCE
             }
         }
 
-        private static List<string> BuildAircraftOrder(AirGroup airGroup)
+        private static List<string> determineAircraftOrder(AirGroup airGroup)
         {
             List<string> aircraftOrder = new List<string>();
             if (airGroup.AirGroupInfo.FlightSize % 3 == 0)

@@ -56,9 +56,12 @@ namespace IL2DCE
 
                 _game = play as IGame;
 
+
+                MissionFile campaignTemplate = new MissionFile(Game.gpLoadSectionFile(Game.Core.CurrentCareer.CampaignInfo.TemplateFilePath));
+
                 if (Game.Core.CurrentCareer.ArmyIndex == 1)
                 {
-                    foreach (AirGroup airGroup in Game.Core.MissionTemplate.RedAirGroups)
+                    foreach (AirGroup airGroup in campaignTemplate.RedAirGroups)
                     {
                         if (Game.Core.CurrentCareer.AirForceIndex == 1 && (airGroup.AirGroupInfo is RafBomberCommandAirGroupInfo
                                 || airGroup.AirGroupInfo is RafFighterCommandEarlyAirGroupInfo
@@ -78,7 +81,7 @@ namespace IL2DCE
                 }
                 else if (Game.Core.CurrentCareer.ArmyIndex == 2)
                 {
-                    foreach (AirGroup airGroup in Game.Core.MissionTemplate.BlueAirGroups)
+                    foreach (AirGroup airGroup in campaignTemplate.BlueAirGroups)
                     {
                         if ((Game.Core.CurrentCareer.AirForceIndex == 1 &&
                                 (airGroup.AirGroupInfo is LwBomberAirGroupInfo
