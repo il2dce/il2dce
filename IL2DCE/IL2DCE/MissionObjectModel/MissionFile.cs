@@ -141,6 +141,10 @@ namespace IL2DCE
                     {
                         _waterways.Add(road);
                     }
+                    else if(value.StartsWith("Train"))
+                    {
+
+                    }
                 }
             }
         }
@@ -160,7 +164,15 @@ namespace IL2DCE
                 return _waterways;
             }
         }
-        
+
+        public IList<Waterway> Railways
+        {
+            get
+            {
+                return _railways;
+            }
+        }
+
         public IList<Point3d> RedFrontMarkers
         {
             get
@@ -341,6 +353,7 @@ namespace IL2DCE
         
         private List<Waterway> _roads = new List<Waterway>();
         private List<Waterway> _waterways = new List<Waterway>();
+        private List<Waterway> _railways = new List<Waterway>();
 
         private List<AirGroup> _redAirGroups = new List<AirGroup>();
         private List<AirGroup> _blueAirGroups = new List<AirGroup>();

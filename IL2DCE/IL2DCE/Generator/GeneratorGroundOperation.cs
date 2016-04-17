@@ -174,130 +174,154 @@ namespace IL2DCE
         {
             AvailableGroundGroups.Remove(groundGroup);
 
-            IList<Point3d> friendlyMarkers = MissionTemplate.GetFriendlyMarkers(groundGroup.Army);
-            if (friendlyMarkers.Count > 0)
+            if (groundGroup.Type == EGroundGroupType.Ship)
             {
-                List<Point3d> availableFriendlyMarkers = new List<Point3d>(friendlyMarkers);
+                // Ships already have the correct waypoint from the mission template. Only remove some waypoints to make the position more random.
+                groundGroup.Waypoints.RemoveRange(0, rand.Next(0, groundGroup.Waypoints.Count));
+                
+                groundGroup.WriteTo(missionFile);
 
-                // Find closest friendly marker
-                Point3d? closestMarker = null;
-                foreach (Point3d marker in availableFriendlyMarkers)
-                {
-                    if (closestMarker == null)
-                    {
-                        closestMarker = marker;
-                    }
-                    else if (closestMarker.HasValue)
-                    {
-                        Point3d p1 = new Point3d(marker.x, marker.y, marker.z);
-                        Point3d p2 = new Point3d(closestMarker.Value.x, closestMarker.Value.y, closestMarker.Value.z);
-                        if (groundGroup.Position.distance(ref p1) < groundGroup.Position.distance(ref p2))
-                        {
-                            closestMarker = marker;
-                        }
-                    }
-                }
+                generateColumnFormation(missionFile, groundGroup, 3);
+            }
+            else if(groundGroup.Type == EGroundGroupType.Train)
+            {
+                groundGroup.Waypoints.RemoveRange(0, rand.Next(0, groundGroup.Waypoints.Count));
 
-                if (closestMarker != null && closestMarker.HasValue)
-                {
-                    availableFriendlyMarkers.Remove(closestMarker.Value);
+                groundGroup.WriteTo(missionFile);
+            }
+            else
+            {
+                //IList<Point3d> friendlyMarkers = MissionTemplate.GetFriendlyMarkers(groundGroup.Army);
+                //if (friendlyMarkers.Count > 0)
+                //{
+                //    List<Point3d> availableFriendlyMarkers = new List<Point3d>(friendlyMarkers);
 
-                    if (availableFriendlyMarkers.Count > 0)
-                    {
-                        int markerIndex = rand.Next(availableFriendlyMarkers.Count);
+                //    // Find closest friendly marker
+                //    Point3d? closestMarker = null;
+                //    foreach (Point3d marker in availableFriendlyMarkers)
+                //    {
+                //        if (closestMarker == null)
+                //        {
+                //            closestMarker = marker;
+                //        }
+                //        else if (closestMarker.HasValue)
+                //        {
+                //            Point3d p1 = new Point3d(marker.x, marker.y, marker.z);
+                //            Point3d p2 = new Point3d(closestMarker.Value.x, closestMarker.Value.y, closestMarker.Value.z);
+                //            if (groundGroup.Position.distance(ref p1) < groundGroup.Position.distance(ref p2))
+                //            {
+                //                closestMarker = marker;
+                //            }
+                //        }
+                //    }
 
-                        groundGroup.Waypoints.Clear();
+                //    if (closestMarker != null && closestMarker.HasValue)
+                //    {
+                //        availableFriendlyMarkers.Remove(closestMarker.Value);
 
-                        Point2d start = new Point2d(groundGroup.Position.x, groundGroup.Position.y);
-                        Point2d end = new Point2d(availableFriendlyMarkers[markerIndex].x, availableFriendlyMarkers[markerIndex].y);
+                //        if (availableFriendlyMarkers.Count > 0)
+                //        {
+                //            int markerIndex = rand.Next(availableFriendlyMarkers.Count);
 
-                        if (groundGroup.Type == EGroundGroupType.Armor || groundGroup.Type == EGroundGroupType.Vehicle)
-                        {
-                            findPath(groundGroup, new Point2d(closestMarker.Value.x, closestMarker.Value.y), new Point2d(availableFriendlyMarkers[markerIndex].x, availableFriendlyMarkers[markerIndex].y));
-                            groundGroup.WriteTo(missionFile);
-                        }
-                        else
-                        {
-                            findPath(groundGroup, start, end);
+                //            groundGroup.Waypoints.Clear();
 
-                            groundGroup.WriteTo(missionFile);
+                //            if (groundGroup.Type == EGroundGroupType.Armor || groundGroup.Type == EGroundGroupType.Vehicle)
+                //            {
+                //                findPath(groundGroup, new Point2d(closestMarker.Value.x, closestMarker.Value.y), new Point2d(availableFriendlyMarkers[markerIndex].x, availableFriendlyMarkers[markerIndex].y));
+                //                groundGroup.WriteTo(missionFile);
+                //            }
+                //            else
+                //            {
+                //                Point2d start = new Point2d(groundGroup.Position.x, groundGroup.Position.y);
+                //                Point2d end = new Point2d(availableFriendlyMarkers[markerIndex].x, availableFriendlyMarkers[markerIndex].y);
 
-                            string groundGroupId = groundGroup.Id;
-                            for (int i = 1; i < 3; i++)
-                            {
-                                double xOffset = -1.0;
-                                double yOffset = -1.0;
 
-                                bool subWaypointUsed = false;
-                                Point2d p1 = new Point2d(groundGroup.Waypoints[0].X, groundGroup.Waypoints[0].Y);
-                                if (groundGroup.Waypoints[0].SubWaypoints.Count > 0)
-                                {
-                                    foreach (GroundGroupSubWaypoint subWaypoint in groundGroup.Waypoints[0].SubWaypoints)
-                                    {
-                                        if (subWaypoint.P.HasValue)
-                                        {
-                                            Point2d p2 = new Point2d(subWaypoint.P.Value.x, subWaypoint.P.Value.y);
-                                            double distance = p1.distance(ref p2);
-                                            xOffset = 500 * ((p2.x - p1.x) / distance);
-                                            yOffset = 500 * ((p2.y - p1.y) / distance);
-                                            subWaypointUsed = true;
-                                            break;
-                                        }
-                                    }
-                                }
-                                if (subWaypointUsed == false)
-                                {
-                                    Point2d p2 = new Point2d(groundGroup.Waypoints[1].X, groundGroup.Waypoints[1].Y);
-                                    double distance = p1.distance(ref p2);
-                                    xOffset = 500 * ((p2.x - p1.x) / distance);
-                                    yOffset = 500 * ((p2.y - p1.y) / distance);
-                                }
+                //                findPath(groundGroup, start, end);
 
-                                groundGroup.Waypoints[0].X += xOffset;
-                                groundGroup.Waypoints[0].Y += yOffset;
-
-                                subWaypointUsed = false;
-                                p1 = new Point2d(groundGroup.Waypoints[groundGroup.Waypoints.Count - 1].X, groundGroup.Waypoints[groundGroup.Waypoints.Count - 1].Y);
-                                if (groundGroup.Waypoints[groundGroup.Waypoints.Count - 2].SubWaypoints.Count > 0)
-                                {
-                                    for (int j = groundGroup.Waypoints[groundGroup.Waypoints.Count - 2].SubWaypoints.Count - 1; j >= 0; j--)
-                                    {
-                                        GroundGroupSubWaypoint subWaypoint = groundGroup.Waypoints[groundGroup.Waypoints.Count - 2].SubWaypoints[j];
-                                        if (subWaypoint.P.HasValue)
-                                        {
-
-                                            Point2d p2 = new Point2d(subWaypoint.P.Value.x, subWaypoint.P.Value.y);
-                                            double distance = p1.distance(ref p2);
-                                            xOffset = 500 * ((p2.x - p1.x) / distance);
-                                            yOffset = 500 * ((p2.y - p1.y) / distance);
-                                            subWaypointUsed = true;
-                                            break;
-                                        }
-                                    }
-                                }
-                                if (subWaypointUsed == false)
-                                {
-                                    Point2d p2 = new Point2d(groundGroup.Waypoints[groundGroup.Waypoints.Count - 2].X, groundGroup.Waypoints[groundGroup.Waypoints.Count - 2].Y);
-                                    double distance = p1.distance(ref p2);
-                                    xOffset = 500 * ((p2.x - p1.x) / distance);
-                                    yOffset = 500 * ((p2.y - p1.y) / distance);
-                                }
-
-                                groundGroup.Waypoints[groundGroup.Waypoints.Count - 1].X -= xOffset;
-                                groundGroup.Waypoints[groundGroup.Waypoints.Count - 1].Y -= yOffset;
-
-                                groundGroup._id = groundGroupId + "." + i.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
-
-                                groundGroup.WriteTo(missionFile);
-                            }
-                        }
-                    }
-                }
+                //                groundGroup.WriteTo(missionFile);
+                                                                
+                //                generateColumnFormation(missionFile, groundGroup, 3);
+                //            }
+                //        }
+                //    }
+                //}
             }
         }
-        
 
-        
+        private static void generateColumnFormation(ISectionFile missionFile, GroundGroup groundGroup, int unitCount)
+        {
+            string groundGroupId = groundGroup.Id;
+
+            for (int i = 1; i < 3; i++)
+            {
+                double xOffset = -1.0;
+                double yOffset = -1.0;
+
+                bool subWaypointUsed = false;
+                Point2d p1 = new Point2d(groundGroup.Waypoints[0].X, groundGroup.Waypoints[0].Y);
+                if (groundGroup.Waypoints[0].SubWaypoints.Count > 0)
+                {
+                    foreach (GroundGroupSubWaypoint subWaypoint in groundGroup.Waypoints[0].SubWaypoints)
+                    {
+                        if (subWaypoint.P.HasValue)
+                        {
+                            Point2d p2 = new Point2d(subWaypoint.P.Value.x, subWaypoint.P.Value.y);
+                            double distance = p1.distance(ref p2);
+                            xOffset = 500 * ((p2.x - p1.x) / distance);
+                            yOffset = 500 * ((p2.y - p1.y) / distance);
+                            subWaypointUsed = true;
+                            break;
+                        }
+                    }
+                }
+                if (subWaypointUsed == false)
+                {
+                    Point2d p2 = new Point2d(groundGroup.Waypoints[1].X, groundGroup.Waypoints[1].Y);
+                    double distance = p1.distance(ref p2);
+                    xOffset = 500 * ((p2.x - p1.x) / distance);
+                    yOffset = 500 * ((p2.y - p1.y) / distance);
+                }
+
+                groundGroup.Waypoints[0].X += xOffset;
+                groundGroup.Waypoints[0].Y += yOffset;
+
+                subWaypointUsed = false;
+                p1 = new Point2d(groundGroup.Waypoints[groundGroup.Waypoints.Count - 1].X, groundGroup.Waypoints[groundGroup.Waypoints.Count - 1].Y);
+                if (groundGroup.Waypoints[groundGroup.Waypoints.Count - 2].SubWaypoints.Count > 0)
+                {
+                    for (int j = groundGroup.Waypoints[groundGroup.Waypoints.Count - 2].SubWaypoints.Count - 1; j >= 0; j--)
+                    {
+                        GroundGroupSubWaypoint subWaypoint = groundGroup.Waypoints[groundGroup.Waypoints.Count - 2].SubWaypoints[j];
+                        if (subWaypoint.P.HasValue)
+                        {
+
+                            Point2d p2 = new Point2d(subWaypoint.P.Value.x, subWaypoint.P.Value.y);
+                            double distance = p1.distance(ref p2);
+                            xOffset = 500 * ((p2.x - p1.x) / distance);
+                            yOffset = 500 * ((p2.y - p1.y) / distance);
+                            subWaypointUsed = true;
+                            break;
+                        }
+                    }
+                }
+                if (subWaypointUsed == false)
+                {
+                    Point2d p2 = new Point2d(groundGroup.Waypoints[groundGroup.Waypoints.Count - 2].X, groundGroup.Waypoints[groundGroup.Waypoints.Count - 2].Y);
+                    double distance = p1.distance(ref p2);
+                    xOffset = 500 * ((p2.x - p1.x) / distance);
+                    yOffset = 500 * ((p2.y - p1.y) / distance);
+                }
+
+                groundGroup.Waypoints[groundGroup.Waypoints.Count - 1].X -= xOffset;
+                groundGroup.Waypoints[groundGroup.Waypoints.Count - 1].Y -= yOffset;
+
+                groundGroup._id = groundGroupId + "." + i.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
+
+                groundGroup.WriteTo(missionFile);
+            }
+        }
+
+
         public List<GroundGroup> getAvailableEnemyGroundGroups(int armyIndex)
         {
             List<GroundGroup> groundGroups = new List<GroundGroup>();

@@ -34,10 +34,26 @@ namespace IL2DCE
         Vehicle,
         Armor,
         Ship,
+        Train,
     }
 
     public class GroundGroup
     {
+        public GroundGroup(string id, string @class, EGroundGroupCountry country, string options, List<GroundGroupWaypoint> waypoints = null)
+        {
+            _id = id;
+
+            Class = @class;
+            Country = country;
+            Options = options;
+
+            if(waypoints != null && waypoints.Count > 0)
+            {
+                // Copy the items in list, not the list itself.
+                Waypoints.AddRange(waypoints);                
+            }
+        }
+
         public GroundGroup(ISectionFile sectionFile, string id)
         {
             _id = id;
@@ -77,11 +93,6 @@ namespace IL2DCE
                     }
                 }
             }
-
-            if (Waypoints.Count > 0)
-            {
-                Position = new Point3d(Waypoints[0].X, Waypoints[0].Y, Waypoints[0].Z);
-            }
         }
 
         public EGroundGroupType Type
@@ -101,6 +112,10 @@ namespace IL2DCE
                 {
                     return EGroundGroupType.Ship;
                 }
+                else if (Class.StartsWith("Train"))
+                {
+                    return EGroundGroupType.Train;
+                }
                 else
                 {
                     throw new System.FormatException("Unknown EType of GroundGroup");
@@ -112,14 +127,16 @@ namespace IL2DCE
         {
             get
             {
-                return _position;
-            }
-            set
-            {
-                _position = value;
+                if(Waypoints.Count > 0)
+                {
+                    return new Point3d(Waypoints[0].X, Waypoints[0].Y, Waypoints[0].Z);
+                }
+                else
+                {
+                    return new Point3d(0.0, 0.0, 0.0); ;
+                }
             }
         }
-        private Point3d _position;
 
         public string Id
         {
