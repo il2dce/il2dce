@@ -77,20 +77,33 @@ namespace IL2DCE
             {
                 string key;
                 sectionFile.get(id + "_Road", i, out key, out value);
-                                
-                if (!key.Contains("S"))
+
+                GroundGroupWaypoint waypoint = null;
+                if(!key.Contains("S"))
                 {
-                    GroundGroupWaypoint waypoint = new GroundGroupWaypoint(sectionFile, id, i);
-                    lastWaypoint = waypoint;
-                    Waypoints.Add(waypoint);
+                    waypoint = new GroundGroupWaypointLine(sectionFile, id, i);
                 }
-                else if (key.Contains("S"))
+                else if(key.Contains("S"))
+                {
+                    waypoint = new GroundGroupWaypointSpline(sectionFile, id, i);
+                }
+                
+                // Check if it's a subwaypoint or the last waypoint (which looks like a subwaypoint but is none).
+                if (waypoint.IsSubWaypoint(sectionFile, id, i) && i < sectionFile.lines(id + "_Road") - 1)
                 {
                     if (lastWaypoint != null)
                     {
-                        GroundGroupSubWaypoint subWaypoint = new GroundGroupSubWaypoint(sectionFile, id, i);
-                        lastWaypoint.SubWaypoints.Add(subWaypoint);
+                        lastWaypoint.SubWaypoints.Add(waypoint);
                     }
+                    else
+                    {
+                        throw new FormatException();
+                    }
+                }
+                else
+                {   
+                    Waypoints.Add(waypoint);
+                    lastWaypoint = waypoint;
                 }
             }
         }
@@ -123,17 +136,17 @@ namespace IL2DCE
             }
         }
 
-        public Point3d Position
+        public Point2d? Position
         {
             get
             {
                 if(Waypoints.Count > 0)
                 {
-                    return new Point3d(Waypoints[0].X, Waypoints[0].Y, Waypoints[0].Z);
+                    return new Point2d(Waypoints[0].X, Waypoints[0].Y);
                 }
                 else
                 {
-                    return new Point3d(0.0, 0.0, 0.0); ;
+                    return null;
                 }
             }
         }
@@ -144,8 +157,11 @@ namespace IL2DCE
             {
                 return _id;
             }
+            set
+            {
+                _id = value;
+            }
         }
-        public string _id;
 
         public string Class
         {
@@ -191,51 +207,56 @@ namespace IL2DCE
                 return _waypoints;
             }
         }
-        private List<GroundGroupWaypoint> _waypoints = new List<GroundGroupWaypoint>();
 
         public void WriteTo(ISectionFile sectionFile)
         {
             if (Waypoints.Count > 1)
             {
                 sectionFile.add("Chiefs", Id, Class + " " + Country.ToString() + " " + Options);
-                double? _lastV = null;
+                // Write all waypoints except for the last one.
                 for (int i = 0; i < Waypoints.Count - 1; i++)
                 {
-                    if (Waypoints[i].V.HasValue)
+                    if (Waypoints[i] is GroundGroupWaypointLine)
                     {
-                        _lastV = Waypoints[i].V.Value;
-                        sectionFile.add(Id + "_Road", Waypoints[i].X.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat), Waypoints[i].Y.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + Waypoints[i].Z.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + "  0 " + (Waypoints[i].SubWaypoints.Count + 2).ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + Waypoints[i].V.Value.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
-                        foreach (GroundGroupSubWaypoint subWaypoint in Waypoints[i].SubWaypoints)
+                        if (Waypoints[i].V.HasValue)
                         {
-                            if (subWaypoint.P.HasValue)
-                            {
-                                sectionFile.add(Id + "_Road", "S", subWaypoint.S + " P " + subWaypoint.P.Value.x.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + subWaypoint.P.Value.y.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
-                            }
-                            else
-                            {
-                                sectionFile.add(Id + "_Road", "S", subWaypoint.S);
-                            }
+                            sectionFile.add(Id + "_Road", Waypoints[i].X.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat), Waypoints[i].Y.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + (Waypoints[i] as GroundGroupWaypointLine).Z.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + "  0 " + (Waypoints[i].SubWaypoints.Count + 2).ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + Waypoints[i].V.Value.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
                         }
                     }
-                    else if (_lastV != null && _lastV.HasValue)
+                    else if (Waypoints[i] is GroundGroupWaypointSpline)
                     {
-                        sectionFile.add(Id + "_Road", Waypoints[i].X.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat), Waypoints[i].Y.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + Waypoints[i].Z.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + "  0 " + (Waypoints[i].SubWaypoints.Count + 2).ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + _lastV.Value.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
-                        foreach (GroundGroupSubWaypoint subWaypoint in Waypoints[i].SubWaypoints)
+                        if (Waypoints[i].V.HasValue)
                         {
-                            if (subWaypoint.P.HasValue)
-                            {
-                                sectionFile.add(Id + "_Road", "S", subWaypoint.S + " P " + subWaypoint.P.Value.x.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + subWaypoint.P.Value.y.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
-                            }
-                            else
-                            {
-                                sectionFile.add(Id + "_Road", "S", subWaypoint.S);
-                            }
+                            sectionFile.add(Id + "_Road", "S", (Waypoints[i] as GroundGroupWaypointSpline).S + " P " + Waypoints[i].X.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + Waypoints[i].Y.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + "  0 " + (Waypoints[i].SubWaypoints.Count + 2).ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + Waypoints[i].V.Value.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
+                        }
+                    }
+
+                    foreach (GroundGroupWaypoint subWaypoint in Waypoints[i].SubWaypoints)
+                    {
+                        if (subWaypoint is GroundGroupWaypointLine)
+                        {
+                            sectionFile.add(Id + "_Road", subWaypoint.X.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat), subWaypoint.Y.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + (subWaypoint as GroundGroupWaypointLine).Z.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
+                        }
+                        else if (subWaypoint is GroundGroupWaypointSpline)
+                        {
+                            sectionFile.add(Id + "_Road", "S", (subWaypoint as GroundGroupWaypointSpline).S + " P " + subWaypoint.X.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + subWaypoint.Y.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
                         }
                     }
                 }
 
-                sectionFile.add(Id + "_Road", Waypoints[Waypoints.Count - 1].X.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat), Waypoints[Waypoints.Count - 1].Y.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + Waypoints[Waypoints.Count - 1].Z.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
+                // For the last waypoint don't write the subwaypoint count and the speed.
+                if (Waypoints[Waypoints.Count - 1] is GroundGroupWaypointLine)
+                {
+                    sectionFile.add(Id + "_Road", Waypoints[Waypoints.Count - 1].X.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat), Waypoints[Waypoints.Count - 1].Y.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + (Waypoints[Waypoints.Count - 1] as GroundGroupWaypointLine).Z.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
+                }
+                else if (Waypoints[Waypoints.Count - 1] is GroundGroupWaypointSpline)
+                {
+                    sectionFile.add(Id + "_Road", "S", (Waypoints[Waypoints.Count - 1] as GroundGroupWaypointSpline).S + " P " + Waypoints[Waypoints.Count - 1].X.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + Waypoints[Waypoints.Count - 1].Y.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
+                }
             }
         }
+
+        private List<GroundGroupWaypoint> _waypoints = new List<GroundGroupWaypoint>();
+        private string _id;
     }
 }

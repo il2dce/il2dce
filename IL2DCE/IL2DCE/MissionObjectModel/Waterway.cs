@@ -14,6 +14,7 @@
 // You should have received a copy of the GNU Affero General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+using System;
 using System.Collections.Generic;
 
 using maddox.game;
@@ -31,19 +32,33 @@ namespace IL2DCE
                 string key;
                 string value;
                 sectionFile.get(id + "_Road", i, out key, out value);
+
+                GroundGroupWaypoint waypoint = null;
                 if (!key.Contains("S"))
                 {
-                    GroundGroupWaypoint waypoint = new GroundGroupWaypoint(sectionFile, id, i);
-                    lastWaypoint = waypoint;
-                    Waypoints.Add(waypoint);
+                    waypoint = new GroundGroupWaypointLine(sectionFile, id, i);
                 }
                 else if (key.Contains("S"))
                 {
+                    waypoint = new GroundGroupWaypointSpline(sectionFile, id, i);
+                }
+
+                // Check if it's a subwaypoint or the last waypoint (which looks like a subwaypoint but is none).
+                if (waypoint.IsSubWaypoint(sectionFile, id, i) && i < sectionFile.lines(id + "_Road") - 1)
+                {
                     if (lastWaypoint != null)
                     {
-                        GroundGroupSubWaypoint subWaypoint = new GroundGroupSubWaypoint(sectionFile, id, i);
-                        lastWaypoint.SubWaypoints.Add(subWaypoint);
+                        lastWaypoint.SubWaypoints.Add(waypoint);
                     }
+                    else
+                    {
+                        throw new FormatException();
+                    }
+                }
+                else
+                {
+                    Waypoints.Add(waypoint);
+                    lastWaypoint = waypoint;
                 }
             }
         }

@@ -29,6 +29,7 @@ namespace IL2DCE
         {
             _roads.Clear();
             _waterways.Clear();
+            _railways.Clear();
 
             _redFrontMarkers.Clear();
             _blueFrontMarkers.Clear();
@@ -143,7 +144,7 @@ namespace IL2DCE
                     }
                     else if(value.StartsWith("Train"))
                     {
-
+                        _railways.Add(road);
                     }
                 }
             }

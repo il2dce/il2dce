@@ -53,7 +53,8 @@
     <Compile Include="Config.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="Generator\Generator.cs" />
-    <Compile Include="MissionObjectModel\GroundGroupSubWaypoint.cs" />
+    <Compile Include="MissionObjectModel\GroundGroupWaypointLine.cs" />
+    <Compile Include="MissionObjectModel\GroundGroupWaypointSpline.cs" />
     <Compile Include="Properties\GlobalAssemblyInfo.cs" />
     <Compile Include="MissionObjectModel\GroundGroup.cs" />
     <Compile Include="MissionObjectModel\GroundGroupWaypoint.cs" />

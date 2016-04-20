@@ -100,15 +100,17 @@ namespace IL2DCE
 
                             if (aiGroundWayPoint.P.z == -1)
                             {
-                                GroundGroupWaypoint groundGroupWaypoint = new GroundGroupWaypoint(aiGroundWayPoint.P.x, aiGroundWayPoint.P.y, aiGroundWayPoint.roadWidth, aiGroundWayPoint.Speed);
+                                GroundGroupWaypoint groundGroupWaypoint = new GroundGroupWaypointLine(aiGroundWayPoint.P.x, aiGroundWayPoint.P.y, aiGroundWayPoint.roadWidth, aiGroundWayPoint.Speed);
                                 lastGroundGroupWaypoint = groundGroupWaypoint;
                                 groundGroup.Waypoints.Add(groundGroupWaypoint);
                             }
                             else if (lastGroundGroupWaypoint != null)
                             {
-                                string s = aiGroundWayPoint.P.x.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + aiGroundWayPoint.P.y.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + aiGroundWayPoint.P.z.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + aiGroundWayPoint.roadWidth.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
-                                GroundGroupSubWaypoint groundGroupSubWaypoint = new GroundGroupSubWaypoint(s, null);
-                                lastGroundGroupWaypoint.SubWaypoints.Add(groundGroupSubWaypoint);
+                                // TODO: Fix calculated param
+
+                                //string s = aiGroundWayPoint.P.x.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + aiGroundWayPoint.P.y.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + aiGroundWayPoint.P.z.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat) + " " + aiGroundWayPoint.roadWidth.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
+                                //GroundGroupSubWaypoint groundGroupSubWaypoint = new GroundGroupSubWaypoint(s, null);
+                                //lastGroundGroupWaypoint.SubWaypoints.Add(groundGroupSubWaypoint);
                             }
                         }
                     }
@@ -181,7 +183,7 @@ namespace IL2DCE
                 
                 groundGroup.WriteTo(missionFile);
 
-                generateColumnFormation(missionFile, groundGroup, 3);
+                //generateColumnFormation(missionFile, groundGroup, 3);
             }
             else if(groundGroup.Type == EGroundGroupType.Train)
             {
@@ -258,25 +260,22 @@ namespace IL2DCE
                 double yOffset = -1.0;
 
                 bool subWaypointUsed = false;
-                Point2d p1 = new Point2d(groundGroup.Waypoints[0].X, groundGroup.Waypoints[0].Y);
+                Point2d p1 = groundGroup.Waypoints[0].Position;
                 if (groundGroup.Waypoints[0].SubWaypoints.Count > 0)
                 {
-                    foreach (GroundGroupSubWaypoint subWaypoint in groundGroup.Waypoints[0].SubWaypoints)
+                    foreach (GroundGroupWaypoint subWaypoint in groundGroup.Waypoints[0].SubWaypoints)
                     {
-                        if (subWaypoint.P.HasValue)
-                        {
-                            Point2d p2 = new Point2d(subWaypoint.P.Value.x, subWaypoint.P.Value.y);
-                            double distance = p1.distance(ref p2);
-                            xOffset = 500 * ((p2.x - p1.x) / distance);
-                            yOffset = 500 * ((p2.y - p1.y) / distance);
-                            subWaypointUsed = true;
-                            break;
-                        }
+                        Point2d p2 = subWaypoint.Position;
+                        double distance = p1.distance(ref p2);
+                        xOffset = 500 * ((p2.x - p1.x) / distance);
+                        yOffset = 500 * ((p2.y - p1.y) / distance);
+                        subWaypointUsed = true;
+                        break;
                     }
                 }
                 if (subWaypointUsed == false)
                 {
-                    Point2d p2 = new Point2d(groundGroup.Waypoints[1].X, groundGroup.Waypoints[1].Y);
+                    Point2d p2 = groundGroup.Waypoints[1].Position;
                     double distance = p1.distance(ref p2);
                     xOffset = 500 * ((p2.x - p1.x) / distance);
                     yOffset = 500 * ((p2.y - p1.y) / distance);
@@ -291,17 +290,14 @@ namespace IL2DCE
                 {
                     for (int j = groundGroup.Waypoints[groundGroup.Waypoints.Count - 2].SubWaypoints.Count - 1; j >= 0; j--)
                     {
-                        GroundGroupSubWaypoint subWaypoint = groundGroup.Waypoints[groundGroup.Waypoints.Count - 2].SubWaypoints[j];
-                        if (subWaypoint.P.HasValue)
-                        {
-
-                            Point2d p2 = new Point2d(subWaypoint.P.Value.x, subWaypoint.P.Value.y);
-                            double distance = p1.distance(ref p2);
-                            xOffset = 500 * ((p2.x - p1.x) / distance);
-                            yOffset = 500 * ((p2.y - p1.y) / distance);
-                            subWaypointUsed = true;
-                            break;
-                        }
+                        GroundGroupWaypoint subWaypoint = groundGroup.Waypoints[groundGroup.Waypoints.Count - 2].SubWaypoints[j];
+                        
+                        Point2d p2 = subWaypoint.Position;
+                        double distance = p1.distance(ref p2);
+                        xOffset = 500 * ((p2.x - p1.x) / distance);
+                        yOffset = 500 * ((p2.y - p1.y) / distance);
+                        subWaypointUsed = true;
+                        break;
                     }
                 }
                 if (subWaypointUsed == false)
@@ -315,7 +311,7 @@ namespace IL2DCE
                 groundGroup.Waypoints[groundGroup.Waypoints.Count - 1].X -= xOffset;
                 groundGroup.Waypoints[groundGroup.Waypoints.Count - 1].Y -= yOffset;
 
-                groundGroup._id = groundGroupId + "." + i.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
+                groundGroup.Id = groundGroupId + "." + i.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
 
                 groundGroup.WriteTo(missionFile);
             }

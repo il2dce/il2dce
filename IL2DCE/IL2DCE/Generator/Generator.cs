@@ -143,7 +143,6 @@ namespace IL2DCE
 
                     // For blue army
                     GroundGroup supplyShip = new GroundGroup(id, "Ship.Tanker_Medium1", EGroundGroupCountry.de, "/sleep 0/skill 2/slowfire 1", waterway.Waypoints);
-
                     supplyShip.WriteTo(missionTemplateFile);
                 }
             }
@@ -168,7 +167,6 @@ namespace IL2DCE
 
                     // For blue army
                     GroundGroup supplyShip = new GroundGroup(id, "Train.BR56-00_c2", EGroundGroupCountry.de, "", railway.Waypoints);
-
                     supplyShip.WriteTo(missionTemplateFile);
                 }
             }
