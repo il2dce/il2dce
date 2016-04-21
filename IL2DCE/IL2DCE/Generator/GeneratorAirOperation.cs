@@ -374,6 +374,14 @@ namespace IL2DCE
 
                     airGroup.GroundAttack(groundGroup, altitude, escortAirGroup);
                 }
+                else if (missionType == EMissionType.ATTACK_TRAIN)
+                {
+                    GroundGroup groundGroup = Generator.GeneratorGroundOperation.getAvailableRandomEnemyGroundGroup(airGroup.ArmyIndex, new List<EGroundGroupType> { EGroundGroupType.Train });
+                    Generator.GeneratorGroundOperation.CreateRandomGroundOperation(sectionFile, groundGroup);
+                    double altitude = getRandomAltitude(randomAircraftParametersInfo);
+
+                    airGroup.GroundAttack(groundGroup, altitude, escortAirGroup);
+                }
                 else if (missionType == EMissionType.ESCORT)
                 {
                     AirGroup escortedAirGroup = getAvailableRandomEscortedAirGroup(airGroup.ArmyIndex);
@@ -627,7 +635,8 @@ namespace IL2DCE
             if (missionType == EMissionType.ATTACK_ARMOR
                 || missionType == EMissionType.ATTACK_RADAR
                 || missionType == EMissionType.ATTACK_SHIP
-                || missionType == EMissionType.ATTACK_VEHICLE)
+                || missionType == EMissionType.ATTACK_VEHICLE
+                || missionType == EMissionType.ATTACK_TRAIN)
             {
                 return true;
             }
@@ -645,6 +654,7 @@ namespace IL2DCE
                 || missionType == EMissionType.ATTACK_RADAR
                 || missionType == EMissionType.ATTACK_SHIP
                 || missionType == EMissionType.ATTACK_VEHICLE
+                || missionType == EMissionType.ATTACK_TRAIN
                 || missionType == EMissionType.MARITIME_RECON
                 || missionType == EMissionType.RECON)
             {
@@ -733,6 +743,18 @@ namespace IL2DCE
             else if (missionType == EMissionType.ATTACK_VEHICLE)
             {
                 List<GroundGroup> groundGroups = Generator.GeneratorGroundOperation.getAvailableEnemyGroundGroups(airGroup.ArmyIndex, new List<EGroundGroupType> { EGroundGroupType.Vehicle });
+                if (groundGroups.Count > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else if (missionType == EMissionType.ATTACK_TRAIN)
+            {
+                List<GroundGroup> groundGroups = Generator.GeneratorGroundOperation.getAvailableEnemyGroundGroups(airGroup.ArmyIndex, new List<EGroundGroupType> { EGroundGroupType.Train });
                 if (groundGroups.Count > 0)
                 {
                     return true;
