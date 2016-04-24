@@ -14,6 +14,7 @@
 // You should have received a copy of the GNU Affero General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+using System;
 using System.Collections.Generic;
 
 namespace IL2DCE
@@ -50,6 +51,16 @@ namespace IL2DCE
         public int AircraftMaxCount
         {
             get { return FlightCount * FlightSize; }
+        }
+
+        public abstract int ArmyIndex
+        {
+            get;
+        }
+
+        public abstract int AirForceIndex
+        {
+            get;
         }
 
         #endregion
@@ -256,6 +267,16 @@ namespace IL2DCE
             get { return 6; }
         }
 
+        public override int ArmyIndex
+        {
+            get { return 1; }
+        }
+
+        public override int AirForceIndex
+        {
+            get { return 1; }
+        }
+
         #endregion
     }
 
@@ -383,6 +404,16 @@ namespace IL2DCE
             get { return 4; }
         }
 
+        public override int ArmyIndex
+        {
+            get { return 1; }
+        }
+
+        public override int AirForceIndex
+        {
+            get { return 1; }
+        }
+        
         #endregion
     }
 
@@ -490,6 +521,16 @@ namespace IL2DCE
             get { return 6; }
         }
 
+        public override int ArmyIndex
+        {
+            get { return 1; }
+        }
+
+        public override int AirForceIndex
+        {
+            get { return 1; }
+        }
+
         #endregion
     }
 
@@ -543,6 +584,16 @@ namespace IL2DCE
             get { return 6; }
         }
 
+        public override int ArmyIndex
+        {
+            get { return 1; }
+        }
+
+        public override int AirForceIndex
+        {
+            get { return 1; }
+        }
+
         #endregion
     }
 
@@ -594,6 +645,16 @@ namespace IL2DCE
         public override int FlightSize
         {
             get { return 4; }
+        }
+
+        public override int ArmyIndex
+        {
+            get { return 1; }
+        }
+
+        public override int AirForceIndex
+        {
+            get { return 1; }
         }
 
         #endregion
@@ -654,6 +715,16 @@ namespace IL2DCE
         public override int FlightSize
         {
             get { return 4; }
+        }
+
+        public override int ArmyIndex
+        {
+            get { return 2; }
+        }
+
+        public override int AirForceIndex
+        {
+            get { return 1; }
         }
 
         #endregion
@@ -739,6 +810,16 @@ namespace IL2DCE
             get { return 4; }
         }
 
+        public override int ArmyIndex
+        {
+            get { return 2; }
+        }
+
+        public override int AirForceIndex
+        {
+            get { return 1; }
+        }
+
         #endregion
     }
 
@@ -791,6 +872,16 @@ namespace IL2DCE
         public override int FlightSize
         {
             get { return 4; }
+        }
+
+        public override int ArmyIndex
+        {
+            get { return 2; }
+        }
+
+        public override int AirForceIndex
+        {
+            get { return 1; }
         }
 
         #endregion
@@ -853,6 +944,16 @@ namespace IL2DCE
             get { return 4; }
         }
 
+        public override int ArmyIndex
+        {
+            get { return 2; }
+        }
+
+        public override int AirForceIndex
+        {
+            get { return 1; }
+        }
+
         #endregion
     }
 
@@ -906,6 +1007,16 @@ namespace IL2DCE
         public override int FlightSize
         {
             get { return 3; }
+        }
+
+        public override int ArmyIndex
+        {
+            get { return 2; }
+        }
+
+        public override int AirForceIndex
+        {
+            get { return 1; }
         }
 
         #endregion
@@ -970,6 +1081,16 @@ namespace IL2DCE
         public override int FlightSize
         {
             get { return 3; }
+        }
+
+        public override int ArmyIndex
+        {
+            get { return 2; }
+        }
+
+        public override int AirForceIndex
+        {
+            get { return 1; }
         }
 
         #endregion
@@ -1044,6 +1165,16 @@ namespace IL2DCE
         public override int FlightSize
         {
             get { return 3; }
+        }
+
+        public override int ArmyIndex
+        {
+            get { return 2; }
+        }
+
+        public override int AirForceIndex
+        {
+            get { return 1; }
         }
 
         #endregion
@@ -1150,6 +1281,16 @@ namespace IL2DCE
             get { return 3; }
         }
 
+        public override int ArmyIndex
+        {
+            get { return 2; }
+        }
+
+        public override int AirForceIndex
+        {
+            get { return 1; }
+        }
+
         #endregion
     }
 
@@ -1203,6 +1344,16 @@ namespace IL2DCE
         public override int FlightSize
         {
             get { return 3; }
+        }
+
+        public override int ArmyIndex
+        {
+            get { return 2; }
+        }
+
+        public override int AirForceIndex
+        {
+            get { return 1; }
         }
 
         #endregion
@@ -1274,6 +1425,16 @@ namespace IL2DCE
             get { return 1; }
         }
 
+        public override int ArmyIndex
+        {
+            get { return 2; }
+        }
+
+        public override int AirForceIndex
+        {
+            get { return 1; }
+        }
+
         #endregion
     }
 
@@ -1331,6 +1492,16 @@ namespace IL2DCE
         public override int FlightSize
         {
             get { return 3; }
+        }
+
+        public override int ArmyIndex
+        {
+            get { return 2; }
+        }
+
+        public override int AirForceIndex
+        {
+            get { return 2; }
         }
 
         #endregion
@@ -1391,6 +1562,16 @@ namespace IL2DCE
         public override int FlightSize
         {
             get { return 3; }
+        }
+
+        public override int ArmyIndex
+        {
+            get { return 2; }
+        }
+
+        public override int AirForceIndex
+        {
+            get { return 2; }
         }
 
         #endregion

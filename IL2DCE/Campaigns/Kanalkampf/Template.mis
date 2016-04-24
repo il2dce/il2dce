@@ -27,8 +27,6 @@
   BoB_RAF_B_88Sqn.03
   BoB_LW_JG2_I.07
   BoB_LW_ZG26_I.13
-  BoB_RA_13St_11Gruppo_1Sq.07
-  BoB_RA_56St_18Gruppo_85Sq.07
   BoB_RAF_F_85Sqn_Late.01
   BoB_RAF_F_87Sqn_Late.01
 [BoB_LW_LG1_IV.37]
@@ -149,32 +147,6 @@
   Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
 [BoB_LW_ZG26_I.13_Way]
   TAKEOFF 281154.25 212993.50 0 0
-[BoB_RA_13St_11Gruppo_1Sq.07]
-  Flight0  1 2 3
-  Flight1  11 12 13
-  Flight2  21 22 23
-  Class Aircraft.BR-20M
-  Formation VIC3
-  CallSign 26
-  Fuel 100
-  Weapons 1
-  SetOnPark 1
-  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
-[BoB_RA_13St_11Gruppo_1Sq.07_Way]
-  TAKEOFF 281897.89 203473.25 0 0
-[BoB_RA_56St_18Gruppo_85Sq.07]
-  Flight0  1 2 3
-  Flight1  11 12 13
-  Flight2  21 22 23
-  Class Aircraft.G50
-  Formation VIC3
-  CallSign 15
-  Fuel 100
-  Weapons 1
-  SetOnPark 1
-  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
-[BoB_RA_56St_18Gruppo_85Sq.07_Way]
-  TAKEOFF 271968.37 205199.37 0 0
 [BoB_RAF_F_85Sqn_Late.01]
   Flight0  1 2 3 4
   Class Aircraft.HurricaneMkI_100oct

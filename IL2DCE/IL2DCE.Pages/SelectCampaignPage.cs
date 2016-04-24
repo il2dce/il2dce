@@ -48,8 +48,13 @@ namespace IL2DCE
 
                 _game = play as IGame;
 
-                FrameworkElement.ListCampaign.ItemsSource = Game.Core.CampaignInfos;
-
+                FrameworkElement.ListCampaign.Items.Clear();
+                                
+                foreach(CampaignInfo campaignInfo in Game.Core.CampaignInfos)
+                {
+                    FrameworkElement.ListCampaign.Items.Add(campaignInfo);
+                }
+                                
                 if (FrameworkElement.ListCampaign.Items.Count > 0)
                 {
                     FrameworkElement.ListCampaign.SelectedIndex = 0;
@@ -86,6 +91,9 @@ namespace IL2DCE
 
             private void bBack_Click(object sender, System.Windows.RoutedEventArgs e)
             {
+                // Remove the selection
+                Game.Core.CurrentCareer.CampaignInfo = null;
+
                 Game.gameInterface.PagePop(null);
             }
 
@@ -105,8 +113,36 @@ namespace IL2DCE
             {
                 if (e.AddedItems.Count > 0)
                 {
-                    CampaignInfo campaignSelected = e.AddedItems[0] as CampaignInfo;
-                    Game.Core.CurrentCareer.CampaignInfo = campaignSelected;
+                    CampaignInfo campaignInfo = e.AddedItems[0] as CampaignInfo;
+
+                    MissionFile campaignTemplate = new MissionFile(Game.gpLoadSectionFile(campaignInfo.TemplateFilePath));
+
+                    string description = "Available AirGroups:\n";
+
+                    int availableAirGroups = 0;
+                    foreach (AirGroup airGroup in campaignTemplate.AirGroups)
+                    {
+                        if (airGroup.AirGroupInfo.ArmyIndex == Game.Core.CurrentCareer.ArmyIndex
+                            && airGroup.AirGroupInfo.AirForceIndex == Game.Core.CurrentCareer.AirForceIndex && campaignInfo.GetAircraftInfo(airGroup.Class).IsFlyable)
+                        {
+                            description += airGroup.ToString() + "\n";
+                            availableAirGroups++;
+                        }
+                    }
+
+                    if (availableAirGroups > 0)
+                    {
+                        Game.Core.CurrentCareer.CampaignInfo = campaignInfo;
+                    }
+                    else
+                    {
+                        description += "None for your AirForce! Please select a different campaign.\n";
+                        Game.Core.CurrentCareer.CampaignInfo = null;
+                    }
+
+
+
+                    FrameworkElement.txtDesc.Text = description;
                 }
 
                 if (Game.Core.CurrentCareer.CampaignInfo != null)
