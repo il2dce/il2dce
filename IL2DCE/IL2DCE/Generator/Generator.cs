@@ -92,17 +92,17 @@ namespace IL2DCE
         /// <summary>
         /// Generates the next mission template based on the previous mission template. 
         /// </summary>
-        /// <param name="campaignTemplateFileName"></param>
+        /// <param name="staticTemplateFileName"></param>
         /// <param name="missionTemplateFile"></param>
         /// <remarks>
         /// For now it has a simplified implementaiton. It only generated random supply ships and air groups.
         /// </remarks>
-        public void GenerateMissionTemplate(string campaignTemplateFileName, out ISectionFile missionTemplateFile)
+        public void GenerateMissionTemplate(string staticTemplateFileName, string templateFileName, out ISectionFile missionTemplateFile)
         {
-            MissionFile campaignTemplateFile = new MissionFile(GamePlay.gpLoadSectionFile(campaignTemplateFileName));
+            MissionFile staticTemplateFile = new MissionFile(GamePlay.gpLoadSectionFile(staticTemplateFileName));
 
             // Use the campaign template to initialise the mission template.
-            missionTemplateFile = GamePlay.gpLoadSectionFile(campaignTemplateFileName);
+            missionTemplateFile = GamePlay.gpLoadSectionFile(templateFileName);
 
             // Remove the ground groups but keep the air groups.
             if (missionTemplateFile.exist("Chiefs"))
@@ -124,7 +124,7 @@ namespace IL2DCE
             int chiefIndex = 0;
             
             // TODO: Only create a random (or decent) amount of supply ships.
-            foreach (Waterway waterway in campaignTemplateFile.Waterways)
+            foreach (Waterway waterway in staticTemplateFile.Waterways)
             {
                 // For waterways only the end must be in friendly territory.
                 if (GamePlay.gpFrontArmy(waterway.End.X, waterway.End.Y) == 1)
@@ -147,7 +147,7 @@ namespace IL2DCE
                 }
             }
 
-            foreach (Waterway railway in campaignTemplateFile.Railways)
+            foreach (Waterway railway in staticTemplateFile.Railways)
             {
                 // For railways the start and the end must be in friendly territory.
                 if (GamePlay.gpFrontArmy(railway.Start.X, railway.Start.Y) == 1 && GamePlay.gpFrontArmy(railway.End.X, railway.End.Y) == 1)

@@ -138,7 +138,7 @@ namespace IL2DCE
 
             // Generate the template for the next mission
             ISectionFile missionTemplateFile = null;
-            generator.GenerateMissionTemplate(CurrentCareer.CampaignInfo.TemplateFilePath, out missionTemplateFile);
+            generator.GenerateMissionTemplate(CurrentCareer.CampaignInfo.StaticTemplateFilePath, CurrentCareer.CampaignInfo.TemplateFilePath, out missionTemplateFile);
             missionTemplateFile.save(CurrentCareer.MissionTemplateFileName);
             
             // Generate the next mission based on the new template.

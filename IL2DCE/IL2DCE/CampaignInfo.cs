@@ -36,6 +36,11 @@ namespace IL2DCE
                 name = campaignFile.get("Main", "name");
             }
 
+            if (campaignFile.exist("Main", "staticTemplateFile"))
+            {
+                staticTemplateFilePath = campaignFolderPath + campaignFile.get("Main", "staticTemplateFile");
+            }
+
             if (campaignFile.exist("Main", "templateFile"))
             {
                 templateFilePath = campaignFolderPath + campaignFile.get("Main", "templateFile");
@@ -81,6 +86,15 @@ namespace IL2DCE
             }
         }
         string name;
+
+        public string StaticTemplateFilePath
+        {
+            get
+            {
+                return staticTemplateFilePath;
+            }
+        }
+        private string staticTemplateFilePath;
 
         public string TemplateFilePath
         {

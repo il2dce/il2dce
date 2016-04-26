@@ -14,13 +14,12 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AgAIAAAgAlIAAACCAAoAgAAAIAAAAAwAAAAAAAQQEEA=</HashCode>
+      <HashCode>AgAIAAAgAkIAAACCAAoAgAAAIAAAAAwAAAAAAAQQEAA=</HashCode>
       <FileName>Core.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Config" />
       <Property Name="CurrentCareer" />
-      <Property Name="World" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="AvailableCareers" />
@@ -32,30 +31,19 @@
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
-    <AssociationLine Name="World" Type="IL2DCE.World" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="8.75" Y="7.336" />
-        <Point X="10.125" Y="7.336" />
-        <Point X="10.125" Y="1.81" />
-        <Point X="10.5" Y="1.81" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>gACRgIAAAhMIECIgACBgAAIEgAQAAQAEAkCAQEAQAEA=</HashCode>
+      <HashCode>AAAAAIEAAgMAAAAAAAAhAAAAAAUAAAAAAADAABAAAAA=</HashCode>
       <FileName>Generator\Generator.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="World" />
-    </ShowAsAssociation>
   </Class>
-  <Class Name="IL2DCE.World">
+  <Class Name="IL2DCE.MissionFile">
     <Position X="10.5" Y="0.75" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>EAAAEEAQIAAQAAABAAAoACQBAYYAAIAAAwEAgICABFA=</HashCode>
-      <FileName>Generator\World.cs</FileName>
+      <HashCode>EAAAEEAQIEAQAAABAAAoACQBAYYAAIAAAwEAkICABFA=</HashCode>
+      <FileName>MissionObjectModel\MissionFile.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="Waterways" />
@@ -69,7 +57,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>gIAAEAAIAAABAAAWBAAAEAEAAAQAAAAhAQAAABAgQFA=</HashCode>
+      <HashCode>gICAEAAIAAABAAAWBAIAEAEAAAQAAAAhAQAAABIkQFA=</HashCode>
       <FileName>Career.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -89,12 +77,9 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>gAgCgAAFgIgUACI0AQIAy0oFAAcUAoCkIyQBgikSIFQ=</HashCode>
+      <HashCode>EAgCgAAFgIgUAAI0AQIAwkoFAAYUAoCkIyQBgikQIFQ=</HashCode>
       <FileName>MissionObjectModel\AirGroup.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="MissionType" />
-    </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="Waypoints" />
     </ShowAsCollectionAssociation>
@@ -159,7 +144,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAiAQAAAAAAIQoEAABAAAQhAAAECAAAAAAAAEAAAAQ=</HashCode>
+      <HashCode>AAAiAQEAAAABIQoEAABAAAQhAAAECAAAAAAAAEAAAAQ=</HashCode>
       <FileName>CampaignInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -179,7 +164,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAgCAAAAAAAAAAAgAAJAAgAAAAIAAAAgAQAAgABAAQA=</HashCode>
+      <HashCode>AAgCAAAAAAAAAAAgAAJAAgAAAAIAAAAgAQAAAABAAQA=</HashCode>
       <FileName>MissionObjectModel\GroundGroup.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -190,23 +175,21 @@
       <Property Name="Waypoints" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="IL2DCE.GroundGroupSubWaypoint">
-    <Position X="24.25" Y="4.75" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAADAAAA=</HashCode>
-      <FileName>MissionObjectModel\GroundGroupSubWaypoint.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="IL2DCE.GroundGroupWaypoint">
     <Position X="21.5" Y="4.75" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
+    <AssociationLine Name="SubWaypoints" Type="IL2DCE.GroundGroupWaypoint" ManuallyRouted="true">
+      <Path>
+        <Point X="22.032" Y="7.334" />
+        <Point X="22.032" Y="8.135" />
+        <Point X="22.478" Y="8.135" />
+        <Point X="22.478" Y="7.334" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAABAAAgAAAAAAQYgE=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAQAAAAABIAAgAAAAAAQYgA=</HashCode>
       <FileName>MissionObjectModel\GroundGroupWaypoint.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -233,10 +216,24 @@
       <FileName>MissionObjectModel\Waterway.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="IL2DCE.GroundGroupWaypointSpline">
+    <Position X="24.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAEAAIAAAAAAAACAAAE=</HashCode>
+      <FileName>MissionObjectModel\GroundGroupWaypointSpline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IL2DCE.GroundGroupWaypointLine">
+    <Position X="26.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAE=</HashCode>
+      <FileName>MissionObjectModel\GroundGroupWaypointLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Enum Name="IL2DCE.EMissionType">
     <Position X="13.25" Y="14.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAMgAAAAAABAgAAEAIggAAAAAAAAAJAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAMgAAAAAABAgAAEAIggAAAAAAAAEJAAAAAAAAAA=</HashCode>
       <FileName>Generator\AircraftInfo.cs</FileName>
     </TypeIdentifier>
   </Enum>
@@ -250,7 +247,7 @@
   <Enum Name="IL2DCE.EGroundGroupType">
     <Position X="19.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABACAAAAAEAAAAAAAAAA=</HashCode>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAABACAAAAAEAAAAAAAAAA=</HashCode>
       <FileName>MissionObjectModel\GroundGroup.cs</FileName>
     </TypeIdentifier>
   </Enum>
