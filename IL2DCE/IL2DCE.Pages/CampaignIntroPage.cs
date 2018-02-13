@@ -57,7 +57,7 @@ namespace IL2DCE
                 _game = play as IGame;
 
 
-                MissionFile campaignTemplate = new MissionFile(Game.gpLoadSectionFile(Game.Core.CurrentCareer.CampaignInfo.TemplateFilePath));
+                MissionFile campaignTemplate = new MissionFile(Game, Game.Core.CurrentCareer.CampaignInfo.InitialMissionTemplateFiles);
 
                 foreach (AirGroup airGroup in campaignTemplate.AirGroups)
                 {

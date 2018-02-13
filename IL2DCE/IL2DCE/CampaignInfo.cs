@@ -17,18 +17,30 @@
 using System;
 
 using maddox.game;
+using System.Collections.Generic;
 
 namespace IL2DCE
 {
+    /// <summary>
+    /// The campaign info object holds the configuration of a campaign.
+    /// </summary>
     public class CampaignInfo
     {
         ISectionFile _globalAircraftInfoFile;
         ISectionFile _localAircraftInfoFile;
 
-        public CampaignInfo(string id, string campaignFolderPath, ISectionFile campaignFile, ISectionFile glocalAircraftInfoFile, ISectionFile localAircraftInfoFile = null)
+        /// <summary>
+        /// The constructor parses the campaign info file.
+        /// </summary>
+        /// <param name="id">The id of the campaign.</param>
+        /// <param name="campaignFolderPath">The folder of the campaign.</param>
+        /// <param name="campaignFile">The section file with the campaign configuration.</param>
+        /// <param name="globalAircraftInfoFile">The global aircraft info file.</param>
+        /// <param name="localAircraftInfoFile">If available the local aircraft info file, otherwise the global aircraft info file is used.</param>
+        public CampaignInfo(string id, string campaignFolderPath, ISectionFile campaignFile, ISectionFile globalAircraftInfoFile, ISectionFile localAircraftInfoFile = null)
         {
             _id = id;
-            _globalAircraftInfoFile = glocalAircraftInfoFile;
+            _globalAircraftInfoFile = globalAircraftInfoFile;
             _localAircraftInfoFile = localAircraftInfoFile;
 
             if (campaignFile.exist("Main", "name"))
@@ -36,14 +48,35 @@ namespace IL2DCE
                 name = campaignFile.get("Main", "name");
             }
 
-            if (campaignFile.exist("Main", "staticTemplateFile"))
+            if (campaignFile.exist("Main", "staticTemplate"))
             {
-                staticTemplateFilePath = campaignFolderPath + campaignFile.get("Main", "staticTemplateFile");
+                var staticTemplates = campaignFile.get("Main", "staticTemplate").Split(new char[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries);
+
+                foreach (string staticTemplate in staticTemplates)
+                {
+                    StaticTemplateFiles.Add(campaignFolderPath + staticTemplate.Trim());
+                }
+
+
+                if(StaticTemplateFiles.Count < 1)
+                {
+                    throw new FormatException("staticTemplate");
+                }                
             }
 
-            if (campaignFile.exist("Main", "templateFile"))
+            if (campaignFile.exist("Main", "initialTemplate"))
             {
-                templateFilePath = campaignFolderPath + campaignFile.get("Main", "templateFile");
+                var initialTemplates = campaignFile.get("Main", "initialTemplate").Split(new char[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries);
+
+                foreach (string initialTemplate in initialTemplates)
+                {
+                    InitialMissionTemplateFiles.Add(campaignFolderPath + initialTemplate.Trim());
+                }
+                
+                if(InitialMissionTemplateFiles.Count < 1)
+                {
+                    throw new FormatException("initialTemplate");
+                }
             }
 
             if (campaignFile.exist("Main", "scriptFile"))
@@ -64,11 +97,18 @@ namespace IL2DCE
             }
         }
 
+        /// <summary>
+        /// The textual representation of a CampaignInfo object.
+        /// </summary>
+        /// <returns>The name of the campaign.</returns>
         public override string ToString()
         {
             return Name;
         }
 
+        /// <summary>
+        /// The id of the campaign.
+        /// </summary>
         public string Id
         {
             get
@@ -78,6 +118,9 @@ namespace IL2DCE
         }
         string _id;
 
+        /// <summary>
+        /// The name of the campaign.
+        /// </summary>
         public string Name
         {
             get
@@ -87,24 +130,33 @@ namespace IL2DCE
         }
         string name;
 
-        public string StaticTemplateFilePath
+        /// <summary>
+        /// The list of static tempalte files that contain the definiton of the supply routes.
+        /// </summary>
+        public List<string> StaticTemplateFiles
         {
             get
             {
-                return staticTemplateFilePath;
+                return staticTemplateFiles;
             }
         }
-        private string staticTemplateFilePath;
+        private List<string> staticTemplateFiles = new List<string>();
 
-        public string TemplateFilePath
+        /// <summary>
+        /// The list of initial mission template files that contain the starting location of air and ground groups.
+        /// </summary>
+        public List<string> InitialMissionTemplateFiles
         {
             get
             {
-                return templateFilePath;
+                return initialMissionTemplateFiles;
             }
         }
-        private string templateFilePath;
+        private List<string> initialMissionTemplateFiles = new List<string>();
 
+        /// <summary>
+        /// The name of the script file that will be used in the generated missions.
+        /// </summary>
         public string ScriptFileName
         {
             get
@@ -114,6 +166,9 @@ namespace IL2DCE
         }
         private string _scriptFileName;
 
+        /// <summary>
+        /// The start date of the campaign.
+        /// </summary>
         public DateTime StartDate
         {
             get
@@ -123,6 +178,9 @@ namespace IL2DCE
         }
         private DateTime _startDate;
 
+        /// <summary>
+        /// The end date of the campaign.
+        /// </summary>
         public DateTime EndDate
         {
             get
@@ -132,6 +190,11 @@ namespace IL2DCE
         }
         private DateTime _endDate;
 
+        /// <summary>
+        /// Gets the aircraft info for the given aicraft name. 
+        /// </summary>
+        /// <param name="aircraft">The name of the aircraft.</param>
+        /// <returns>If available it returns the definition of the local aircraft info file, otherwise the definiton of the global aircraft info is returned.</returns>
         public AircraftInfo GetAircraftInfo(string aircraft)
         {
             if(_localAircraftInfoFile != null && _localAircraftInfoFile.exist("Main", aircraft))

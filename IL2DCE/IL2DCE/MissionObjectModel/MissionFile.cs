@@ -25,7 +25,23 @@ namespace IL2DCE
 {
     public class MissionFile
     {
+        public MissionFile(IGamePlay game, IEnumerable<string> fileNames)
+        {
+            init();
+
+            foreach(string fileName in fileNames)
+            {
+                load(game.gpLoadSectionFile(fileName));
+            }
+        }
+
         public MissionFile(ISectionFile file)
+        {
+            init();
+            load(file);
+        }
+
+        private void init()
         {
             _roads.Clear();
             _waterways.Clear();
@@ -40,7 +56,10 @@ namespace IL2DCE
 
             _redStationaries.Clear();
             _blueStationaries.Clear();
+        }
 
+        private void load(ISectionFile file)
+        { 
             for (int i = 0; i < file.lines("Stationary"); i++)
             {
                 string key;

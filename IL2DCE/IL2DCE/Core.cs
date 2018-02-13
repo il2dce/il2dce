@@ -85,10 +85,18 @@ namespace IL2DCE
 
         public void AdvanceCampaign(IGame game)
         {
+            Generator generator = new Generator(this);
+            
+            ISectionFile previousMissionTemplateFile = null;
+
             if (!CurrentCareer.Date.HasValue)
             {
+                // It is the first mission.
                 CurrentCareer.Date = CurrentCareer.CampaignInfo.StartDate;
                 CurrentCareer.Experience = CurrentCareer.RankIndex * 1000;
+                                
+                // Generate the initial mission tempalte
+                generator.GenerateInitialMissionTempalte(CurrentCareer.CampaignInfo.InitialMissionTemplateFiles, out previousMissionTemplateFile);
             }
             else
             {
@@ -110,6 +118,8 @@ namespace IL2DCE
                 {
                     CurrentCareer.RankIndex += 1;
                 }
+
+                previousMissionTemplateFile = game.gpLoadSectionFile(CurrentCareer.MissionTemplateFileName);
             }
 
             string missionFolderSystemPath = this._careersFolderSystemPath + "\\" + CurrentCareer.PilotName;
@@ -125,7 +135,7 @@ namespace IL2DCE
             }
 
             // Preload mission file for path calculation.
-            game.gameInterface.MissionLoad(CurrentCareer.CampaignInfo.TemplateFilePath);
+            game.gameInterface.MissionLoad(CurrentCareer.CampaignInfo.StaticTemplateFiles[0]);
 
             ISectionFile careerFile = GamePlay.gpCreateSectionFile();
             string careerFileName = "$user/mission/IL2DCE/" + CurrentCareer.PilotName + "/Career.ini";
@@ -134,11 +144,9 @@ namespace IL2DCE
             string missionFileName = string.Format("$user/mission/IL2DCE/" + CurrentCareer.PilotName + "/{0}.mis", missionId);
             CurrentCareer.MissionFileName = missionFileName;
 
-            Generator generator = new Generator(this);
-
             // Generate the template for the next mission
             ISectionFile missionTemplateFile = null;
-            generator.GenerateMissionTemplate(CurrentCareer.CampaignInfo.StaticTemplateFilePath, CurrentCareer.CampaignInfo.TemplateFilePath, out missionTemplateFile);
+            generator.GenerateMissionTemplate(CurrentCareer.CampaignInfo.StaticTemplateFiles, previousMissionTemplateFile, out missionTemplateFile);
             missionTemplateFile.save(CurrentCareer.MissionTemplateFileName);
             
             // Generate the next mission based on the new template.
@@ -160,15 +168,8 @@ namespace IL2DCE
 
 
 #if DEBUG
-            if (!System.IO.Directory.Exists(this._debugFolderSystemPath))
-            {
-                System.IO.Directory.CreateDirectory(this._debugFolderSystemPath);
-            }
-            missionTemplateFile.save("$user/missions/IL2DCE/Debug/IL2DCEDebugTemplate.mis");
-            missionFile.save("$user/missions/IL2DCE/Debug/IL2DCEDebug.mis");
-            briefingFile.SaveTo(this._debugFolderSystemPath + "\\IL2DCEDebug.briefing");
-            System.IO.File.Copy(scriptSourceFileSystemPath, this._debugFolderSystemPath + "\\IL2DCEDebug.cs", true);
-#else
+            Config.Debug = 1;
+#endif
             if (Config.Debug == 1)
             {
                 if (!System.IO.Directory.Exists(this._debugFolderSystemPath))
@@ -177,10 +178,9 @@ namespace IL2DCE
                 }
                 missionTemplateFile.save("$user/missions/IL2DCE/Debug/IL2DCEDebugTemplate.mis");
                 missionFile.save("$user/missions/IL2DCE/Debug/IL2DCEDebug.mis");
-                briefingFile.save(this._debugFolderSystemPath + "\\IL2DCEDebug.briefing");
+                briefingFile.SaveTo(this._debugFolderSystemPath + "\\IL2DCEDebug.briefing");
                 System.IO.File.Copy(scriptSourceFileSystemPath, this._debugFolderSystemPath + "\\IL2DCEDebug.cs", true);
             }
-#endif
 
             CurrentCareer.WriteTo(careerFile);
             careerFile.save(careerFileName);

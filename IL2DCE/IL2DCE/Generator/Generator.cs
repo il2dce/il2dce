@@ -89,6 +89,62 @@ namespace IL2DCE
             _core = core;
         }
 
+        public void GenerateInitialMissionTempalte(IEnumerable<string> initialMissionTemplateFiles, out ISectionFile initialMissionTemplateFile)
+        {
+            initialMissionTemplateFile = null;
+           
+            foreach (string fileName in initialMissionTemplateFiles)
+            {
+                // Use the first template file to load the map.
+                initialMissionTemplateFile = GamePlay.gpLoadSectionFile(fileName);
+                break;
+            }
+
+            if (initialMissionTemplateFile != null)
+            {
+                // Delete everything from the template file.
+
+                if (initialMissionTemplateFile.exist("AirGroups"))
+                {
+                    // Delete all air groups from the template file.
+                    for (int i = 0; i < initialMissionTemplateFile.lines("AirGroups"); i++)
+                    {
+                        string key;
+                        string value;
+                        initialMissionTemplateFile.get("AirGroups", i, out key, out value);
+                        initialMissionTemplateFile.delete(key);
+                        initialMissionTemplateFile.delete(key + "_Way");
+                    }
+                    initialMissionTemplateFile.delete("AirGroups");
+                }
+
+                if (initialMissionTemplateFile.exist("Chiefs"))
+                {
+                    // Delete all ground groups from the template file.
+                    for (int i = 0; i < initialMissionTemplateFile.lines("Chiefs"); i++)
+                    {
+                        string key;
+                        string value;
+                        initialMissionTemplateFile.get("Chiefs", i, out key, out value);
+                        initialMissionTemplateFile.delete(key + "_Road");
+                    }
+                    initialMissionTemplateFile.delete("Chiefs");
+                }
+
+                MissionFile initialMission = new MissionFile(GamePlay, initialMissionTemplateFiles);
+
+                foreach(AirGroup airGroup in initialMission.AirGroups)
+                {
+                    airGroup.WriteTo(initialMissionTemplateFile, Config);
+                }
+                
+                foreach(GroundGroup groundGroup in initialMission.GroundGroups)
+                {
+                    groundGroup.WriteTo(initialMissionTemplateFile);
+                }
+            }
+        }
+
         /// <summary>
         /// Generates the next mission template based on the previous mission template. 
         /// </summary>
@@ -97,12 +153,12 @@ namespace IL2DCE
         /// <remarks>
         /// For now it has a simplified implementaiton. It only generated random supply ships and air groups.
         /// </remarks>
-        public void GenerateMissionTemplate(string staticTemplateFileName, string templateFileName, out ISectionFile missionTemplateFile)
+        public void GenerateMissionTemplate(IEnumerable<string> staticTemplateFiles, ISectionFile previousMissionTemplate, out ISectionFile missionTemplateFile)
         {
-            MissionFile staticTemplateFile = new MissionFile(GamePlay.gpLoadSectionFile(staticTemplateFileName));
+            MissionFile staticTemplateFile = new MissionFile(GamePlay, staticTemplateFiles);
 
-            // Use the campaign template to initialise the mission template.
-            missionTemplateFile = GamePlay.gpLoadSectionFile(templateFileName);
+            // Use the previous mission template to initialise the next mission template.
+            missionTemplateFile = previousMissionTemplate;
 
             // Remove the ground groups but keep the air groups.
             if (missionTemplateFile.exist("Chiefs"))

@@ -115,7 +115,7 @@ namespace IL2DCE
                 {
                     CampaignInfo campaignInfo = e.AddedItems[0] as CampaignInfo;
 
-                    MissionFile campaignTemplate = new MissionFile(Game.gpLoadSectionFile(campaignInfo.TemplateFilePath));
+                    MissionFile campaignTemplate = new MissionFile(Game, campaignInfo.InitialMissionTemplateFiles);
 
                     string description = "Available AirGroups:\n";
 
