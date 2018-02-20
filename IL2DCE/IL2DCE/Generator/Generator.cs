@@ -47,11 +47,18 @@ namespace IL2DCE
             set;
         }
 
-        private Random rand = new Random();
+        internal IRandom Random
+        {
+            get
+            {
+                return _core.Random;
+            }
+
+        }
         
         private Core _core;
 
-        private Core Core
+        internal Core Core
         {
             get
             {
@@ -148,7 +155,8 @@ namespace IL2DCE
         /// <summary>
         /// Generates the next mission template based on the previous mission template. 
         /// </summary>
-        /// <param name="staticTemplateFileName"></param>
+        /// <param name="staticTemplateFiles"></param>
+        /// <param name="previousMissionTemplate"></param>
         /// <param name="missionTemplateFile"></param>
         /// <remarks>
         /// For now it has a simplified implementaiton. It only generated random supply ships and air groups.
@@ -228,7 +236,7 @@ namespace IL2DCE
             }
         }
 
-        public void GenerateMission(string missionTemplateFileName, string missionId, out ISectionFile missionFile, out BriefingFile briefingFile)
+        public void GenerateMission(string environmentTemplateFile, string missionTemplateFileName, string missionId, out ISectionFile missionFile, out BriefingFile briefingFile)
         {
             MissionFile missionTemplateFile = new MissionFile(GamePlay.gpLoadSectionFile(missionTemplateFileName));
 
@@ -236,41 +244,18 @@ namespace IL2DCE
             GeneratorGroundOperation = new GeneratorGroundOperation(this, Career.CampaignInfo, missionTemplateFile, Core.GamePlay, Core.Config);
             GeneratorBriefing = new GeneratorBriefing(Core, this);
             
-            missionFile = GamePlay.gpLoadSectionFile(missionTemplateFileName);
+            // Load the environment template file for the generated mission.
+
+            missionFile = GamePlay.gpLoadSectionFile(environmentTemplateFile);
             briefingFile = new BriefingFile();
 
             briefingFile.MissionName = missionId;
             briefingFile.MissionDescription = "";
-
-            // Delete everything from the template file.
             
-            if (missionFile.exist("AirGroups"))
-            {
-                // Delete all air groups from the template file.
-                for (int i = 0; i < missionFile.lines("AirGroups"); i++)
-                {
-                    string key;
-                    string value;
-                    missionFile.get("AirGroups", i, out key, out value);
-                    missionFile.delete(key);
-                    missionFile.delete(key + "_Way");
-                }
-                missionFile.delete("AirGroups");
-            }
+            // Delete things from the template file.
 
-            if (missionFile.exist("Chiefs"))
-            {
-                // Delete all ground groups from the template file.
-                for (int i = 0; i < missionFile.lines("Chiefs"); i++)
-                {
-                    string key;
-                    string value;
-                    missionFile.get("Chiefs", i, out key, out value);
-                    missionFile.delete(key + "_Road");
-                }
-                missionFile.delete("Chiefs");
-            }
-
+            // It is not necessary to delete air groups and ground groups from the missionFile as it 
+            // is based on the environment template. If there is anything in it (air groups, ...) it is intentional.
             for (int i = 0; i < missionFile.lines("MAIN"); i++)
             {
                 // Delete player from the template file.
@@ -286,13 +271,13 @@ namespace IL2DCE
 
             // Add things to the template file.
 
-            int randomTime = rand.Next(5, 21);
+            int randomTime = Core.Random.Next(5, 21);
             missionFile.set("MAIN", "TIME", randomTime.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
 
-            int randomWeatherIndex = rand.Next(0, 3);
+            int randomWeatherIndex = Core.Random.Next(0, 3);
             missionFile.set("MAIN", "WeatherIndex", randomWeatherIndex.ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
 
-            int randomCloudsHeight = rand.Next(5, 15);
+            int randomCloudsHeight = Core.Random.Next(5, 15);
             missionFile.set("MAIN", "CloudsHeight", (randomCloudsHeight * 100).ToString(System.Globalization.CultureInfo.InvariantCulture.NumberFormat));
 
             string weatherString = "";
@@ -357,7 +342,7 @@ namespace IL2DCE
                 {
                     if (GeneratorAirOperation.AvailableAirGroups.Count > 0)
                     {
-                        int randomAirGroupIndex = rand.Next(GeneratorAirOperation.AvailableAirGroups.Count);
+                        int randomAirGroupIndex = Core.Random.Next(GeneratorAirOperation.AvailableAirGroups.Count);
                         AirGroup randomAirGroup = GeneratorAirOperation.AvailableAirGroups[randomAirGroupIndex];
                         GeneratorAirOperation.CreateRandomAirOperation(missionFile, briefingFile, randomAirGroup);
                     }
@@ -372,7 +357,7 @@ namespace IL2DCE
                 {
                     if (GeneratorGroundOperation.AvailableGroundGroups.Count > 0)
                     {
-                        int randomGroundGroupIndex = rand.Next(GeneratorGroundOperation.AvailableGroundGroups.Count);
+                        int randomGroundGroupIndex = Core.Random.Next(GeneratorGroundOperation.AvailableGroundGroups.Count);
                         GroundGroup randomGroundGroup = GeneratorGroundOperation.AvailableGroundGroups[randomGroundGroupIndex];
                         GeneratorGroundOperation.AvailableGroundGroups.Remove(randomGroundGroup);
 

@@ -39,6 +39,7 @@
     <Compile Include="Generator\GeneratorBriefing.cs" />
     <Compile Include="Generator\GeneratorAirOperation.cs" />
     <Compile Include="Generator\GeneratorGroundOperation.cs" />
+    <Compile Include="IRandom.cs" />
     <Compile Include="MissionObjectModel\AirGroup.cs" />
     <Compile Include="MissionObjectModel\AirGroupInfo.cs" />
     <Compile Include="MissionObjectModel\AirGroupWaypoint.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="MissionObjectModel\Stationary.cs" />
     <Compile Include="MissionObjectModel\Waterway.cs" />
     <Compile Include="MissionObjectModel\MissionFile.cs" />
+    <Compile Include="Random.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="core">

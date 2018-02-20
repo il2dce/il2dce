@@ -53,7 +53,13 @@ namespace IL2DCE
             set;
         }
 
-        private Random rand = new Random();
+        private IRandom Random
+        {
+            get
+            {
+                return Generator.Random;
+            }
+        }
 
         public IList<AirGroup> AvailableAirGroups = new List<AirGroup>();
         
@@ -77,13 +83,13 @@ namespace IL2DCE
         {
             if (missionParameters.MinAltitude != null && missionParameters.MinAltitude.HasValue && missionParameters.MaxAltitude != null && missionParameters.MaxAltitude.HasValue)
             {
-                return (double)rand.Next((int)missionParameters.MinAltitude.Value, (int)missionParameters.MaxAltitude.Value);
+                return (double)Random.Next((int)missionParameters.MinAltitude.Value, (int)missionParameters.MaxAltitude.Value);
             }
             else
             {
                 GamePlay.gpLogServer(new Player[] { GamePlay.gpPlayer() }, "No altitude defined for: " + missionParameters.LoadoutId + ". Using default altitude.", null);
                 // Use some default altitudes
-                return (double)rand.Next(300, 7000);
+                return (double)Random.Next(300, 7000);
             }
         }
 
@@ -160,7 +166,7 @@ namespace IL2DCE
 
         private string getRandomSkill(EMissionType missionType)
         {
-            int randomLevel = rand.Next(0, 5);
+            int randomLevel = Random.Next(0, 5);
 
             return getTweakedSkill(missionType, randomLevel);
         }
@@ -253,7 +259,7 @@ namespace IL2DCE
 
                 if (availableMissionTypes.Count > 0)
                 {
-                    int randomMissionTypeIndex = rand.Next(availableMissionTypes.Count);
+                    int randomMissionTypeIndex = Random.Next(availableMissionTypes.Count);
                     EMissionType randomMissionType = availableMissionTypes[randomMissionTypeIndex];
 
                     CreateAirOperation(sectionFile, briefingFile, airGroup, randomMissionType, true, null);
@@ -268,7 +274,7 @@ namespace IL2DCE
                 AvailableAirGroups.Remove(airGroup);
 
                 IList<AircraftParametersInfo> aircraftParametersInfos = CampaignInfo.GetAircraftInfo(airGroup.Class).GetAircraftParametersInfo(missionType);
-                int aircraftParametersInfoIndex = rand.Next(aircraftParametersInfos.Count);
+                int aircraftParametersInfoIndex = Random.Next(aircraftParametersInfos.Count);
                 AircraftParametersInfo randomAircraftParametersInfo = aircraftParametersInfos[aircraftParametersInfoIndex];
                 AircraftLoadoutInfo aircraftLoadoutInfo = CampaignInfo.GetAircraftInfo(airGroup.Class).GetAircraftLoadoutInfo(randomAircraftParametersInfo.LoadoutId);
                 airGroup.Weapons = aircraftLoadoutInfo.Weapons;
@@ -303,7 +309,7 @@ namespace IL2DCE
 
                         if (availableOffensiveMissionTypes.Count > 0)
                         {
-                            int offensiveMissionTypeIndex = rand.Next(availableOffensiveMissionTypes.Count);
+                            int offensiveMissionTypeIndex = Random.Next(availableOffensiveMissionTypes.Count);
                             EMissionType randomOffensiveMissionType = availableOffensiveMissionTypes[offensiveMissionTypeIndex];
                             CreateAirOperation(sectionFile, briefingFile, offensiveAirGroup, randomOffensiveMissionType, false, null);
 
@@ -351,7 +357,7 @@ namespace IL2DCE
                     IList<Stationary> radars = MissionTemplate.GetEnemyRadars(airGroup.ArmyIndex);
                     if (radars.Count > 0)
                     {
-                        int radarIndex = rand.Next(radars.Count);
+                        int radarIndex = Random.Next(radars.Count);
                         Stationary radar = radars[radarIndex];
                         double altitude = getRandomAltitude(randomAircraftParametersInfo);
 
@@ -398,7 +404,7 @@ namespace IL2DCE
 
                         if (availableEscortedMissionTypes.Count > 0)
                         {
-                            int escortedMissionTypeIndex = rand.Next(availableEscortedMissionTypes.Count);
+                            int escortedMissionTypeIndex = Random.Next(availableEscortedMissionTypes.Count);
                             EMissionType randomEscortedMissionType = availableEscortedMissionTypes[escortedMissionTypeIndex];
                             CreateAirOperation(sectionFile, briefingFile, escortedAirGroup, randomEscortedMissionType, true, airGroup);
 
@@ -422,7 +428,7 @@ namespace IL2DCE
 
                         if (availableOffensiveMissionTypes.Count > 0)
                         {
-                            int offensiveMissionTypeIndex = rand.Next(availableOffensiveMissionTypes.Count);
+                            int offensiveMissionTypeIndex = Random.Next(availableOffensiveMissionTypes.Count);
                             EMissionType randomOffensiveMissionType = availableOffensiveMissionTypes[offensiveMissionTypeIndex];
                             CreateAirOperation(sectionFile, briefingFile, interceptedAirGroup, randomOffensiveMissionType, false, null);
 
@@ -457,7 +463,7 @@ namespace IL2DCE
                     AvailableAirGroups.Remove(escortAirGroup);
 
                     IList<AircraftParametersInfo> escortAircraftParametersInfos = CampaignInfo.GetAircraftInfo(escortAirGroup.Class).GetAircraftParametersInfo(EMissionType.ESCORT);
-                    int escortAircraftParametersInfoIndex = rand.Next(escortAircraftParametersInfos.Count);
+                    int escortAircraftParametersInfoIndex = Random.Next(escortAircraftParametersInfos.Count);
                     AircraftParametersInfo escortRandomAircraftParametersInfo = escortAircraftParametersInfos[escortAircraftParametersInfoIndex];
                     AircraftLoadoutInfo escortAircraftLoadoutInfo = CampaignInfo.GetAircraftInfo(escortAirGroup.Class).GetAircraftLoadoutInfo(escortRandomAircraftParametersInfo.LoadoutId);
                     escortAirGroup.Weapons = escortAircraftLoadoutInfo.Weapons;
@@ -480,7 +486,7 @@ namespace IL2DCE
                             AvailableAirGroups.Remove(interceptAirGroup);
 
                             IList<AircraftParametersInfo> interceptAircraftParametersInfos = CampaignInfo.GetAircraftInfo(interceptAirGroup.Class).GetAircraftParametersInfo(EMissionType.INTERCEPT);
-                            int interceptAircraftParametersInfoIndex = rand.Next(interceptAircraftParametersInfos.Count);
+                            int interceptAircraftParametersInfoIndex = Random.Next(interceptAircraftParametersInfos.Count);
                             AircraftParametersInfo interceptRandomAircraftParametersInfo = interceptAircraftParametersInfos[interceptAircraftParametersInfoIndex];
                             AircraftLoadoutInfo interceptAircraftLoadoutInfo = CampaignInfo.GetAircraftInfo(interceptAirGroup.Class).GetAircraftLoadoutInfo(interceptRandomAircraftParametersInfo.LoadoutId);
                             interceptAirGroup.Weapons = interceptAircraftLoadoutInfo.Weapons;
@@ -527,7 +533,7 @@ namespace IL2DCE
 
             if (airGroups.Count > 0)
             {
-                int interceptedAirGroupIndex = rand.Next(airGroups.Count);
+                int interceptedAirGroupIndex = Random.Next(airGroups.Count);
                 AirGroup interceptedAirGroup = airGroups[interceptedAirGroupIndex];
 
                 return interceptedAirGroup;
@@ -563,7 +569,7 @@ namespace IL2DCE
             List<AirGroup> airGroups = getAvailableEscortedAirGroups(armyIndex);
             if (airGroups.Count > 0)
             {
-                int escortedAirGroupIndex = rand.Next(airGroups.Count);
+                int escortedAirGroupIndex = Random.Next(airGroups.Count);
                 AirGroup escortedAirGroup = airGroups[escortedAirGroupIndex];
 
                 return escortedAirGroup;
@@ -590,7 +596,7 @@ namespace IL2DCE
 
             if (airGroups.Count > 0)
             {
-                int escortAirGroupIndex = rand.Next(airGroups.Count);
+                int escortAirGroupIndex = Random.Next(airGroups.Count);
                 AirGroup escortAirGroup = airGroups[escortAirGroupIndex];
 
                 return escortAirGroup;
@@ -617,7 +623,7 @@ namespace IL2DCE
 
             if (airGroups.Count > 0)
             {
-                int interceptAirGroupIndex = rand.Next(airGroups.Count);
+                int interceptAirGroupIndex = Random.Next(airGroups.Count);
                 AirGroup interceptAirGroup = airGroups[interceptAirGroupIndex];
 
                 return interceptAirGroup;

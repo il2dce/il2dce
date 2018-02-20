@@ -53,8 +53,11 @@ section
 setOutPath "$INSTDIR\parts\IL2DCE\Campaigns\Kanalkampf"
 
 file "parts\IL2DCE\Campaigns\Kanalkampf\CampaignInfo.ini"
-file "parts\IL2DCE\Campaigns\Kanalkampf\Template.cs"
-file "parts\IL2DCE\Campaigns\Kanalkampf\Template.mis"
+file "parts\IL2DCE\Campaigns\Kanalkampf\LW_OrderOfBattle_August1940.mis"
+file "parts\IL2DCE\Campaigns\Kanalkampf\MissionSingle.cs"
+file "parts\IL2DCE\Campaigns\Kanalkampf\RAF_OrderOfBattle_August1940.mis"
+file "parts\IL2DCE\Campaigns\Kanalkampf\StaticTemplate.mis"
+file "parts\IL2DCE\Campaigns\Kanalkampf\Summer1940.mis"
 
 sectionEnd
 
@@ -66,8 +69,11 @@ delete "$INSTDIR\uninst.exe"
 delete "$INSTDIR\..\..\AddIns\IL2DCE.GameSingle.xml"
 
 delete "$INSTDIR\Campaigns\Kanalkampf\CampaignInfo.ini"
-delete "$INSTDIR\Campaigns\Kanalkampf\Template.cs"
-delete "$INSTDIR\Campaigns\Kanalkampf\Template.mis"
+delete "$INSTDIR\Campaigns\Kanalkampf\LW_OrderOfBattle_August1940.mis"
+delete "$INSTDIR\Campaigns\Kanalkampf\MissionSingle.cs"
+delete "$INSTDIR\Campaigns\Kanalkampf\RAF_OrderOfBattle_August1940.mis"
+delete "$INSTDIR\Campaigns\Kanalkampf\StaticTemplate.mis"
+delete "$INSTDIR\Campaigns\Kanalkampf\Summer1940.mis"
 RMDir "$INSTDIR\Campaigns\Kanalkampf"
 
 delete "$INSTDIR\Campaigns\AircraftInfo.ini"

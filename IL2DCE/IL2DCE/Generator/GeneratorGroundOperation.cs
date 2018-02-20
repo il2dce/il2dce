@@ -29,7 +29,13 @@ namespace IL2DCE
             set;
         }
 
-        private Random rand = new Random();
+        private IRandom Random
+        {
+            get
+            {
+                return Generator.Random;
+            }
+        }
 
         public IList<GroundGroup> AvailableGroundGroups = new List<GroundGroup>();
         
@@ -179,7 +185,7 @@ namespace IL2DCE
             if (groundGroup.Type == EGroundGroupType.Ship)
             {
                 // Ships already have the correct waypoint from the mission template. Only remove some waypoints to make the position more random.
-                groundGroup.Waypoints.RemoveRange(0, rand.Next(0, groundGroup.Waypoints.Count));
+                groundGroup.Waypoints.RemoveRange(0, Random.Next(0, groundGroup.Waypoints.Count));
                 
                 groundGroup.WriteTo(missionFile);
 
@@ -187,7 +193,7 @@ namespace IL2DCE
             }
             else if(groundGroup.Type == EGroundGroupType.Train)
             {
-                groundGroup.Waypoints.RemoveRange(0, rand.Next(0, groundGroup.Waypoints.Count));
+                groundGroup.Waypoints.RemoveRange(0, Random.Next(0, groundGroup.Waypoints.Count));
 
                 groundGroup.WriteTo(missionFile);
             }
@@ -375,7 +381,7 @@ namespace IL2DCE
             List<GroundGroup> groundGroups = getAvailableEnemyGroundGroups(armyIndex);
             if (groundGroups.Count > 0)
             {
-                int groundGroupIndex = rand.Next(groundGroups.Count);
+                int groundGroupIndex = Random.Next(groundGroups.Count);
                 GroundGroup targetGroundGroup = groundGroups[groundGroupIndex];
 
                 return targetGroundGroup;
@@ -391,7 +397,7 @@ namespace IL2DCE
             List<GroundGroup> groundGroups = getAvailableEnemyGroundGroups(armyIndex, groundGroupTypes);
             if (groundGroups.Count > 0)
             {
-                int groundGroupIndex = rand.Next(groundGroups.Count);
+                int groundGroupIndex = Random.Next(groundGroups.Count);
                 GroundGroup targetGroundGroup = groundGroups[groundGroupIndex];
 
                 return targetGroundGroup;
@@ -407,7 +413,7 @@ namespace IL2DCE
             List<GroundGroup> groundGroups = getAvailableFriendlyGroundGroups(armyIndex);
             if (groundGroups.Count > 0)
             {
-                int groundGroupIndex = rand.Next(groundGroups.Count);
+                int groundGroupIndex = Random.Next(groundGroups.Count);
                 GroundGroup targetGroundGroup = groundGroups[groundGroupIndex];
 
                 return targetGroundGroup;
@@ -423,7 +429,7 @@ namespace IL2DCE
             List<GroundGroup> groundGroups = getAvailableFriendlyGroundGroups(armyIndex, groundGroupTypes);
             if (groundGroups.Count > 0)
             {
-                int groundGroupIndex = rand.Next(groundGroups.Count);
+                int groundGroupIndex = Random.Next(groundGroups.Count);
                 GroundGroup targetGroundGroup = groundGroups[groundGroupIndex];
 
                 return targetGroundGroup;

@@ -24,8 +24,16 @@ namespace IL2DCE
     public class Core
     {
         public Core(IGame game)
+            : this(game, new Random())
+        {
+
+        }
+
+        public Core(IGame game, IRandom random)
         {
             _gamePlay = game;
+            _random = random;
+
             
             ISectionFile confFile = game.gameInterface.SectionFileLoad("$home/parts/IL2DCE/conf.ini");
             _config = new Config(confFile);
@@ -153,7 +161,7 @@ namespace IL2DCE
 
             ISectionFile missionFile = null;
             BriefingFile briefingFile = null;
-            generator.GenerateMission(CurrentCareer.MissionTemplateFileName, missionId, out missionFile, out briefingFile);
+            generator.GenerateMission(CurrentCareer.CampaignInfo.EnvironmentTemplateFile, CurrentCareer.MissionTemplateFileName, missionId, out missionFile, out briefingFile);
 
             string briefingFileSystemPath = string.Format(this._careersFolderSystemPath + "\\" + CurrentCareer.PilotName + "\\{0}.briefing", missionId);
             string scriptSourceFileSystemPath = this._campaignsFolderSystemPath + "\\" + CurrentCareer.CampaignInfo.Id + "\\" + CurrentCareer.CampaignInfo.ScriptFileName;
@@ -265,6 +273,14 @@ namespace IL2DCE
             }
         }
 
+        public IRandom Random
+        {
+            get
+            {
+                return _random;
+            }
+        }
+
         private string _careersFolderSystemPath;
         private string _campaignsFolderSystemPath;
         private string _debugFolderSystemPath;
@@ -273,5 +289,6 @@ namespace IL2DCE
         private IList<Career> _availableCareers = new List<Career>();
         private IList<CampaignInfo> _campaigns = new List<CampaignInfo>();
         private IGamePlay _gamePlay;
+        private IRandom _random;
     }
 }

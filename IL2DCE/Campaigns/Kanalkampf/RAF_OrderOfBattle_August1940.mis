@@ -1,0 +1,287 @@
+﻿[PARTS]
+  core.100
+  bob.100
+[MAIN]
+  MAP Land$English_Channel_1940
+  BattleArea 150000 100000 100000 150000 1000
+  TIME 12.0000002905726
+  WeatherIndex 0
+  CloudsHeight 1000
+  BreezeActivity 10
+  ThermalActivity 10
+[GlobalWind_0]
+  Power 3.000 0.000 0.000
+  BottomBound 0.00
+  TopBound 1500.00
+  GustPower 0
+  GustAngle 45
+[splines]
+[AirGroups]
+  BoB_RAF_F_32Sqn_Late.01
+  BoB_RAF_F_501Sqn_Late.01
+  BoB_RAF_F_610Sqn_Late.01
+  BoB_RAF_F_600Sqn_Late.01
+  BoB_RAF_F_56Sqn_Late.01
+  BoB_RAF_F_151Sqn_Late.01
+  BoB_RAF_F_64Sqn_Late.02
+  BoB_RAF_F_615Sqn_Late.01
+  BoB_RAF_F_111Sqn_Late.02
+  BoB_RAF_F_1_RCAF_Late.01
+  BoB_RAF_F_65Sqn_Late.02
+  BoB_RAF_F_74Sqn_Late.01
+  BoB_RAF_F_54Sqn_Late.02
+  BoB_RAF_F_41Sqn_Late.01
+  BoB_RAF_F_43Sqn_Late.02
+  BoB_RAF_F_601Sqn_Late.01
+  BoB_RAF_F_145Sqn_Late.02
+  BoB_RAF_F_1Sqn_Late.01
+  BoB_RAF_F_257Sqn_Late.02
+  BoB_RAF_F_303_PL_Late.01
+  BoB_RAF_F_604Sqn_Late.01
+  BoB_RAF_F_609Sqn_Late.01
+  BoB_RAF_F_238Sqn_Late.01
+  BoB_RAF_F_264Sqn_Late.01
+[BoB_RAF_F_32Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 26
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_32Sqn_Late.01_Way]
+  TAKEOFF 155398.50 253707.00 500.00 0.0
+[BoB_RAF_F_501Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 30
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_501Sqn_Late.01_Way]
+  TAKEOFF 180397.14 264784.19 500.00 0.0
+[BoB_RAF_F_610Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.SpitfireMkIa_100oct
+  Formation FINGERFOUR
+  CallSign 28
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_610Sqn_Late.01_Way]
+  TAKEOFF 155345.87 253986.09 500.00 0.0
+[BoB_RAF_F_600Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.BlenheimMkIVF
+  Formation FINGERFOUR
+  CallSign 20
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_600Sqn_Late.01_Way]
+  TAKEOFF 248313.87 259053.08 500.00 0.0
+[BoB_RAF_F_56Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 7
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_56Sqn_Late.01_Way]
+  TAKEOFF 162632.67 297560.03 500.00 0.0
+[BoB_RAF_F_151Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 20
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_151Sqn_Late.01_Way]
+  TAKEOFF 162737.28 297766.80 500.00 0.0
+[BoB_RAF_F_64Sqn_Late.02]
+  Flight1  11
+  Class Aircraft.SpitfireMkIa_100oct
+  Formation FINGERFOUR
+  CallSign 33
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_64Sqn_Late.02_Way]
+  TAKEOFF 146529.49 251166.22 500.00 0.0
+[BoB_RAF_F_615Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 16
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_615Sqn_Late.01_Way]
+  TAKEOFF 146831.40 251104.82 500.00 0.0
+[BoB_RAF_F_111Sqn_Late.02]
+  Flight1  11
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 16
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_111Sqn_Late.02_Way]
+  TAKEOFF 144192.26 256366.38 500.00 0.0
+[BoB_RAF_F_1_RCAF_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 10
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_1_RCAF_Late.01_Way]
+  TAKEOFF 144148.61 256544.70 500.00 0.0
+[BoB_RAF_F_65Sqn_Late.02]
+  Flight1  11
+  Class Aircraft.SpitfireMkIa_100oct
+  Formation FINGERFOUR
+  CallSign 10
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_65Sqn_Late.02_Way]
+  TAKEOFF 166692.94 277805.06 500.00 0.0
+[BoB_RAF_F_74Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.SpitfireMkIa_100oct
+  Formation FINGERFOUR
+  CallSign 17
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_74Sqn_Late.01_Way]
+  TAKEOFF 166556.10 277374.75 500.00 0.0
+[BoB_RAF_F_54Sqn_Late.02]
+  Flight1  11
+  Class Aircraft.SpitfireMkIa_100oct
+  Formation FINGERFOUR
+  CallSign 23
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_54Sqn_Late.02_Way]
+  TAKEOFF 167121.59 277463.11 500.00 0.0
+[BoB_RAF_F_41Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.SpitfireMkIa_100oct
+  Formation FINGERFOUR
+  CallSign 17
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_41Sqn_Late.01_Way]
+  TAKEOFF 167146.05 278010.92 500.00 0.0
+[BoB_RAF_F_43Sqn_Late.02]
+  Flight1  11
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 17
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_43Sqn_Late.02_Way]
+  TAKEOFF 104491.56 199455.16 500.00 0.0
+[BoB_RAF_F_601Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 1
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_601Sqn_Late.01_Way]
+  TAKEOFF 104678.71 199525.34 500.00 0.0
+[BoB_RAF_F_145Sqn_Late.02]
+  Flight1  11
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 31
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_145Sqn_Late.02_Way]
+  TAKEOFF 101440.58 199889.32 500.00 0.0
+[BoB_RAF_F_1Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 31
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_1Sqn_Late.01_Way]
+  TAKEOFF 123353.50 278088.66 500.00 0.0
+[BoB_RAF_F_257Sqn_Late.02]
+  Flight1  11
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 25
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_257Sqn_Late.02_Way]
+  TAKEOFF 123245.86 278335.60 500.00 0.0
+[BoB_RAF_F_303_PL_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 11
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_303_PL_Late.01_Way]
+  TAKEOFF 123442.41 278309.74 500.00 0.0
+[BoB_RAF_F_604Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.BlenheimMkIVF
+  Formation FINGERFOUR
+  CallSign 31
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_604Sqn_Late.01_Way]
+  TAKEOFF 45821.71 238949.70 500.00 0.0
+[BoB_RAF_F_609Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.SpitfireMkIa_100oct
+  Formation FINGERFOUR
+  CallSign 1
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_609Sqn_Late.01_Way]
+  TAKEOFF 46171.02 239141.84 500.00 0.0
+[BoB_RAF_F_238Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 19
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_238Sqn_Late.01_Way]
+  TAKEOFF 46213.44 238795.20 500.00 0.0
+[BoB_RAF_F_264Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.DefiantMkI
+  Formation FINGERFOUR
+  CallSign 26
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_264Sqn_Late.01_Way]
+  TAKEOFF 166803.80 278023.50 500.00 0.0
+[CustomChiefs]
+[Stationary]
+[Buildings]
+[BuildingsLinks]

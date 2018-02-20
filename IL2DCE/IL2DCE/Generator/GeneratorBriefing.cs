@@ -43,7 +43,13 @@ namespace IL2DCE
 
 
 
-        private Random rand = new Random();
+        private IRandom Random
+        {
+            get
+            {
+                return Core.Random;
+            }
+        }
         
         public void CreateBriefing(BriefingFile briefingFile, AirGroup airGroup, EMissionType missionType, AirGroup escortAirGroup)
         {

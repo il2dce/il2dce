@@ -47,41 +47,55 @@ namespace IL2DCE
             {
                 name = campaignFile.get("Main", "name");
             }
+            else
+            {
+                throw new FormatException("name");
+            }
+
+            if (campaignFile.exist("Main", "environmentTemplate"))
+            {
+                _environmentTemplateFile = campaignFolderPath + campaignFile.get("Main", "environmentTemplate").Trim();
+            }
+            else
+            {
+                throw new FormatException("environmentTemplate");
+            }
 
             if (campaignFile.exist("Main", "staticTemplate"))
             {
-                var staticTemplates = campaignFile.get("Main", "staticTemplate").Split(new char[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries);
+                var staticTemplates = campaignFile.get("Main", "staticTemplate").Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
 
                 foreach (string staticTemplate in staticTemplates)
                 {
                     StaticTemplateFiles.Add(campaignFolderPath + staticTemplate.Trim());
-                }
-
-
-                if(StaticTemplateFiles.Count < 1)
-                {
-                    throw new FormatException("staticTemplate");
-                }                
+                }           
+            }
+            if (StaticTemplateFiles.Count < 1)
+            {
+                throw new FormatException("staticTemplate");
             }
 
             if (campaignFile.exist("Main", "initialTemplate"))
             {
-                var initialTemplates = campaignFile.get("Main", "initialTemplate").Split(new char[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries);
+                var initialTemplates = campaignFile.get("Main", "initialTemplate").Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
 
                 foreach (string initialTemplate in initialTemplates)
                 {
                     InitialMissionTemplateFiles.Add(campaignFolderPath + initialTemplate.Trim());
                 }
-                
-                if(InitialMissionTemplateFiles.Count < 1)
-                {
-                    throw new FormatException("initialTemplate");
-                }
+            }
+            if (InitialMissionTemplateFiles.Count < 1)
+            {
+                throw new FormatException("initialTemplate");
             }
 
             if (campaignFile.exist("Main", "scriptFile"))
             {
                 _scriptFileName = campaignFile.get("Main", "scriptFile");
+            }
+            else
+            {
+                throw new FormatException("scriptFile");
             }
 
             if (campaignFile.exist("Main", "startDate"))
@@ -89,11 +103,19 @@ namespace IL2DCE
                 string startDateString = campaignFile.get("Main", "startDate");
                 _startDate = DateTime.Parse(startDateString);
             }
+            else
+            {
+                throw new FormatException("startDate");
+            }
 
             if (campaignFile.exist("Main", "endDate"))
             {
                 string endDateString = campaignFile.get("Main", "endDate");
                 _endDate = DateTime.Parse(endDateString);
+            }
+            else
+            {
+                throw new FormatException("endDate");
             }
         }
 
@@ -131,16 +153,28 @@ namespace IL2DCE
         string name;
 
         /// <summary>
+        /// The environment template file that contains the definition of scenery objects.
+        /// </summary>
+        public string EnvironmentTemplateFile
+        {
+            get
+            {
+                return _environmentTemplateFile;
+            }
+        }
+        string _environmentTemplateFile;
+
+        /// <summary>
         /// The list of static tempalte files that contain the definiton of the supply routes.
         /// </summary>
         public List<string> StaticTemplateFiles
         {
             get
             {
-                return staticTemplateFiles;
+                return _staticTemplateFiles;
             }
         }
-        private List<string> staticTemplateFiles = new List<string>();
+        private List<string> _staticTemplateFiles = new List<string>();
 
         /// <summary>
         /// The list of initial mission template files that contain the starting location of air and ground groups.
@@ -149,10 +183,10 @@ namespace IL2DCE
         {
             get
             {
-                return initialMissionTemplateFiles;
+                return _initialMissionTemplateFiles;
             }
         }
-        private List<string> initialMissionTemplateFiles = new List<string>();
+        private List<string> _initialMissionTemplateFiles = new List<string>();
 
         /// <summary>
         /// The name of the script file that will be used in the generated missions.
