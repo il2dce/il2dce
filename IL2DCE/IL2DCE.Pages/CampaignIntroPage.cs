@@ -65,7 +65,13 @@ namespace IL2DCE
                         && airGroup.AirGroupInfo.AirForceIndex == Game.Core.CurrentCareer.AirForceIndex && Game.Core.CurrentCareer.CampaignInfo.GetAircraftInfo(airGroup.Class).IsFlyable)
                     {
                         System.Windows.Controls.ComboBoxItem itemAirGroup = new System.Windows.Controls.ComboBoxItem();
-                        itemAirGroup.Content = airGroup.ToString() + "(" + Game.Core.CurrentCareer.CampaignInfo.GetAircraftInfo(airGroup.Class).Aircraft.Remove(0, 9) + ")";
+
+                        itemAirGroup.Content = airGroup.ToString() + " (" + Game.Core.CurrentCareer.CampaignInfo.GetAircraftInfo(airGroup.Class).Aircraft.Remove(0, 9) + ")";
+                        if (airGroup.Airstart == true)
+                        {
+                            itemAirGroup.Content += " [AIRSTART]";
+                        }
+
                         itemAirGroup.Tag = airGroup;
                         FrameworkElement.comboBoxSelectAirGroup.Items.Add(itemAirGroup);
                     }

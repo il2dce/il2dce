@@ -184,16 +184,16 @@ namespace IL2DCE
 
             if (groundGroup.Type == EGroundGroupType.Ship)
             {
-                // Ships already have the correct waypoint from the mission template. Only remove some waypoints to make the position more random.
-                groundGroup.Waypoints.RemoveRange(0, Random.Next(0, groundGroup.Waypoints.Count));
+                // Ships already have the correct waypoint from the mission template. Only remove some waypoints to make the position more random, but leave at least 2 waypoints.
+                groundGroup.Waypoints.RemoveRange(0, Random.Next(0, groundGroup.Waypoints.Count-1));
                 
                 groundGroup.WriteTo(missionFile);
 
-                //generateColumnFormation(missionFile, groundGroup, 3);
+                generateColumnFormation(missionFile, groundGroup, 3);
             }
             else if(groundGroup.Type == EGroundGroupType.Train)
             {
-                groundGroup.Waypoints.RemoveRange(0, Random.Next(0, groundGroup.Waypoints.Count));
+                groundGroup.Waypoints.RemoveRange(0, Random.Next(0, groundGroup.Waypoints.Count-1));
 
                 groundGroup.WriteTo(missionFile);
             }
@@ -256,11 +256,11 @@ namespace IL2DCE
             }
         }
 
-        private static void generateColumnFormation(ISectionFile missionFile, GroundGroup groundGroup, int unitCount)
+        private static void generateColumnFormation(ISectionFile missionFile, GroundGroup groundGroup, int columnSize)
         {
             string groundGroupId = groundGroup.Id;
 
-            for (int i = 1; i < 3; i++)
+            for (int i = 1; i < columnSize; i++)
             {
                 double xOffset = -1.0;
                 double yOffset = -1.0;
