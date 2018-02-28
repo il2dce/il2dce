@@ -39,7 +39,7 @@ namespace IL2DCE
 
     public class GroundGroup
     {
-        public GroundGroup(string id, string @class, EGroundGroupCountry country, string options, List<GroundGroupWaypoint> waypoints = null)
+        public GroundGroup(string id, string @class, EGroundGroupCountry country, string options, List<GroundGroupWaypoint> waypoints)
         {
             _id = id;
 
@@ -47,11 +47,7 @@ namespace IL2DCE
             Country = country;
             Options = options;
 
-            if(waypoints != null && waypoints.Count > 0)
-            {
-                // Copy the items in list, not the list itself.
-                Waypoints.AddRange(waypoints);                
-            }
+            Waypoints.AddRange(waypoints);
         }
 
         public GroundGroup(ISectionFile sectionFile, string id)
@@ -136,18 +132,11 @@ namespace IL2DCE
             }
         }
 
-        public Point2d? Position
+        public Point2d Position
         {
             get
             {
-                if(Waypoints.Count > 0)
-                {
-                    return new Point2d(Waypoints[0].X, Waypoints[0].Y);
-                }
-                else
-                {
-                    return null;
-                }
+                return new Point2d(Waypoints[0].X, Waypoints[0].Y);
             }
         }
 

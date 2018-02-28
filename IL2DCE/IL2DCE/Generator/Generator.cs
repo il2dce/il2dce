@@ -359,8 +359,6 @@ namespace IL2DCE
                     {
                         int randomGroundGroupIndex = Core.Random.Next(GeneratorGroundOperation.AvailableGroundGroups.Count);
                         GroundGroup randomGroundGroup = GeneratorGroundOperation.AvailableGroundGroups[randomGroundGroupIndex];
-                        GeneratorGroundOperation.AvailableGroundGroups.Remove(randomGroundGroup);
-
                         GeneratorGroundOperation.CreateRandomGroundOperation(missionFile, randomGroundGroup);
                     }
                 }

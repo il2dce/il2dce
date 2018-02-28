@@ -57,6 +57,56 @@ namespace IL2DCE
             set;
 
         }
+        
+        public GroundGroup getRandomTargetBasedOnRange(List<GroundGroup> availableGroundGroups, AirGroup offensiveAirGroup)
+        {
+            GroundGroup selectedGroundGroup = null;
+
+            if (availableGroundGroups.Count > 1)
+            {
+                availableGroundGroups.Sort(new DistanceComparer(offensiveAirGroup.Position));
+
+                Point2d position = new Point2d(offensiveAirGroup.Position.x, offensiveAirGroup.Position.y);
+
+                // TODO: Use range of the aircraft instead of the maxDistance.
+                // Problem is that range depends on loadout, so depending on loadout different targets would be available.
+
+                Point2d last = availableGroundGroups[availableGroundGroups.Count - 1].Position;
+                double maxDistance = last.distance(ref position);
+
+                List<KeyValuePair<GroundGroup, int>> elements = new List<KeyValuePair<GroundGroup, int>>();
+
+                int previousWeight = 0;
+
+                foreach (GroundGroup groundGroup in availableGroundGroups)
+                {
+                    double distance = groundGroup.Position.distance(ref position);
+                    int weight = Convert.ToInt32(Math.Ceiling(maxDistance - distance));
+                    int cumulativeWeight = previousWeight + weight;
+                    elements.Add(new KeyValuePair<GroundGroup, int>(groundGroup, cumulativeWeight));
+
+                    previousWeight = cumulativeWeight;
+                }
+
+                int diceRoll = Random.Next(0, previousWeight);
+                int cumulative = 0;
+                for (int i = 0; i < elements.Count; i++)
+                {
+                    cumulative += elements[i].Value;
+                    if (diceRoll <= cumulative)
+                    {
+                        selectedGroundGroup = elements[i].Key;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                selectedGroundGroup = availableGroundGroups[0];
+            }
+
+            return selectedGroundGroup;
+        }
 
         public GeneratorGroundOperation(Generator generator, CampaignInfo campaignInfo, MissionFile missionTemplate, IGamePlay gamePlay, Config config)
         {
@@ -392,13 +442,45 @@ namespace IL2DCE
             }
         }
 
-        public GroundGroup getAvailableRandomEnemyGroundGroup(int armyIndex, List<EGroundGroupType> groundGroupTypes)
+        public GroundGroup getAvailableRandomEnemyGroundGroup(AirGroup airGroup, EMissionType missionType)
         {
-            List<GroundGroup> groundGroups = getAvailableEnemyGroundGroups(armyIndex, groundGroupTypes);
+            if(missionType == EMissionType.ARMED_MARITIME_RECON || missionType == EMissionType.MARITIME_RECON
+                || missionType == EMissionType.ATTACK_SHIP)
+            {
+                return getAvailableRandomEnemyGroundGroup(airGroup, new List<EGroundGroupType> { EGroundGroupType.Ship });
+            }
+            else if(missionType == EMissionType.ARMED_RECON || missionType == EMissionType.RECON)
+            {
+                return getAvailableRandomEnemyGroundGroup(airGroup, new List<EGroundGroupType> { EGroundGroupType.Armor, EGroundGroupType.Train, EGroundGroupType.Vehicle });
+            }
+            else if(missionType == EMissionType.ATTACK_ARMOR)
+            {
+                return getAvailableRandomEnemyGroundGroup(airGroup, new List<EGroundGroupType> { EGroundGroupType.Armor });
+            }
+            else if (missionType == EMissionType.ATTACK_VEHICLE)
+            {
+                return getAvailableRandomEnemyGroundGroup(airGroup, new List<EGroundGroupType> { EGroundGroupType.Vehicle });
+            }
+            else if (missionType == EMissionType.ATTACK_TRAIN)
+            {
+                return getAvailableRandomEnemyGroundGroup(airGroup, new List<EGroundGroupType> { EGroundGroupType.Train });
+            }
+            else
+            {
+                throw new NotImplementedException(missionType.ToString());
+            }
+        }
+
+
+        public GroundGroup getAvailableRandomEnemyGroundGroup(AirGroup airGroup, List<EGroundGroupType> groundGroupTypes)
+        {
+            List<GroundGroup> groundGroups = getAvailableEnemyGroundGroups(airGroup.ArmyIndex, groundGroupTypes);
             if (groundGroups.Count > 0)
             {
-                int groundGroupIndex = Random.Next(groundGroups.Count);
-                GroundGroup targetGroundGroup = groundGroups[groundGroupIndex];
+                //int groundGroupIndex = Random.Next(groundGroups.Count);
+                //GroundGroup targetGroundGroup = groundGroups[groundGroupIndex];
+
+                GroundGroup targetGroundGroup = getRandomTargetBasedOnRange(groundGroups, airGroup);
 
                 return targetGroundGroup;
             }
@@ -408,13 +490,15 @@ namespace IL2DCE
             }
         }
 
-        public GroundGroup getAvailableRandomFriendlyGroundGroup(int armyIndex)
+        public GroundGroup getAvailableRandomFriendlyGroundGroup(AirGroup airGroup)
         {
-            List<GroundGroup> groundGroups = getAvailableFriendlyGroundGroups(armyIndex);
+            List<GroundGroup> groundGroups = getAvailableFriendlyGroundGroups(airGroup.ArmyIndex);
             if (groundGroups.Count > 0)
             {
-                int groundGroupIndex = Random.Next(groundGroups.Count);
-                GroundGroup targetGroundGroup = groundGroups[groundGroupIndex];
+                //int groundGroupIndex = Random.Next(groundGroups.Count);
+                //GroundGroup targetGroundGroup = groundGroups[groundGroupIndex];
+
+                GroundGroup targetGroundGroup = getRandomTargetBasedOnRange(groundGroups, airGroup);
 
                 return targetGroundGroup;
             }
@@ -424,13 +508,15 @@ namespace IL2DCE
             }
         }
 
-        public GroundGroup getAvailableRandomFriendlyGroundGroup(int armyIndex, List<EGroundGroupType> groundGroupTypes)
+        public GroundGroup getAvailableRandomFriendlyGroundGroup(AirGroup airGroup, List<EGroundGroupType> groundGroupTypes)
         {
-            List<GroundGroup> groundGroups = getAvailableFriendlyGroundGroups(armyIndex, groundGroupTypes);
+            List<GroundGroup> groundGroups = getAvailableFriendlyGroundGroups(airGroup.ArmyIndex, groundGroupTypes);
             if (groundGroups.Count > 0)
             {
-                int groundGroupIndex = Random.Next(groundGroups.Count);
-                GroundGroup targetGroundGroup = groundGroups[groundGroupIndex];
+                //int groundGroupIndex = Random.Next(groundGroups.Count);
+                //GroundGroup targetGroundGroup = groundGroups[groundGroupIndex];
+
+                GroundGroup targetGroundGroup = getRandomTargetBasedOnRange(groundGroups, airGroup);
 
                 return targetGroundGroup;
             }

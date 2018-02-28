@@ -37,7 +37,7 @@ namespace IL2DCE
         ATTACK_VEHICLE,
         ATTACK_TRAIN,
         //ATTACK_ARTILLERY,
-        ATTACK_RADAR,
+        //ATTACK_RADAR,
         ATTACK_SHIP,
 
         INTERCEPT,
