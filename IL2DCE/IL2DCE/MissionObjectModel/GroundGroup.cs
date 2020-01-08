@@ -22,13 +22,6 @@ using maddox.GP;
 
 namespace IL2DCE
 {
-    public enum EGroundGroupCountry
-    {
-        nn,
-        gb,
-        de,
-    }
-
     public enum EGroundGroupType
     {
         Vehicle,
@@ -39,7 +32,7 @@ namespace IL2DCE
 
     public class GroundGroup
     {
-        public GroundGroup(string id, string @class, EGroundGroupCountry country, string options, List<GroundGroupWaypoint> waypoints)
+        public GroundGroup(string id, string @class, ECountry country, string options, List<GroundGroupWaypoint> waypoints)
         {
             _id = id;
 
@@ -61,7 +54,7 @@ namespace IL2DCE
             value = value.Remove(0, Class.Length + 1);
 
             // Army
-            Country = (EGroundGroupCountry)Enum.Parse(typeof(EGroundGroupCountry), value.Substring(0, 2));
+            Country = (ECountry)Enum.Parse(typeof(ECountry), value.Substring(0, 2));
             value = value.Remove(0, 2);
 
             // Options
@@ -158,7 +151,7 @@ namespace IL2DCE
             set;
         }
 
-        public EGroundGroupCountry Country
+        public ECountry Country
         {
             get;
             set;
@@ -168,11 +161,11 @@ namespace IL2DCE
         {
             get
             {
-                if (Country == EGroundGroupCountry.gb)
+                if (Country == ECountry.gb)
                 {
                     return 1;
                 }
-                else if (Country == EGroundGroupCountry.de)
+                else if (Country == ECountry.de)
                 {
                     return 2;
                 }

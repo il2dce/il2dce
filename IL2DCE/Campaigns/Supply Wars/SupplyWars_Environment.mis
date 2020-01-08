@@ -1,0 +1,25 @@
+﻿[PARTS]
+  core.100
+  bob.100
+[MAIN]
+  MAP Land$English_Channel_1940
+  BattleArea 170000 135000 150000 150000 10000
+  TIME 12.0000002905726
+  WeatherIndex 0
+  CloudsHeight 1000
+  BreezeActivity 10
+  ThermalActivity 10
+[GlobalWind_0]
+  Power 3.000 0.000 0.000
+  BottomBound 0.00
+  TopBound 1500.00
+  GustPower 0
+  GustAngle 45
+[splines]
+[AirGroups]
+[CustomChiefs]
+[Chiefs]
+[Stationary]
+[Buildings]
+[BuildingsLinks]
+[FrontMarker]

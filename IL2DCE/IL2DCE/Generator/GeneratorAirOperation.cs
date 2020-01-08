@@ -413,18 +413,23 @@ namespace IL2DCE
 
                     airGroup.Recon(groundGroup, altitude, escortAirGroup);
                 }
-                //else if (missionType == EMissionType.ATTACK_RADAR)
-                //{
-                //    IList<Stationary> radars = MissionTemplate.GetEnemyRadars(airGroup.ArmyIndex);
-                //    if (radars.Count > 0)
-                //    {
-                //        int radarIndex = Random.Next(radars.Count);
-                //        Stationary radar = radars[radarIndex];
-                //        double altitude = getRandomAltitude(randomAircraftParametersInfo);
+                else if (missionType == EMissionType.ATTACK_RADAR
+                    || missionType == EMissionType.ATTACK_AIRCRAFT
+                    || missionType == EMissionType.ATTACK_ARTILLERY
+                    || missionType == EMissionType.ATTACK_DEPOT)
+                {
+                    Stationary stationary = forcedTargetStationary;
+                    if (stationary == null)
+                    {
+                        stationary = Generator.GeneratorGroundOperation.getAvailableRandomEnemyStationary(airGroup, missionType);
+                    }
+                    // No need to generate a random ground operation for the stationary as the stationary objects are always generated
+                    // into the file.
+                    //Generator.GeneratorGroundOperation.CreateRandomGroundOperation(sectionFile, stationary);
+                    double altitude = getRandomAltitude(randomAircraftParametersInfo);
 
-                //        airGroup.GroundAttack(radar, altitude, escortAirGroup);
-                //    }
-                //}                                      
+                    airGroup.GroundAttack(stationary, altitude, escortAirGroup);
+                }
                 else if (missionType == EMissionType.ATTACK_ARMOR || 
                     missionType == EMissionType.ATTACK_VEHICLE || 
                     missionType == EMissionType.ATTACK_TRAIN || 
@@ -623,7 +628,9 @@ namespace IL2DCE
             if (airGroups.Count > 0)
             {
                 List<GroundGroup> possibleTargetGroundGroups = new List<GroundGroup>();
+                List<Stationary> possibleTargetStationaries = new List<Stationary>();
                 Dictionary<GroundGroup, List<Tuple<AirGroup, EMissionType>>> possibleOffensiveAirGroups = new Dictionary<GroundGroup, List<Tuple<AirGroup, EMissionType>>>();
+                Dictionary<Stationary, List<Tuple<AirGroup, EMissionType>>> possibleOffensiveAirGroupsStationary = new Dictionary<Stationary, List<Tuple<AirGroup, EMissionType>>>();
 
                 foreach (AirGroup possibleOffensiveAirGroup in airGroups)
                 {
@@ -642,25 +649,67 @@ namespace IL2DCE
                         EMissionType possibleOffensiveMissionType = availableOffensiveMissionTypes[offensiveMissionTypeIndex];
 
                         
-                        GroundGroup possibleTargetGroundGroup = Generator.GeneratorGroundOperation.getAvailableRandomEnemyGroundGroup(possibleOffensiveAirGroup, possibleOffensiveMissionType);                        
-                        possibleTargetGroundGroups.Add(possibleTargetGroundGroup);
+                        GroundGroup possibleTargetGroundGroup = Generator.GeneratorGroundOperation.getAvailableRandomEnemyGroundGroup(possibleOffensiveAirGroup, possibleOffensiveMissionType);
+                        Stationary possibleTargetStationary = Generator.GeneratorGroundOperation.getAvailableRandomEnemyStationary(possibleOffensiveAirGroup, possibleOffensiveMissionType);
 
-                        if(!possibleOffensiveAirGroups.ContainsKey(possibleTargetGroundGroup))
+                        if (possibleTargetGroundGroup != null)
                         {
-                            possibleOffensiveAirGroups.Add(possibleTargetGroundGroup, new List<Tuple<AirGroup, EMissionType>>());
+                            possibleTargetGroundGroups.Add(possibleTargetGroundGroup);
+
+                            if (!possibleOffensiveAirGroups.ContainsKey(possibleTargetGroundGroup))
+                            {
+                                possibleOffensiveAirGroups.Add(possibleTargetGroundGroup, new List<Tuple<AirGroup, EMissionType>>());
+                            }
+                            possibleOffensiveAirGroups[possibleTargetGroundGroup].Add(new Tuple<AirGroup, EMissionType>(possibleOffensiveAirGroup, possibleOffensiveMissionType));
                         }
-                        possibleOffensiveAirGroups[possibleTargetGroundGroup].Add(new Tuple<AirGroup, EMissionType>(possibleOffensiveAirGroup, possibleOffensiveMissionType));
+                        else if(possibleTargetStationary != null)
+                        {
+                            possibleTargetStationaries.Add(possibleTargetStationary);
+
+                            if (!possibleOffensiveAirGroupsStationary.ContainsKey(possibleTargetStationary))
+                            {
+                                possibleOffensiveAirGroupsStationary.Add(possibleTargetStationary, new List<Tuple<AirGroup, EMissionType>>());
+                            }
+                            possibleOffensiveAirGroupsStationary[possibleTargetStationary].Add(new Tuple<AirGroup, EMissionType>(possibleOffensiveAirGroup, possibleOffensiveMissionType));
+                        }
                     }
                 }
 
                 targetGroundGroup = Generator.GeneratorGroundOperation.getRandomTargetBasedOnRange(possibleTargetGroundGroups, defensiveAirGroup);
-                
-                if(possibleOffensiveAirGroups.ContainsKey(targetGroundGroup))
+                targetStationary = Generator.GeneratorGroundOperation.getRandomTargetBasedOnRange(possibleTargetStationaries, defensiveAirGroup);
+
+                if(targetGroundGroup != null && targetStationary != null)
+                {
+                    // Randomly select one of them
+                    int type = Random.Next(2);
+                    if(type == 0)
+                    {
+                        targetStationary = null;
+                    }
+                    else
+                    {
+                        targetGroundGroup = null;
+                    }
+                }
+
+                if (targetGroundGroup != null && possibleOffensiveAirGroups.ContainsKey(targetGroundGroup))
                 {
                     targetStationary = null;
 
                     // Select a random offensive air group from the list
+                    // TODO: Select offensive airGroup by based on range
                     var tuple = possibleOffensiveAirGroups[targetGroundGroup][Random.Next(possibleOffensiveAirGroups[targetGroundGroup].Count)];
+                    AirGroup offensiveAirGroup = tuple.Item1;
+                    offensiveMissionType = tuple.Item2;
+                    return offensiveAirGroup;
+                }
+                else if(targetStationary != null && possibleOffensiveAirGroupsStationary.ContainsKey(targetStationary))
+                {
+                    targetGroundGroup = null;
+
+                    // Select a random offensive air group from the list
+                    // TODO: Select offensive airGroup by based on range
+                    var tuple = possibleOffensiveAirGroupsStationary[targetStationary][Random.Next(possibleOffensiveAirGroupsStationary[targetStationary].Count)];
                     AirGroup offensiveAirGroup = tuple.Item1;
                     offensiveMissionType = tuple.Item2;
                     return offensiveAirGroup;
@@ -830,10 +879,14 @@ namespace IL2DCE
         private bool isMissionTypeEscorted(EMissionType missionType)
         {
             if (missionType == EMissionType.ATTACK_ARMOR
-                //|| missionType == EMissionType.ATTACK_RADAR
                 || missionType == EMissionType.ATTACK_SHIP
                 || missionType == EMissionType.ATTACK_VEHICLE
-                || missionType == EMissionType.ATTACK_TRAIN)
+                || missionType == EMissionType.ATTACK_TRAIN
+                
+                || missionType == EMissionType.ATTACK_RADAR
+                || missionType == EMissionType.ATTACK_AIRCRAFT
+                || missionType == EMissionType.ATTACK_ARTILLERY
+                || missionType == EMissionType.ATTACK_DEPOT)
             {
                 return true;
             }
@@ -847,13 +900,18 @@ namespace IL2DCE
         {
             if (missionType == EMissionType.ARMED_MARITIME_RECON
                 || missionType == EMissionType.ARMED_RECON
-                || missionType == EMissionType.ATTACK_ARMOR
-                //|| missionType == EMissionType.ATTACK_RADAR
+                || missionType == EMissionType.ATTACK_ARMOR                
                 || missionType == EMissionType.ATTACK_SHIP
                 || missionType == EMissionType.ATTACK_VEHICLE
                 || missionType == EMissionType.ATTACK_TRAIN
                 || missionType == EMissionType.MARITIME_RECON
-                || missionType == EMissionType.RECON)
+                || missionType == EMissionType.RECON
+
+                || missionType == EMissionType.ATTACK_RADAR
+                || missionType == EMissionType.ATTACK_AIRCRAFT
+                || missionType == EMissionType.ATTACK_ARTILLERY
+                || missionType == EMissionType.ATTACK_DEPOT
+                )
             {
                 return true;
             }
@@ -905,7 +963,8 @@ namespace IL2DCE
             else if (missionType == EMissionType.ARMED_RECON)
             {
                 List<GroundGroup> groundGroups = Generator.GeneratorGroundOperation.getAvailableEnemyGroundGroups(airGroup.ArmyIndex, new List<EGroundGroupType> { EGroundGroupType.Armor, EGroundGroupType.Vehicle, EGroundGroupType.Train });
-                if (groundGroups.Count > 0)
+                List<Stationary> stationaries = Generator.GeneratorGroundOperation.getAvailableEnemyStationaries(airGroup.ArmyIndex, new List<EStationaryType> { EStationaryType.Aircraft, EStationaryType.Artillery, EStationaryType.Radar, EStationaryType.Depot });
+                if (groundGroups.Count > 0 || stationaries.Count > 0)
                 {
                     return true;
                 }
@@ -926,18 +985,54 @@ namespace IL2DCE
                     return false;
                 }
             }
-            //else if (missionType == EMissionType.ATTACK_RADAR)
-            //{
-            //    IList<Stationary> radars = MissionTemplate.GetEnemyRadars(airGroup.ArmyIndex);
-            //    if (radars.Count > 0)
-            //    {
-            //        return true;
-            //    }
-            //    else
-            //    {
-            //        return false;
-            //    }
-            //}
+            else if (missionType == EMissionType.ATTACK_RADAR)
+            {
+                IList<Stationary> stationaries = Generator.GeneratorGroundOperation.getAvailableEnemyStationaries(airGroup.ArmyIndex, new List<EStationaryType> { EStationaryType.Radar});
+                if (stationaries.Count > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else if (missionType == EMissionType.ATTACK_AIRCRAFT)
+            {
+                IList<Stationary> stationaries = Generator.GeneratorGroundOperation.getAvailableEnemyStationaries(airGroup.ArmyIndex, new List<EStationaryType> { EStationaryType.Aircraft });
+                if (stationaries.Count > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else if (missionType == EMissionType.ATTACK_ARTILLERY)
+            {
+                IList<Stationary> stationaries = Generator.GeneratorGroundOperation.getAvailableEnemyStationaries(airGroup.ArmyIndex, new List<EStationaryType> { EStationaryType.Artillery });
+                if (stationaries.Count > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else if (missionType == EMissionType.ATTACK_DEPOT)
+            {
+                IList<Stationary> stationaries = Generator.GeneratorGroundOperation.getAvailableEnemyStationaries(airGroup.ArmyIndex, new List<EStationaryType> { EStationaryType.Depot });
+                if (stationaries.Count > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
             else if (missionType == EMissionType.ATTACK_SHIP)
             {
                 List<GroundGroup> groundGroups = Generator.GeneratorGroundOperation.getAvailableEnemyGroundGroups(airGroup.ArmyIndex, new List<EGroundGroupType> { EGroundGroupType.Ship });
@@ -1013,7 +1108,8 @@ namespace IL2DCE
             else if (missionType == EMissionType.RECON)
             {
                 List<GroundGroup> groundGroups = Generator.GeneratorGroundOperation.getAvailableEnemyGroundGroups(airGroup.ArmyIndex, new List<EGroundGroupType> { EGroundGroupType.Armor, EGroundGroupType.Vehicle, EGroundGroupType.Train });
-                if (groundGroups.Count > 0)
+                List<Stationary> stationaries = Generator.GeneratorGroundOperation.getAvailableEnemyStationaries(airGroup.ArmyIndex, new List<EStationaryType> { EStationaryType.Aircraft, EStationaryType.Artillery, EStationaryType.Radar, EStationaryType.Depot });
+                if (groundGroups.Count > 0 || stationaries.Count > 0)
                 {
                     return true;
                 }

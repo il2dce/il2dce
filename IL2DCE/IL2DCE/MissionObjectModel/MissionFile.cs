@@ -23,6 +23,13 @@ using System.Text;
 
 namespace IL2DCE
 {
+    public enum ECountry
+    {
+        nn,
+        gb,
+        de,
+    }
+
     public class MissionFile
     {
         public MissionFile(IGamePlay game, IEnumerable<string> fileNames)
@@ -32,7 +39,7 @@ namespace IL2DCE
             foreach(string fileName in fileNames)
             {
                 load(game.gpLoadSectionFile(fileName));
-            }
+            }            
         }
 
         public MissionFile(ISectionFile file)
@@ -46,9 +53,14 @@ namespace IL2DCE
             _roads.Clear();
             _waterways.Clear();
             _railways.Clear();
+            _depots.Clear();
+            _aircrafts.Clear();
+            _artilleries.Clear();
 
-            _redFrontMarkers.Clear();
-            _blueFrontMarkers.Clear();
+            //_redFrontMarkers.Clear();
+            //_blueFrontMarkers.Clear();
+            //_neutralFrontMarkers.Clear();
+
             _redAirGroups.Clear();
             _blueAirGroups.Clear();
             _redGroundGroups.Clear();
@@ -65,54 +77,86 @@ namespace IL2DCE
                 string key;
                 string value;
                 file.get("Stationary", i, out key, out value);
-
-                // Radar
-                string[] valueParts = value.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                if (valueParts.Length > 4)
+                
+                Stationary stationary = new Stationary(file, key);
+                    
+                if(stationary.Army == 1)
                 {
-                    if (valueParts[0] == "Stationary.Radar.EnglishRadar1")
+                    _redStationaries.Add(stationary);
+                }
+                else if(stationary.Army == 2)
+                {
+                    _blueStationaries.Add(stationary);
+                }
+                else
+                {
+                    if(stationary.Type == EStationaryType.Radar)
                     {
-                        double x;
-                        double y;
-                        double.TryParse(valueParts[2], System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture.NumberFormat, out x);
-                        double.TryParse(valueParts[3], System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture.NumberFormat, out y);
-                        Stationary radar = new Stationary(key, x, y);
-                        _redStationaries.Add(radar);
+                        _radars.Add(stationary);
+                    }
+                    else if (stationary.Type == EStationaryType.Artillery)
+                    {
+                        _artilleries.Add(stationary);
+                    }
+                    else if(stationary.Type == EStationaryType.Aircraft)
+                    {
+                        _aircrafts.Add(stationary);
                     }
                 }
             }
 
-            for (int i = 0; i < file.lines("FrontMarker"); i++)
+            for (int i = 0; i < file.lines("Buildings"); i++)
             {
                 string key;
                 string value;
-                file.get("FrontMarker", i, out key, out value);
+                file.get("Buildings", i, out key, out value);
 
+                
                 string[] valueParts = value.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                if (valueParts.Length == 3)
+                if (valueParts.Length > 4)
                 {
-                    double x;
-                    double y;
-                    int army;
-                    if (double.TryParse(valueParts[0], System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture.NumberFormat, out x)
-                        && double.TryParse(valueParts[1], System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture.NumberFormat, out y)
-                        && int.TryParse(valueParts[2], System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture.NumberFormat, out army))
+                    // Depots
+                    if (valueParts[0] == "buildings.House$Oil_Bunker-Small" || valueParts[0] == "buildings.House$Oil_Bunker-Middle" || valueParts[0] == "buildings.House$Oil_Bunker-Big")
                     {
-                        if (army == 0)
-                        {
-                            _neutralFrontMarkers.Add(new Point3d(x, y, 0.0));
-                        }
-                        else if (army == 1)
-                        {
-                            _redFrontMarkers.Add(new Point3d(x, y, 0.0));
-                        }
-                        else if (army == 2)
-                        {
-                            _blueFrontMarkers.Add(new Point3d(x, y, 0.0));
-                        }
+                        Building building = new Building(file, key);
+                        _depots.Add(building);
                     }
+
+                    // Other buldings ...
                 }
             }
+
+            //for (int i = 0; i < file.lines("FrontMarker"); i++)
+            //{
+            //    string key;
+            //    string value;
+            //    file.get("FrontMarker", i, out key, out value);
+
+            //    string[] valueParts = value.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            //    if (valueParts.Length == 3)
+            //    {
+            //        double x;
+            //        double y;
+            //        int army;
+            //        if (double.TryParse(valueParts[0], System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture.NumberFormat, out x)
+            //            && double.TryParse(valueParts[1], System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture.NumberFormat, out y)
+            //            && int.TryParse(valueParts[2], System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture.NumberFormat, out army))
+            //        {
+            //            if (army == 0)
+            //            {
+            //                _neutralFrontMarkers.Add(new Point3d(x, y, 0.0));
+            //            }
+            //            else if (army == 1)
+            //            {
+            //                _redFrontMarkers.Add(new Point3d(x, y, 0.0));
+            //            }
+            //            else if (army == 2)
+            //            {
+            //                _blueFrontMarkers.Add(new Point3d(x, y, 0.0));
+            //            }
+            //        }
+            //    }
+            //}
 
 
             for (int i = 0; i < file.lines("AirGroups"); i++)
@@ -193,21 +237,58 @@ namespace IL2DCE
             }
         }
 
-        public IList<Point3d> RedFrontMarkers
+        public IList<Building> Depots
         {
             get
             {
-                return _redFrontMarkers;
+                return _depots;
             }
         }
 
-        public IList<Point3d> BlueFrontMarkers
+        public IList<Stationary> Radar
         {
             get
             {
-                return _blueFrontMarkers;
+                return _radars;
             }
         }
+
+        public IList<Stationary> Aircraft
+        {
+            get
+            {
+                return _aircrafts;
+            }
+        }
+
+        public IList<Stationary> Artilleries
+        {
+            get
+            {
+                return _artilleries;
+            }
+        }
+
+
+
+
+
+
+        //public IList<Point3d> RedFrontMarkers
+        //{
+        //    get
+        //    {
+        //        return _redFrontMarkers;
+        //    }
+        //}
+
+        //public IList<Point3d> BlueFrontMarkers
+        //{
+        //    get
+        //    {
+        //        return _blueFrontMarkers;
+        //    }
+        //}
         
         public IList<AirGroup> AirGroups
         {
@@ -303,7 +384,18 @@ namespace IL2DCE
             }
         }
 
-        public IList<Stationary> GetFriendlyRadars(int armyIndex)
+        public IList<Stationary> Stationaries
+        {
+            get
+            {
+                List<Stationary> stationaries = new List<Stationary>();
+                stationaries.AddRange(_redStationaries);
+                stationaries.AddRange(_blueStationaries);
+                return stationaries;
+            }
+        }
+
+        public IList<Stationary> GetFriendlyStationaries(int armyIndex)
         {
             if (armyIndex == 1)
             {
@@ -319,7 +411,7 @@ namespace IL2DCE
             }
         }
 
-        public IList<Stationary> GetEnemyRadars(int armyIndex)
+        public IList<Stationary> GetEnemyStationaries(int armyIndex)
         {
             if (armyIndex == 1)
             {
@@ -335,45 +427,52 @@ namespace IL2DCE
             }
         }
 
-        public IList<Point3d> GetFriendlyMarkers(int armyIndex)
-        {
-            if (armyIndex == 1)
-            {
-                return _redFrontMarkers;
-            }
-            else if (armyIndex == 2)
-            {
-                return _blueFrontMarkers;
-            }
-            else
-            {
-                return new List<Point3d>();
-            }
-        }
+        //public IList<Point3d> GetFriendlyMarkers(int armyIndex)
+        //{
+        //    if (armyIndex == 1)
+        //    {
+        //        return _redFrontMarkers;
+        //    }
+        //    else if (armyIndex == 2)
+        //    {
+        //        return _blueFrontMarkers;
+        //    }
+        //    else
+        //    {
+        //        return new List<Point3d>();
+        //    }
+        //}
 
-        public IList<Point3d> GetEnemyMarkers(int armyIndex)
-        {
-            if (armyIndex == 1)
-            {
-                return _blueFrontMarkers;
-            }
-            else if (armyIndex == 2)
-            {
-                return _redFrontMarkers;
-            }
-            else
-            {
-                return new List<Point3d>();
-            }
-        }
+        //public IList<Point3d> GetEnemyMarkers(int armyIndex)
+        //{
+        //    if (armyIndex == 1)
+        //    {
+        //        return _blueFrontMarkers;
+        //    }
+        //    else if (armyIndex == 2)
+        //    {
+        //        return _redFrontMarkers;
+        //    }
+        //    else
+        //    {
+        //        return new List<Point3d>();
+        //    }
+        //}
 
-        private List<Point3d> _redFrontMarkers = new List<Point3d>();
-        private List<Point3d> _blueFrontMarkers = new List<Point3d>();
-        private List<Point3d> _neutralFrontMarkers = new List<Point3d>();
+        //private List<Point3d> _redFrontMarkers = new List<Point3d>();
+        //private List<Point3d> _blueFrontMarkers = new List<Point3d>();
+        //private List<Point3d> _neutralFrontMarkers = new List<Point3d>();
         
+
+
         private List<Waterway> _roads = new List<Waterway>();
         private List<Waterway> _waterways = new List<Waterway>();
         private List<Waterway> _railways = new List<Waterway>();
+        private List<Building> _depots = new List<Building>();
+        private List<Stationary> _radars = new List<Stationary>();
+        private List<Stationary> _artilleries = new List<Stationary>();
+        private List<Stationary> _aircrafts = new List<Stationary>();
+
 
         private List<AirGroup> _redAirGroups = new List<AirGroup>();
         private List<AirGroup> _blueAirGroups = new List<AirGroup>();
@@ -383,6 +482,5 @@ namespace IL2DCE
 
         private List<Stationary> _redStationaries = new List<Stationary>();
         private List<Stationary> _blueStationaries = new List<Stationary>();
-
     }
 }

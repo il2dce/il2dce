@@ -35,20 +35,24 @@ namespace IL2DCE
 
         ATTACK_ARMOR,
         ATTACK_VEHICLE,
-        ATTACK_TRAIN,
-        //ATTACK_ARTILLERY,
-        //ATTACK_RADAR,
+        ATTACK_TRAIN,        
         ATTACK_SHIP,
+
+        ATTACK_ARTILLERY,
+        ATTACK_RADAR,
+        ATTACK_AIRCRAFT,
+        ATTACK_DEPOT,
 
         INTERCEPT,
         //MARITIME_INTERCEPT,
         //NIGHT_INTERCEPT,
-        ESCORT,
-        COVER,
-        // SWEEP,
 
+        ESCORT,
+
+        COVER,
         //MARITIME_COVER,
-        
+
+        //SWEEP,
         //INTRUDER,
         //NIGHT_INTRUDER,
     };

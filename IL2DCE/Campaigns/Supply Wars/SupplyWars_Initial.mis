@@ -1,0 +1,265 @@
+﻿[PARTS]
+  core.100
+  bob.100
+[MAIN]
+  MAP Land$English_Channel_1940
+  BattleArea 170000 135000 150000 150000 10000
+  TIME 12.0000002905726
+  WeatherIndex 0
+  CloudsHeight 1000
+  BreezeActivity 10
+  ThermalActivity 10
+[GlobalWind_0]
+  Power 3.000 0.000 0.000
+  BottomBound 0.00
+  TopBound 1500.00
+  GustPower 0
+  GustAngle 45
+[splines]
+[AirGroups]
+  BoB_LW_KG53_II.11
+  BoB_LW_KG51_III.12
+  BoB_LW_LG1_IV.11
+  BoB_LW_ErprGr210.11
+  BoB_RA_13St_43Gruppo_5Sq.01
+  BoB_RA_56St_20Gruppo_351Sq.01
+  BoB_LW_ZG26_I.21
+  BoB_RAF_B_88Sqn.01
+  BoB_RAF_F_501Sqn_Late.01
+  BoB_RAF_F_601Sqn_Late.01
+  BoB_RAF_B_35Sqn.01
+  BoB_RAF_B_15Sqn.01
+  BoB_RAF_B_10Sqn.01
+  BoB_RAF_F_3Sqn_Late.01
+  BoB_RAF_F_41Sqn_Late.01
+  BoB_RAF_F_303_PL_Late.01
+  BoB_RAF_F_92Sqn_Late.01
+  BoB_LW_JG2_I.31
+  BoB_LW_JG51_II.31
+  BoB_LW_JG26_I.11
+[BoB_LW_KG53_II.11]
+  Flight0  1
+  Class Aircraft.He-111H-2
+  Formation VIC3
+  CallSign 26
+  Fuel 100
+  Weapons 1 1 1 1 1 1 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_LW_KG53_II.11_Way]
+  TAKEOFF 306617.19 160679.80 0 0
+  NORMFLY 304956.81 161692.73 500.00 300.00
+[BoB_LW_KG51_III.12]
+  Flight1  11
+  Class Aircraft.Ju-88A-1
+  Formation VIC3
+  CallSign 30
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_LW_KG51_III.12_Way]
+  TAKEOFF 311506.01 190335.16 0 0
+  NORMFLY 310858.46 190477.16 500.00 300.00
+[BoB_LW_LG1_IV.11]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 28
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_LW_LG1_IV.11_Way]
+  TAKEOFF 284952.34 182653.07 0 0
+  NORMFLY 284665.54 182720.19 500.00 300.00
+[BoB_LW_ErprGr210.11]
+  Flight0  1
+  Class Aircraft.Bf-110C-7
+  Formation FINGERFOUR
+  CallSign 28
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_LW_ErprGr210.11_Way]
+  TAKEOFF 287228.58 202004.77 0 0
+  NORMFLY 285564.88 202657.70 500.00 300.00
+[BoB_RA_13St_43Gruppo_5Sq.01]
+  Flight0  1
+  Class Aircraft.BR-20M
+  Formation VIC3
+  CallSign 10
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RA_13St_43Gruppo_5Sq.01_Way]
+  TAKEOFF 285016.54 140003.28 0 0
+  NORMFLY 283832.57 140567.99 500.00 300.00
+[BoB_RA_56St_20Gruppo_351Sq.01]
+  Flight0  1
+  Class Aircraft.G50
+  Formation VIC3
+  CallSign 31
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RA_56St_20Gruppo_351Sq.01_Way]
+  TAKEOFF 272592.10 200207.55 0 0
+  NORMFLY 272313.32 200876.76 500.00 300.00
+[BoB_LW_ZG26_I.21]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 25
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_LW_ZG26_I.21_Way]
+  TAKEOFF 296448.85 217378.61 0 0
+  NORMFLY 295766.75 217722.56 500.00 300.00
+[BoB_RAF_B_88Sqn.01]
+  Flight0  1
+  Class Aircraft.BlenheimMkIV_Late
+  Formation LINEABREAST
+  CallSign 26
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_B_88Sqn.01_Way]
+  TAKEOFF 212228.41 262804.11 0 0
+  NORMFLY 213580.68 262393.19 500.00 300.00
+[BoB_RAF_F_501Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.BeaufighterMkIF
+  Formation FINGERFOUR
+  CallSign 20
+  Fuel 100
+  Weapons 1 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_F_501Sqn_Late.01_Way]
+  TAKEOFF 234443.68 248432.17 0 0
+  NORMFLY 234840.31 248178.42 500.00 300.00
+[BoB_RAF_F_601Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI
+  Formation FINGERFOUR
+  CallSign 7
+  Fuel 100
+  Weapons 1
+  Belt _Gun00 Gun.Browning303MkII MainBelt 0
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_F_601Sqn_Late.01_Way]
+  TAKEOFF 251005.45 261067.85 0 0
+  NORMFLY 251661.69 260044.81 500.00 300.00
+[BoB_RAF_B_35Sqn.01]
+  Flight0  1
+  Class Aircraft.WellingtonMkIc
+  Formation LINEABREAST
+  CallSign 20
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_B_35Sqn.01_Way]
+  TAKEOFF 180340.90 264786.57 0 0
+  NORMFLY 180395.30 264586.56 500.00 300.00
+[BoB_RAF_B_15Sqn.01]
+  Flight0  1
+  Class Aircraft.WellingtonMkIc
+  Formation LINEABREAST
+  CallSign 33
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_B_15Sqn.01_Way]
+  TAKEOFF 201036.45 282772.94 0 0
+  NORMFLY 202810.60 278687.18 500.00 300.00
+[BoB_RAF_B_10Sqn.01]
+  Flight0  1
+  Class Aircraft.BlenheimMkIV_Late
+  Formation LINEABREAST
+  CallSign 16
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_B_10Sqn.01_Way]
+  TAKEOFF 188311.98 257775.35 0 0
+  NORMFLY 188336.27 257536.61 500.00 300.00
+[BoB_RAF_F_3Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_FB
+  Formation FINGERFOUR
+  CallSign 16
+  Fuel 100
+  Weapons 1 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_F_3Sqn_Late.01_Way]
+  TAKEOFF 225172.18 228849.61 0 0
+  NORMFLY 225208.92 228717.69 500.00 300.00
+[BoB_RAF_F_41Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.SpitfireMkIa
+  Formation FINGERFOUR
+  CallSign 6
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_F_41Sqn_Late.01_Way]
+  TAKEOFF 248182.81 258990.88 0 0
+  NORMFLY 249102.47 258613.58 500.00 300.00
+[BoB_RAF_F_303_PL_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI
+  Formation FINGERFOUR
+  CallSign 10
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_F_303_PL_Late.01_Way]
+  TAKEOFF 235014.14 232546.46 0 0
+  NORMFLY 235243.79 232379.75 500.00 300.00
+[BoB_RAF_F_92Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.SpitfireMkIa
+  Formation FINGERFOUR
+  CallSign 17
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_F_92Sqn_Late.01_Way]
+  TAKEOFF 221853.43 221257.84 0 0
+  NORMFLY 222688.59 221808.37 500.00 300.00
+[BoB_LW_JG2_I.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 23
+  Fuel 100
+  Weapons 1 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_LW_JG2_I.31_Way]
+  TAKEOFF 277026.38 209365.22 0 0
+  NORMFLY 276928.44 209513.70 500.00 300.00
+[BoB_LW_JG51_II.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-3
+  Formation FINGERFOUR
+  CallSign 17
+  Fuel 100
+  Weapons 1 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_LW_JG51_II.31_Way]
+  TAKEOFF 291217.61 216385.80 0 0
+  NORMFLY 290954.77 216381.26 500.00 300.00
+[BoB_LW_JG26_I.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 17
+  Fuel 100
+  Weapons 1 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_LW_JG26_I.11_Way]
+  TAKEOFF 278152.49 182086.15 0 0
+  NORMFLY 277878.69 182177.42 500.00 300.00
+[CustomChiefs]
+[Stationary]
+[Buildings]
+[BuildingsLinks]
+[FrontMarker]

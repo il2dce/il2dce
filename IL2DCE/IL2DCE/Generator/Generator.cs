@@ -182,11 +182,18 @@ namespace IL2DCE
                 missionTemplateFile.delete("Chiefs");
             }
 
+            if (missionTemplateFile.exist("Stationary"))
+            {
+                // Delete all stationaries from the template file.
+                missionTemplateFile.delete("Stationary");
+            }
+
             // Generate supply ships and trains.
 
             // For now generate a random supply ship on one of the routes to a harbour.
             int chiefIndex = 0;
-            
+            int stationaryIndex = 0;
+
             // TODO: Only create a random (or decent) amount of supply ships.
             foreach (Waterway waterway in staticTemplateFile.Waterways)
             {
@@ -197,7 +204,7 @@ namespace IL2DCE
                     chiefIndex++;
 
                     // For red army
-                    GroundGroup supplyShip = new GroundGroup(id, "Ship.Tanker_Medium1", EGroundGroupCountry.gb, "/sleep 0/skill 2/slowfire 1", waterway.Waypoints);
+                    GroundGroup supplyShip = new GroundGroup(id, "Ship.Tanker_Medium1", ECountry.gb, "/sleep 0/skill 2/slowfire 1", waterway.Waypoints);
                     supplyShip.WriteTo(missionTemplateFile);
                 }
                 else if(GamePlay.gpFrontArmy(waterway.End.X, waterway.End.Y) == 2)
@@ -206,7 +213,7 @@ namespace IL2DCE
                     chiefIndex++;
 
                     // For blue army
-                    GroundGroup supplyShip = new GroundGroup(id, "Ship.Tanker_Medium1", EGroundGroupCountry.de, "/sleep 0/skill 2/slowfire 1", waterway.Waypoints);
+                    GroundGroup supplyShip = new GroundGroup(id, "Ship.Tanker_Medium1", ECountry.de, "/sleep 0/skill 2/slowfire 1", waterway.Waypoints);
                     supplyShip.WriteTo(missionTemplateFile);
                 }
             }
@@ -220,8 +227,7 @@ namespace IL2DCE
                     chiefIndex++;
 
                     // For red army
-                    // TODO: Use british train for red
-                    GroundGroup supplyShip = new GroundGroup(id, "Train.57xx_0-6-0PT_c0", EGroundGroupCountry.gb, "", railway.Waypoints);
+                    GroundGroup supplyShip = new GroundGroup(id, "Train.57xx_0-6-0PT_c0", ECountry.gb, "", railway.Waypoints);
                     supplyShip.WriteTo(missionTemplateFile);
                 }
                 else if (GamePlay.gpFrontArmy(railway.Start.X, railway.Start.Y) == 2 && GamePlay.gpFrontArmy(railway.End.X, railway.End.Y) == 2)
@@ -230,10 +236,103 @@ namespace IL2DCE
                     chiefIndex++;
 
                     // For blue army
-                    GroundGroup supplyShip = new GroundGroup(id, "Train.BR56-00_c2", EGroundGroupCountry.de, "", railway.Waypoints);
+                    GroundGroup supplyShip = new GroundGroup(id, "Train.BR56-00_c2", ECountry.de, "", railway.Waypoints);
                     supplyShip.WriteTo(missionTemplateFile);
                 }
             }
+
+            foreach(Building depot in staticTemplateFile.Depots)
+            {
+                // For depots the position must be in friendly territory.
+                if (GamePlay.gpFrontArmy(depot.X, depot.Y) == 1)
+                {
+                    string id = stationaryIndex.ToString("Static" + System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
+                    stationaryIndex++;
+
+                    // For red army
+                    Stationary fuelTruck = new Stationary(id, "Stationary.Morris_CS8_tank", ECountry.gb, depot.X, depot.Y, depot.Direction);
+                    fuelTruck.WriteTo(missionTemplateFile);
+                }
+                else if(GamePlay.gpFrontArmy(depot.X, depot.Y) == 2)
+                {
+                    string id = stationaryIndex.ToString("Static" + System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
+                    stationaryIndex++;
+
+                    // For blue army
+                    Stationary fuelTruck = new Stationary(id, "Stationary.Opel_Blitz_fuel", ECountry.de, depot.X, depot.Y, depot.Direction);
+                    fuelTruck.WriteTo(missionTemplateFile);
+                }
+            }
+
+            foreach (Stationary aircraft in staticTemplateFile.Aircraft)
+            {
+                // For aircraft the position must be in friendly territory.
+                if (GamePlay.gpFrontArmy(aircraft.X, aircraft.Y) == 1)
+                {
+                    string id = stationaryIndex.ToString("Static" + System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
+                    stationaryIndex++;
+
+                    // For red army
+                    Stationary fuelTruck = new Stationary(id, "Stationary.HurricaneMkI_dH5-20", ECountry.gb, aircraft.X, aircraft.Y, aircraft.Direction);
+                    fuelTruck.WriteTo(missionTemplateFile);
+                }
+                else if (GamePlay.gpFrontArmy(aircraft.X, aircraft.Y) == 2)
+                {
+                    string id = stationaryIndex.ToString("Static" + System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
+                    stationaryIndex++;
+
+                    // For blue army
+                    Stationary fuelTruck = new Stationary(id, "Stationary.Bf-109E-1", ECountry.de, aircraft.X, aircraft.Y, aircraft.Direction);
+                    fuelTruck.WriteTo(missionTemplateFile);
+                }
+            }
+
+            foreach (Stationary artillery in staticTemplateFile.Artilleries)
+            {
+                // For artillery the position must be in friendly territory.
+                if (GamePlay.gpFrontArmy(artillery.X, artillery.Y) == 1)
+                {
+                    string id = stationaryIndex.ToString("Static" + System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
+                    stationaryIndex++;
+
+                    // For red army
+                    Stationary aaGun = new Stationary(id, "Artillery.Bofors", ECountry.gb, artillery.X, artillery.Y, artillery.Direction, "/timeout 0/radius_hide 0");
+                    aaGun.WriteTo(missionTemplateFile);
+                }
+                else if (GamePlay.gpFrontArmy(artillery.X, artillery.Y) == 2)
+                {
+                    string id = stationaryIndex.ToString("Static" + System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
+                    stationaryIndex++;
+
+                    // For blue army
+                    Stationary aaGun = new Stationary(id, "Artillery.4_cm_Flak_28", ECountry.de, artillery.X, artillery.Y, artillery.Direction, "/timeout 0/radius_hide 0");
+                    aaGun.WriteTo(missionTemplateFile);
+                }
+            }
+
+            foreach (Stationary radar in staticTemplateFile.Radar)
+            {
+                // For artillery the position must be in friendly territory.
+                if (GamePlay.gpFrontArmy(radar.X, radar.Y) == 1)
+                {
+                    string id = stationaryIndex.ToString("Static" + System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
+                    stationaryIndex++;
+
+                    // For red army
+                    Stationary radarSite = new Stationary(id, "Stationary.Radar.EnglishRadar1", ECountry.gb, radar.X, radar.Y, radar.Direction);
+                    radarSite.WriteTo(missionTemplateFile);
+                }
+                else if (GamePlay.gpFrontArmy(radar.X, radar.Y) == 2)
+                {
+                    string id = stationaryIndex.ToString("Static" + System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
+                    stationaryIndex++;
+
+                    // For blue army
+                    Stationary radarSite = new Stationary(id, "Stationary.Radar.Wotan_II", ECountry.de, radar.X, radar.Y, radar.Direction);
+                    radarSite.WriteTo(missionTemplateFile);
+                }
+            }
+
         }
 
         public void GenerateMission(string environmentTemplateFile, string missionTemplateFileName, string missionId, out ISectionFile missionFile, out BriefingFile briefingFile)
@@ -362,6 +461,16 @@ namespace IL2DCE
                         GeneratorGroundOperation.CreateRandomGroundOperation(missionFile, randomGroundGroup);
                     }
                 }
+            }
+
+            // Add all stationaries.
+            if (GeneratorGroundOperation.AvailableStationaries != null && GeneratorGroundOperation.AvailableStationaries.Count > 0)
+            {
+                for(int i = 0; i < GeneratorGroundOperation.AvailableStationaries.Count; i++)
+                {
+                    Stationary stationary = GeneratorGroundOperation.AvailableStationaries[i];
+                    stationary.WriteTo(missionFile);
+                }                
             }
         }
 

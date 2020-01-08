@@ -6,7 +6,7 @@ using System.Text;
 
 namespace IL2DCE
 {
-    public class DistanceComparer : IComparer<AirGroup>, IComparer<GroundGroup>
+    public class DistanceComparer : IComparer<AirGroup>, IComparer<GroundGroup>, IComparer<Stationary>
     {
         Point3d _position3d;
         Point2d _position2d;
@@ -33,9 +33,14 @@ namespace IL2DCE
             return x.Position.distance(ref _position2d).CompareTo(y.Position.distance(ref _position2d));
         }
 
+        public int Compare(Stationary x, Stationary y)
+        {
+            return x.Position.distance(ref _position2d).CompareTo(y.Position.distance(ref _position2d));
+        }
+
         //public int Compare(KeyValuePair<int, Point3d> x, KeyValuePair<int, Point3d> y)
         //{
         //    return x.Value.distance(ref _position3d).CompareTo(y.Value.distance(ref _position3d));
         //}        
-    }    
+    }
 }

@@ -38,7 +38,9 @@ namespace IL2DCE
         }
 
         public IList<GroundGroup> AvailableGroundGroups = new List<GroundGroup>();
-        
+
+        public IList<Stationary> AvailableStationaries = new List<Stationary>();
+
         private MissionFile MissionTemplate
         {
             get;
@@ -100,13 +102,66 @@ namespace IL2DCE
                     }
                 }
             }
-            else
+            else if(availableGroundGroups.Count == 0)
             {
                 selectedGroundGroup = availableGroundGroups[0];
-            }
-
+            }           
+                
             return selectedGroundGroup;
         }
+
+
+        public Stationary getRandomTargetBasedOnRange(List<Stationary> availableStationaries, AirGroup offensiveAirGroup)
+        {
+            Stationary selectedStationary = null;
+
+            if (availableStationaries.Count > 1)
+            {
+                availableStationaries.Sort(new DistanceComparer(offensiveAirGroup.Position));
+
+                Point2d position = new Point2d(offensiveAirGroup.Position.x, offensiveAirGroup.Position.y);
+
+                // TODO: Use range of the aircraft instead of the maxDistance.
+                // Problem is that range depends on loadout, so depending on loadout different targets would be available.
+
+                Point2d last = availableStationaries[availableStationaries.Count - 1].Position;
+                double maxDistance = last.distance(ref position);
+
+                List<KeyValuePair<Stationary, int>> elements = new List<KeyValuePair<Stationary, int>>();
+
+                int previousWeight = 0;
+
+                foreach (Stationary stationary in availableStationaries)
+                {
+                    double distance = stationary.Position.distance(ref position);
+                    int weight = Convert.ToInt32(Math.Ceiling(maxDistance - distance));
+                    int cumulativeWeight = previousWeight + weight;
+                    elements.Add(new KeyValuePair<Stationary, int>(stationary, cumulativeWeight));
+
+                    previousWeight = cumulativeWeight;
+                }
+
+                int diceRoll = Random.Next(0, previousWeight);
+                int cumulative = 0;
+                for (int i = 0; i < elements.Count; i++)
+                {
+                    cumulative += elements[i].Value;
+                    if (diceRoll <= cumulative)
+                    {
+                        selectedStationary = elements[i].Key;
+                        break;
+                    }
+                }
+            }
+            else if(availableStationaries.Count == 0)
+            {
+                selectedStationary = availableStationaries[0];
+            }
+
+            return selectedStationary;
+        }
+
+
 
         public GeneratorGroundOperation(Generator generator, CampaignInfo campaignInfo, MissionFile missionTemplate, IGamePlay gamePlay, Config config)
         {
@@ -116,10 +171,16 @@ namespace IL2DCE
             Config = config;
 
             AvailableGroundGroups.Clear();
+            AvailableStationaries.Clear();
 
             foreach (GroundGroup groundGroup in MissionTemplate.GroundGroups)
             {
                 AvailableGroundGroups.Add(groundGroup);
+            }
+
+            foreach (Stationary stationary in MissionTemplate.Stationaries)
+            {
+                AvailableStationaries.Add(stationary);
             }
         }
         
@@ -374,6 +435,8 @@ namespace IL2DCE
         }
 
 
+        #region GroundGroup
+
         public List<GroundGroup> getAvailableEnemyGroundGroups(int armyIndex)
         {
             List<GroundGroup> groundGroups = new List<GroundGroup>();
@@ -467,7 +530,7 @@ namespace IL2DCE
             }
             else
             {
-                throw new NotImplementedException(missionType.ToString());
+                return null;
             }
         }
 
@@ -525,5 +588,160 @@ namespace IL2DCE
                 return null;
             }
         }
+
+#endregion
+
+        #region Stationary
+
+
+        public List<Stationary> getAvailableEnemyStationaries(int armyIndex)
+        {
+            List<Stationary> stationaries = new List<Stationary>();
+            foreach (Stationary stationary in AvailableStationaries)
+            {
+                if (stationary.Army != armyIndex)
+                {
+                    stationaries.Add(stationary);
+                }
+            }
+            return stationaries;
+        }
+
+        public List<Stationary> getAvailableFriendlyStationaries(int armyIndex)
+        {
+            List<Stationary> stationaries = new List<Stationary>();
+            foreach (Stationary stationary in AvailableStationaries)
+            {
+                if (stationary.Army == armyIndex)
+                {
+                    stationaries.Add(stationary);
+                }
+            }
+            return stationaries;
+        }
+
+        public List<Stationary> getAvailableEnemyStationaries(int armyIndex, List<EStationaryType> stationaryTypes)
+        {
+            List<Stationary> stationaries = new List<Stationary>();
+            foreach (Stationary stationary in getAvailableEnemyStationaries(armyIndex))
+            {
+                if (stationaryTypes.Contains(stationary.Type))
+                {
+                    stationaries.Add(stationary);
+                }
+            }
+            return stationaries;
+        }
+
+        public List<Stationary> getAvailableFriendlyStationaries(int armyIndex, List<EStationaryType> stationaryTypes)
+        {
+            List<Stationary> stationaries = new List<Stationary>();
+            foreach (Stationary stationary in getAvailableFriendlyStationaries(armyIndex))
+            {
+                if (stationaryTypes.Contains(stationary.Type))
+                {
+                    stationaries.Add(stationary);
+                }
+            }
+            return stationaries;
+        }
+
+        public Stationary getAvailableRandomEnemyStationary(int armyIndex)
+        {
+            List<Stationary> stationaries = getAvailableEnemyStationaries(armyIndex);
+            if (stationaries.Count > 0)
+            {
+                int stationaryIndex = Random.Next(stationaries.Count);
+                Stationary targetStationary = stationaries[stationaryIndex];
+
+                return targetStationary;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public Stationary getAvailableRandomEnemyStationary(AirGroup airGroup, EMissionType missionType)
+        {
+            if (missionType == EMissionType.ATTACK_AIRCRAFT)
+            {
+                return getAvailableRandomEnemyStationary(airGroup, new List<EStationaryType> { EStationaryType.Aircraft });
+            }
+            else if (missionType == EMissionType.ATTACK_ARTILLERY)
+            {
+                return getAvailableRandomEnemyStationary(airGroup, new List<EStationaryType> { EStationaryType.Artillery });
+            }
+            else if (missionType == EMissionType.ATTACK_RADAR)
+            {
+                return getAvailableRandomEnemyStationary(airGroup, new List<EStationaryType> { EStationaryType.Radar });
+            }
+            else if (missionType == EMissionType.ATTACK_DEPOT)
+            {
+                return getAvailableRandomEnemyStationary(airGroup, new List<EStationaryType> { EStationaryType.Depot });
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
+        public Stationary getAvailableRandomEnemyStationary(AirGroup airGroup, List<EStationaryType> stationaryTypes)
+        {
+            List<Stationary> stationaries = getAvailableEnemyStationaries(airGroup.ArmyIndex, stationaryTypes);
+            if (stationaries.Count > 0)
+            {
+                //int groundGroupIndex = Random.Next(groundGroups.Count);
+                //GroundGroup targetGroundGroup = groundGroups[groundGroupIndex];
+
+                Stationary targetStationary = getRandomTargetBasedOnRange(stationaries, airGroup);
+
+                return targetStationary;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public Stationary getAvailableRandomFriendlyStationary(AirGroup airGroup)
+        {
+            List<Stationary> stationaries = getAvailableFriendlyStationaries(airGroup.ArmyIndex);
+            if (stationaries.Count > 0)
+            {
+                //int groundGroupIndex = Random.Next(groundGroups.Count);
+                //GroundGroup targetGroundGroup = groundGroups[groundGroupIndex];
+
+                Stationary targetStationary = getRandomTargetBasedOnRange(stationaries, airGroup);
+
+                return targetStationary;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public Stationary getAvailableRandomFriendlyStationary(AirGroup airGroup, List<EStationaryType> stationaryTypes)
+        {
+            List<Stationary> stationaries = getAvailableFriendlyStationaries(airGroup.ArmyIndex, stationaryTypes);
+            if (stationaries.Count > 0)
+            {
+                //int groundGroupIndex = Random.Next(groundGroups.Count);
+                //GroundGroup targetGroundGroup = groundGroups[groundGroupIndex];
+
+                Stationary targetStationary = getRandomTargetBasedOnRange(stationaries, airGroup);
+
+                return targetStationary;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
+        #endregion
     }
 }
