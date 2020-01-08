@@ -469,7 +469,7 @@ namespace IL2DCE
                 for(int i = 0; i < GeneratorGroundOperation.AvailableStationaries.Count; i++)
                 {
                     Stationary stationary = GeneratorGroundOperation.AvailableStationaries[i];
-                    stationary.WriteTo(missionFile);
+                    stationary.WriteTo(missionFile);                    
                 }                
             }
         }

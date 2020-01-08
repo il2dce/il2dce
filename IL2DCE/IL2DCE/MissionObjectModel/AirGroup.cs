@@ -830,6 +830,44 @@ namespace IL2DCE
         //    createEndWaypoints(landingAirport);
         //}
 
+
+
+        public void Recon(Stationary targetStationary, double altitude, AirGroup escortAirGroup = null, AiAirport landingAirport = null)
+        {
+            this.reset();
+            this.Altitude = altitude;
+            this.TargetStationary = targetStationary;
+            this.EscortAirGroup = escortAirGroup;
+
+            Point3d? rendevouzPosition = null;
+            if (EscortAirGroup != null)
+            {
+                rendevouzPosition = new Point3d(Position.x + 0.50 * (EscortAirGroup.Position.x - Position.x), Position.y + 0.50 * (EscortAirGroup.Position.y - Position.y), altitude);
+            }
+
+            createStartWaypoints();
+
+            if (rendevouzPosition != null && rendevouzPosition.HasValue)
+            {
+                Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.NORMFLY, rendevouzPosition.Value, 300.0));
+                Point3d pStart = new Point3d(targetStationary.X, targetStationary.Y, altitude);
+                createInbetweenWaypoints(rendevouzPosition.Value, pStart);
+            }
+            else
+            {
+                Point3d pStart = new Point3d(targetStationary.X, targetStationary.Y, altitude);
+                createStartInbetweenPoints(pStart);
+            }
+
+            Waypoints.Add(new AirGroupWaypoint(AirGroupWaypoint.AirGroupWaypointTypes.RECON, targetStationary.X, targetStationary.Y, altitude, 300.0, targetStationary.Id));
+
+            Point3d pEnd = new Point3d(targetStationary.X, targetStationary.Y, altitude);
+            createEndInbetweenPoints(pEnd, landingAirport);
+
+            createEndWaypoints(landingAirport);
+        }
+
+
         public void Recon(GroundGroup targetGroundGroup, double altitude, AirGroup escortAirGroup = null, AiAirport landingAirport = null)
         {
             this.reset();
@@ -842,8 +880,6 @@ namespace IL2DCE
             {
                 rendevouzPosition = new Point3d(Position.x + 0.50 * (EscortAirGroup.Position.x - Position.x), Position.y + 0.50 * (EscortAirGroup.Position.y - Position.y), altitude);
             }
-
-            Waypoints.Clear();
 
             if (targetGroundGroup.Waypoints.Count > 0)
             {

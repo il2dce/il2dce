@@ -28,6 +28,7 @@ namespace IL2DCE
         Armor,
         Ship,
         Train,
+        Unknown,
     }
 
     public class GroundGroup
@@ -120,7 +121,7 @@ namespace IL2DCE
                 }
                 else
                 {
-                    throw new System.FormatException("Unknown EType of GroundGroup");
+                    return EGroundGroupType.Unknown;
                 }
             }
         }

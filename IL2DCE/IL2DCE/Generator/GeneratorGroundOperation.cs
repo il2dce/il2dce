@@ -102,7 +102,7 @@ namespace IL2DCE
                     }
                 }
             }
-            else if(availableGroundGroups.Count == 0)
+            else if(availableGroundGroups.Count == 1)
             {
                 selectedGroundGroup = availableGroundGroups[0];
             }           
@@ -153,7 +153,7 @@ namespace IL2DCE
                     }
                 }
             }
-            else if(availableStationaries.Count == 0)
+            else if(availableStationaries.Count == 1)
             {
                 selectedStationary = availableStationaries[0];
             }

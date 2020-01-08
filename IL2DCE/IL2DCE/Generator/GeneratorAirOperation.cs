@@ -18,6 +18,7 @@ using maddox.game;
 using maddox.GP;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace IL2DCE
 {
@@ -256,6 +257,11 @@ namespace IL2DCE
             return getRandomAirGroupBasedOnDistance(availableAirGroups, referenceAirGroup.Position);
         }
 
+        public AirGroup getRandomAirGroupBasedOnDistance(List<AirGroup> availableAirGroups, Point2d targetPosition)
+        {
+            return getRandomAirGroupBasedOnDistance(availableAirGroups, new Point3d(targetPosition.x, targetPosition.y, 0.0));
+        }
+
         public AirGroup getRandomAirGroupBasedOnDistance(List<AirGroup> availableAirGroups, Point3d targetPosition)
         {
             AirGroup selectedAirGroup = null;
@@ -294,7 +300,7 @@ namespace IL2DCE
                     }
                 }
             }
-            else
+            else if(availableAirGroups.Count == 1)
             {
                 selectedAirGroup = availableAirGroups[0];
             }
@@ -404,14 +410,37 @@ namespace IL2DCE
                 if (missionType == EMissionType.MARITIME_RECON || missionType == EMissionType.RECON)
                 {
                     GroundGroup groundGroup = forcedTargetGroundGroup;
-                    if (groundGroup == null)
+                    Stationary stationary = forcedTargetStationary;
+                    if (groundGroup == null && stationary == null)
                     {
                         groundGroup = Generator.GeneratorGroundOperation.getAvailableRandomEnemyGroundGroup(airGroup, missionType);
+                        stationary = Generator.GeneratorGroundOperation.getAvailableRandomEnemyStationary(airGroup, missionType);
+                        
+                        if (groundGroup != null && stationary != null)
+                        {
+                            // Randomly select one of them
+                            int type = Random.Next(2);
+                            if (type == 0)
+                            {
+                                stationary = null;
+                            }
+                            else
+                            {
+                                groundGroup = null;
+                            }
+                        }
                     }
-                    Generator.GeneratorGroundOperation.CreateRandomGroundOperation(sectionFile, groundGroup);
-                    double altitude = getRandomAltitude(randomAircraftParametersInfo);
 
-                    airGroup.Recon(groundGroup, altitude, escortAirGroup);
+                    double altitude = getRandomAltitude(randomAircraftParametersInfo);
+                    if (groundGroup != null)
+                    {
+                        Generator.GeneratorGroundOperation.CreateRandomGroundOperation(sectionFile, groundGroup);
+                        airGroup.Recon(groundGroup, altitude, escortAirGroup);
+                    }
+                    else if(stationary != null)
+                    {
+                        airGroup.Recon(stationary, altitude, escortAirGroup);
+                    }                    
                 }
                 else if (missionType == EMissionType.ATTACK_RADAR
                     || missionType == EMissionType.ATTACK_AIRCRAFT
@@ -438,14 +467,37 @@ namespace IL2DCE
                     missionType == EMissionType.ARMED_MARITIME_RECON)
                 {
                     GroundGroup groundGroup = forcedTargetGroundGroup;
-                    if (groundGroup == null)
+                    Stationary stationary = forcedTargetStationary;
+                    if (groundGroup == null && stationary == null)
                     {
                         groundGroup = Generator.GeneratorGroundOperation.getAvailableRandomEnemyGroundGroup(airGroup, missionType);
-                    }
-                    Generator.GeneratorGroundOperation.CreateRandomGroundOperation(sectionFile, groundGroup);
-                    double altitude = getRandomAltitude(randomAircraftParametersInfo);
+                        stationary = Generator.GeneratorGroundOperation.getAvailableRandomEnemyStationary(airGroup, missionType);
 
-                    airGroup.GroundAttack(groundGroup, altitude, escortAirGroup);
+                        if (groundGroup != null && stationary != null)
+                        {
+                            // Randomly select one of them
+                            int type = Random.Next(2);
+                            if (type == 0)
+                            {
+                                stationary = null;
+                            }
+                            else
+                            {
+                                groundGroup = null;
+                            }
+                        }
+                    }
+
+                    double altitude = getRandomAltitude(randomAircraftParametersInfo);
+                    if (groundGroup != null)
+                    {
+                        Generator.GeneratorGroundOperation.CreateRandomGroundOperation(sectionFile, groundGroup);
+                        airGroup.GroundAttack(groundGroup, altitude, escortAirGroup);
+                    }
+                    else if(stationary != null)
+                    {
+                        airGroup.GroundAttack(stationary, altitude, escortAirGroup);
+                    }
                 }                
                 else if (missionType == EMissionType.ESCORT)
                 {
@@ -629,8 +681,8 @@ namespace IL2DCE
             {
                 List<GroundGroup> possibleTargetGroundGroups = new List<GroundGroup>();
                 List<Stationary> possibleTargetStationaries = new List<Stationary>();
-                Dictionary<GroundGroup, List<Tuple<AirGroup, EMissionType>>> possibleOffensiveAirGroups = new Dictionary<GroundGroup, List<Tuple<AirGroup, EMissionType>>>();
-                Dictionary<Stationary, List<Tuple<AirGroup, EMissionType>>> possibleOffensiveAirGroupsStationary = new Dictionary<Stationary, List<Tuple<AirGroup, EMissionType>>>();
+                Dictionary<GroundGroup, Dictionary<AirGroup, EMissionType>> possibleOffensiveAirGroups = new Dictionary<GroundGroup, Dictionary<AirGroup, EMissionType>>();
+                Dictionary<Stationary, Dictionary<AirGroup, EMissionType>> possibleOffensiveAirGroupsStationary = new Dictionary<Stationary, Dictionary<AirGroup, EMissionType>>();
 
                 foreach (AirGroup possibleOffensiveAirGroup in airGroups)
                 {
@@ -658,9 +710,9 @@ namespace IL2DCE
 
                             if (!possibleOffensiveAirGroups.ContainsKey(possibleTargetGroundGroup))
                             {
-                                possibleOffensiveAirGroups.Add(possibleTargetGroundGroup, new List<Tuple<AirGroup, EMissionType>>());
+                                possibleOffensiveAirGroups.Add(possibleTargetGroundGroup, new Dictionary<AirGroup, EMissionType>());
                             }
-                            possibleOffensiveAirGroups[possibleTargetGroundGroup].Add(new Tuple<AirGroup, EMissionType>(possibleOffensiveAirGroup, possibleOffensiveMissionType));
+                            possibleOffensiveAirGroups[possibleTargetGroundGroup].Add(possibleOffensiveAirGroup, possibleOffensiveMissionType);
                         }
                         else if(possibleTargetStationary != null)
                         {
@@ -668,13 +720,14 @@ namespace IL2DCE
 
                             if (!possibleOffensiveAirGroupsStationary.ContainsKey(possibleTargetStationary))
                             {
-                                possibleOffensiveAirGroupsStationary.Add(possibleTargetStationary, new List<Tuple<AirGroup, EMissionType>>());
+                                possibleOffensiveAirGroupsStationary.Add(possibleTargetStationary, new Dictionary<AirGroup, EMissionType>());
                             }
-                            possibleOffensiveAirGroupsStationary[possibleTargetStationary].Add(new Tuple<AirGroup, EMissionType>(possibleOffensiveAirGroup, possibleOffensiveMissionType));
+                            possibleOffensiveAirGroupsStationary[possibleTargetStationary].Add(possibleOffensiveAirGroup, possibleOffensiveMissionType);
                         }
                     }
                 }
 
+                // Select target considering the distance to the defensiveAirGroup
                 targetGroundGroup = Generator.GeneratorGroundOperation.getRandomTargetBasedOnRange(possibleTargetGroundGroups, defensiveAirGroup);
                 targetStationary = Generator.GeneratorGroundOperation.getRandomTargetBasedOnRange(possibleTargetStationaries, defensiveAirGroup);
 
@@ -692,27 +745,24 @@ namespace IL2DCE
                     }
                 }
 
+                // Now select the offensiveAirGroup for the selected target, also considering the distance to the target
                 if (targetGroundGroup != null && possibleOffensiveAirGroups.ContainsKey(targetGroundGroup))
                 {
                     targetStationary = null;
-
-                    // Select a random offensive air group from the list
-                    // TODO: Select offensive airGroup by based on range
-                    var tuple = possibleOffensiveAirGroups[targetGroundGroup][Random.Next(possibleOffensiveAirGroups[targetGroundGroup].Count)];
-                    AirGroup offensiveAirGroup = tuple.Item1;
-                    offensiveMissionType = tuple.Item2;
+                    
+                    var offensiveAirGroups = possibleOffensiveAirGroups[targetGroundGroup].Keys.ToList();
+                    AirGroup offensiveAirGroup = getRandomAirGroupBasedOnDistance(offensiveAirGroups, targetGroundGroup.Position);
+                    offensiveMissionType = possibleOffensiveAirGroups[targetGroundGroup][offensiveAirGroup];
                     return offensiveAirGroup;
                 }
                 else if(targetStationary != null && possibleOffensiveAirGroupsStationary.ContainsKey(targetStationary))
                 {
                     targetGroundGroup = null;
 
-                    // Select a random offensive air group from the list
-                    // TODO: Select offensive airGroup by based on range
-                    var tuple = possibleOffensiveAirGroupsStationary[targetStationary][Random.Next(possibleOffensiveAirGroupsStationary[targetStationary].Count)];
-                    AirGroup offensiveAirGroup = tuple.Item1;
-                    offensiveMissionType = tuple.Item2;
-                    return offensiveAirGroup;
+                    var offensiveAirGroups = possibleOffensiveAirGroupsStationary[targetStationary].Keys.ToList();
+                    AirGroup offensiveAirGroup = getRandomAirGroupBasedOnDistance(offensiveAirGroups, targetStationary.Position);
+                    offensiveMissionType = possibleOffensiveAirGroupsStationary[targetStationary][offensiveAirGroup];
+                    return offensiveAirGroup;                    
                 }
                 else
                 {
