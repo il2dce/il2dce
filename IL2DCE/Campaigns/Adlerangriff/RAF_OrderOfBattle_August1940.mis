@@ -1,0 +1,683 @@
+﻿[PARTS]
+  core.100
+  bob.100
+[MAIN]
+  MAP Land$English_Channel_1940
+  BattleArea 150000 100000 100000 150000 1000
+  TIME 12.0000002905726
+  WeatherIndex 0
+  CloudsHeight 1000
+  BreezeActivity 10
+  ThermalActivity 10
+[GlobalWind_0]
+  Power 3.000 0.000 0.000
+  BottomBound 0.00
+  TopBound 1500.00
+  GustPower 0
+  GustAngle 45
+[splines]
+[AirGroups]
+  BoB_RAF_F_32Sqn_Late.01
+  BoB_RAF_F_501Sqn_Late.01
+  BoB_RAF_F_610Sqn_Late.01
+  BoB_RAF_F_600Sqn_Late.01
+  BoB_RAF_F_56Sqn_Late.01
+  BoB_RAF_F_151Sqn_Late.01
+  BoB_RAF_F_64Sqn_Late.02
+  BoB_RAF_F_615Sqn_Late.01
+  BoB_RAF_F_111Sqn_Late.02
+  BoB_RAF_F_1_RCAF_Late.01
+  BoB_RAF_F_65Sqn_Late.02
+  BoB_RAF_F_74Sqn_Late.01
+  BoB_RAF_F_54Sqn_Late.02
+  BoB_RAF_F_41Sqn_Late.01
+  BoB_RAF_F_43Sqn_Late.01
+  BoB_RAF_F_601Sqn_Late.01
+  BoB_RAF_F_145Sqn_Late.02
+  BoB_RAF_F_1Sqn_Late.01
+  BoB_RAF_F_257Sqn_Late.02
+  BoB_RAF_F_303_PL_Late.01
+  BoB_RAF_F_604Sqn_Late.01
+  BoB_RAF_F_609Sqn_Late.01
+  BoB_RAF_F_238Sqn_Late.01
+  BoB_RAF_F_264Sqn_Late.01
+  BoB_RAF_F_236Sqn_Late.01
+  BoB_RAF_B_82Sqn.01
+  BoB_RAF_B_21Sqn.02
+  BoB_RAF_B_105Sqn.01
+  BoB_RAF_B_37Sqn.01
+  BoB_RAF_B_75Sqn.02
+  BoB_RAF_B_38Sqn.01
+  BoB_RAF_B_115Sqn.02
+  BoB_RAF_B_15Sqn.02
+  BoB_RAF_B_40Sqn.01
+  BoB_RAF_B_88Sqn.02
+[BoB_RAF_F_32Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 26
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_32Sqn_Late.01_Way]
+  TAKEOFF 155398.50 253707.00 0 0
+[BoB_RAF_F_501Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 30
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_501Sqn_Late.01_Way]
+  TAKEOFF 180397.14 264784.19 0 0
+[BoB_RAF_F_610Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.SpitfireMkIa_100oct
+  Formation FINGERFOUR
+  CallSign 28
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_610Sqn_Late.01_Way]
+  TAKEOFF 155345.87 253986.09 0 0
+[BoB_RAF_F_600Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.BlenheimMkIVF
+  Formation FINGERFOUR
+  CallSign 20
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_600Sqn_Late.01_Way]
+  TAKEOFF 248313.87 259053.08 0 0
+[BoB_RAF_F_56Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 7
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_56Sqn_Late.01_Way]
+  TAKEOFF 162632.67 297560.03 0 0
+[BoB_RAF_F_151Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 20
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_151Sqn_Late.01_Way]
+  TAKEOFF 162737.28 297766.80 0 0
+[BoB_RAF_F_64Sqn_Late.02]
+  Flight1  11
+  Class Aircraft.SpitfireMkIa_100oct
+  Formation FINGERFOUR
+  CallSign 33
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_64Sqn_Late.02_Way]
+  TAKEOFF 146529.49 251166.22 0 0
+[BoB_RAF_F_615Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 16
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_615Sqn_Late.01_Way]
+  TAKEOFF 146831.40 251104.82 0 0
+[BoB_RAF_F_111Sqn_Late.02]
+  Flight1  11
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 16
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_111Sqn_Late.02_Way]
+  TAKEOFF 144192.26 256366.38 0 0
+[BoB_RAF_F_1_RCAF_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 10
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_1_RCAF_Late.01_Way]
+  TAKEOFF 144148.61 256544.70 0 0
+[BoB_RAF_F_65Sqn_Late.02]
+  Flight1  11
+  Class Aircraft.SpitfireMkIa_100oct
+  Formation FINGERFOUR
+  CallSign 10
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_65Sqn_Late.02_Way]
+  TAKEOFF 166691.76 277803.88 0 0
+[BoB_RAF_F_74Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.SpitfireMkIa_100oct
+  Formation FINGERFOUR
+  CallSign 17
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_74Sqn_Late.01_Way]
+  TAKEOFF 166556.10 277374.75 0 0
+[BoB_RAF_F_54Sqn_Late.02]
+  Flight1  11
+  Class Aircraft.SpitfireMkIa_100oct
+  Formation FINGERFOUR
+  CallSign 23
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_54Sqn_Late.02_Way]
+  TAKEOFF 167121.59 277463.11 0 0
+[BoB_RAF_F_41Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.SpitfireMkIa_100oct
+  Formation FINGERFOUR
+  CallSign 17
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_41Sqn_Late.01_Way]
+  TAKEOFF 167146.05 278010.92 0 0
+[BoB_RAF_F_43Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 17
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_43Sqn_Late.01_Way]
+  TAKEOFF 104491.56 199455.16 0 0
+[BoB_RAF_F_601Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 1
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_601Sqn_Late.01_Way]
+  TAKEOFF 104678.71 199525.34 0 0
+[BoB_RAF_F_145Sqn_Late.02]
+  Flight1  11
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 31
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_145Sqn_Late.02_Way]
+  TAKEOFF 101440.58 199889.32 0 0
+[BoB_RAF_F_1Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 31
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_1Sqn_Late.01_Way]
+  TAKEOFF 123353.50 278088.66 0 0
+[BoB_RAF_F_257Sqn_Late.02]
+  Flight1  11
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 25
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_257Sqn_Late.02_Way]
+  TAKEOFF 123245.86 278335.60 0 0
+[BoB_RAF_F_303_PL_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 11
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_303_PL_Late.01_Way]
+  TAKEOFF 123442.41 278309.74 0 0
+[BoB_RAF_F_604Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.BlenheimMkIVF
+  Formation FINGERFOUR
+  CallSign 31
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_604Sqn_Late.01_Way]
+  TAKEOFF 45821.71 238949.70 0 0
+[BoB_RAF_F_609Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.SpitfireMkIa_100oct
+  Formation FINGERFOUR
+  CallSign 1
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_609Sqn_Late.01_Way]
+  TAKEOFF 46171.02 239141.84 0 0
+[BoB_RAF_F_238Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.HurricaneMkI_100oct
+  Formation FINGERFOUR
+  CallSign 19
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_238Sqn_Late.01_Way]
+  TAKEOFF 46213.44 238795.20 0 0
+[BoB_RAF_F_264Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.DefiantMkI
+  Formation FINGERFOUR
+  CallSign 26
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_RAF_F_264Sqn_Late.01_Way]
+  TAKEOFF 166803.80 278023.50 0 0
+[BoB_RAF_F_236Sqn_Late.01]
+  Flight0  1
+  Class Aircraft.BlenheimMkIVF
+  Formation FINGERFOUR
+  CallSign 26
+  Fuel 100
+  Weapons 1
+  Belt _Gun00 Gun.Browning303MkII MainBelt 10 2 2 11 2 2 2 2
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_F_236Sqn_Late.01_Way]
+  TAKEOFF 89589.08 196311.91 0 0
+[BoB_RAF_B_82Sqn.01]
+  Flight0  1
+  Class Aircraft.BlenheimMkIV_Late
+  Formation LINEABREAST
+  CallSign 26
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_B_82Sqn.01_Way]
+  TAKEOFF 200945.81 282619.51 0 0
+[BoB_RAF_B_21Sqn.02]
+  Flight1  11
+  Class Aircraft.BlenheimMkIV_Late
+  Formation LINEABREAST
+  CallSign 30
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_B_21Sqn.02_Way]
+  TAKEOFF 201101.03 282648.69 0 0
+[BoB_RAF_B_105Sqn.01]
+  Flight0  1
+  Class Aircraft.BlenheimMkIV_Late
+  Formation LINEABREAST
+  CallSign 28
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_B_105Sqn.01_Way]
+  TAKEOFF 201036.80 282746.56 0 0
+[BoB_RAF_B_37Sqn.01]
+  Flight0  1
+  Class Aircraft.WellingtonMkIc
+  Formation LINEABREAST
+  CallSign 20
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_B_37Sqn.01_Way]
+  TAKEOFF 90764.03 266388.67 0 0
+[BoB_RAF_B_75Sqn.02]
+  Flight1  11
+  Class Aircraft.WellingtonMkIc
+  Formation LINEABREAST
+  CallSign 7
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_B_75Sqn.02_Way]
+  TAKEOFF 90899.80 266471.35 0 0
+[BoB_RAF_B_38Sqn.01]
+  Flight0  1
+  Class Aircraft.WellingtonMkIc
+  Formation LINEABREAST
+  CallSign 20
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_B_38Sqn.01_Way]
+  TAKEOFF 31348.78 233388.08 0 0
+[BoB_RAF_B_115Sqn.02]
+  Flight1  11
+  Class Aircraft.WellingtonMkIc
+  Formation LINEABREAST
+  CallSign 33
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_B_115Sqn.02_Way]
+  TAKEOFF 31236.99 233331.11 0 0
+[BoB_RAF_B_15Sqn.02]
+  Flight1  11
+  Class Aircraft.BlenheimMkIV_Late
+  Formation LINEABREAST
+  CallSign 16
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_B_15Sqn.02_Way]
+  TAKEOFF 121259.24 269302.76 0 0
+[BoB_RAF_B_40Sqn.01]
+  Flight0  1
+  Class Aircraft.BlenheimMkIV_Late
+  Formation LINEABREAST
+  CallSign 16
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_B_40Sqn.01_Way]
+  TAKEOFF 121420.85 269425.73 0 0
+[BoB_RAF_B_88Sqn.02]
+  Flight1  11
+  Class Aircraft.BlenheimMkIV_Late
+  Formation LINEABREAST
+  CallSign 10
+  Fuel 100
+  Weapons 1
+  Skill 0.8 0.6 0.5 0.5 0.5 0.5 0.6 0.5
+[BoB_RAF_B_88Sqn.02_Way]
+  TAKEOFF 121647.46 269345.80 0 0
+[CustomChiefs]
+[Stationary]
+  Static126 Stationary.BlenheimMkIVF nn 89187.45 196173.16 0.00 
+  Static127 Stationary.BlenheimMkIVF nn 89185.16 196217.13 0.00 
+  Static128 Stationary.BlenheimMkIVF nn 89183.73 196259.47 0.00 
+  Static129 Stationary.BlenheimMkIVF nn 89181.59 196405.72 0.00 
+  Static130 Stationary.BlenheimMkIVF nn 89180.97 196446.31 0.00 
+  Static131 Stationary.BlenheimMkIVF nn 89181.66 196487.30 0.00 
+  Static111 Stationary.HurricaneMkI_100oct nn 104507.94 198845.20 -295.00 
+  Static112 Stationary.HurricaneMkI_100oct nn 104537.77 198830.03 -295.00 
+  Static113 Stationary.HurricaneMkI_100oct nn 104573.18 198815.11 -285.00 
+  Static110 Stationary.HurricaneMkI_100oct nn 104364.54 198906.41 -310.00 
+  Static109 Stationary.HurricaneMkI_100oct nn 104408.04 198886.94 -280.00 
+  Static108 Stationary.HurricaneMkI_100oct nn 104446.23 198874.14 -295.00 
+  Static119 Stationary.HurricaneMkI_100oct nn 104176.92 199292.16 -330.00 
+  Static118 Stationary.HurricaneMkI_100oct nn 104161.50 199326.55 -330.00 
+  Static117 Stationary.HurricaneMkI_100oct nn 104141.02 199360.19 -325.00 
+  Static123 Stationary.HurricaneMkI_100oct nn 101319.73 199487.73 100.00 
+  Static116 Stationary.HurricaneMkI_100oct nn 104117.74 199438.33 -360.00 
+  Static115 Stationary.HurricaneMkI_100oct nn 104112.94 199475.50 -345.00 
+  Static121 Stationary.HurricaneMkI_100oct nn 101164.41 199539.78 -315.00 
+  Static122 Stationary.HurricaneMkI_100oct nn 101190.84 199514.58 -300.00 
+  Static124 Stationary.HurricaneMkI_100oct nn 101353.34 199492.64 95.00 
+  Static125 Stationary.HurricaneMkI_100oct nn 101386.13 199495.31 100.00 
+  Static114 Stationary.HurricaneMkI_100oct nn 104110.41 199513.44 -360.00 
+  Static120 Stationary.HurricaneMkI_100oct nn 101152.90 199573.64 -330.00 
+  Static209 Stationary.WellingtonMkIc nn 31261.68 232812.53 70.00 
+  Static207 Stationary.WellingtonMkIc nn 31177.18 232874.83 40.00 
+  Static208 Stationary.WellingtonMkIc nn 31212.88 232840.06 55.00 
+  Static198 Stationary.WellingtonMkIc nn 31949.71 232868.86 -230.00 
+  Static201 Stationary.WellingtonMkIc nn 31975.65 232895.33 -215.00 
+  Static206 Stationary.WellingtonMkIc nn 31111.40 232931.39 50.00 
+  Static199 Stationary.WellingtonMkIc nn 31990.74 232928.41 -195.00 
+  Static204 Stationary.WellingtonMkIc nn 31033.77 232994.14 40.00 
+  Static205 Stationary.WellingtonMkIc nn 31068.17 232961.63 55.00 
+  Static200 Stationary.WellingtonMkIc nn 31996.82 232977.91 -195.00 
+  Static202 Stationary.WellingtonMkIc nn 32004.50 233010.98 -195.00 
+  Static203 Stationary.WellingtonMkIc nn 32011.91 233044.34 -190.00 
+  Static132 Stationary.BlenheimMkIVF nn 46193.65 238772.33 120.00 
+  Static133 Stationary.BlenheimMkIVF nn 46229.99 238791.72 120.00 
+  Static134 Stationary.BlenheimMkIVF nn 46265.27 238808.27 120.00 
+  Static135 Stationary.BlenheimMkIVF nn 46317.97 238835.70 120.00 
+  Static136 Stationary.BlenheimMkIVF nn 46351.50 238852.05 120.00 
+  Static137 Stationary.BlenheimMkIVF nn 46387.43 238870.77 120.00 
+  Static143 Stationary.HurricaneMkI_100oct nn 45551.63 239052.86 -30.00 
+  Static142 Stationary.HurricaneMkI_100oct nn 45565.35 239076.81 -30.00 
+  Static141 Stationary.HurricaneMkI_100oct nn 45579.29 239101.20 -30.00 
+  Static140 Stationary.HurricaneMkI_100oct nn 45576.48 239160.67 15.00 
+  Static138 Stationary.HurricaneMkI_100oct nn 45562.70 239210.22 15.00 
+  Static139 Stationary.HurricaneMkI_100oct nn 45568.42 239185.28 15.00 
+  Static146 Stationary.SpitfireMkIa_100oct nn 46454.29 239356.86 -135.00 
+  Static147 Stationary.SpitfireMkIa_100oct nn 46515.92 239342.48 -110.00 
+  Static148 Stationary.SpitfireMkIa_100oct nn 46541.84 239336.39 -110.00 
+  Static149 Stationary.SpitfireMkIa_100oct nn 46564.92 239328.55 -110.00 
+  Static144 Stationary.SpitfireMkIa_100oct nn 46403.77 239379.06 -105.00 
+  Static145 Stationary.SpitfireMkIa_100oct nn 46429.69 239369.70 -110.00 
+  Static84 Stationary.HurricaneMkI_100oct nn 146961.13 250983.70 175.00 
+  Static85 Stationary.HurricaneMkI_100oct nn 146964.83 251017.64 175.00 
+  Static86 Stationary.HurricaneMkI_100oct nn 146968.28 251048.25 175.00 
+  Static87 Stationary.HurricaneMkI_100oct nn 146967.66 251094.30 175.00 
+  Static88 Stationary.HurricaneMkI_100oct nn 146969.88 251119.69 175.00 
+  Static89 Stationary.HurricaneMkI_100oct nn 146970.52 251147.95 190.00 
+  Static90 Stationary.SpitfireMkIa_100oct nn 146349.13 251375.77 -70.00 
+  Static91 Stationary.SpitfireMkIa_100oct nn 146374.95 251384.47 -70.00 
+  Static92 Stationary.SpitfireMkIa_100oct nn 146400.33 251393.34 -70.00 
+  Static93 Stationary.SpitfireMkIa_100oct nn 146515.84 251439.39 -70.00 
+  Static94 Stationary.SpitfireMkIa_100oct nn 146547.69 251448.67 -70.00 
+  Static95 Stationary.SpitfireMkIa_100oct nn 146577.80 251461.80 -55.00 
+  Static98 Stationary.SpitfireMkIa_100oct nn 155551.25 253615.95 -120.00 
+  Static97 Stationary.SpitfireMkIa_100oct nn 155578.47 253602.81 -120.00 
+  Static96 Stationary.SpitfireMkIa_100oct nn 155610.11 253584.42 -120.00 
+  Static99 Stationary.SpitfireMkIa_100oct nn 155527.30 253660.95 -180.00 
+  Static104 Stationary.HurricaneMkI_100oct nn 154810.36 253696.16 -365.00 
+  Static103 Stationary.HurricaneMkI_100oct nn 154810.36 253730.47 -360.00 
+  Static100 Stationary.SpitfireMkIa_100oct nn 155528.98 253698.05 -190.00 
+  Static101 Stationary.SpitfireMkIa_100oct nn 155536.72 253735.31 -195.00 
+  Static102 Stationary.HurricaneMkI_100oct nn 154803.55 253761.63 -345.00 
+  Static105 Stationary.HurricaneMkI_100oct nn 154852.33 253841.16 -435.00 
+  Static106 Stationary.HurricaneMkI_100oct nn 154888.67 253853.98 -425.00 
+  Static107 Stationary.HurricaneMkI_100oct nn 154918.34 253869.61 -415.00 
+  Static72 Stationary.HurricaneMkI_100oct nn 143860.94 256381.61 -25.00 
+  Static73 Stationary.HurricaneMkI_100oct nn 143877.59 256415.14 -25.00 
+  Static74 Stationary.HurricaneMkI_100oct nn 143892.03 256445.73 -25.00 
+  Static75 Stationary.HurricaneMkI_100oct nn 143912.69 256489.34 -25.00 
+  Static76 Stationary.HurricaneMkI_100oct nn 143926.08 256516.52 -25.00 
+  Static77 Stationary.HurricaneMkI_100oct nn 143936.78 256541.77 -25.00 
+  Static78 Stationary.HurricaneMkI_100oct nn 143976.41 256633.91 -25.00 
+  Static79 Stationary.HurricaneMkI_100oct nn 143989.03 256663.36 -25.00 
+  Static80 Stationary.HurricaneMkI_100oct nn 144001.28 256690.52 -25.00 
+  Static81 Stationary.HurricaneMkI_100oct nn 144026.50 256751.00 -25.00 
+  Static82 Stationary.HurricaneMkI_100oct nn 144041.05 256781.22 -25.00 
+  Static83 Stationary.HurricaneMkI_100oct nn 144052.77 256809.63 -25.00 
+  Static5 Stationary.BlenheimMkIVF nn 248836.50 258909.30 -185.00 
+  Static4 Stationary.BlenheimMkIVF nn 248841.31 258947.31 -190.00 
+  Static3 Stationary.BlenheimMkIVF nn 248847.92 258980.81 -195.00 
+  Static2 Stationary.BlenheimMkIVF nn 248867.91 259084.33 -195.00 
+  Static1 Stationary.BlenheimMkIVF nn 248875.27 259118.89 -195.00 
+  Static8 Stationary.BlenheimMkIVF nn 247517.59 259145.28 -360.00 
+  Static7 Stationary.BlenheimMkIVF nn 247520.30 259192.00 -370.00 
+  Static0 Stationary.BlenheimMkIVF nn 248883.39 259147.84 -200.00 
+  Static6 Stationary.BlenheimMkIVF nn 247527.94 259240.64 -370.00 
+  Static11 Stationary.BlenheimMkIVF nn 248453.84 259576.80 -495.00 
+  Static9 Stationary.BlenheimMkIVF nn 248315.33 259623.38 -465.00 
+  Static10 Stationary.BlenheimMkIVF nn 248377.06 259605.94 -465.00 
+  Static22 Stationary.HurricaneMkI_100oct nn 180216.44 264239.03 45.00 
+  Static23 Stationary.HurricaneMkI_100oct nn 180240.33 264218.88 45.00 
+  Static20 Stationary.HurricaneMkI_100oct nn 180138.88 264302.97 45.00 
+  Static21 Stationary.HurricaneMkI_100oct nn 180190.25 264263.03 45.00 
+  Static18 Stationary.HurricaneMkI_100oct nn 180085.59 264347.41 45.00 
+  Static19 Stationary.HurricaneMkI_100oct nn 180112.70 264324.56 45.00 
+  Static197 Stationary.WellingtonMkIc nn 91217.70 266235.97 -185.00 
+  Static17 Stationary.HurricaneMkI_100oct nn 179849.73 264894.66 -420.00 
+  Static196 Stationary.WellingtonMkIc nn 91227.83 266302.22 -190.00 
+  Static16 Stationary.HurricaneMkI_100oct nn 179872.28 264919.16 -390.00 
+  Static15 Stationary.HurricaneMkI_100oct nn 179887.67 264955.00 -360.00 
+  Static195 Stationary.WellingtonMkIc nn 91231.34 266367.94 -185.00 
+  Static14 Stationary.HurricaneMkI_100oct nn 179901.52 264999.91 -390.00 
+  Static13 Stationary.HurricaneMkI_100oct nn 179923.13 265031.84 -420.00 
+  Static12 Stationary.HurricaneMkI_100oct nn 179961.23 265045.78 -450.00 
+  Static194 Stationary.WellingtonMkIc nn 91216.55 266508.50 -165.00 
+  Static188 Stationary.WellingtonMkIc nn 90494.80 266574.75 -75.00 
+  Static186 Stationary.WellingtonMkIc nn 90623.29 266601.06 -75.00 
+  Static187 Stationary.WellingtonMkIc nn 90664.34 266617.56 -60.00 
+  Static189 Stationary.WellingtonMkIc nn 90785.56 266679.75 -60.00 
+  Static193 Stationary.WellingtonMkIc nn 91223.78 266628.84 -195.00 
+  Static190 Stationary.WellingtonMkIc nn 90839.66 266711.59 -45.00 
+  Static192 Stationary.WellingtonMkIc nn 91247.79 266741.13 -165.00 
+  Static191 Stationary.WellingtonMkIc nn 90960.59 266794.31 -60.00 
+  Static177 Stationary.BlenheimMkIV_Late nn 121896.28 268958.28 180.00 
+  Static176 Stationary.BlenheimMkIV_Late nn 121896.00 268996.38 165.00 
+  Static175 Stationary.BlenheimMkIV_Late nn 121921.59 269139.44 180.00 
+  Static174 Stationary.BlenheimMkIV_Late nn 121922.62 269185.09 165.00 
+  Static178 Stationary.BlenheimMkIV_Late nn 121973.07 269308.94 165.00 
+  Static179 Stationary.BlenheimMkIV_Late nn 121984.16 269357.84 165.00 
+  Static173 Stationary.BlenheimMkIV_Late nn 122019.25 269499.25 165.00 
+  Static172 Stationary.BlenheimMkIV_Late nn 122026.65 269533.66 165.00 
+  Static171 Stationary.BlenheimMkIV_Late nn 122032.90 269565.22 165.00 
+  Static170 Stationary.BlenheimMkIV_Late nn 122037.17 269636.63 180.00 
+  Static169 Stationary.BlenheimMkIV_Late nn 122026.08 269673.31 195.00 
+  Static180 Stationary.BlenheimMkIV_Late nn 121395.41 269733.78 -30.00 
+  Static168 Stationary.BlenheimMkIV_Late nn 122007.98 269710.50 225.00 
+  Static181 Stationary.BlenheimMkIV_Late nn 121419.29 269762.22 -45.00 
+  Static182 Stationary.BlenheimMkIV_Late nn 121443.47 269785.25 -45.00 
+  Static183 Stationary.BlenheimMkIV_Late nn 121483.85 269825.06 -30.00 
+  Static184 Stationary.BlenheimMkIV_Late nn 121506.03 269853.78 -30.00 
+  Static185 Stationary.BlenheimMkIV_Late nn 121528.79 269877.97 -45.00 
+  Static42 Stationary.DefiantMkI nn 166393.97 277312.72 0.00 
+  Static43 Stationary.DefiantMkI nn 166394.69 277350.03 0.00 
+  Static44 Stationary.DefiantMkI nn 166391.36 277392.00 5.00 
+  Static47 Stationary.DefiantMkI nn 166370.19 277460.63 10.00 
+  Static46 Stationary.DefiantMkI nn 166357.63 277496.91 20.00 
+  Static60 Stationary.HurricaneMkI_100oct nn 124012.74 278173.47 170.00 
+  Static45 Stationary.DefiantMkI nn 166343.41 277529.44 30.00 
+  Static71 Stationary.HurricaneMkI_100oct nn 122566.92 278238.50 -65.00 
+  Static70 Stationary.HurricaneMkI_100oct nn 122607.00 278258.41 -65.00 
+  Static61 Stationary.HurricaneMkI_100oct nn 124016.33 278208.91 170.00 
+  Static62 Stationary.HurricaneMkI_100oct nn 124020.06 278239.66 170.00 
+  Static69 Stationary.HurricaneMkI_100oct nn 122646.44 278274.88 -65.00 
+  Static68 Stationary.HurricaneMkI_100oct nn 122682.76 278320.16 -5.00 
+  Static67 Stationary.HurricaneMkI_100oct nn 122684.41 278356.69 -5.00 
+  Static66 Stationary.HurricaneMkI_100oct nn 122687.15 278389.72 -5.00 
+  Static63 Stationary.HurricaneMkI_100oct nn 124024.80 278337.69 170.00 
+  Static64 Stationary.HurricaneMkI_100oct nn 124029.11 278369.50 170.00 
+  Static39 Stationary.DefiantMkI nn 166101.03 277759.72 45.00 
+  Static40 Stationary.DefiantMkI nn 166128.78 277736.03 45.00 
+  Static41 Stationary.DefiantMkI nn 166161.34 277708.25 45.00 
+  Static65 Stationary.HurricaneMkI_100oct nn 124033.41 278406.94 170.00 
+  Static38 Stationary.DefiantMkI nn 166070.33 277786.75 40.00 
+  Static37 Stationary.DefiantMkI nn 166044.63 277818.25 40.00 
+  Static36 Stationary.DefiantMkI nn 166021.48 277845.44 40.00 
+  Static24 Stationary.SpitfireMkIa_100oct nn 166816.03 278238.09 -25.00 
+  Static25 Stationary.SpitfireMkIa_100oct nn 166833.50 278267.84 -35.00 
+  Static34 Stationary.SpitfireMkIa_100oct nn 167415.45 278241.16 -155.00 
+  Static33 Stationary.SpitfireMkIa_100oct nn 167399.02 278268.28 -145.00 
+  Static35 Stationary.SpitfireMkIa_100oct nn 167428.47 278211.13 -170.00 
+  Static26 Stationary.SpitfireMkIa_100oct nn 166855.70 278303.13 -20.00 
+  Static27 Stationary.SpitfireMkIa_100oct nn 166874.72 278326.69 -50.00 
+  Static28 Stationary.SpitfireMkIa_100oct nn 166900.38 278352.69 -35.00 
+  Static29 Stationary.SpitfireMkIa_100oct nn 166925.45 278382.25 -35.00 
+  Static31 Stationary.SpitfireMkIa_100oct nn 167275.53 278382.06 -120.00 
+  Static32 Stationary.SpitfireMkIa_100oct nn 167299.20 278360.78 -125.00 
+  Static30 Stationary.SpitfireMkIa_100oct nn 167246.56 278401.38 -120.00 
+  Static158 Stationary.BlenheimMkIV_Late nn 200679.31 282375.38 90.00 
+  Static159 Stationary.BlenheimMkIV_Late nn 200719.52 282381.81 100.00 
+  Static156 Stationary.BlenheimMkIV_Late nn 200852.02 282402.53 90.00 
+  Static157 Stationary.BlenheimMkIV_Late nn 200911.95 282399.53 80.00 
+  Static160 Stationary.BlenheimMkIV_Late nn 201053.69 282376.06 80.00 
+  Static161 Stationary.BlenheimMkIV_Late nn 201092.55 282370.31 80.00 
+  Static167 Stationary.BlenheimMkIV_Late nn 201515.88 282629.06 180.00 
+  Static166 Stationary.BlenheimMkIV_Late nn 201502.73 282673.66 195.00 
+  Static165 Stationary.BlenheimMkIV_Late nn 201479.19 282709.81 225.00 
+  Static163 Stationary.BlenheimMkIV_Late nn 201342.31 282794.56 225.00 
+  Static164 Stationary.BlenheimMkIV_Late nn 201375.97 282778.69 240.00 
+  Static150 Stationary.BlenheimMkIV_Late nn 200673.11 282865.16 -30.00 
+  Static162 Stationary.BlenheimMkIV_Late nn 201334.42 282827.69 180.00 
+  Static151 Stationary.BlenheimMkIV_Late nn 200692.55 282892.78 -30.00 
+  Static152 Stationary.BlenheimMkIV_Late nn 200710.33 282916.88 -30.00 
+  Static153 Stationary.BlenheimMkIV_Late nn 200738.80 282948.91 -30.00 
+  Static154 Stationary.BlenheimMkIV_Late nn 200754.13 282971.63 -30.00 
+  Static155 Stationary.BlenheimMkIV_Late nn 200769.17 282994.06 -30.00 
+  Static49 Stationary.HurricaneMkI_100oct nn 161946.70 297979.22 -105.00 
+  Static50 Stationary.HurricaneMkI_100oct nn 161972.64 297970.72 -105.00 
+  Static51 Stationary.HurricaneMkI_100oct nn 162041.59 297952.19 -105.00 
+  Static52 Stationary.HurricaneMkI_100oct nn 162073.75 297944.81 -105.00 
+  Static53 Stationary.HurricaneMkI_100oct nn 162103.63 297935.75 -105.00 
+  Static54 Stationary.HurricaneMkI_100oct nn 162337.11 297963.03 -10.00 
+  Static48 Stationary.HurricaneMkI_100oct nn 161913.98 297989.69 -105.00 
+  Static55 Stationary.HurricaneMkI_100oct nn 162342.28 297989.78 -10.00 
+  Static56 Stationary.HurricaneMkI_100oct nn 162347.92 298018.47 -10.00 
+  Static57 Stationary.HurricaneMkI_100oct nn 162366.27 298099.63 -10.00 
+  Static58 Stationary.HurricaneMkI_100oct nn 162372.61 298131.25 -10.00 
+  Static59 Stationary.HurricaneMkI_100oct nn 162377.98 298163.06 -10.00 
+  Static210 Artillery.Bofors nn 248873.31 258795.48 -15.00 /timeout 0/radius_hide 0
+  Static211 Artillery.Bofors nn 248704.53 259463.63 -15.00 /timeout 0/radius_hide 0
+  Static212 Artillery.Bofors nn 247463.03 259158.23 -15.00 /timeout 0/radius_hide 0
+  Static213 Artillery.Bofors nn 248152.34 259650.36 -15.00 /timeout 0/radius_hide 0
+  Static214 Artillery.Bofors nn 201429.13 282885.53 -15.00 /timeout 0/radius_hide 0
+  Static215 Artillery.Bofors nn 201288.50 282250.53 -15.00 /timeout 0/radius_hide 0
+  Static216 Artillery.Bofors nn 200528.50 282735.34 -15.00 /timeout 0/radius_hide 0
+  Static217 Artillery.Bofors nn 200713.16 283020.19 -15.00 /timeout 0/radius_hide 0
+  Static218 Artillery.Bofors nn 162808.45 297214.84 -15.00 /timeout 0/radius_hide 0
+  Static219 Artillery.Bofors nn 161866.23 297470.13 -15.00 /timeout 0/radius_hide 0
+  Static220 Artillery.Bofors nn 162249.20 297971.16 -15.00 /timeout 0/radius_hide 0
+  Static221 Artillery.Bofors nn 162967.33 298272.44 -15.00 /timeout 0/radius_hide 0
+  Static222 Artillery.Bofors nn 166927.81 277057.66 -15.00 /timeout 0/radius_hide 0
+  Static223 Artillery.Bofors nn 166735.27 278053.22 -15.00 /timeout 0/radius_hide 0
+  Static224 Artillery.Bofors nn 166078.34 277503.16 -15.00 /timeout 0/radius_hide 0
+  Static225 Artillery.Bofors nn 167445.75 278315.84 -15.00 /timeout 0/radius_hide 0
+  Static226 Artillery.Bofors nn 180017.00 265229.53 -15.00 /timeout 0/radius_hide 0
+  Static227 Artillery.Bofors nn 180563.86 265625.59 -15.00 /timeout 0/radius_hide 0
+  Static228 Artillery.Bofors nn 180578.19 264837.09 -15.00 /timeout 0/radius_hide 0
+  Static229 Artillery.Bofors nn 180158.09 264270.56 -15.00 /timeout 0/radius_hide 0
+  Static230 Artillery.Bofors nn 155370.59 254657.13 -15.00 /timeout 0/radius_hide 0
+  Static231 Artillery.Bofors nn 155714.78 254473.75 -15.00 /timeout 0/radius_hide 0
+  Static232 Artillery.Bofors nn 155359.28 253289.83 -15.00 /timeout 0/radius_hide 0
+  Static233 Artillery.Bofors nn 154837.42 253640.31 -15.00 /timeout 0/radius_hide 0
+  Static234 Artillery.Bofors nn 146806.22 250586.33 -15.00 /timeout 0/radius_hide 0
+  Static235 Artillery.Bofors nn 147001.92 251129.28 -15.00 /timeout 0/radius_hide 0
+  Static236 Artillery.Bofors nn 146723.56 251576.45 -15.00 /timeout 0/radius_hide 0
+  Static237 Artillery.Bofors nn 146190.22 250867.70 -15.00 /timeout 0/radius_hide 0
+  Static238 Artillery.Bofors nn 144134.27 257060.44 -15.00 /timeout 0/radius_hide 0
+  Static239 Artillery.Bofors nn 143943.13 255869.36 -15.00 /timeout 0/radius_hide 0
+  Static240 Artillery.Bofors nn 144555.48 255855.97 -15.00 /timeout 0/radius_hide 0
+  Static241 Artillery.Bofors nn 144555.08 256798.41 -15.00 /timeout 0/radius_hide 0
+  Static242 Artillery.Bofors nn 124060.49 278063.97 -15.00 /timeout 0/radius_hide 0
+  Static243 Artillery.Bofors nn 124067.41 278640.84 -15.00 /timeout 0/radius_hide 0
+  Static244 Artillery.Bofors nn 122988.58 278700.69 -15.00 /timeout 0/radius_hide 0
+  Static245 Artillery.Bofors nn 122509.82 278211.50 -15.00 /timeout 0/radius_hide 0
+  Static246 Artillery.Bofors nn 122027.14 269408.34 -15.00 /timeout 0/radius_hide 0
+  Static247 Artillery.Bofors nn 122012.90 269037.38 -15.00 /timeout 0/radius_hide 0
+  Static248 Artillery.Bofors nn 120820.87 269603.59 -15.00 /timeout 0/radius_hide 0
+  Static249 Artillery.Bofors nn 121397.45 269840.34 -15.00 /timeout 0/radius_hide 0
+  Static250 Artillery.Bofors nn 90608.97 266703.09 -15.00 /timeout 0/radius_hide 0
+  Static251 Artillery.Bofors nn 90565.16 266020.22 -15.00 /timeout 0/radius_hide 0
+  Static252 Artillery.Bofors nn 91297.30 266393.22 -15.00 /timeout 0/radius_hide 0
+  Static253 Artillery.Bofors nn 91004.91 266856.91 -15.00 /timeout 0/radius_hide 0
+  Static254 Artillery.Bofors nn 104277.51 199886.17 -15.00 /timeout 0/radius_hide 0
+  Static255 Artillery.Bofors nn 105131.20 198956.38 -15.00 /timeout 0/radius_hide 0
+  Static256 Artillery.Bofors nn 104495.09 198785.39 -15.00 /timeout 0/radius_hide 0
+  Static257 Artillery.Bofors nn 104022.77 199311.16 -15.00 /timeout 0/radius_hide 0
+  Static258 Artillery.Bofors nn 101482.02 200105.88 -15.00 /timeout 0/radius_hide 0
+  Static259 Artillery.Bofors nn 101249.55 199527.22 -15.00 /timeout 0/radius_hide 0
+  Static260 Artillery.Bofors nn 101815.39 199791.94 -15.00 /timeout 0/radius_hide 0
+  Static261 Artillery.Bofors nn 101101.40 200138.44 -15.00 /timeout 0/radius_hide 0
+  Static262 Artillery.Bofors nn 89157.82 196368.11 -15.00 /timeout 0/radius_hide 0
+  Static263 Artillery.Bofors nn 89193.23 196009.73 -15.00 /timeout 0/radius_hide 0
+  Static264 Artillery.Bofors nn 89995.06 195725.75 -15.00 /timeout 0/radius_hide 0
+  Static265 Artillery.Bofors nn 89561.30 196876.11 -15.00 /timeout 0/radius_hide 0
+  Static266 Artillery.Bofors nn 45804.44 239454.67 -15.00 /timeout 0/radius_hide 0
+  Static267 Artillery.Bofors nn 46131.91 238676.78 -15.00 /timeout 0/radius_hide 0
+  Static268 Artillery.Bofors nn 46522.10 238899.88 -15.00 /timeout 0/radius_hide 0
+  Static269 Artillery.Bofors nn 45499.79 239152.91 -15.00 /timeout 0/radius_hide 0
+  Static270 Artillery.Bofors nn 32080.63 233026.03 -15.00 /timeout 0/radius_hide 0
+  Static271 Artillery.Bofors nn 31185.79 232786.13 -15.00 /timeout 0/radius_hide 0
+  Static272 Artillery.Bofors nn 32092.16 233293.30 -15.00 /timeout 0/radius_hide 0
+  Static273 Artillery.Bofors nn 31872.27 232771.88 -15.00 /timeout 0/radius_hide 0
+[Buildings]
+[BuildingsLinks]

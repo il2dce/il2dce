@@ -1,0 +1,2017 @@
+﻿[PARTS]
+  core.100
+  bob.100
+[MAIN]
+  MAP Land$English_Channel_1940
+  BattleArea 150000 100000 100000 150000 1000
+  TIME 12.0000002905726
+  WeatherIndex 0
+  CloudsHeight 1000
+  BreezeActivity 10
+  ThermalActivity 10
+[GlobalWind_0]
+  Power 3.000 0.000 0.000
+  BottomBound 0.00
+  TopBound 1500.00
+  GustPower 0
+  GustAngle 45
+[splines]
+[AirGroups]
+  BoB_LW_KG1_I.11
+  BoB_LW_KG1_I.21
+  BoB_LW_KG1_I.31
+  BoB_LW_KG1_II.11
+  BoB_LW_KG1_II.21
+  BoB_LW_KG1_II.31
+  BoB_LW_KG1_III.11
+  BoB_LW_KG1_III.21
+  BoB_LW_KG1_III.31
+  BoB_LW_KG76_III.11
+  BoB_LW_KG76_III.21
+  BoB_LW_KG76_III.31
+  BoB_LW_KG76_I.11
+  BoB_LW_KG76_I.21
+  BoB_LW_KG76_I.31
+  BoB_LW_KG76_II.11
+  BoB_LW_KG76_II.21
+  BoB_LW_KG76_II.31
+  BoB_LW_KG2_II.11
+  BoB_LW_KG2_II.21
+  BoB_LW_KG2_II.31
+  BoB_LW_StG1_II.11
+  BoB_LW_StG1_II.21
+  BoB_LW_StG1_II.31
+  BoB_LW_LG1_IV.11
+  BoB_LW_LG1_IV.22
+  BoB_LW_LG1_IV.31
+  BoB_LW_ErprGr210.11
+  BoB_LW_ErprGr210.21
+  BoB_LW_ErprGr210.31
+  BoB_LW_LG2_II.11
+  BoB_LW_LG2_II.21
+  BoB_LW_LG2_II.31
+  BoB_LW_LG2_I.11
+  BoB_LW_LG2_I.21
+  BoB_LW_LG2_I.31
+  BoB_LW_JG3_II.11
+  BoB_LW_JG3_II.21
+  BoB_LW_JG3_II.31
+  BoB_LW_JG3_III.11
+  BoB_LW_JG3_III.21
+  BoB_LW_JG3_III.31
+  BoB_LW_JG26_I.11
+  BoB_LW_JG26_I.21
+  BoB_LW_JG26_I.31
+  BoB_LW_JG26_II.11
+  BoB_LW_JG26_II.21
+  BoB_LW_JG26_II.31
+  BoB_LW_JG26_III.11
+  BoB_LW_JG26_III.21
+  BoB_LW_JG26_III.31
+  BoB_LW_JG51_I.11
+  BoB_LW_JG51_I.21
+  BoB_LW_JG51_I.31
+  BoB_LW_JG51_II.11
+  BoB_LW_JG51_II.21
+  BoB_LW_JG51_II.31
+  BoB_LW_JG51_III.11
+  BoB_LW_JG51_III.21
+  BoB_LW_JG51_III.31
+  BoB_LW_JG52_I.11
+  BoB_LW_JG52_I.21
+  BoB_LW_JG52_I.31
+  BoB_LW_JG52_II.11
+  BoB_LW_JG52_II.21
+  BoB_LW_JG52_II.31
+  BoB_LW_JG54_I.11
+  BoB_LW_JG54_I.21
+  BoB_LW_JG54_I.31
+  BoB_LW_JG54_II.11
+  BoB_LW_JG54_II.21
+  BoB_LW_JG54_II.31
+  BoB_LW_JG54_III.11
+  BoB_LW_JG54_III.21
+  BoB_LW_JG54_III.31
+  BoB_LW_ZG26_I.11
+  BoB_LW_ZG26_I.21
+  BoB_LW_ZG26_I.31
+  BoB_LW_ZG26_III.11
+  BoB_LW_ZG26_III.21
+  BoB_LW_ZG26_III.31
+  BoB_LW_ZG26_II.11
+  BoB_LW_ZG26_II.21
+  BoB_LW_ZG26_II.31
+  BoB_LW_ZG76_II.11
+  BoB_LW_ZG76_II.21
+  BoB_LW_ZG76_II.31
+  BoB_LW_StG77_I.11
+  BoB_LW_StG77_I.21
+  BoB_LW_StG77_I.31
+  BoB_LW_StG77_II.11
+  BoB_LW_StG77_II.21
+  BoB_LW_StG77_II.31
+  BoB_LW_StG77_III.11
+  BoB_LW_StG77_III.21
+  BoB_LW_StG77_III.31
+  BoB_LW_LG1_V.11
+  BoB_LW_LG1_V.21
+  BoB_LW_LG1_V.31
+  BoB_LW_AufklGr_11.01
+  BoB_LW_JG2_I.11
+  BoB_LW_JG2_I.21
+  BoB_LW_JG2_I.31
+  BoB_LW_JG2_II.11
+  BoB_LW_JG2_II.22
+  BoB_LW_JG2_II.31
+  BoB_LW_JG2_III.11
+  BoB_LW_JG2_III.21
+  BoB_LW_JG2_III.31
+  BoB_LW_JG27_I.11
+  BoB_LW_JG27_I.21
+  BoB_LW_JG27_I.31
+  BoB_LW_JG27_II.11
+  BoB_LW_JG27_II.21
+  BoB_LW_JG27_II.31
+  BoB_LW_JG27_III.11
+  BoB_LW_JG27_III.21
+  BoB_LW_JG27_III.31
+  BoB_LW_ZG2_I.11
+  BoB_LW_ZG2_I.21
+  BoB_LW_ZG2_I.31
+  BoB_LW_AufklGr_122.01
+  BoB_LW_AufklGr_14.01
+  BoB_LW_StG2_I.11
+  BoB_LW_StG2_I.21
+  BoB_LW_StG2_I.31
+[BoB_LW_KG1_I.11]
+  Flight0  1
+  Class Aircraft.He-111H-2
+  Formation VIC3
+  CallSign 26
+  Fuel 100
+  Weapons 1 1 1 1 1 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG1_I.11_Way]
+  TAKEOFF 335356.62 73157.28 0 0
+[BoB_LW_KG1_I.21]
+  Flight0  1
+  Class Aircraft.He-111H-2
+  Formation VIC3
+  CallSign 30
+  Fuel 100
+  Weapons 1 1 1 1 1 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG1_I.21_Way]
+  TAKEOFF 335255.47 73065.75 0 0
+[BoB_LW_KG1_I.31]
+  Flight0  1
+  Class Aircraft.He-111H-2
+  Formation VIC3
+  CallSign 28
+  Fuel 100
+  Weapons 1 1 1 1 1 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG1_I.31_Way]
+  TAKEOFF 335438.84 73064.88 0 0
+[BoB_LW_KG1_II.11]
+  Flight0  1
+  Class Aircraft.He-111H-2
+  Formation VIC3
+  CallSign 20
+  Fuel 100
+  Weapons 1 1 1 1 1 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG1_II.11_Way]
+  TAKEOFF 335170.84 72622.70 0 0
+[BoB_LW_KG1_II.21]
+  Flight0  1
+  Class Aircraft.He-111H-2
+  Formation VIC3
+  CallSign 7
+  Fuel 100
+  Weapons 1 1 1 1 1 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG1_II.21_Way]
+  TAKEOFF 335086.87 72531.10 0 0
+[BoB_LW_KG1_II.31]
+  Flight0  1
+  Class Aircraft.He-111H-2
+  Formation VIC3
+  CallSign 20
+  Fuel 100
+  Weapons 1 1 1 1 1 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG1_II.31_Way]
+  TAKEOFF 335191.19 72515.84 0 0
+[BoB_LW_KG1_III.11]
+  Flight0  1
+  Class Aircraft.He-111H-2
+  Formation VIC3
+  CallSign 33
+  Fuel 100
+  Weapons 1 1 1 1 1 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG1_III.11_Way]
+  TAKEOFF 346209.96 87776.68 0 0
+[BoB_LW_KG1_III.21]
+  Flight0  1
+  Class Aircraft.He-111H-2
+  Formation VIC3
+  CallSign 16
+  Fuel 100
+  Weapons 1 1 1 1 1 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG1_III.21_Way]
+  TAKEOFF 346154.41 87693.35 0 0
+[BoB_LW_KG1_III.31]
+  Flight0  1
+  Class Aircraft.He-111H-2
+  Formation VIC3
+  CallSign 33
+  Fuel 100
+  Weapons 1 1 1 1 1 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG1_III.31_Way]
+  TAKEOFF 346259.34 87696.44 0 0
+[BoB_LW_KG76_III.11]
+  Flight0  1
+  Class Aircraft.Do-17Z-2
+  Formation VIC3
+  CallSign 10
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG76_III.11_Way]
+  TAKEOFF 296926.68 9646.85 0 0
+[BoB_LW_KG76_III.21]
+  Flight0  1
+  Class Aircraft.Do-17Z-2
+  Formation VIC3
+  CallSign 10
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG76_III.21_Way]
+  TAKEOFF 296863.68 9521.54 0 0
+[BoB_LW_KG76_III.31]
+  Flight0  1
+  Class Aircraft.Do-17Z-2
+  Formation VIC3
+  CallSign 17
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG76_III.31_Way]
+  TAKEOFF 297018.47 9526.46 0 0
+[BoB_LW_KG76_I.11]
+  Flight0  1
+  Class Aircraft.Do-17Z-2
+  Formation VIC3
+  CallSign 23
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG76_I.11_Way]
+  TAKEOFF 303449.25 48955.16 0 0
+[BoB_LW_KG76_I.21]
+  Flight0  1
+  Class Aircraft.Do-17Z-2
+  Formation VIC3
+  CallSign 17
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG76_I.21_Way]
+  TAKEOFF 303391.62 48875.66 0 0
+[BoB_LW_KG76_I.31]
+  Flight0  1
+  Class Aircraft.Do-17Z-2
+  Formation VIC3
+  CallSign 17
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG76_I.31_Way]
+  TAKEOFF 303494.97 48873.67 0 0
+[BoB_LW_KG76_II.11]
+  Flight0  1
+  Class Aircraft.Ju-88A-1
+  Formation VIC3
+  CallSign 1
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG76_II.11_Way]
+  TAKEOFF 331619.74 27246.51 0 0
+[BoB_LW_KG76_II.21]
+  Flight0  1
+  Class Aircraft.Ju-88A-1
+  Formation VIC3
+  CallSign 31
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG76_II.21_Way]
+  TAKEOFF 331556.15 27147.94 0 0
+[BoB_LW_KG76_II.31]
+  Flight0  1
+  Class Aircraft.Ju-88A-1
+  Formation VIC3
+  CallSign 31
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG76_II.31_Way]
+  TAKEOFF 331689.70 27147.94 0 0
+[BoB_LW_KG2_II.11]
+  Flight0  1
+  Class Aircraft.Do-17Z-2
+  Formation VIC3
+  CallSign 25
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG2_II.11_Way]
+  TAKEOFF 351162.18 145580.19 0 0
+[BoB_LW_KG2_II.21]
+  Flight0  1
+  Class Aircraft.Do-17Z-2
+  Formation VIC3
+  CallSign 11
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG2_II.21_Way]
+  TAKEOFF 351076.01 145496.99 0 0
+[BoB_LW_KG2_II.31]
+  Flight0  1
+  Class Aircraft.Do-17Z-2
+  Formation VIC3
+  CallSign 30
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_KG2_II.31_Way]
+  TAKEOFF 351206.75 145491.05 0 0
+[BoB_LW_StG1_II.11]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 31
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_StG1_II.11_Way]
+  TAKEOFF 291076.74 216605.12 0 0
+[BoB_LW_StG1_II.21]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 31
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_StG1_II.21_Way]
+  TAKEOFF 291032.26 216555.95 0 0
+[BoB_LW_StG1_II.31]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 1
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_StG1_II.31_Way]
+  TAKEOFF 291111.86 216551.27 0 0
+[BoB_LW_LG1_IV.11]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 25
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_LG1_IV.11_Way]
+  TAKEOFF 306422.60 160959.36 0 0
+[BoB_LW_LG1_IV.22]
+  Flight1  11
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 19
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_LG1_IV.22_Way]
+  TAKEOFF 306366.78 160841.53 0 0
+[BoB_LW_LG1_IV.31]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 34
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_LG1_IV.31_Way]
+  TAKEOFF 306497.02 160850.83 0 0
+[BoB_LW_ErprGr210.11]
+  Flight0  1
+  Class Aircraft.Bf-110C-7
+  Formation FINGERFOUR
+  CallSign 25
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ErprGr210.11_Way]
+  TAKEOFF 290807.94 216227.68 0 0
+[BoB_LW_ErprGr210.21]
+  Flight0  1
+  Class Aircraft.Bf-110C-7
+  Formation FINGERFOUR
+  CallSign 20
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ErprGr210.21_Way]
+  TAKEOFF 290727.04 216150.82 0 0
+[BoB_LW_ErprGr210.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4B
+  Formation FINGERFOUR
+  CallSign 3
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ErprGr210.31_Way]
+  TAKEOFF 290852.44 216150.82 0 0
+[BoB_LW_LG2_II.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4B
+  Formation LINEABREAST
+  CallSign 6
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_LG2_II.11_Way]
+  TAKEOFF 291444.10 216204.32 0 0
+[BoB_LW_LG2_II.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4B
+  Formation VIC3
+  CallSign 16
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_LG2_II.21_Way]
+  TAKEOFF 291396.73 216134.59 0 0
+[BoB_LW_LG2_II.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4B
+  Formation VIC3
+  CallSign 10
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_LG2_II.31_Way]
+  TAKEOFF 291498.64 216129.22 0 0
+[BoB_LW_LG2_I.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 10
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_LG2_I.11_Way]
+  TAKEOFF 291514.73 216488.59 0 0
+[BoB_LW_LG2_I.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 23
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_LG2_I.21_Way]
+  TAKEOFF 291439.64 216424.23 0 0
+[BoB_LW_LG2_I.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 28
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_LG2_I.31_Way]
+  TAKEOFF 291560.32 216424.23 0 0
+[BoB_LW_JG3_II.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 1
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG3_II.11_Way]
+  TAKEOFF 277917.89 182157.57 0 0
+[BoB_LW_JG3_II.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 14
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG3_II.21_Way]
+  TAKEOFF 277875.08 182101.38 0 0
+[BoB_LW_JG3_II.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 12
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG3_II.31_Way]
+  TAKEOFF 277950.00 182106.73 0 0
+[BoB_LW_JG3_III.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 35
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG3_III.11_Way]
+  TAKEOFF 284645.15 182671.54 0 0
+[BoB_LW_JG3_III.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 18
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG3_III.21_Way]
+  TAKEOFF 284600.95 182627.34 0 0
+[BoB_LW_JG3_III.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 26
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG3_III.31_Way]
+  TAKEOFF 284665.67 182627.34 0 0
+[BoB_LW_JG26_I.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 4
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG26_I.11_Way]
+  TAKEOFF 272086.01 205475.17 0 0
+[BoB_LW_JG26_I.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 10
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG26_I.21_Way]
+  TAKEOFF 272060.39 205432.46 0 0
+[BoB_LW_JG26_I.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 33
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG26_I.31_Way]
+  TAKEOFF 272104.81 205434.17 0 0
+[BoB_LW_JG26_II.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 29
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG26_II.11_Way]
+  TAKEOFF 272330.00 200444.78 0 0
+[BoB_LW_JG26_II.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 12
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG26_II.21_Way]
+  TAKEOFF 272289.67 200402.95 0 0
+[BoB_LW_JG26_II.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 16
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG26_II.31_Way]
+  TAKEOFF 272359.88 200395.49 0 0
+[BoB_LW_JG26_III.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 5
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG26_III.11_Way]
+  TAKEOFF 281779.67 203640.38 0 0
+[BoB_LW_JG26_III.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 8
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG26_III.21_Way]
+  TAKEOFF 281751.05 203608.80 0 0
+[BoB_LW_JG26_III.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 15
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG26_III.31_Way]
+  TAKEOFF 281801.38 203606.83 0 0
+[BoB_LW_JG51_I.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 26
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG51_I.11_Way]
+  TAKEOFF 269735.91 207140.47 0 0
+[BoB_LW_JG51_I.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 22
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG51_I.21_Way]
+  TAKEOFF 269714.49 207118.29 0 0
+[BoB_LW_JG51_I.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 18
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG51_I.31_Way]
+  TAKEOFF 269747.39 207114.47 0 0
+[BoB_LW_JG51_II.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 7
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG51_II.11_Way]
+  TAKEOFF 269884.32 207149.65 0 0
+[BoB_LW_JG51_II.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 32
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG51_II.21_Way]
+  TAKEOFF 269870.55 207132.83 0 0
+[BoB_LW_JG51_II.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 30
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG51_II.31_Way]
+  TAKEOFF 269894.26 207135.89 0 0
+[BoB_LW_JG51_III.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 27
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG51_III.11_Way]
+  TAKEOFF 311268.03 190361.72 0 0
+[BoB_LW_JG51_III.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 31
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG51_III.21_Way]
+  TAKEOFF 311252.59 190324.91 0 0
+[BoB_LW_JG51_III.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 25
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG51_III.31_Way]
+  TAKEOFF 311283.46 190327.29 0 0
+[BoB_LW_JG52_I.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 23
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG52_I.11_Way]
+  TAKEOFF 281067.94 213103.42 0 0
+[BoB_LW_JG52_I.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 8
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG52_I.21_Way]
+  TAKEOFF 281025.01 213052.68 0 0
+[BoB_LW_JG52_I.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 33
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG52_I.31_Way]
+  TAKEOFF 281103.07 213044.87 0 0
+[BoB_LW_JG52_II.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 33
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG52_II.11_Way]
+  TAKEOFF 276938.90 209241.59 0 0
+[BoB_LW_JG52_II.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 3
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG52_II.21_Way]
+  TAKEOFF 276916.49 209211.13 0 0
+[BoB_LW_JG52_II.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 31
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG52_II.31_Way]
+  TAKEOFF 276953.23 209206.65 0 0
+[BoB_LW_JG54_I.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 6
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG54_I.11_Way]
+  TAKEOFF 287121.86 202322.63 0 0
+[BoB_LW_JG54_I.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 23
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG54_I.21_Way]
+  TAKEOFF 287041.09 202199.40 0 0
+[BoB_LW_JG54_I.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 30
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG54_I.31_Way]
+  TAKEOFF 287203.98 202217.02 0 0
+[BoB_LW_JG54_II.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 20
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG54_II.11_Way]
+  TAKEOFF 285614.11 200121.25 0 0
+[BoB_LW_JG54_II.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 17
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG54_II.21_Way]
+  TAKEOFF 285586.45 200085.14 0 0
+[BoB_LW_JG54_II.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 24
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG54_II.31_Way]
+  TAKEOFF 285636.40 200087.44 0 0
+[BoB_LW_JG54_III.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 26
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG54_III.11_Way]
+  TAKEOFF 284009.06 205132.52 0 0
+[BoB_LW_JG54_III.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 29
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG54_III.21_Way]
+  TAKEOFF 283961.99 205098.90 0 0
+[BoB_LW_JG54_III.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 3
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG54_III.31_Way]
+  TAKEOFF 284020.27 205092.17 0 0
+[BoB_LW_ZG26_I.11]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 26
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ZG26_I.11_Way]
+  TAKEOFF 294842.94 130637.19 0 0
+[BoB_LW_ZG26_I.21]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 26
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ZG26_I.21_Way]
+  TAKEOFF 294806.21 130581.95 0 0
+[BoB_LW_ZG26_I.31]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 4
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ZG26_I.31_Way]
+  TAKEOFF 294868.08 130581.95 0 0
+[BoB_LW_ZG26_III.11]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 33
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ZG26_III.11_Way]
+  TAKEOFF 314635.99 130826.30 0 0
+[BoB_LW_ZG26_III.21]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 6
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ZG26_III.21_Way]
+  TAKEOFF 314560.34 130727.01 0 0
+[BoB_LW_ZG26_III.31]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 17
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ZG26_III.31_Way]
+  TAKEOFF 314688.00 130722.28 0 0
+[BoB_LW_ZG26_II.11]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 20
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ZG26_II.11_Way]
+  TAKEOFF 304913.96 38544.93 0 0
+[BoB_LW_ZG26_II.21]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 12
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ZG26_II.21_Way]
+  TAKEOFF 304875.08 38507.61 0 0
+[BoB_LW_ZG26_II.31]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 24
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ZG26_II.31_Way]
+  TAKEOFF 304934.17 38490.50 0 0
+[BoB_LW_ZG76_II.11]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 17
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ZG76_II.11_Way]
+  TAKEOFF 283990.64 125034.06 0 0
+[BoB_LW_ZG76_II.21]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 30
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ZG76_II.21_Way]
+  TAKEOFF 283928.50 124957.80 0 0
+[BoB_LW_ZG76_II.31]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 29
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ZG76_II.31_Way]
+  TAKEOFF 284024.54 124954.98 0 0
+[BoB_LW_StG77_I.11]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 29
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_StG77_I.11_Way]
+  TAKEOFF 117456.20 18613.16 0 0
+[BoB_LW_StG77_I.21]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 28
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_StG77_I.21_Way]
+  TAKEOFF 117389.27 18543.66 0 0
+[BoB_LW_StG77_I.31]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 34
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_StG77_I.31_Way]
+  TAKEOFF 117484.52 18535.94 0 0
+[BoB_LW_StG77_II.11]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 10
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_StG77_II.11_Way]
+  TAKEOFF 117901.52 18420.11 0 0
+[BoB_LW_StG77_II.21]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 19
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_StG77_II.21_Way]
+  TAKEOFF 117839.74 18360.90 0 0
+[BoB_LW_StG77_II.31]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 24
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_StG77_II.31_Way]
+  TAKEOFF 117922.11 18340.31 0 0
+[BoB_LW_StG77_III.11]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 12
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_StG77_III.11_Way]
+  TAKEOFF 117360.96 18046.86 0 0
+[BoB_LW_StG77_III.21]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 10
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_StG77_III.21_Way]
+  TAKEOFF 117286.31 18000.53 0 0
+[BoB_LW_StG77_III.31]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 30
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_StG77_III.31_Way]
+  TAKEOFF 117384.13 17982.51 0 0
+[BoB_LW_LG1_V.11]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 8
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_LG1_V.11_Way]
+  TAKEOFF 117893.80 17905.28 0 0
+[BoB_LW_LG1_V.21]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 6
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_LG1_V.21_Way]
+  TAKEOFF 117808.85 17835.78 0 0
+[BoB_LW_LG1_V.31]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 2
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_LG1_V.31_Way]
+  TAKEOFF 117947.86 17828.06 0 0
+[BoB_LW_AufklGr_11.01]
+  Flight0  1
+  Class Aircraft.Do-215B-1
+  Formation LINEABREAST
+  CallSign 23
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_AufklGr_11.01_Way]
+  TAKEOFF 191804.48 10403.61 0 0
+[BoB_LW_JG2_I.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 25
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG2_I.11_Way]
+  TAKEOFF 208028.49 10313.73 0 0
+[BoB_LW_JG2_I.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 23
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG2_I.21_Way]
+  TAKEOFF 207985.76 10247.26 0 0
+[BoB_LW_JG2_I.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 34
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG2_I.31_Way]
+  TAKEOFF 208061.73 10240.14 0 0
+[BoB_LW_JG2_II.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 8
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG2_II.11_Way]
+  TAKEOFF 207852.83 10021.75 0 0
+[BoB_LW_JG2_II.22]
+  Flight1  11
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 34
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG2_II.22_Way]
+  TAKEOFF 207817.22 9964.77 0 0
+[BoB_LW_JG2_II.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 2
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG2_II.31_Way]
+  TAKEOFF 207905.05 9964.77 0 0
+[BoB_LW_JG2_III.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 33
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG2_III.11_Way]
+  TAKEOFF 157119.75 58019.50 0 0
+[BoB_LW_JG2_III.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 25
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG2_III.21_Way]
+  TAKEOFF 157053.53 57950.10 0 0
+[BoB_LW_JG2_III.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 3
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG2_III.31_Way]
+  TAKEOFF 157139.16 57953.28 0 0
+[BoB_LW_JG27_I.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 5
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG27_I.11_Way]
+  TAKEOFF 124166.81 28815.98 0 0
+[BoB_LW_JG27_I.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 3
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG27_I.21_Way]
+  TAKEOFF 124121.59 28759.13 0 0
+[BoB_LW_JG27_I.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 22
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG27_I.31_Way]
+  TAKEOFF 124202.99 28753.96 0 0
+[BoB_LW_JG27_II.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 35
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG27_II.11_Way]
+  TAKEOFF 111382.12 33508.24 0 0
+[BoB_LW_JG27_II.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 18
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG27_II.21_Way]
+  TAKEOFF 111355.35 33470.93 0 0
+[BoB_LW_JG27_II.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 5
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG27_II.31_Way]
+  TAKEOFF 111414.56 33465.25 0 0
+[BoB_LW_JG27_III.11]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 25
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG27_III.11_Way]
+  TAKEOFF 52573.59 39887.17 0 0
+[BoB_LW_JG27_III.21]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 21
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG27_III.21_Way]
+  TAKEOFF 52547.13 39857.97 0 0
+[BoB_LW_JG27_III.31]
+  Flight0  1
+  Class Aircraft.Bf-109E-4
+  Formation FINGERFOUR
+  CallSign 8
+  Fuel 100
+  Weapons 1 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_JG27_III.31_Way]
+  TAKEOFF 52600.05 39857.06 0 0
+[BoB_LW_ZG2_I.11]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 22
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ZG2_I.11_Way]
+  TAKEOFF 321841.11 95357.95 0 0
+[BoB_LW_ZG2_I.21]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 0
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ZG2_I.21_Way]
+  TAKEOFF 321806.60 95323.43 0 0
+[BoB_LW_ZG2_I.31]
+  Flight0  1
+  Class Aircraft.Bf-110C-4
+  Formation FINGERFOUR
+  CallSign 13
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_ZG2_I.31_Way]
+  TAKEOFF 321859.60 95317.27 0 0
+[BoB_LW_AufklGr_122.01]
+  Flight0  1
+  Class Aircraft.FW-200C-1
+  Formation LINEABREAST
+  CallSign 26
+  Fuel 100
+  Weapons 1
+  Belt _Gun00 Gun.MG15 MainBelt 0 2
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_AufklGr_122.01_Way]
+  TAKEOFF 293314.92 64752.78 0 0
+[BoB_LW_AufklGr_14.01]
+  Flight0  1
+  Class Aircraft.FW-200C-1
+  Formation LINEABREAST
+  CallSign 30
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_AufklGr_14.01_Way]
+  TAKEOFF 43878.16 70847.70 0 0
+[BoB_LW_StG2_I.11]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 28
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_StG2_I.11_Way]
+  TAKEOFF 43568.40 70639.14 0 0
+[BoB_LW_StG2_I.21]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 20
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_StG2_I.21_Way]
+  TAKEOFF 43500.45 70568.30 0 0
+[BoB_LW_StG2_I.31]
+  Flight0  1
+  Class Aircraft.Ju-87B-2
+  Formation VIC
+  CallSign 7
+  Fuel 100
+  Weapons 1
+  Skill 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3
+[BoB_LW_StG2_I.31_Way]
+  TAKEOFF 43624.79 70568.30 0 0
+[CustomChiefs]
+[Stationary]
+  Static28 Stationary.Bf-109E-4 nn 277259.69 209597.25 -90.00 
+  Static29 Stationary.Bf-109E-4 nn 277288.50 209584.86 -120.00 
+  Static26 Stationary.Bf-109E-4 nn 277199.34 209617.64 -120.00 
+  Static27 Stationary.Bf-109E-4 nn 277216.91 209604.22 -150.00 
+  Static30 Stationary.Bf-109E-4 nn 277200.56 209674.66 -195.00 
+  Static31 Stationary.Bf-109E-4 nn 277202.31 209717.70 -180.00 
+  Static32 Stationary.Bf-109E-4 nn 277195.34 209744.72 -165.00 
+  Static33 Stationary.Bf-109E-4 nn 277156.84 209813.73 -135.00 
+  Static25 Stationary.Bf-109E-4 nn 281630.91 213586.70 -120.00 
+  Static24 Stationary.Bf-109E-4 nn 281610.09 213608.95 -150.00 
+  Static22 Stationary.Bf-109E-4 nn 281608.28 213630.41 -180.00 
+  Static20 Stationary.Bf-109E-4 nn 281353.72 213692.20 -90.00 
+  Static18 Stationary.Bf-109E-4 nn 281400.16 213669.30 -135.00 
+  Static19 Stationary.Bf-109E-4 nn 281423.63 213644.97 -120.00 
+  Static23 Stationary.Bf-109E-4 nn 281550.78 213648.05 -60.00 
+  Static21 Stationary.Bf-109E-4 nn 281312.63 213699.50 -75.00 
+  Static14 Stationary.Bf-110C-4 nn 291514.13 215863.06 -240.00 
+  Static15 Stationary.Bf-110C-4 nn 291552.34 215877.89 -255.00 
+  Static16 Stationary.Bf-110C-4 nn 291601.41 215894.17 -225.00 
+  Static17 Stationary.Bf-110C-4 nn 291636.53 215909.28 -255.00 
+  Static12 Stationary.Bf-109E-4 nn 291769.84 216700.75 -150.00 
+  Static13 Stationary.Bf-109E-4 nn 291787.41 216654.14 -180.00 
+  Static10 Stationary.Bf-109E-4 nn 291705.22 216740.31 -105.00 
+  Static11 Stationary.Bf-109E-4 nn 291738.22 216724.08 -120.00 
+  Static6 Stationary.Bf-109E-4 nn 291589.88 216810.73 -90.00 
+  Static7 Stationary.Bf-109E-4 nn 291628.16 216813.41 -105.00 
+  Static9 Stationary.Bf-109E-4 nn 291683.28 216776.81 -180.00 
+  Static8 Stationary.Bf-109E-4 nn 291665.88 216801.50 -135.00 
+  Static0 Stationary.Ju-87B-2 nn 291010.44 216878.77 -90.00 
+  Static1 Stationary.Ju-87B-2 nn 291059.75 216882.48 -105.00 
+  Static2 Stationary.Ju-87B-2 nn 291115.03 216885.41 -90.00 
+  Static3 Stationary.Ju-87B-2 nn 291147.44 216882.06 -15.00 
+  Static4 Stationary.Ju-87B-2 nn 291187.94 216889.42 -60.00 
+  Static5 Stationary.Ju-87B-2 nn 291222.88 216883.28 -105.00 
+  Static34 Stationary.Bf-109E-4 nn 281676.84 213586.11 -90.00 
+  Static35 Stationary.Bf-109E-4 nn 281714.09 213588.41 -105.00 
+  Static36 Stationary.Bf-109E-4 nn 281745.25 213572.75 -135.00 
+  Static37 Stationary.Bf-109E-4 nn 281778.16 213549.45 -105.00 
+  Static38 Stationary.Bf-109E-4 nn 281825.13 213516.08 -135.00 
+  Static39 Stationary.Bf-109E-4 nn 281860.72 213484.92 -150.00 
+  Static40 Stationary.Bf-109E-4 nn 281891.91 213451.33 -120.00 
+  Static41 Stationary.Bf-109E-4 nn 281925.09 213422.17 -150.00 
+  Static42 Stationary.Bf-109E-4 nn 270219.25 207197.88 -255.00 
+  Static43 Stationary.Bf-109E-4 nn 270200.28 207177.47 -210.00 
+  Static44 Stationary.Bf-109E-4 nn 270149.88 207153.47 -225.00 
+  Static45 Stationary.Bf-109E-4 nn 270134.84 207125.52 -195.00 
+  Static46 Stationary.Bf-109E-4 nn 270106.22 207104.17 -240.00 
+  Static47 Stationary.Bf-109E-4 nn 270086.84 207091.02 -255.00 
+  Static48 Stationary.Bf-109E-4 nn 270060.25 207087.17 -270.00 
+  Static49 Stationary.Bf-109E-4 nn 270038.09 207072.55 -225.00 
+  Static50 Stationary.Bf-109E-4 nn 269927.47 206990.11 -225.00 
+  Static51 Stationary.Bf-109E-4 nn 269941.94 207010.66 -195.00 
+  Static52 Stationary.Bf-109E-4 nn 269954.81 207029.58 -225.00 
+  Static53 Stationary.Bf-109E-4 nn 269978.44 207041.69 -255.00 
+  Static54 Stationary.Bf-109E-4 nn 271767.78 205322.39 -330.00 
+  Static55 Stationary.Bf-109E-4 nn 271779.38 205303.70 -345.00 
+  Static56 Stationary.Bf-109E-4 nn 271792.19 205283.13 -330.00 
+  Static57 Stationary.Bf-109E-4 nn 271796.13 205252.25 -360.00 
+  Static58 Stationary.Bf-109E-4 nn 271793.06 205058.72 -330.00 
+  Static59 Stationary.Bf-109E-4 nn 271788.09 205025.58 -375.00 
+  Static60 Stationary.Bf-109E-4 nn 271773.53 204994.34 -405.00 
+  Static61 Stationary.Bf-109E-4 nn 271746.03 204973.09 -420.00 
+  Static62 Stationary.Bf-109E-4 nn 271669.72 204813.27 -360.00 
+  Static63 Stationary.Bf-109E-4 nn 271674.22 204779.91 -345.00 
+  Static64 Stationary.Bf-109E-4 nn 271684.13 204746.63 -360.00 
+  Static65 Stationary.Bf-109E-4 nn 271687.66 204721.75 -330.00 
+  Static66 Stationary.Bf-109E-4 nn 271893.25 205618.05 -60.00 
+  Static67 Stationary.Bf-109E-4 nn 271910.78 205639.20 -30.00 
+  Static68 Stationary.Bf-109E-4 nn 271930.16 205667.19 -45.00 
+  Static69 Stationary.Bf-109E-4 nn 271950.75 205697.63 -15.00 
+  Static71 Stationary.Bf-109E-4 nn 273000.84 200112.00 165.00 
+  Static72 Stationary.Bf-109E-4 nn 272999.16 200073.41 195.00 
+  Static73 Stationary.Bf-109E-4 nn 273006.19 199961.34 195.00 
+  Static74 Stationary.Bf-109E-4 nn 273007.44 199923.89 180.00 
+  Static76 Stationary.Bf-109E-4 nn 273029.66 200220.33 195.00 
+  Static77 Stationary.Bf-109E-4 nn 273027.19 200253.91 180.00 
+  Static78 Stationary.Bf-109E-4 nn 273031.81 200284.45 165.00 
+  Static79 Stationary.Bf-109E-4 nn 273039.59 200313.22 150.00 
+  Static70 Stationary.Bf-109E-4 nn 273071.06 200422.28 165.00 
+  Static75 Stationary.Bf-109E-4 nn 273080.78 200457.27 165.00 
+  Static80 Stationary.Bf-109E-4 nn 273092.22 200497.59 180.00 
+  Static81 Stationary.Bf-109E-4 nn 273102.34 200541.77 150.00 
+  Static82 Stationary.Bf-109E-4 nn 272513.13 200827.59 -45.00 
+  Static83 Stationary.Bf-109E-4 nn 272534.69 200857.30 -30.00 
+  Static84 Stationary.Bf-109E-4 nn 272560.13 200885.63 -45.00 
+  Static85 Stationary.Bf-109E-4 nn 272587.47 200913.20 -60.00 
+  Static86 Stationary.Bf-109E-4 nn 281573.53 204113.48 -90.00 
+  Static87 Stationary.Bf-109E-4 nn 281600.16 204107.13 -120.00 
+  Static88 Stationary.Bf-109E-4 nn 281624.44 204098.78 -105.00 
+  Static89 Stationary.Bf-109E-4 nn 281654.13 204088.78 -120.00 
+  Static90 Stationary.Bf-109E-4 nn 281714.97 204067.02 -105.00 
+  Static91 Stationary.Bf-109E-4 nn 281745.38 204058.06 -120.00 
+  Static92 Stationary.Bf-109E-4 nn 281773.88 204049.13 -105.00 
+  Static93 Stationary.Bf-109E-4 nn 281809.06 204041.66 -120.00 
+  Static94 Stationary.Bf-109E-4 nn 281877.06 204019.14 -120.00 
+  Static95 Stationary.Bf-109E-4 nn 281905.09 204011.39 -90.00 
+  Static96 Stationary.Bf-109E-4 nn 281934.19 204005.28 -105.00 
+  Static97 Stationary.Bf-109E-4 nn 281964.31 203996.78 -120.00 
+  Static98 Stationary.Bf-109E-4 nn 283895.00 205112.69 -30.00 
+  Static99 Stationary.Bf-109E-4 nn 283906.22 205136.56 -45.00 
+  Static100 Stationary.Bf-109E-4 nn 283920.69 205155.25 -30.00 
+  Static101 Stationary.Bf-109E-4 nn 283941.75 205173.08 -60.00 
+  Static102 Stationary.Bf-109E-4 nn 283985.66 205233.06 -15.00 
+  Static103 Stationary.Bf-109E-4 nn 284002.63 205254.36 -45.00 
+  Static104 Stationary.Bf-109E-4 nn 284026.84 205265.02 -75.00 
+  Static105 Stationary.Bf-109E-4 nn 284055.53 205267.30 -90.00 
+  Static106 Stationary.Bf-109E-4 nn 284278.59 205509.33 0.00 
+  Static107 Stationary.Bf-109E-4 nn 284283.94 205538.05 -30.00 
+  Static108 Stationary.Bf-109E-4 nn 284309.28 205561.41 -60.00 
+  Static109 Stationary.Bf-109E-4 nn 284340.19 205573.53 -75.00 
+  Static110 Stationary.Bf-109E-4 nn 284095.31 205313.28 -15.00 
+  Static111 Stationary.Bf-109E-4 nn 284106.41 205335.89 -30.00 
+  Static112 Stationary.Bf-109E-4 nn 284128.47 205355.34 -60.00 
+  Static113 Stationary.Bf-109E-4 nn 284151.28 205380.66 -30.00 
+  Static114 Stationary.Bf-109E-4 nn 286821.91 201562.92 45.00 
+  Static115 Stationary.Bf-109E-4 nn 286846.69 201548.58 60.00 
+  Static116 Stationary.Bf-109E-4 nn 286875.78 201538.86 75.00 
+  Static117 Stationary.Bf-109E-4 nn 286915.63 201528.59 90.00 
+  Static118 Stationary.Bf-109E-4 nn 286991.34 201529.34 90.00 
+  Static119 Stationary.Bf-109E-4 nn 287029.34 201532.73 105.00 
+  Static120 Stationary.Bf-109E-4 nn 287061.59 201533.44 75.00 
+  Static121 Stationary.Bf-109E-4 nn 287102.72 201527.13 90.00 
+  Static122 Stationary.Bf-109E-4 nn 286643.41 201794.13 90.00 
+  Static123 Stationary.Bf-109E-4 nn 286601.03 201801.11 45.00 
+  Static124 Stationary.Bf-109E-4 nn 286592.31 201836.70 0.00 
+  Static125 Stationary.Bf-109E-4 nn 286592.22 201878.72 0.00 
+  Static126 Stationary.Bf-109E-4 nn 286601.63 201919.94 -30.00 
+  Static127 Stationary.Bf-109E-4 nn 286621.19 201950.98 -45.00 
+  Static128 Stationary.Bf-109E-4 nn 286641.16 201977.67 -30.00 
+  Static129 Stationary.Bf-109E-4 nn 286649.97 202009.45 -15.00 
+  Static130 Stationary.Bf-109E-4 nn 285728.72 200287.31 -60.00 
+  Static131 Stationary.Bf-109E-4 nn 285684.72 200279.55 -90.00 
+  Static132 Stationary.Bf-109E-4 nn 285646.09 200287.02 -120.00 
+  Static133 Stationary.Bf-109E-4 nn 285610.88 200300.89 -105.00 
+  Static134 Stationary.Bf-109E-4 nn 285541.97 200319.67 -75.00 
+  Static135 Stationary.Bf-109E-4 nn 285516.34 200306.22 -60.00 
+  Static136 Stationary.Bf-109E-4 nn 285483.25 200300.25 -105.00 
+  Static137 Stationary.Bf-109E-4 nn 285455.75 200314.97 -120.00 
+  Static138 Stationary.Bf-109E-4 nn 285403.13 200330.61 -105.00 
+  Static139 Stationary.Bf-109E-4 nn 285380.50 200344.27 -150.00 
+  Static140 Stationary.Bf-109E-4 nn 285355.31 200356.22 -120.00 
+  Static141 Stationary.Bf-109E-4 nn 285326.50 200365.61 -105.00 
+  Static142 Stationary.Bf-109E-4 nn 311194.03 190652.31 -150.00 
+  Static143 Stationary.Bf-109E-4 nn 311204.63 190631.47 -165.00 
+  Static144 Stationary.Bf-109E-4 nn 311217.16 190613.83 -135.00 
+  Static145 Stationary.Bf-109E-4 nn 311239.88 190595.89 -120.00 
+  Static146 Stationary.Bf-109E-4 nn 311308.03 190572.50 -105.00 
+  Static147 Stationary.Bf-109E-4 nn 311344.66 190566.34 -90.00 
+  Static148 Stationary.Bf-109E-4 nn 311375.78 190567.11 -90.00 
+  Static149 Stationary.Bf-109E-4 nn 311409.88 190567.06 -90.00 
+  Static150 Stationary.Bf-109E-4 nn 311503.47 190569.58 -90.00 
+  Static151 Stationary.Bf-109E-4 nn 311532.19 190571.81 -75.00 
+  Static152 Stationary.Bf-109E-4 nn 311561.84 190573.73 -90.00 
+  Static153 Stationary.Bf-109E-4 nn 311473.38 190569.08 -105.00 
+  Static154 Stationary.Bf-109E-4 nn 278144.84 182335.89 -60.00 
+  Static155 Stationary.Bf-109E-4 nn 278237.16 182402.19 -60.00 
+  Static156 Stationary.Bf-109E-4 nn 278324.97 182448.50 -75.00 
+  Static157 Stationary.Bf-109E-4 nn 278406.69 182478.17 -75.00 
+  Static158 Stationary.Bf-109E-4 nn 278492.06 182512.08 -45.00 
+  Static159 Stationary.Bf-109E-4 nn 278589.34 182518.30 -120.00 
+  Static160 Stationary.Bf-109E-4 nn 278040.78 182334.36 -105.00 
+  Static161 Stationary.Bf-109E-4 nn 277926.66 182351.63 -90.00 
+  Static162 Stationary.Bf-109E-4 nn 277790.38 182325.17 -30.00 
+  Static163 Stationary.Bf-109E-4 nn 277719.53 182284.61 -75.00 
+  Static164 Stationary.Bf-109E-4 nn 285317.38 182869.36 -120.00 
+  Static165 Stationary.Bf-109E-4 nn 285343.38 182853.58 -120.00 
+  Static166 Stationary.Bf-109E-4 nn 285373.19 182837.20 -120.00 
+  Static167 Stationary.Bf-109E-4 nn 285407.06 182819.67 -105.00 
+  Static168 Stationary.Bf-109E-4 nn 284990.66 182934.52 -75.00 
+  Static169 Stationary.Bf-109E-4 nn 284946.81 182928.67 -90.00 
+  Static170 Stationary.Bf-109E-4 nn 284903.88 182923.13 -75.00 
+  Static171 Stationary.Bf-109E-4 nn 284858.56 182916.11 -90.00 
+  Static172 Stationary.Bf-109E-4 nn 284715.09 182931.59 -120.00 
+  Static173 Stationary.Bf-109E-4 nn 284674.75 182957.61 -135.00 
+  Static174 Stationary.Bf-109E-4 nn 284639.69 182984.50 -120.00 
+  Static175 Stationary.Bf-109E-4 nn 284588.88 183002.03 -90.00 
+  Static176 Stationary.Ju-87B-2 nn 306252.94 161546.00 -105.00 
+  Static177 Stationary.Ju-87B-2 nn 306285.19 161535.36 -120.00 
+  Static178 Stationary.Ju-87B-2 nn 306314.91 161515.81 -135.00 
+  Static179 Stationary.Ju-87B-2 nn 306381.63 161488.19 -90.00 
+  Static180 Stationary.Ju-87B-2 nn 306426.97 161488.97 -105.00 
+  Static181 Stationary.Ju-87B-2 nn 306461.63 161468.38 -135.00 
+  Static182 Stationary.Ju-87B-2 nn 306548.84 161440.84 -90.00 
+  Static183 Stationary.Ju-87B-2 nn 306593.41 161436.42 -105.00 
+  Static184 Stationary.Ju-87B-2 nn 306624.19 161419.73 -135.00 
+  Static185 Stationary.Do-17Z-2 nn 351860.53 145706.80 -120.00 
+  Static186 Stationary.Do-17Z-2 nn 351906.56 145693.17 -105.00 
+  Static187 Stationary.Do-17Z-2 nn 351949.25 145678.52 -120.00 
+  Static188 Stationary.Do-17Z-2 nn 352048.50 145637.63 -120.00 
+  Static189 Stationary.Do-17Z-2 nn 352094.28 145608.83 -135.00 
+  Static190 Stationary.Do-17Z-2 nn 352126.16 145560.48 -165.00 
+  Static191 Stationary.Do-17Z-2 nn 352238.34 145309.34 -180.00 
+  Static192 Stationary.Do-17Z-2 nn 352236.69 145260.19 -180.00 
+  Static193 Stationary.Do-17Z-2 nn 352235.94 145210.56 -195.00 
+  Static194 Stationary.Do-17Z-2 nn 350611.09 144850.64 60.00 
+  Static195 Stationary.Do-17Z-2 nn 350563.09 144868.67 75.00 
+  Static196 Stationary.Do-17Z-2 nn 350518.38 144887.95 60.00 
+  Static197 Stationary.Do-17Z-2 nn 350440.97 144935.02 45.00 
+  Static198 Stationary.Do-17Z-2 nn 350413.69 144974.61 30.00 
+  Static199 Stationary.Do-17Z-2 nn 350397.75 145016.53 15.00 
+  Static200 Stationary.Do-17Z-2 nn 350385.16 145088.31 0.00 
+  Static201 Stationary.Do-17Z-2 nn 350383.88 145152.08 0.00 
+  Static202 Stationary.Do-17Z-2 nn 350380.53 145216.72 0.00 
+  Static203 Stationary.Bf-110C-4 nn 315113.69 130573.24 -150.00 
+  Static204 Stationary.Bf-110C-4 nn 315134.72 130501.70 -165.00 
+  Static205 Stationary.Bf-110C-4 nn 315126.47 130542.30 -165.00 
+  Static206 Stationary.Bf-110C-4 nn 315137.59 130466.28 -180.00 
+  Static207 Stationary.Bf-110C-4 nn 315142.06 130386.21 -225.00 
+  Static208 Stationary.Bf-110C-4 nn 315087.78 130290.09 -210.00 
+  Static209 Stationary.Bf-110C-4 nn 315106.53 130325.85 -195.00 
+  Static210 Stationary.Bf-110C-4 nn 315121.94 130358.20 -210.00 
+  Static211 Stationary.Bf-110C-4 nn 315030.13 130513.63 15.00 
+  Static212 Stationary.Bf-110C-4 nn 315040.06 130472.46 0.00 
+  Static213 Stationary.Bf-110C-4 nn 315038.63 130424.77 -15.00 
+  Static214 Stationary.Bf-110C-4 nn 315021.03 130382.18 -30.00 
+  Static215 Stationary.Bf-110C-4 nn 295233.22 130924.25 -180.00 
+  Static216 Stationary.Bf-110C-4 nn 295249.31 130896.25 -120.00 
+  Static217 Stationary.Bf-110C-4 nn 295345.47 130828.98 -120.00 
+  Static218 Stationary.Bf-110C-4 nn 295376.78 130804.73 -135.00 
+  Static219 Stationary.Bf-110C-4 nn 295473.41 130728.04 -135.00 
+  Static220 Stationary.Bf-110C-4 nn 295496.13 130700.69 -150.00 
+  Static221 Stationary.Bf-110C-4 nn 295517.06 130681.73 -105.00 
+  Static222 Stationary.Bf-110C-4 nn 295560.72 130681.51 -90.00 
+  Static223 Stationary.Bf-110C-4 nn 295660.38 130627.58 -135.00 
+  Static224 Stationary.Bf-110C-4 nn 295690.34 130607.51 -120.00 
+  Static225 Stationary.Bf-110C-4 nn 294907.09 130917.88 -30.00 
+  Static226 Stationary.Bf-110C-4 nn 294882.63 130877.30 -45.00 
+  Static227 Stationary.Bf-110C-4 nn 284148.97 125505.77 -150.00 
+  Static228 Stationary.Bf-110C-4 nn 284176.25 125472.45 -135.00 
+  Static229 Stationary.Bf-110C-4 nn 284209.84 125449.99 -120.00 
+  Static230 Stationary.Bf-110C-4 nn 284254.22 125459.87 -60.00 
+  Static231 Stationary.Bf-110C-4 nn 284340.28 125436.78 -135.00 
+  Static232 Stationary.Bf-110C-4 nn 284368.13 125404.63 -150.00 
+  Static233 Stationary.Bf-110C-4 nn 284396.50 125374.63 -135.00 
+  Static234 Stationary.Bf-110C-4 nn 284421.09 125342.48 -165.00 
+  Static235 Stationary.Bf-110C-4 nn 284500.06 125242.67 -150.00 
+  Static236 Stationary.Bf-110C-4 nn 284533.69 125209.59 -135.00 
+  Static237 Stationary.Bf-110C-4 nn 284578.97 125181.73 -120.00 
+  Static238 Stationary.Bf-110C-4 nn 284629.47 125155.20 -90.00 
+  Static239 Stationary.Bf-110C-4 nn 322106.06 94735.91 90.00 
+  Static240 Stationary.Bf-110C-4 nn 322147.28 94743.95 105.00 
+  Static241 Stationary.Bf-110C-4 nn 322414.91 94783.45 90.00 
+  Static242 Stationary.Bf-110C-4 nn 322375.56 94776.21 105.00 
+  Static243 Stationary.Bf-110C-4 nn 322064.59 94735.39 75.00 
+  Static244 Stationary.Bf-110C-4 nn 322193.31 94753.72 90.00 
+  Static245 Stationary.Bf-110C-4 nn 322333.50 94769.34 90.00 
+  Static246 Stationary.Bf-110C-4 nn 322289.63 94764.14 105.00 
+  Static247 Stationary.Bf-110C-4 nn 321502.53 95034.56 60.00 
+  Static248 Stationary.Bf-110C-4 nn 321546.59 95007.59 30.00 
+  Static249 Stationary.Bf-110C-4 nn 321587.06 94955.61 60.00 
+  Static250 Stationary.Bf-110C-4 nn 321629.44 94907.52 30.00 
+  Static251 Stationary.He-111H-2 nn 346013.38 88360.05 -105.00 
+  Static252 Stationary.He-111H-2 nn 346056.56 88344.85 -120.00 
+  Static253 Stationary.He-111H-2 nn 346092.09 88320.98 -135.00 
+  Static254 Stationary.He-111H-2 nn 346171.84 88286.52 -105.00 
+  Static255 Stationary.He-111H-2 nn 346216.91 88284.63 -105.00 
+  Static256 Stationary.He-111H-2 nn 346252.44 88265.09 -120.00 
+  Static257 Stationary.He-111H-2 nn 346328.69 88217.88 -90.00 
+  Static258 Stationary.He-111H-2 nn 346372.09 88216.53 -105.00 
+  Static259 Stationary.He-111H-2 nn 346407.09 88192.92 -135.00 
+  Static260 Stationary.He-111H-2 nn 346596.63 86716.02 -195.00 
+  Static261 Stationary.He-111H-2 nn 346614.31 86757.40 -210.00 
+  Static262 Stationary.He-111H-2 nn 346650.69 86787.24 -225.00 
+  Static263 Stationary.He-111H-2 nn 346727.72 86870.27 -195.00 
+  Static264 Stationary.He-111H-2 nn 346747.25 86926.70 -210.00 
+  Static265 Stationary.He-111H-2 nn 346787.41 86965.22 -225.00 
+  Static266 Stationary.He-111H-2 nn 346851.75 87068.68 -195.00 
+  Static267 Stationary.He-111H-2 nn 346881.84 87125.11 -210.00 
+  Static268 Stationary.He-111H-2 nn 346900.03 87176.11 -180.00 
+  Static269 Stationary.He-111H-2 nn 334839.47 73254.13 30.00 
+  Static270 Stationary.He-111H-2 nn 334871.88 73189.99 30.00 
+  Static271 Stationary.He-111H-2 nn 334903.94 73128.87 30.00 
+  Static272 Stationary.He-111H-2 nn 334941.03 73055.73 30.00 
+  Static273 Stationary.He-111H-2 nn 334964.41 73015.98 30.00 
+  Static274 Stationary.He-111H-2 nn 334989.44 72974.55 30.00 
+  Static275 Stationary.He-111H-2 nn 335031.06 72895.49 30.00 
+  Static276 Stationary.He-111H-2 nn 335052.44 72855.74 30.00 
+  Static277 Stationary.He-111H-2 nn 335075.16 72810.98 30.00 
+  Static278 Stationary.He-111H-2 nn 335155.97 73384.80 -90.00 
+  Static279 Stationary.He-111H-2 nn 335244.47 73379.12 -105.00 
+  Static280 Stationary.He-111H-2 nn 335330.63 73374.77 -75.00 
+  Static281 Stationary.He-111H-2 nn 335097.41 72212.23 75.00 
+  Static282 Stationary.He-111H-2 nn 335170.22 72205.55 105.00 
+  Static283 Stationary.He-111H-2 nn 335235.34 72214.91 120.00 
+  Static284 Stationary.He-111H-2 nn 335047.28 72286.78 15.00 
+  Static285 Stationary.He-111H-2 nn 335027.91 72334.21 30.00 
+  Static286 Stationary.He-111H-2 nn 335006.53 72385.65 -15.00 
+  Static287 Stationary.FW-200C-1 nn 292719.16 64750.36 -45.00 
+  Static288 Stationary.FW-200C-1 nn 292667.53 64714.24 -75.00 
+  Static289 Stationary.FW-200C-1 nn 292859.56 64896.04 -30.00 
+  Static290 Stationary.FW-200C-1 nn 293729.09 64971.51 -90.00 
+  Static291 Stationary.FW-200C-1 nn 293576.22 65019.41 -135.00 
+  Static292 Stationary.FW-200C-1 nn 293531.91 65071.70 -150.00 
+  Static293 Stationary.Do-17Z-2 nn 303379.31 49139.98 -75.00 
+  Static294 Stationary.Do-17Z-2 nn 303413.75 49150.55 -75.00 
+  Static295 Stationary.Do-17Z-2 nn 303450.13 49160.72 -75.00 
+  Static296 Stationary.Do-17Z-2 nn 303574.69 49211.29 -75.00 
+  Static297 Stationary.Do-17Z-2 nn 303611.31 49223.81 -75.00 
+  Static298 Stationary.Do-17Z-2 nn 303646.19 49235.84 -75.00 
+  Static299 Stationary.Do-17Z-2 nn 303460.06 49216.25 -75.00 
+  Static300 Stationary.Do-17Z-2 nn 303496.69 49227.36 -75.00 
+  Static301 Stationary.Do-17Z-2 nn 303528.13 49235.86 -75.00 
+  Static302 Stationary.Do-17Z-2 nn 303900.34 48891.59 -230.00 
+  Static303 Stationary.Do-17Z-2 nn 303925.06 48912.79 -230.00 
+  Static304 Stationary.Do-17Z-2 nn 303948.59 48932.57 -230.00 
+  Static305 Stationary.Do-17Z-2 nn 303249.28 48303.19 50.00 
+  Static306 Stationary.Do-17Z-2 nn 303221.53 48323.66 50.00 
+  Static307 Stationary.Do-17Z-2 nn 303192.47 48343.45 50.00 
+  Static308 Stationary.Do-17Z-2 nn 303126.16 48292.36 140.00 
+  Static309 Stationary.Do-17Z-2 nn 303098.78 48266.66 125.00 
+  Static310 Stationary.Do-17Z-2 nn 303070.38 48236.13 140.00 
+  Static311 Stationary.Do-17Z-2 nn 297220.84 8616.59 125.00 
+  Static312 Stationary.Do-17Z-2 nn 297261.91 8649.86 140.00 
+  Static313 Stationary.Do-17Z-2 nn 297298.47 8682.23 125.00 
+  Static314 Stationary.Do-17Z-2 nn 297416.19 8839.56 155.00 
+  Static315 Stationary.Do-17Z-2 nn 297450.16 8889.94 140.00 
+  Static316 Stationary.Do-17Z-2 nn 297488.88 8931.06 125.00 
+  Static317 Stationary.Do-17Z-2 nn 297555.19 9091.65 185.00 
+  Static318 Stationary.Do-17Z-2 nn 297556.47 9144.84 170.00 
+  Static319 Stationary.Do-17Z-2 nn 297567.28 9191.00 155.00 
+  Static320 Stationary.Bf-110C-4 nn 305042.34 38111.80 165.00 
+  Static321 Stationary.Bf-110C-4 nn 305054.25 38149.44 165.00 
+  Static322 Stationary.Bf-110C-4 nn 305065.88 38188.66 165.00 
+  Static323 Stationary.Bf-110C-4 nn 305030.94 38071.55 165.00 
+  Static324 Stationary.Bf-110C-4 nn 304723.44 38121.98 0.00 
+  Static325 Stationary.Bf-110C-4 nn 304723.47 38088.45 0.00 
+  Static326 Stationary.Bf-110C-4 nn 304730.84 38046.91 15.00 
+  Static327 Stationary.Bf-110C-4 nn 304739.38 38011.37 15.00 
+  Static328 Stationary.Bf-110C-4 nn 305006.06 37994.80 175.00 
+  Static329 Stationary.Bf-110C-4 nn 305001.63 37965.17 165.00 
+  Static330 Stationary.Bf-110C-4 nn 304998.78 37931.11 180.00 
+  Static331 Stationary.Bf-110C-4 nn 304994.78 37887.78 165.00 
+  Static332 Stationary.Ju-88A-1 nn 331284.34 27157.33 15.00 
+  Static333 Stationary.Ju-88A-1 nn 331287.75 27124.43 15.00 
+  Static334 Stationary.Ju-88A-1 nn 331296.59 27088.92 15.00 
+  Static335 Stationary.Ju-88A-1 nn 331315.88 27015.50 15.00 
+  Static336 Stationary.Ju-88A-1 nn 331325.47 26981.73 15.00 
+  Static337 Stationary.Ju-88A-1 nn 331333.16 26953.72 15.00 
+  Static338 Stationary.Ju-88A-1 nn 331348.88 26887.34 15.00 
+  Static339 Stationary.Ju-88A-1 nn 331358.09 26858.94 15.00 
+  Static340 Stationary.Ju-88A-1 nn 331366.53 26827.09 15.00 
+  Static341 Stationary.Do-215B-1 nn 191455.41 10665.48 15.00 
+  Static342 Stationary.Do-215B-1 nn 191468.33 10626.05 15.00 
+  Static343 Stationary.Do-215B-1 nn 191492.00 10530.30 15.00 
+  Static344 Stationary.Do-215B-1 nn 191505.09 10493.53 15.00 
+  Static345 Stationary.Do-215B-1 nn 191533.33 10407.75 15.00 
+  Static346 Stationary.Do-215B-1 nn 191545.80 10368.70 15.00 
+  Static347 Stationary.Bf-109E-4 nn 208348.02 9748.24 150.00 
+  Static348 Stationary.Bf-109E-4 nn 208365.25 9764.93 120.00 
+  Static349 Stationary.Bf-109E-4 nn 208382.31 9783.82 135.00 
+  Static350 Stationary.Bf-109E-4 nn 208399.38 9799.66 120.00 
+  Static351 Stationary.Bf-109E-4 nn 208458.05 9862.87 150.00 
+  Static352 Stationary.Bf-109E-4 nn 208470.61 9885.38 165.00 
+  Static353 Stationary.Bf-109E-4 nn 208487.64 9909.92 135.00 
+  Static354 Stationary.Bf-109E-4 nn 208504.89 9931.01 150.00 
+  Static355 Stationary.Bf-109E-4 nn 207988.91 9616.35 90.00 
+  Static356 Stationary.Bf-109E-4 nn 207953.97 9610.38 105.00 
+  Static357 Stationary.Bf-109E-4 nn 207916.45 9605.31 105.00 
+  Static358 Stationary.Bf-109E-4 nn 207871.44 9605.11 75.00 
+  Static359 Stationary.Bf-109E-4 nn 207932.83 10579.01 -45.00 
+  Static360 Stationary.Bf-109E-4 nn 207961.81 10597.67 -60.00 
+  Static361 Stationary.Bf-109E-4 nn 207987.38 10608.01 -75.00 
+  Static362 Stationary.Bf-109E-4 nn 208014.14 10616.12 -90.00 
+  Static363 Stationary.Bf-109E-4 nn 208052.88 10628.08 -60.00 
+  Static364 Stationary.Bf-109E-4 nn 208074.78 10638.43 -75.00 
+  Static365 Stationary.Bf-109E-4 nn 208643.45 10494.79 -135.00 
+  Static366 Stationary.Bf-109E-4 nn 208625.50 10516.48 -165.00 
+  Static367 Stationary.Bf-109E-4 nn 208550.53 10592.37 -105.00 
+  Static368 Stationary.Bf-109E-4 nn 208585.00 10558.71 -180.00 
+  Static369 Stationary.Bf-109E-4 nn 208577.70 10582.23 -135.00 
+  Static370 Stationary.Bf-109E-4 nn 208606.50 10539.24 -120.00 
+  Static371 Stationary.Bf-109E-4 nn 156754.38 57839.79 -30.00 
+  Static372 Stationary.Bf-109E-4 nn 156755.69 57869.95 0.00 
+  Static373 Stationary.Bf-109E-4 nn 156748.39 57906.33 30.00 
+  Static374 Stationary.Bf-109E-4 nn 156746.59 57948.25 -15.00 
+  Static375 Stationary.Bf-109E-4 nn 156745.55 58054.05 -30.00 
+  Static376 Stationary.Bf-109E-4 nn 156762.92 58088.25 -15.00 
+  Static377 Stationary.Bf-109E-4 nn 156786.73 58108.85 -90.00 
+  Static378 Stationary.Bf-109E-4 nn 156817.95 58119.53 -75.00 
+  Static379 Stationary.Bf-109E-4 nn 156949.63 58194.50 -45.00 
+  Static380 Stationary.Bf-109E-4 nn 156966.00 58215.21 -45.00 
+  Static381 Stationary.Bf-109E-4 nn 156989.48 58231.20 -75.00 
+  Static382 Stationary.Bf-109E-4 nn 157021.27 58240.77 -90.00 
+  Static383 Stationary.Bf-109E-4 nn 124514.73 28126.69 -135.00 
+  Static384 Stationary.Bf-109E-4 nn 124498.00 28159.86 -165.00 
+  Static385 Stationary.Bf-109E-4 nn 124502.73 28192.02 -210.00 
+  Static386 Stationary.Bf-109E-4 nn 124533.87 28205.29 -270.00 
+  Static387 Stationary.Bf-109E-4 nn 124590.05 28262.37 -195.00 
+  Static388 Stationary.Bf-109E-4 nn 124599.91 28289.57 -210.00 
+  Static389 Stationary.Bf-109E-4 nn 124629.50 28311.08 -240.00 
+  Static390 Stationary.Bf-109E-4 nn 124658.19 28325.43 -240.00 
+  Static391 Stationary.Bf-109E-4 nn 124730.51 28403.43 -195.00 
+  Static392 Stationary.Bf-109E-4 nn 124739.38 28429.94 -195.00 
+  Static393 Stationary.Bf-109E-4 nn 124751.94 28460.29 -210.00 
+  Static394 Stationary.Bf-109E-4 nn 124775.63 28481.43 -225.00 
+  Static395 Stationary.Bf-109E-4 nn 111642.17 32832.61 -225.00 
+  Static396 Stationary.Bf-109E-4 nn 111652.82 32857.53 -210.00 
+  Static397 Stationary.Bf-109E-4 nn 111661.77 32885.85 -195.00 
+  Static398 Stationary.Bf-109E-4 nn 111672.66 32913.43 -210.00 
+  Static399 Stationary.Bf-109E-4 nn 111719.38 33038.07 -195.00 
+  Static400 Stationary.Bf-109E-4 nn 111723.24 33069.04 -180.00 
+  Static401 Stationary.Bf-109E-4 nn 111727.61 33102.66 -195.00 
+  Static402 Stationary.Bf-109E-4 nn 111740.91 33135.57 -210.00 
+  Static403 Stationary.Bf-109E-4 nn 111768.75 33224.14 -165.00 
+  Static404 Stationary.Bf-109E-4 nn 111769.23 33257.54 -195.00 
+  Static405 Stationary.Bf-109E-4 nn 111777.22 33296.50 -210.00 
+  Static406 Stationary.Bf-109E-4 nn 111790.77 33335.71 -195.00 
+  Static407 Stationary.Bf-110C-4 nn 117463.52 18868.15 60.00 
+  Static408 Stationary.Bf-110C-4 nn 117500.12 18849.81 60.00 
+  Static409 Stationary.Bf-110C-4 nn 117536.59 18832.24 60.00 
+  Static410 Stationary.Bf-110C-4 nn 117573.06 18810.69 60.00 
+  Static411 Stationary.Ju-87B-2 nn 118011.63 17538.40 60.00 
+  Static412 Stationary.Ju-87B-2 nn 118049.75 17517.84 60.00 
+  Static413 Stationary.Ju-87B-2 nn 118082.91 17498.61 60.00 
+  Static414 Stationary.Ju-87B-2 nn 117937.35 17432.96 75.00 
+  Static415 Stationary.Ju-87B-2 nn 117984.10 17424.01 75.00 
+  Static416 Stationary.Ju-87B-2 nn 118037.82 17409.42 75.00 
+  Static417 Stationary.Ju-87B-2 nn 117226.55 17636.36 15.00 
+  Static418 Stationary.Ju-87B-2 nn 117234.14 17602.08 0.00 
+  Static419 Stationary.Ju-87B-2 nn 117240.11 17561.30 30.00 
+  Static420 Stationary.Ju-87B-2 nn 117265.39 17448.82 30.00 
+  Static421 Stationary.Ju-87B-2 nn 117286.85 17412.83 45.00 
+  Static422 Stationary.Ju-87B-2 nn 117254.27 17488.88 0.00 
+  Static423 Stationary.Ju-87B-2 nn 117114.62 17692.35 60.00 
+  Static424 Stationary.Ju-87B-2 nn 117078.15 17713.91 60.00 
+  Static425 Stationary.Ju-87B-2 nn 117049.30 17745.40 45.00 
+  Static426 Stationary.Ju-87B-2 nn 117943.73 17301.44 90.00 
+  Static427 Stationary.Ju-87B-2 nn 117991.14 17300.11 90.00 
+  Static428 Stationary.Ju-87B-2 nn 118036.56 17302.43 90.00 
+  Static429 Stationary.Ju-87B-2 nn 118423.30 18494.58 -120.00 
+  Static430 Stationary.Ju-87B-2 nn 118459.78 18479.00 -120.00 
+  Static431 Stationary.Ju-87B-2 nn 118491.94 18464.41 -120.00 
+  Static432 Stationary.Ju-87B-2 nn 118691.21 18322.17 -180.00 
+  Static433 Stationary.Ju-87B-2 nn 118682.59 18354.100 -150.00 
+  Static434 Stationary.Ju-87B-2 nn 118659.38 18382.85 -135.00 
+  Static435 Stationary.Ju-87B-2 nn 118808.66 17990.65 -180.00 
+  Static436 Stationary.Ju-87B-2 nn 118806.34 18036.41 -180.00 
+  Static437 Stationary.Ju-87B-2 nn 118804.34 18077.86 -180.00 
+  Static438 Stationary.Ju-87B-2 nn 43059.05 70630.38 15.00 
+  Static439 Stationary.Ju-87B-2 nn 43055.92 70667.17 0.00 
+  Static440 Stationary.Ju-87B-2 nn 43056.44 70703.17 0.00 
+  Static441 Stationary.FW-200C-1 nn 44407.88 70912.09 180.00 
+  Static442 Stationary.FW-200C-1 nn 44424.41 70735.34 180.00 
+  Static443 Stationary.FW-200C-1 nn 44452.99 70558.66 195.00 
+  Static444 Stationary.Ju-87B-2 nn 43254.35 70917.35 -90.00 
+  Static445 Stationary.Ju-87B-2 nn 43301.83 70931.70 -60.00 
+  Static446 Stationary.Ju-87B-2 nn 43328.70 70964.83 -30.00 
+  Static447 Stationary.Ju-87B-2 nn 43357.40 71043.36 -15.00 
+  Static448 Stationary.Ju-87B-2 nn 43370.71 71081.45 -15.00 
+  Static449 Stationary.Ju-87B-2 nn 43380.88 71114.58 -15.00 
+  Static450 Stationary.Ju-87B-2 nn 43566.20 71276.08 -90.00 
+  Static451 Stationary.Ju-87B-2 nn 43610.28 71277.13 -90.00 
+  Static452 Stationary.Ju-87B-2 nn 43652.02 71276.34 -90.00 
+  Static453 Stationary.Ju-87B-2 nn 43757.06 71272.52 -90.00 
+  Static454 Stationary.Ju-87B-2 nn 43805.06 71272.26 -90.00 
+  Static455 Stationary.Ju-87B-2 nn 43850.20 71271.21 -90.00 
+  Static456 Stationary.Ju-87B-2 nn 43999.57 71272.50 -90.00 
+  Static457 Stationary.Ju-87B-2 nn 44043.76 71272.71 -90.00 
+  Static458 Stationary.Ju-87B-2 nn 44092.02 71271.93 -90.00 
+  Static459 Stationary.Bf-109E-4 nn 52571.91 40227.59 -15.00 
+  Static460 Stationary.Bf-109E-4 nn 52561.87 40198.64 -15.00 
+  Static461 Stationary.Bf-109E-4 nn 52551.96 40168.27 -15.00 
+  Static462 Stationary.Bf-109E-4 nn 52540.69 40135.69 -15.00 
+  Static463 Stationary.Bf-109E-4 nn 52516.53 40048.93 -15.00 
+  Static464 Stationary.Bf-109E-4 nn 52510.92 40025.17 -15.00 
+  Static465 Stationary.Bf-109E-4 nn 52503.99 39996.46 -15.00 
+  Static466 Stationary.Bf-109E-4 nn 52498.71 39966.77 -15.00 
+  Static467 Stationary.Bf-109E-4 nn 52479.25 39885.92 -15.00 
+  Static468 Stationary.Bf-109E-4 nn 52472.32 39857.99 -15.00 
+  Static469 Stationary.Bf-109E-4 nn 52463.50 39823.82 -15.00 
+  Static470 Stationary.Bf-109E-4 nn 52454.43 39789.50 -15.00 
+  Static471 Artillery.4_cm_Flak_28 nn 290481.50 216677.75 -15.00 /timeout 0/radius_hide 0
+  Static472 Artillery.4_cm_Flak_28 nn 290466.91 216042.63 -15.00 /timeout 0/radius_hide 0
+  Static473 Artillery.4_cm_Flak_28 nn 291777.72 216067.50 -15.00 /timeout 0/radius_hide 0
+  Static474 Artillery.4_cm_Flak_28 nn 291525.34 216843.75 -15.00 /timeout 0/radius_hide 0
+  Static475 Artillery.4_cm_Flak_28 nn 281648.66 212452.56 -15.00 /timeout 0/radius_hide 0
+  Static476 Artillery.4_cm_Flak_28 nn 280682.34 212643.17 -15.00 /timeout 0/radius_hide 0
+  Static477 Artillery.4_cm_Flak_28 nn 281042.34 213639.78 -15.00 /timeout 0/radius_hide 0
+  Static478 Artillery.4_cm_Flak_28 nn 281618.84 213700.89 -15.00 /timeout 0/radius_hide 0
+  Static479 Artillery.4_cm_Flak_28 nn 277441.75 209456.78 -15.00 /timeout 0/radius_hide 0
+  Static480 Artillery.4_cm_Flak_28 nn 277534.22 208914.44 -15.00 /timeout 0/radius_hide 0
+  Static481 Artillery.4_cm_Flak_28 nn 276870.03 208932.58 -15.00 /timeout 0/radius_hide 0
+  Static482 Artillery.4_cm_Flak_28 nn 276627.44 209445.53 -15.00 /timeout 0/radius_hide 0
+  Static483 Artillery.4_cm_Flak_28 nn 269840.97 207049.55 -15.00 /timeout 0/radius_hide 0
+  Static484 Artillery.4_cm_Flak_28 nn 269548.22 207078.94 -15.00 /timeout 0/radius_hide 0
+  Static485 Artillery.4_cm_Flak_28 nn 269424.41 207239.80 -15.00 /timeout 0/radius_hide 0
+  Static486 Artillery.4_cm_Flak_28 nn 269585.13 207344.02 -15.00 /timeout 0/radius_hide 0
+  Static487 Artillery.4_cm_Flak_28 nn 271737.50 205574.56 -15.00 /timeout 0/radius_hide 0
+  Static488 Artillery.4_cm_Flak_28 nn 272111.44 205922.67 -15.00 /timeout 0/radius_hide 0
+  Static489 Artillery.4_cm_Flak_28 nn 271702.28 204671.50 -15.00 /timeout 0/radius_hide 0
+  Static490 Artillery.4_cm_Flak_28 nn 272246.59 204761.58 -15.00 /timeout 0/radius_hide 0
+  Static491 Artillery.4_cm_Flak_28 nn 281415.78 204035.33 -15.00 /timeout 0/radius_hide 0
+  Static492 Artillery.4_cm_Flak_28 nn 281756.19 204212.09 -15.00 /timeout 0/radius_hide 0
+  Static493 Artillery.4_cm_Flak_28 nn 282185.41 202809.25 -15.00 /timeout 0/radius_hide 0
+  Static494 Artillery.4_cm_Flak_28 nn 282483.59 203221.47 -15.00 /timeout 0/radius_hide 0
+  Static495 Artillery.4_cm_Flak_28 nn 284278.34 205574.94 -15.00 /timeout 0/radius_hide 0
+  Static496 Artillery.4_cm_Flak_28 nn 284530.13 205269.05 -15.00 /timeout 0/radius_hide 0
+  Static497 Artillery.4_cm_Flak_28 nn 283764.53 204966.34 -15.00 /timeout 0/radius_hide 0
+  Static498 Artillery.4_cm_Flak_28 nn 284050.47 204823.02 -15.00 /timeout 0/radius_hide 0
+  Static499 Artillery.4_cm_Flak_28 nn 286766.13 202250.44 -15.00 /timeout 0/radius_hide 0
+  Static500 Artillery.4_cm_Flak_28 nn 287412.22 202300.70 -15.00 /timeout 0/radius_hide 0
+  Static501 Artillery.4_cm_Flak_28 nn 287098.47 201491.64 -15.00 /timeout 0/radius_hide 0
+  Static502 Artillery.4_cm_Flak_28 nn 287617.38 201810.77 -15.00 /timeout 0/radius_hide 0
+  Static503 Artillery.4_cm_Flak_28 nn 285284.88 200357.13 -15.00 /timeout 0/radius_hide 0
+  Static504 Artillery.4_cm_Flak_28 nn 285795.84 200308.34 -15.00 /timeout 0/radius_hide 0
+  Static505 Artillery.4_cm_Flak_28 nn 285888.53 199645.95 -15.00 /timeout 0/radius_hide 0
+  Static506 Artillery.4_cm_Flak_28 nn 285601.72 199861.88 -15.00 /timeout 0/radius_hide 0
+  Static507 Artillery.4_cm_Flak_28 nn 271949.72 200729.83 -15.00 /timeout 0/radius_hide 0
+  Static508 Artillery.4_cm_Flak_28 nn 273135.97 200691.53 -15.00 /timeout 0/radius_hide 0
+  Static509 Artillery.4_cm_Flak_28 nn 272574.44 199678.52 -15.00 /timeout 0/radius_hide 0
+  Static510 Artillery.4_cm_Flak_28 nn 271735.03 200355.45 -15.00 /timeout 0/radius_hide 0
+  Static511 Artillery.4_cm_Flak_28 nn 310973.41 190701.48 -15.00 /timeout 0/radius_hide 0
+  Static512 Artillery.4_cm_Flak_28 nn 311404.66 190636.64 -15.00 /timeout 0/radius_hide 0
+  Static513 Artillery.4_cm_Flak_28 nn 312177.88 190259.02 -15.00 /timeout 0/radius_hide 0
+  Static514 Artillery.4_cm_Flak_28 nn 311152.91 189997.95 -15.00 /timeout 0/radius_hide 0
+  Static515 Artillery.4_cm_Flak_28 nn 277837.34 182419.84 -15.00 /timeout 0/radius_hide 0
+  Static516 Artillery.4_cm_Flak_28 nn 278496.06 182560.09 -15.00 /timeout 0/radius_hide 0
+  Static517 Artillery.4_cm_Flak_28 nn 278154.97 181629.81 -15.00 /timeout 0/radius_hide 0
+  Static518 Artillery.4_cm_Flak_28 nn 278619.06 182026.81 -15.00 /timeout 0/radius_hide 0
+  Static519 Artillery.4_cm_Flak_28 nn 284409.50 183002.89 -15.00 /timeout 0/radius_hide 0
+  Static520 Artillery.4_cm_Flak_28 nn 285235.19 183008.91 -15.00 /timeout 0/radius_hide 0
+  Static521 Artillery.4_cm_Flak_28 nn 285654.50 182677.67 -15.00 /timeout 0/radius_hide 0
+  Static522 Artillery.4_cm_Flak_28 nn 284478.25 182489.63 -15.00 /timeout 0/radius_hide 0
+  Static523 Artillery.4_cm_Flak_28 nn 305919.88 161198.80 -15.00 /timeout 0/radius_hide 0
+  Static524 Artillery.4_cm_Flak_28 nn 306494.75 161556.53 -15.00 /timeout 0/radius_hide 0
+  Static525 Artillery.4_cm_Flak_28 nn 306876.84 159982.55 -15.00 /timeout 0/radius_hide 0
+  Static526 Artillery.4_cm_Flak_28 nn 307141.22 160634.42 -15.00 /timeout 0/radius_hide 0
+  Static527 Artillery.4_cm_Flak_28 nn 351042.72 145992.41 -15.00 /timeout 0/radius_hide 0
+  Static528 Artillery.4_cm_Flak_28 nn 352299.13 145541.86 -15.00 /timeout 0/radius_hide 0
+  Static529 Artillery.4_cm_Flak_28 nn 351430.06 144733.41 -15.00 /timeout 0/radius_hide 0
+  Static530 Artillery.4_cm_Flak_28 nn 350604.72 144742.22 -15.00 /timeout 0/radius_hide 0
+  Static531 Artillery.4_cm_Flak_28 nn 315209.31 130986.54 -15.00 /timeout 0/radius_hide 0
+  Static532 Artillery.4_cm_Flak_28 nn 315013.44 131415.56 -15.00 /timeout 0/radius_hide 0
+  Static533 Artillery.4_cm_Flak_28 nn 314299.56 130780.96 -15.00 /timeout 0/radius_hide 0
+  Static534 Artillery.4_cm_Flak_28 nn 314489.94 130253.88 -15.00 /timeout 0/radius_hide 0
+  Static535 Artillery.4_cm_Flak_28 nn 294892.13 131090.20 -15.00 /timeout 0/radius_hide 0
+  Static536 Artillery.4_cm_Flak_28 nn 295702.47 130742.37 -15.00 /timeout 0/radius_hide 0
+  Static537 Artillery.4_cm_Flak_28 nn 295596.22 130219.45 -15.00 /timeout 0/radius_hide 0
+  Static538 Artillery.4_cm_Flak_28 nn 294817.44 130079.14 -15.00 /timeout 0/radius_hide 0
+  Static539 Artillery.4_cm_Flak_28 nn 283776.09 125795.42 -15.00 /timeout 0/radius_hide 0
+  Static540 Artillery.4_cm_Flak_28 nn 284481.34 125285.09 -15.00 /timeout 0/radius_hide 0
+  Static541 Artillery.4_cm_Flak_28 nn 283174.63 124614.35 -15.00 /timeout 0/radius_hide 0
+  Static542 Artillery.4_cm_Flak_28 nn 284429.41 124166.86 -15.00 /timeout 0/radius_hide 0
+  Static543 Artillery.4_cm_Flak_28 nn 321555.31 94848.16 -15.00 /timeout 0/radius_hide 0
+  Static544 Artillery.4_cm_Flak_28 nn 321416.22 95138.70 -15.00 /timeout 0/radius_hide 0
+  Static545 Artillery.4_cm_Flak_28 nn 322175.91 95935.32 -15.00 /timeout 0/radius_hide 0
+  Static546 Artillery.4_cm_Flak_28 nn 322716.56 95649.59 -15.00 /timeout 0/radius_hide 0
+  Static547 Artillery.4_cm_Flak_28 nn 345670.63 88009.32 -15.00 /timeout 0/radius_hide 0
+  Static548 Artillery.4_cm_Flak_28 nn 346264.03 88375.12 -15.00 /timeout 0/radius_hide 0
+  Static549 Artillery.4_cm_Flak_28 nn 346887.69 87395.57 -15.00 /timeout 0/radius_hide 0
+  Static550 Artillery.4_cm_Flak_28 nn 345948.91 86935.58 -15.00 /timeout 0/radius_hide 0
+  Static551 Artillery.4_cm_Flak_28 nn 334831.00 73007.70 -15.00 /timeout 0/radius_hide 0
+  Static552 Artillery.4_cm_Flak_28 nn 335840.81 73193.20 -15.00 /timeout 0/radius_hide 0
+  Static553 Artillery.4_cm_Flak_28 nn 335240.16 72158.41 -15.00 /timeout 0/radius_hide 0
+  Static554 Artillery.4_cm_Flak_28 nn 335422.75 73392.32 -15.00 /timeout 0/radius_hide 0
+  Static555 Artillery.4_cm_Flak_28 nn 331084.28 27257.04 -15.00 /timeout 0/radius_hide 0
+  Static556 Artillery.4_cm_Flak_28 nn 331405.22 27689.45 -15.00 /timeout 0/radius_hide 0
+  Static557 Artillery.4_cm_Flak_28 nn 331532.84 25864.18 -15.00 /timeout 0/radius_hide 0
+  Static558 Artillery.4_cm_Flak_28 nn 332295.66 26665.69 -15.00 /timeout 0/radius_hide 0
+  Static559 Artillery.4_cm_Flak_28 nn 297421.97 8737.02 -15.00 /timeout 0/radius_hide 0
+  Static560 Artillery.4_cm_Flak_28 nn 297192.72 8512.03 -15.00 /timeout 0/radius_hide 0
+  Static561 Artillery.4_cm_Flak_28 nn 296474.19 9110.69 -15.00 /timeout 0/radius_hide 0
+  Static562 Artillery.4_cm_Flak_28 nn 296911.91 9910.88 -15.00 /timeout 0/radius_hide 0
+  Static563 Artillery.4_cm_Flak_28 nn 304895.09 38851.75 -15.00 /timeout 0/radius_hide 0
+  Static564 Artillery.4_cm_Flak_28 nn 305127.41 38285.00 -15.00 /timeout 0/radius_hide 0
+  Static565 Artillery.4_cm_Flak_28 nn 304760.97 37976.64 -15.00 /timeout 0/radius_hide 0
+  Static566 Artillery.4_cm_Flak_28 nn 305136.56 38968.75 -15.00 /timeout 0/radius_hide 0
+  Static567 Artillery.4_cm_Flak_28 nn 302823.13 48682.91 -15.00 /timeout 0/radius_hide 0
+  Static568 Artillery.4_cm_Flak_28 nn 303225.16 48205.38 -15.00 /timeout 0/radius_hide 0
+  Static569 Artillery.4_cm_Flak_28 nn 303389.31 49294.81 -15.00 /timeout 0/radius_hide 0
+  Static570 Artillery.4_cm_Flak_28 nn 303970.72 49300.42 -15.00 /timeout 0/radius_hide 0
+  Static571 Artillery.4_cm_Flak_28 nn 293211.66 64407.20 -15.00 /timeout 0/radius_hide 0
+  Static572 Artillery.4_cm_Flak_28 nn 293823.25 64394.50 -15.00 /timeout 0/radius_hide 0
+  Static573 Artillery.4_cm_Flak_28 nn 293491.28 65206.78 -15.00 /timeout 0/radius_hide 0
+  Static574 Artillery.4_cm_Flak_28 nn 292621.09 64776.41 -15.00 /timeout 0/radius_hide 0
+  Static575 Artillery.4_cm_Flak_28 nn 207445.17 10072.86 -15.00 /timeout 0/radius_hide 0
+  Static576 Artillery.4_cm_Flak_28 nn 207633.13 10429.16 -15.00 /timeout 0/radius_hide 0
+  Static577 Artillery.4_cm_Flak_28 nn 208651.05 10565.43 -15.00 /timeout 0/radius_hide 0
+  Static578 Artillery.4_cm_Flak_28 nn 208667.63 9959.17 -15.00 /timeout 0/radius_hide 0
+  Static579 Artillery.4_cm_Flak_28 nn 191247.13 10695.01 -15.00 /timeout 0/radius_hide 0
+  Static580 Artillery.4_cm_Flak_28 nn 191321.67 10022.62 -15.00 /timeout 0/radius_hide 0
+  Static581 Artillery.4_cm_Flak_28 nn 192346.08 9600.84 -15.00 /timeout 0/radius_hide 0
+  Static582 Artillery.4_cm_Flak_28 nn 191819.75 11220.41 -15.00 /timeout 0/radius_hide 0
+  Static583 Artillery.4_cm_Flak_28 nn 156890.34 57717.13 -15.00 /timeout 0/radius_hide 0
+  Static584 Artillery.4_cm_Flak_28 nn 157978.69 58314.57 -15.00 /timeout 0/radius_hide 0
+  Static585 Artillery.4_cm_Flak_28 nn 157505.14 58783.33 -15.00 /timeout 0/radius_hide 0
+  Static586 Artillery.4_cm_Flak_28 nn 156712.09 58092.05 -15.00 /timeout 0/radius_hide 0
+  Static587 Artillery.4_cm_Flak_28 nn 124857.88 28475.11 -15.00 /timeout 0/radius_hide 0
+  Static588 Artillery.4_cm_Flak_28 nn 124649.14 28200.53 -15.00 /timeout 0/radius_hide 0
+  Static589 Artillery.4_cm_Flak_28 nn 123787.61 28189.08 -15.00 /timeout 0/radius_hide 0
+  Static590 Artillery.4_cm_Flak_28 nn 124310.83 29195.00 -15.00 /timeout 0/radius_hide 0
+  Static591 Artillery.4_cm_Flak_28 nn 117422.54 18827.74 -15.00 /timeout 0/radius_hide 0
+  Static592 Artillery.4_cm_Flak_28 nn 118507.02 18559.39 -15.00 /timeout 0/radius_hide 0
+  Static593 Artillery.4_cm_Flak_28 nn 117323.52 17623.10 -15.00 /timeout 0/radius_hide 0
+  Static594 Artillery.4_cm_Flak_28 nn 118138.82 17262.03 -15.00 /timeout 0/radius_hide 0
+  Static595 Artillery.4_cm_Flak_28 nn 111851.09 33379.25 -15.00 /timeout 0/radius_hide 0
+  Static596 Artillery.4_cm_Flak_28 nn 111696.19 32817.87 -15.00 /timeout 0/radius_hide 0
+  Static597 Artillery.4_cm_Flak_28 nn 111283.40 33361.53 -15.00 /timeout 0/radius_hide 0
+  Static598 Artillery.4_cm_Flak_28 nn 111560.77 33928.73 -15.00 /timeout 0/radius_hide 0
+  Static599 Artillery.4_cm_Flak_28 nn 52432.11 40195.05 -15.00 /timeout 0/radius_hide 0
+  Static600 Artillery.4_cm_Flak_28 nn 52495.84 40268.46 -15.00 /timeout 0/radius_hide 0
+  Static601 Artillery.4_cm_Flak_28 nn 52417.52 39827.57 -15.00 /timeout 0/radius_hide 0
+  Static602 Artillery.4_cm_Flak_28 nn 52442.14 39969.58 -15.00 /timeout 0/radius_hide 0
+  Static603 Artillery.4_cm_Flak_28 nn 44412.44 71130.81 -15.00 /timeout 0/radius_hide 0
+  Static604 Artillery.4_cm_Flak_28 nn 44528.52 70967.10 -15.00 /timeout 0/radius_hide 0
+  Static605 Artillery.4_cm_Flak_28 nn 43287.72 70987.35 -15.00 /timeout 0/radius_hide 0
+  Static606 Artillery.4_cm_Flak_28 nn 43847.31 71319.09 -15.00 /timeout 0/radius_hide 0
+[Buildings]
+[BuildingsLinks]

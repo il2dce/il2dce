@@ -1,0 +1,1103 @@
+﻿[PARTS]
+  core.100
+  bob.100
+[MAIN]
+  MAP Land$English_Channel_1940
+  BattleArea 170000 135000 150000 150000 10000
+  TIME 12.0000002905726
+  WeatherIndex 0
+  CloudsHeight 1000
+  BreezeActivity 10
+  ThermalActivity 10
+[GlobalWind_0]
+  Power 3.000 0.000 0.000
+  BottomBound 0.00
+  TopBound 1500.00
+  GustPower 0
+  GustAngle 45
+[splines]
+[CustomChiefs]
+[Chiefs]
+  0_Chief Ship.Tanker_Medium1 nn /sleep 0/skill 2/slowfire 1
+  1_Chief Ship.Tanker_Medium1 nn /sleep 0/skill 2/slowfire 1
+  2_Chief Ship.Tanker_Medium1 nn /sleep 0/skill 2/slowfire 1
+  3_Chief Ship.Tanker_Medium1 nn /sleep 0/skill 2/slowfire 1
+  4_Chief Train.57xx_0-6-0PT nn 
+  5_Chief Train.57xx_0-6-0PT nn 
+  6_Chief Train.57xx_0-6-0PT nn 
+  8_Chief Train.57xx_0-6-0PT nn 
+[0_Chief_Road]
+  238888.66 135231.30 38.40  0 2 5.56
+  239731.39 150119.61 38.40  0 2 2.78
+  243570.53 164820.66 38.40  0 2 2.78
+  247503.28 176993.48 38.40  0 2 2.78
+  253121.52 185701.75 38.40  0 2 2.78
+  260893.41 190851.80 38.40  0 2 2.78
+  263596.28 192056.97 38.40  0 2 2.78
+  264979.59 191730.16 38.40
+[1_Chief_Road]
+  319718.53 233478.48 38.40  0 2 5.56
+  308928.38 231923.97 38.40  0 2 2.78
+  296689.53 228138.55 38.40  0 2 2.78
+  284461.16 223875.61 38.40  0 2 2.78
+  282198.16 218138.34 38.40  0 2 2.78
+  283812.47 217141.36 38.40
+[2_Chief_Road]
+  171438.34 180717.34 38.40  0 2 5.56
+  192553.05 187234.23 38.40  0 2 2.78
+  216144.17 197791.58 38.40  0 2 2.78
+  233803.86 208829.98 38.40  0 2 2.78
+  240606.73 226517.52 38.40  0 2 2.78
+  237690.77 229142.53 38.40
+[3_Chief_Road]
+  240900.59 285118.25 38.40  0 2 5.56
+  259579.45 271533.63 38.40  0 2 2.78
+  266277.41 254175.50 38.40  0 2 2.78
+  263069.94 239364.50 38.40  0 2 2.78
+  250334.36 234458.94 38.40  0 2 2.78
+  246520.78 234325.91 38.40
+[4_Chief_Road]
+  S 475 57 0.02 5.00 P 309084.75 202038.33  0 2 5.56
+  S 475 53 0.47 5.00 P 308105.38 203605.27  0 4 5.56
+  S 475 53 0.00 -761.00 P 308009.91 203677.30
+  S 475 52 0.00 -761.00 P 307993.44 203886.06
+  S 475 48 0.25 5.00 P 305853.25 205272.80  0 2 5.56
+  S 475 43 0.56 5.00 P 303554.22 205918.92  0 6 5.56
+  S 475 42 0.00 -919.00 P 302791.19 206083.66
+  S 475 41 0.00 -919.00 P 302592.66 206150.16
+  S 475 40 0.00 -918.00 P 301800.50 206244.28
+  S 475 39 0.00 -918.00 P 301666.69 206405.34
+  S 475 37 0.56 5.00 P 300799.53 206542.44  0 2 5.56
+  S 475 33 0.34 5.00 P 298249.06 207149.95  0 4 5.56
+  S 475 33 0.00 -917.00 P 298191.78 207164.09
+  S 475 32 0.00 -917.00 P 297986.84 207121.22
+  S 475 27 0.19 5.00 P 295719.59 207659.61  0 4 5.56
+  S 475 25 0.00 -914.00 P 294946.69 207893.44
+  S 475 24 0.00 -914.00 P 294749.44 207789.98
+  S 475 20 0.75 5.00 P 293014.53 208382.69  0 6 5.56
+  S 475 20 0.00 -913.00 P 292645.66 208560.56
+  S 475 19 0.00 -913.00 P 292425.94 208678.47
+  S 475 17 0.00 -912.00 P 291599.72 209036.67
+  S 475 16 0.00 -912.00 P 291458.47 209191.25
+  S 475 14 0.41 5.00 P 290515.84 209594.72  0 2 5.56
+  S 475 12 0.56 5.00 P 288069.25 210772.91  0 2 5.56
+  S 475 10 0.20 5.00 P 286013.78 211774.98  0 4 5.56
+  S 475 9 0.00 -907.00 P 285772.47 211946.28
+  S 475 8 0.00 -907.00 P 285556.94 212042.50
+  S 475 0 0.36 20.00 P 284109.16 213782.06  0 7 5.56
+  S 475 0 0.02 20.00 P 283968.44 213983.72
+  S 471 107 0.00 20.00 P 283939.69 214021.86
+  S 471 107 0.74 20.00 P 283697.06 214270.92
+  S 3025 2 0.67 20.00 P 283584.91 214352.19
+  S 3025 0 0.38 20.00 P 283328.13 214628.50
+  S 471 108 0.81 5.00 P 283290.78 214688.31  0 2 5.56
+  S 471 112 0.90 5.00 P 283903.94 215315.33
+[5_Chief_Road]
+  S 478 48 0.38 5.00 P 303370.28 187233.45  0 2 11.11
+  S 478 52 0.81 5.00 P 300953.53 186807.23  0 4 1.00
+  S 478 53 0.00 -475.00 P 300924.00 186838.81
+  S 478 54 0.00 -475.00 P 300821.59 187021.47
+  S 478 55 0.50 5.00 P 300456.13 186914.63  0 2 5.56
+  S 478 57 0.62 5.00 P 299583.03 185903.25  0 2 5.56
+  S 478 60 0.73 5.00 P 298334.38 185074.63  0 2 5.56
+  S 478 64 0.77 5.00 P 296870.94 184837.95  0 2 5.56
+  S 478 68 0.14 5.00 P 295357.09 185052.45  0 2 5.56
+  S 478 72 0.56 5.00 P 293504.88 185311.11  0 2 5.56
+  S 478 77 0.44 5.00 P 291713.09 184894.48  0 2 5.56
+  S 478 82 0.30 5.00 P 290020.38 184122.36  0 2 5.56
+  S 478 86 0.49 5.00 P 288770.00 183605.78  0 2 5.56
+  S 478 90 0.09 5.00 P 286976.66 183971.06  0 2 5.56
+  S 478 92 0.83 5.00 P 284943.56 183674.78  0 2 5.56
+  S 478 96 0.53 5.00 P 283610.84 183163.80  0 2 5.56
+  S 478 100 0.57 5.00 P 282560.06 182143.61  0 2 5.56
+  S 478 105 0.41 5.00 P 280438.91 180993.64  0 2 5.56
+  S 478 109 0.74 5.00 P 278352.09 180626.44  0 2 5.56
+  S 478 115 0.80 5.00 P 275902.97 179968.91  0 4 5.56
+  S 478 120 0.00 -463.00 P 274978.97 181089.95
+  S 478 121 0.00 -463.00 P 274777.88 181031.59
+  S 478 122 0.03 5.00 P 274493.63 181195.11  0 2 5.56
+  S 478 126 0.65 5.00 P 272651.84 181891.39  0 2 5.56
+  S 478 128 0.55 5.00 P 271997.59 182168.20  0 4 5.56
+  S 478 130 0.00 -464.00 P 271722.81 182209.86
+  S 478 131 0.00 -464.00 P 271522.25 182270.16
+  S 466 182 0.80 5.00 P 271362.94 182369.83  0 2 5.56
+  S 466 186 0.13 5.00 P 270208.47 183241.61  0 2 5.56
+  S 466 189 0.51 5.00 P 268928.63 184587.39  0 4 5.56
+  S 466 191 0.00 -458.00 P 268572.00 184887.02
+  S 466 192 0.00 -458.00 P 268393.22 184996.05
+  S 466 195 0.94 5.00 P 267328.78 185756.89  0 2 5.56
+  S 466 202 0.01 5.00 P 266530.13 187199.22  0 2 5.56
+  S 466 203 0.64 5.00 P 266506.94 187855.52  0 2 5.56
+  S 466 207 0.69 5.00 P 266297.19 189315.59  0 2 5.56
+  S 466 209 0.58 5.00 P 265985.44 190097.30
+[6_Chief_Road]
+  S 84 75 0.89 20.00 P 244775.05 257382.41  0 8 11.11
+  S 84 77 0.00 20.00 P 245075.06 257365.02
+  S 42 1 0.00 20.00 P 245170.42 257326.36
+  S 42 2 0.24 20.00 P 245245.61 257216.13
+  S 26 3 0.50 20.00 P 245258.28 257095.63
+  S 26 4 0.07 20.00 P 245267.11 257025.72
+  245280.00 256992.00 20.00
+  S 26 4 0.35 5.00 P 245285.70 256975.06  0 6 5.56
+  S 26 6 0.00 -1769.00 P 245644.88 256329.67
+  S 26 7 0.00 -1769.00 P 245795.23 256183.95
+  S 26 8 0.00 -1774.00 P 246071.45 255744.80
+  S 26 9 0.00 -1774.00 P 246137.34 255518.14
+  S 26 10 0.05 5.00 P 246401.56 255104.33  0 2 5.56
+  S 26 13 0.76 5.00 P 246207.31 253325.02  0 4 5.56
+  S 26 15 0.00 -1670.00 P 245863.14 252853.22
+  S 26 16 0.00 -1670.00 P 245920.22 252637.94
+  S 26 18 0.35 5.00 P 246148.09 251776.44  0 2 5.56
+  S 26 25 0.02 5.00 P 248257.94 250148.59  0 4 5.56
+  S 26 27 0.00 -1671.00 P 248821.81 249362.41
+  S 26 28 0.00 -1671.00 P 249056.56 249337.63
+  S 26 29 0.72 5.00 P 249681.56 248264.66  0 2 5.56
+  S 26 32 0.88 5.00 P 250963.53 246335.55  0 2 5.56
+  S 26 38 0.23 5.00 P 250764.58 244351.98  0 2 5.56
+  S 26 42 0.34 5.00 P 249408.92 242416.77  0 2 5.56
+  S 26 46 0.11 5.00 P 248227.34 240445.33  0 2 5.56
+  S 26 49 0.49 5.00 P 246702.52 237945.17  0 2 5.56
+  S 26 51 0.67 5.00 P 245826.59 236595.63  0 4 5.56
+  S 26 61 0.00 -1444.00 P 244039.06 236230.33
+  S 26 62 0.00 -1444.00 P 243962.33 236035.50
+  S 26 64 0.07 5.00 P 244137.42 235847.67
+[8_Chief_Road]
+  S 47 67 0.94 5.00 P 229489.83 249565.48  0 2 11.11
+  S 47 64 0.70 5.00 P 230324.31 248770.73  0 2 5.56
+  S 47 62 0.71 5.00 P 230948.94 247742.58  0 2 5.56
+  S 47 61 0.41 5.00 P 231311.11 246869.22  0 2 5.56
+  S 47 55 0.35 5.00 P 232204.22 245710.33  0 2 5.56
+  S 47 50 0.66 5.00 P 233116.50 244480.00  0 2 5.56
+  S 47 42 0.76 5.00 P 234203.84 242881.20  0 2 5.56
+  S 47 34 0.40 5.00 P 232704.48 240322.61  0 2 5.56
+  S 47 27 0.87 5.00 P 232026.42 238503.45  0 2 5.56
+  S 47 20 0.83 5.00 P 231489.91 236735.88  0 2 5.56
+  S 47 14 0.78 5.00 P 230309.89 234816.02  0 2 5.56
+  S 47 8 0.61 5.00 P 230575.78 232702.94  0 4 5.56
+  S 47 7 0.00 -1439.00 P 230950.16 232371.58
+  S 47 6 0.00 -1439.00 P 231142.33 232288.41
+  S 47 3 0.74 5.00 P 231801.73 231484.08  0 2 5.56
+  S 47 0 0.75 20.00 P 232734.44 230095.03  0 5 5.56
+  S 47 0 0.28 20.00 P 232793.23 230016.17
+  S 26 100 1.00 20.00 P 232846.59 229978.00
+  S 26 99 0.31 20.00 P 234746.06 229601.95
+  S 26 99 0.29 5.00 P 234806.27 229590.16  0 2 5.56
+  S 26 97 0.82 5.00 P 235841.72 229412.59
+[Stationary]
+  Static581 Artillery.4_cm_Flak_28 nn 192346.08 9600.84 -15.00 /timeout 0/radius_hide 0
+  Static358 Stationary.Bf-109E-4 nn 207871.44 9605.11 75.00 
+  Static357 Stationary.Bf-109E-4 nn 207916.45 9605.31 105.00 
+  Static356 Stationary.Bf-109E-4 nn 207953.97 9610.38 105.00 
+  Static355 Stationary.Bf-109E-4 nn 207988.91 9616.35 90.00 
+  Static580 Artillery.4_cm_Flak_28 nn 191321.67 10022.62 -15.00 /timeout 0/radius_hide 0
+  Static347 Stationary.Bf-109E-4 nn 208348.02 9748.24 150.00 
+  Static348 Stationary.Bf-109E-4 nn 208365.25 9764.93 120.00 
+  Static349 Stationary.Bf-109E-4 nn 208382.31 9783.82 135.00 
+  Static350 Stationary.Bf-109E-4 nn 208399.38 9799.66 120.00 
+  Static351 Stationary.Bf-109E-4 nn 208458.05 9862.87 150.00 
+  Static352 Stationary.Bf-109E-4 nn 208470.61 9885.38 165.00 
+  Static353 Stationary.Bf-109E-4 nn 208487.64 9909.92 135.00 
+  Static560 Artillery.4_cm_Flak_28 nn 297192.72 8512.03 -15.00 /timeout 0/radius_hide 0
+  Static354 Stationary.Bf-109E-4 nn 208504.89 9931.01 150.00 
+  Static578 Artillery.4_cm_Flak_28 nn 208667.63 9959.17 -15.00 /timeout 0/radius_hide 0
+  Static311 Stationary.Do-17Z-2 nn 297220.84 8616.59 125.00 
+  Static312 Stationary.Do-17Z-2 nn 297261.91 8649.86 140.00 
+  Static313 Stationary.Do-17Z-2 nn 297298.47 8682.23 125.00 
+  Static575 Artillery.4_cm_Flak_28 nn 207445.17 10072.86 -15.00 /timeout 0/radius_hide 0
+  Static559 Artillery.4_cm_Flak_28 nn 297421.97 8737.02 -15.00 /timeout 0/radius_hide 0
+  Static346 Stationary.Do-215B-1 nn 191545.80 10368.70 15.00 
+  Static345 Stationary.Do-215B-1 nn 191533.33 10407.75 15.00 
+  Static344 Stationary.Do-215B-1 nn 191505.09 10493.53 15.00 
+  Static314 Stationary.Do-17Z-2 nn 297416.19 8839.56 155.00 
+  Static315 Stationary.Do-17Z-2 nn 297450.16 8889.94 140.00 
+  Static343 Stationary.Do-215B-1 nn 191492.00 10530.30 15.00 
+  Static316 Stationary.Do-17Z-2 nn 297488.88 8931.06 125.00 
+  Static576 Artillery.4_cm_Flak_28 nn 207633.13 10429.16 -15.00 /timeout 0/radius_hide 0
+  Static342 Stationary.Do-215B-1 nn 191468.33 10626.05 15.00 
+  Static341 Stationary.Do-215B-1 nn 191455.41 10665.48 15.00 
+  Static579 Artillery.4_cm_Flak_28 nn 191247.13 10695.01 -15.00 /timeout 0/radius_hide 0
+  Static365 Stationary.Bf-109E-4 nn 208643.45 10494.79 -135.00 
+  Static561 Artillery.4_cm_Flak_28 nn 296474.19 9110.69 -15.00 /timeout 0/radius_hide 0
+  Static317 Stationary.Do-17Z-2 nn 297555.19 9091.65 185.00 
+  Static318 Stationary.Do-17Z-2 nn 297556.47 9144.84 170.00 
+  Static366 Stationary.Bf-109E-4 nn 208625.50 10516.48 -165.00 
+  Static368 Stationary.Bf-109E-4 nn 208585.00 10558.71 -180.00 
+  Static370 Stationary.Bf-109E-4 nn 208606.50 10539.24 -120.00 
+  Static319 Stationary.Do-17Z-2 nn 297567.28 9191.00 155.00 
+  Static359 Stationary.Bf-109E-4 nn 207932.83 10579.01 -45.00 
+  Static360 Stationary.Bf-109E-4 nn 207961.81 10597.67 -60.00 
+  Static361 Stationary.Bf-109E-4 nn 207987.38 10608.01 -75.00 
+  Static362 Stationary.Bf-109E-4 nn 208014.14 10616.12 -90.00 
+  Static367 Stationary.Bf-109E-4 nn 208550.53 10592.37 -105.00 
+  Static369 Stationary.Bf-109E-4 nn 208577.70 10582.23 -135.00 
+  Static577 Artillery.4_cm_Flak_28 nn 208651.05 10565.43 -15.00 /timeout 0/radius_hide 0
+  Static363 Stationary.Bf-109E-4 nn 208052.88 10628.08 -60.00 
+  Static364 Stationary.Bf-109E-4 nn 208074.78 10638.43 -75.00 
+  Static582 Artillery.4_cm_Flak_28 nn 191819.75 11220.41 -15.00 /timeout 0/radius_hide 0
+  Static562 Artillery.4_cm_Flak_28 nn 296911.91 9910.88 -15.00 /timeout 0/radius_hide 0
+  Static594 Artillery.4_cm_Flak_28 nn 118138.82 17262.03 -15.00 /timeout 0/radius_hide 0
+  Static426 Stationary.Ju-87B-2 nn 117943.73 17301.44 90.00 
+  Static427 Stationary.Ju-87B-2 nn 117991.14 17300.11 90.00 
+  Static428 Stationary.Ju-87B-2 nn 118036.56 17302.43 90.00 
+  Static421 Stationary.Ju-87B-2 nn 117286.85 17412.83 45.00 
+  Static420 Stationary.Ju-87B-2 nn 117265.39 17448.82 30.00 
+  Static414 Stationary.Ju-87B-2 nn 117937.35 17432.96 75.00 
+  Static415 Stationary.Ju-87B-2 nn 117984.10 17424.01 75.00 
+  Static416 Stationary.Ju-87B-2 nn 118037.82 17409.42 75.00 
+  Static422 Stationary.Ju-87B-2 nn 117254.27 17488.88 0.00 
+  Static412 Stationary.Ju-87B-2 nn 118049.75 17517.84 60.00 
+  Static413 Stationary.Ju-87B-2 nn 118082.91 17498.61 60.00 
+  Static419 Stationary.Ju-87B-2 nn 117240.11 17561.30 30.00 
+  Static411 Stationary.Ju-87B-2 nn 118011.63 17538.40 60.00 
+  Static418 Stationary.Ju-87B-2 nn 117234.14 17602.08 0.00 
+  Static417 Stationary.Ju-87B-2 nn 117226.55 17636.36 15.00 
+  Static593 Artillery.4_cm_Flak_28 nn 117323.52 17623.10 -15.00 /timeout 0/radius_hide 0
+  Static424 Stationary.Ju-87B-2 nn 117078.15 17713.91 60.00 
+  Static423 Stationary.Ju-87B-2 nn 117114.62 17692.35 60.00 
+  Static425 Stationary.Ju-87B-2 nn 117049.30 17745.40 45.00 
+  Static435 Stationary.Ju-87B-2 nn 118808.66 17990.65 -180.00 
+  Static436 Stationary.Ju-87B-2 nn 118806.34 18036.41 -180.00 
+  Static437 Stationary.Ju-87B-2 nn 118804.34 18077.86 -180.00 
+  Static432 Stationary.Ju-87B-2 nn 118691.21 18322.17 -180.00 
+  Static433 Stationary.Ju-87B-2 nn 118682.59 18354.10 -150.00 
+  Static434 Stationary.Ju-87B-2 nn 118659.38 18382.85 -135.00 
+  Static429 Stationary.Ju-87B-2 nn 118423.30 18494.58 -120.00 
+  Static430 Stationary.Ju-87B-2 nn 118459.78 18479.00 -120.00 
+  Static431 Stationary.Ju-87B-2 nn 118491.94 18464.41 -120.00 
+  Static592 Artillery.4_cm_Flak_28 nn 118507.02 18559.39 -15.00 /timeout 0/radius_hide 0
+  Static410 Stationary.Bf-110C-4 nn 117573.06 18810.69 60.00 
+  Static591 Artillery.4_cm_Flak_28 nn 117422.54 18827.74 -15.00 /timeout 0/radius_hide 0
+  Static407 Stationary.Bf-110C-4 nn 117463.52 18868.15 60.00 
+  Static408 Stationary.Bf-110C-4 nn 117500.12 18849.81 60.00 
+  Static409 Stationary.Bf-110C-4 nn 117536.59 18832.24 60.00 
+  Static383 Stationary.Bf-109E-4 nn 124514.73 28126.69 -135.00 
+  Static384 Stationary.Bf-109E-4 nn 124498.00 28159.86 -165.00 
+  Static589 Artillery.4_cm_Flak_28 nn 123787.61 28189.08 -15.00 /timeout 0/radius_hide 0
+  Static385 Stationary.Bf-109E-4 nn 124502.73 28192.02 -210.00 
+  Static386 Stationary.Bf-109E-4 nn 124533.87 28205.29 -270.00 
+  Static588 Artillery.4_cm_Flak_28 nn 124649.14 28200.53 -15.00 /timeout 0/radius_hide 0
+  Static387 Stationary.Bf-109E-4 nn 124590.05 28262.37 -195.00 
+  Static388 Stationary.Bf-109E-4 nn 124599.91 28289.57 -210.00 
+  Static389 Stationary.Bf-109E-4 nn 124629.50 28311.08 -240.00 
+  Static390 Stationary.Bf-109E-4 nn 124658.19 28325.43 -240.00 
+  Static391 Stationary.Bf-109E-4 nn 124730.51 28403.43 -195.00 
+  Static392 Stationary.Bf-109E-4 nn 124739.38 28429.94 -195.00 
+  Static393 Stationary.Bf-109E-4 nn 124751.94 28460.29 -210.00 
+  Static587 Artillery.4_cm_Flak_28 nn 124857.88 28475.11 -15.00 /timeout 0/radius_hide 0
+  Static394 Stationary.Bf-109E-4 nn 124775.63 28481.43 -225.00 
+  Static557 Artillery.4_cm_Flak_28 nn 331532.84 25864.18 -15.00 /timeout 0/radius_hide 0
+  Static590 Artillery.4_cm_Flak_28 nn 124310.83 29195.00 -15.00 /timeout 0/radius_hide 0
+  Static558 Artillery.4_cm_Flak_28 nn 332295.66 26665.69 -15.00 /timeout 0/radius_hide 0
+  Static340 Stationary.Ju-88A-1 nn 331366.53 26827.09 15.00 
+  Static339 Stationary.Ju-88A-1 nn 331358.09 26858.94 15.00 
+  Static338 Stationary.Ju-88A-1 nn 331348.88 26887.34 15.00 
+  Static336 Stationary.Ju-88A-1 nn 331325.47 26981.73 15.00 
+  Static337 Stationary.Ju-88A-1 nn 331333.16 26953.72 15.00 
+  Static335 Stationary.Ju-88A-1 nn 331315.88 27015.50 15.00 
+  Static334 Stationary.Ju-88A-1 nn 331296.59 27088.92 15.00 
+  Static333 Stationary.Ju-88A-1 nn 331287.75 27124.43 15.00 
+  Static332 Stationary.Ju-88A-1 nn 331284.34 27157.33 15.00 
+  Static555 Artillery.4_cm_Flak_28 nn 331084.28 27257.04 -15.00 /timeout 0/radius_hide 0
+  Static556 Artillery.4_cm_Flak_28 nn 331405.22 27689.45 -15.00 /timeout 0/radius_hide 0
+  Static596 Artillery.4_cm_Flak_28 nn 111696.19 32817.87 -15.00 /timeout 0/radius_hide 0
+  Static395 Stationary.Bf-109E-4 nn 111642.17 32832.61 -225.00 
+  Static396 Stationary.Bf-109E-4 nn 111652.82 32857.53 -210.00 
+  Static397 Stationary.Bf-109E-4 nn 111661.77 32885.85 -195.00 
+  Static398 Stationary.Bf-109E-4 nn 111672.66 32913.43 -210.00 
+  Static399 Stationary.Bf-109E-4 nn 111719.38 33038.07 -195.00 
+  Static400 Stationary.Bf-109E-4 nn 111723.24 33069.04 -180.00 
+  Static401 Stationary.Bf-109E-4 nn 111727.61 33102.66 -195.00 
+  Static402 Stationary.Bf-109E-4 nn 111740.91 33135.57 -210.00 
+  Static403 Stationary.Bf-109E-4 nn 111768.75 33224.14 -165.00 
+  Static404 Stationary.Bf-109E-4 nn 111769.23 33257.54 -195.00 
+  Static405 Stationary.Bf-109E-4 nn 111777.22 33296.50 -210.00 
+  Static406 Stationary.Bf-109E-4 nn 111790.77 33335.71 -195.00 
+  Static597 Artillery.4_cm_Flak_28 nn 111283.40 33361.53 -15.00 /timeout 0/radius_hide 0
+  Static595 Artillery.4_cm_Flak_28 nn 111851.09 33379.25 -15.00 /timeout 0/radius_hide 0
+  Static598 Artillery.4_cm_Flak_28 nn 111560.77 33928.73 -15.00 /timeout 0/radius_hide 0
+  Static470 Stationary.Bf-109E-4 nn 52454.43 39789.50 -15.00 
+  Static601 Artillery.4_cm_Flak_28 nn 52417.52 39827.57 -15.00 /timeout 0/radius_hide 0
+  Static469 Stationary.Bf-109E-4 nn 52463.50 39823.82 -15.00 
+  Static468 Stationary.Bf-109E-4 nn 52472.32 39857.99 -15.00 
+  Static467 Stationary.Bf-109E-4 nn 52479.25 39885.92 -15.00 
+  Static602 Artillery.4_cm_Flak_28 nn 52442.14 39969.58 -15.00 /timeout 0/radius_hide 0
+  Static466 Stationary.Bf-109E-4 nn 52498.71 39966.77 -15.00 
+  Static465 Stationary.Bf-109E-4 nn 52503.99 39996.46 -15.00 
+  Static464 Stationary.Bf-109E-4 nn 52510.92 40025.17 -15.00 
+  Static463 Stationary.Bf-109E-4 nn 52516.53 40048.93 -15.00 
+  Static462 Stationary.Bf-109E-4 nn 52540.69 40135.69 -15.00 
+  Static461 Stationary.Bf-109E-4 nn 52551.96 40168.27 -15.00 
+  Static599 Artillery.4_cm_Flak_28 nn 52432.11 40195.05 -15.00 /timeout 0/radius_hide 0
+  Static460 Stationary.Bf-109E-4 nn 52561.87 40198.64 -15.00 
+  Static459 Stationary.Bf-109E-4 nn 52571.91 40227.59 -15.00 
+  Static600 Artillery.4_cm_Flak_28 nn 52495.84 40268.46 -15.00 /timeout 0/radius_hide 0
+  Static331 Stationary.Bf-110C-4 nn 304994.78 37887.78 165.00 
+  Static330 Stationary.Bf-110C-4 nn 304998.78 37931.11 180.00 
+  Static565 Artillery.4_cm_Flak_28 nn 304760.97 37976.64 -15.00 /timeout 0/radius_hide 0
+  Static327 Stationary.Bf-110C-4 nn 304739.38 38011.37 15.00 
+  Static329 Stationary.Bf-110C-4 nn 305001.63 37965.17 165.00 
+  Static328 Stationary.Bf-110C-4 nn 305006.06 37994.80 175.00 
+  Static326 Stationary.Bf-110C-4 nn 304730.84 38046.91 15.00 
+  Static323 Stationary.Bf-110C-4 nn 305030.94 38071.55 165.00 
+  Static325 Stationary.Bf-110C-4 nn 304723.47 38088.45 0.00 
+  Static324 Stationary.Bf-110C-4 nn 304723.44 38121.98 0.00 
+  Static320 Stationary.Bf-110C-4 nn 305042.34 38111.80 165.00 
+  Static321 Stationary.Bf-110C-4 nn 305054.25 38149.44 165.00 
+  Static322 Stationary.Bf-110C-4 nn 305065.88 38188.66 165.00 
+  Static564 Artillery.4_cm_Flak_28 nn 305127.41 38285.00 -15.00 /timeout 0/radius_hide 0
+  Static563 Artillery.4_cm_Flak_28 nn 304895.09 38851.75 -15.00 /timeout 0/radius_hide 0
+  Static566 Artillery.4_cm_Flak_28 nn 305136.56 38968.75 -15.00 /timeout 0/radius_hide 0
+  Static310 Stationary.Do-17Z-2 nn 303070.38 48236.13 140.00 
+  Static568 Artillery.4_cm_Flak_28 nn 303225.16 48205.38 -15.00 /timeout 0/radius_hide 0
+  Static309 Stationary.Do-17Z-2 nn 303098.78 48266.66 125.00 
+  Static308 Stationary.Do-17Z-2 nn 303126.16 48292.36 140.00 
+  Static305 Stationary.Do-17Z-2 nn 303249.28 48303.19 50.00 
+  Static307 Stationary.Do-17Z-2 nn 303192.47 48343.45 50.00 
+  Static306 Stationary.Do-17Z-2 nn 303221.53 48323.66 50.00 
+  Static567 Artillery.4_cm_Flak_28 nn 302823.13 48682.91 -15.00 /timeout 0/radius_hide 0
+  Static302 Stationary.Do-17Z-2 nn 303900.34 48891.59 -230.00 
+  Static303 Stationary.Do-17Z-2 nn 303925.06 48912.79 -230.00 
+  Static304 Stationary.Do-17Z-2 nn 303948.59 48932.57 -230.00 
+  Static293 Stationary.Do-17Z-2 nn 303379.31 49139.98 -75.00 
+  Static294 Stationary.Do-17Z-2 nn 303413.75 49150.55 -75.00 
+  Static295 Stationary.Do-17Z-2 nn 303450.13 49160.72 -75.00 
+  Static296 Stationary.Do-17Z-2 nn 303574.69 49211.29 -75.00 
+  Static299 Stationary.Do-17Z-2 nn 303460.06 49216.25 -75.00 
+  Static300 Stationary.Do-17Z-2 nn 303496.69 49227.36 -75.00 
+  Static301 Stationary.Do-17Z-2 nn 303528.13 49235.86 -75.00 
+  Static297 Stationary.Do-17Z-2 nn 303611.31 49223.81 -75.00 
+  Static298 Stationary.Do-17Z-2 nn 303646.19 49235.84 -75.00 
+  Static569 Artillery.4_cm_Flak_28 nn 303389.31 49294.81 -15.00 /timeout 0/radius_hide 0
+  Static570 Artillery.4_cm_Flak_28 nn 303970.72 49300.42 -15.00 /timeout 0/radius_hide 0
+  Static583 Artillery.4_cm_Flak_28 nn 156890.34 57717.13 -15.00 /timeout 0/radius_hide 0
+  Static371 Stationary.Bf-109E-4 nn 156754.38 57839.79 -30.00 
+  Static372 Stationary.Bf-109E-4 nn 156755.69 57869.95 0.00 
+  Static373 Stationary.Bf-109E-4 nn 156748.39 57906.33 30.00 
+  Static374 Stationary.Bf-109E-4 nn 156746.59 57948.25 -15.00 
+  Static586 Artillery.4_cm_Flak_28 nn 156712.09 58092.05 -15.00 /timeout 0/radius_hide 0
+  Static375 Stationary.Bf-109E-4 nn 156745.55 58054.05 -30.00 
+  Static376 Stationary.Bf-109E-4 nn 156762.92 58088.25 -15.00 
+  Static377 Stationary.Bf-109E-4 nn 156786.73 58108.85 -90.00 
+  Static378 Stationary.Bf-109E-4 nn 156817.95 58119.53 -75.00 
+  Static379 Stationary.Bf-109E-4 nn 156949.63 58194.50 -45.00 
+  Static380 Stationary.Bf-109E-4 nn 156966.00 58215.21 -45.00 
+  Static381 Stationary.Bf-109E-4 nn 156989.48 58231.20 -75.00 
+  Static382 Stationary.Bf-109E-4 nn 157021.27 58240.77 -90.00 
+  Static584 Artillery.4_cm_Flak_28 nn 157978.69 58314.57 -15.00 /timeout 0/radius_hide 0
+  Static585 Artillery.4_cm_Flak_28 nn 157505.14 58783.33 -15.00 /timeout 0/radius_hide 0
+  Static571 Artillery.4_cm_Flak_28 nn 293211.66 64407.20 -15.00 /timeout 0/radius_hide 0
+  Static572 Artillery.4_cm_Flak_28 nn 293823.25 64394.50 -15.00 /timeout 0/radius_hide 0
+  Static288 Stationary.FW-200C-1 nn 292667.53 64714.24 -75.00 
+  Static287 Stationary.FW-200C-1 nn 292719.16 64750.36 -45.00 
+  Static574 Artillery.4_cm_Flak_28 nn 292621.09 64776.41 -15.00 /timeout 0/radius_hide 0
+  Static289 Stationary.FW-200C-1 nn 292859.56 64896.04 -30.00 
+  Static291 Stationary.FW-200C-1 nn 293576.22 65019.41 -135.00 
+  Static290 Stationary.FW-200C-1 nn 293729.09 64971.51 -90.00 
+  Static292 Stationary.FW-200C-1 nn 293531.91 65071.70 -150.00 
+  Static573 Artillery.4_cm_Flak_28 nn 293491.28 65206.78 -15.00 /timeout 0/radius_hide 0
+  Static443 Stationary.FW-200C-1 nn 44452.99 70558.66 195.00 
+  Static438 Stationary.Ju-87B-2 nn 43059.05 70630.38 15.00 
+  Static439 Stationary.Ju-87B-2 nn 43055.92 70667.17 0.00 
+  Static440 Stationary.Ju-87B-2 nn 43056.44 70703.17 0.00 
+  Static442 Stationary.FW-200C-1 nn 44424.41 70735.34 180.00 
+  Static444 Stationary.Ju-87B-2 nn 43254.35 70917.35 -90.00 
+  Static445 Stationary.Ju-87B-2 nn 43301.83 70931.70 -60.00 
+  Static446 Stationary.Ju-87B-2 nn 43328.70 70964.83 -30.00 
+  Static441 Stationary.FW-200C-1 nn 44407.88 70912.09 180.00 
+  Static604 Artillery.4_cm_Flak_28 nn 44528.52 70967.10 -15.00 /timeout 0/radius_hide 0
+  Static605 Artillery.4_cm_Flak_28 nn 43287.72 70987.35 -15.00 /timeout 0/radius_hide 0
+  Static447 Stationary.Ju-87B-2 nn 43357.40 71043.36 -15.00 
+  Static448 Stationary.Ju-87B-2 nn 43370.71 71081.45 -15.00 
+  Static449 Stationary.Ju-87B-2 nn 43380.88 71114.58 -15.00 
+  Static603 Artillery.4_cm_Flak_28 nn 44412.44 71130.81 -15.00 /timeout 0/radius_hide 0
+  Static450 Stationary.Ju-87B-2 nn 43566.20 71276.08 -90.00 
+  Static451 Stationary.Ju-87B-2 nn 43610.28 71277.13 -90.00 
+  Static452 Stationary.Ju-87B-2 nn 43652.02 71276.34 -90.00 
+  Static453 Stationary.Ju-87B-2 nn 43757.06 71272.52 -90.00 
+  Static454 Stationary.Ju-87B-2 nn 43805.06 71272.26 -90.00 
+  Static455 Stationary.Ju-87B-2 nn 43850.20 71271.21 -90.00 
+  Static456 Stationary.Ju-87B-2 nn 43999.57 71272.50 -90.00 
+  Static457 Stationary.Ju-87B-2 nn 44043.76 71272.71 -90.00 
+  Static458 Stationary.Ju-87B-2 nn 44092.02 71271.93 -90.00 
+  Static606 Artillery.4_cm_Flak_28 nn 43847.31 71319.09 -15.00 /timeout 0/radius_hide 0
+  Static553 Artillery.4_cm_Flak_28 nn 335240.16 72158.41 -15.00 /timeout 0/radius_hide 0
+  Static281 Stationary.He-111H-2 nn 335097.41 72212.23 75.00 
+  Static282 Stationary.He-111H-2 nn 335170.22 72205.55 105.00 
+  Static283 Stationary.He-111H-2 nn 335235.34 72214.91 120.00 
+  Static284 Stationary.He-111H-2 nn 335047.28 72286.78 15.00 
+  Static285 Stationary.He-111H-2 nn 335027.91 72334.21 30.00 
+  Static286 Stationary.He-111H-2 nn 335006.53 72385.65 -15.00 
+  Static277 Stationary.He-111H-2 nn 335075.16 72810.98 30.00 
+  Static275 Stationary.He-111H-2 nn 335031.06 72895.49 30.00 
+  Static276 Stationary.He-111H-2 nn 335052.44 72855.74 30.00 
+  Static551 Artillery.4_cm_Flak_28 nn 334831.00 73007.70 -15.00 /timeout 0/radius_hide 0
+  Static273 Stationary.He-111H-2 nn 334964.41 73015.98 30.00 
+  Static274 Stationary.He-111H-2 nn 334989.44 72974.55 30.00 
+  Static272 Stationary.He-111H-2 nn 334941.03 73055.73 30.00 
+  Static271 Stationary.He-111H-2 nn 334903.94 73128.87 30.00 
+  Static270 Stationary.He-111H-2 nn 334871.88 73189.99 30.00 
+  Static552 Artillery.4_cm_Flak_28 nn 335840.81 73193.20 -15.00 /timeout 0/radius_hide 0
+  Static269 Stationary.He-111H-2 nn 334839.47 73254.13 30.00 
+  Static278 Stationary.He-111H-2 nn 335155.97 73384.80 -90.00 
+  Static279 Stationary.He-111H-2 nn 335244.47 73379.12 -105.00 
+  Static280 Stationary.He-111H-2 nn 335330.63 73374.77 -75.00 
+  Static554 Artillery.4_cm_Flak_28 nn 335422.75 73392.32 -15.00 /timeout 0/radius_hide 0
+  Static260 Stationary.He-111H-2 nn 346596.63 86716.02 -195.00 
+  Static261 Stationary.He-111H-2 nn 346614.31 86757.40 -210.00 
+  Static262 Stationary.He-111H-2 nn 346650.69 86787.24 -225.00 
+  Static263 Stationary.He-111H-2 nn 346727.72 86870.27 -195.00 
+  Static550 Artillery.4_cm_Flak_28 nn 345948.91 86935.58 -15.00 /timeout 0/radius_hide 0
+  Static264 Stationary.He-111H-2 nn 346747.25 86926.70 -210.00 
+  Static265 Stationary.He-111H-2 nn 346787.41 86965.22 -225.00 
+  Static266 Stationary.He-111H-2 nn 346851.75 87068.68 -195.00 
+  Static267 Stationary.He-111H-2 nn 346881.84 87125.11 -210.00 
+  Static268 Stationary.He-111H-2 nn 346900.03 87176.11 -180.00 
+  Static549 Artillery.4_cm_Flak_28 nn 346887.69 87395.57 -15.00 /timeout 0/radius_hide 0
+  Static547 Artillery.4_cm_Flak_28 nn 345670.63 88009.32 -15.00 /timeout 0/radius_hide 0
+  Static257 Stationary.He-111H-2 nn 346328.69 88217.88 -90.00 
+  Static258 Stationary.He-111H-2 nn 346372.09 88216.53 -105.00 
+  Static259 Stationary.He-111H-2 nn 346407.09 88192.92 -135.00 
+  Static254 Stationary.He-111H-2 nn 346171.84 88286.52 -105.00 
+  Static255 Stationary.He-111H-2 nn 346216.91 88284.63 -105.00 
+  Static256 Stationary.He-111H-2 nn 346252.44 88265.09 -120.00 
+  Static251 Stationary.He-111H-2 nn 346013.38 88360.05 -105.00 
+  Static252 Stationary.He-111H-2 nn 346056.56 88344.85 -120.00 
+  Static253 Stationary.He-111H-2 nn 346092.09 88320.98 -135.00 
+  Static548 Artillery.4_cm_Flak_28 nn 346264.03 88375.12 -15.00 /timeout 0/radius_hide 0
+  Static243 Stationary.Bf-110C-4 nn 322064.59 94735.39 75.00 
+  Static239 Stationary.Bf-110C-4 nn 322106.06 94735.91 90.00 
+  Static240 Stationary.Bf-110C-4 nn 322147.28 94743.95 105.00 
+  Static244 Stationary.Bf-110C-4 nn 322193.31 94753.72 90.00 
+  Static246 Stationary.Bf-110C-4 nn 322289.63 94764.14 105.00 
+  Static245 Stationary.Bf-110C-4 nn 322333.50 94769.34 90.00 
+  Static242 Stationary.Bf-110C-4 nn 322375.56 94776.21 105.00 
+  Static241 Stationary.Bf-110C-4 nn 322414.91 94783.45 90.00 
+  Static543 Artillery.4_cm_Flak_28 nn 321555.31 94848.16 -15.00 /timeout 0/radius_hide 0
+  Static250 Stationary.Bf-110C-4 nn 321629.44 94907.52 30.00 
+  Static249 Stationary.Bf-110C-4 nn 321587.06 94955.61 60.00 
+  Static247 Stationary.Bf-110C-4 nn 321502.53 95034.56 60.00 
+  Static248 Stationary.Bf-110C-4 nn 321546.59 95007.59 30.00 
+  Static544 Artillery.4_cm_Flak_28 nn 321416.22 95138.70 -15.00 /timeout 0/radius_hide 0
+  Static546 Artillery.4_cm_Flak_28 nn 322716.56 95649.59 -15.00 /timeout 0/radius_hide 0
+  Static545 Artillery.4_cm_Flak_28 nn 322175.91 95935.32 -15.00 /timeout 0/radius_hide 0
+  Static542 Artillery.4_cm_Flak_28 nn 284429.41 124166.86 -15.00 /timeout 0/radius_hide 0
+  Static541 Artillery.4_cm_Flak_28 nn 283174.63 124614.35 -15.00 /timeout 0/radius_hide 0
+  Static237 Stationary.Bf-110C-4 nn 284578.97 125181.73 -120.00 
+  Static238 Stationary.Bf-110C-4 nn 284629.47 125155.20 -90.00 
+  Static236 Stationary.Bf-110C-4 nn 284533.69 125209.59 -135.00 
+  Static235 Stationary.Bf-110C-4 nn 284500.06 125242.67 -150.00 
+  Static540 Artillery.4_cm_Flak_28 nn 284481.34 125285.09 -15.00 /timeout 0/radius_hide 0
+  Static233 Stationary.Bf-110C-4 nn 284396.50 125374.63 -135.00 
+  Static234 Stationary.Bf-110C-4 nn 284421.09 125342.48 -165.00 
+  Static231 Stationary.Bf-110C-4 nn 284340.28 125436.78 -135.00 
+  Static232 Stationary.Bf-110C-4 nn 284368.13 125404.63 -150.00 
+  Static228 Stationary.Bf-110C-4 nn 284176.25 125472.45 -135.00 
+  Static229 Stationary.Bf-110C-4 nn 284209.84 125449.99 -120.00 
+  Static230 Stationary.Bf-110C-4 nn 284254.22 125459.87 -60.00 
+  Static227 Stationary.Bf-110C-4 nn 284148.97 125505.77 -150.00 
+  Static539 Artillery.4_cm_Flak_28 nn 283776.09 125795.42 -15.00 /timeout 0/radius_hide 0
+  Static538 Artillery.4_cm_Flak_28 nn 294817.44 130079.14 -15.00 /timeout 0/radius_hide 0
+  Static537 Artillery.4_cm_Flak_28 nn 295596.22 130219.45 -15.00 /timeout 0/radius_hide 0
+  Static534 Artillery.4_cm_Flak_28 nn 314489.94 130253.88 -15.00 /timeout 0/radius_hide 0
+  Static208 Stationary.Bf-110C-4 nn 315087.78 130290.09 -210.00 
+  Static224 Stationary.Bf-110C-4 nn 295690.34 130607.51 -120.00 
+  Static209 Stationary.Bf-110C-4 nn 315106.53 130325.85 -195.00 
+  Static210 Stationary.Bf-110C-4 nn 315121.94 130358.20 -210.00 
+  Static221 Stationary.Bf-110C-4 nn 295517.06 130681.73 -105.00 
+  Static222 Stationary.Bf-110C-4 nn 295560.72 130681.51 -90.00 
+  Static223 Stationary.Bf-110C-4 nn 295660.38 130627.58 -135.00 
+  Static214 Stationary.Bf-110C-4 nn 315021.03 130382.18 -30.00 
+  Static213 Stationary.Bf-110C-4 nn 315038.63 130424.77 -15.00 
+  Static207 Stationary.Bf-110C-4 nn 315142.06 130386.21 -225.00 
+  Static219 Stationary.Bf-110C-4 nn 295473.41 130728.04 -135.00 
+  Static220 Stationary.Bf-110C-4 nn 295496.13 130700.69 -150.00 
+  Static536 Artillery.4_cm_Flak_28 nn 295702.47 130742.37 -15.00 /timeout 0/radius_hide 0
+  Static212 Stationary.Bf-110C-4 nn 315040.06 130472.46 0.00 
+  Static206 Stationary.Bf-110C-4 nn 315137.59 130466.28 -180.00 
+  Static218 Stationary.Bf-110C-4 nn 295376.78 130804.73 -135.00 
+  Static211 Stationary.Bf-110C-4 nn 315030.13 130513.63 15.00 
+  Static204 Stationary.Bf-110C-4 nn 315134.72 130501.70 -165.00 
+  Static205 Stationary.Bf-110C-4 nn 315126.47 130542.30 -165.00 
+  Static226 Stationary.Bf-110C-4 nn 294882.63 130877.30 -45.00 
+  Static217 Stationary.Bf-110C-4 nn 295345.47 130828.98 -120.00 
+  Static203 Stationary.Bf-110C-4 nn 315113.69 130573.24 -150.00 
+  Static225 Stationary.Bf-110C-4 nn 294907.09 130917.88 -30.00 
+  Static216 Stationary.Bf-110C-4 nn 295249.31 130896.25 -120.00 
+  Static215 Stationary.Bf-110C-4 nn 295233.22 130924.25 -180.00 
+  Static533 Artillery.4_cm_Flak_28 nn 314299.56 130780.96 -15.00 /timeout 0/radius_hide 0
+  Static535 Artillery.4_cm_Flak_28 nn 294892.13 131090.20 -15.00 /timeout 0/radius_hide 0
+  Static531 Artillery.4_cm_Flak_28 nn 315209.31 130986.54 -15.00 /timeout 0/radius_hide 0
+  Static532 Artillery.4_cm_Flak_28 nn 315013.44 131415.56 -15.00 /timeout 0/radius_hide 0
+  Static530 Artillery.4_cm_Flak_28 nn 350604.72 144742.22 -15.00 /timeout 0/radius_hide 0
+  Static529 Artillery.4_cm_Flak_28 nn 351430.06 144733.41 -15.00 /timeout 0/radius_hide 0
+  Static196 Stationary.Do-17Z-2 nn 350518.38 144887.95 60.00 
+  Static195 Stationary.Do-17Z-2 nn 350563.09 144868.67 75.00 
+  Static194 Stationary.Do-17Z-2 nn 350611.09 144850.64 60.00 
+  Static197 Stationary.Do-17Z-2 nn 350440.97 144935.02 45.00 
+  Static199 Stationary.Do-17Z-2 nn 350397.75 145016.53 15.00 
+  Static198 Stationary.Do-17Z-2 nn 350413.69 144974.61 30.00 
+  Static200 Stationary.Do-17Z-2 nn 350385.16 145088.31 0.00 
+  Static201 Stationary.Do-17Z-2 nn 350383.88 145152.08 0.00 
+  Static193 Stationary.Do-17Z-2 nn 352235.94 145210.56 -195.00 
+  Static202 Stationary.Do-17Z-2 nn 350380.53 145216.72 0.00 
+  Static192 Stationary.Do-17Z-2 nn 352236.69 145260.19 -180.00 
+  Static191 Stationary.Do-17Z-2 nn 352238.34 145309.34 -180.00 
+  Static190 Stationary.Do-17Z-2 nn 352126.16 145560.48 -165.00 
+  Static528 Artillery.4_cm_Flak_28 nn 352299.13 145541.86 -15.00 /timeout 0/radius_hide 0
+  Static188 Stationary.Do-17Z-2 nn 352048.50 145637.63 -120.00 
+  Static189 Stationary.Do-17Z-2 nn 352094.28 145608.83 -135.00 
+  Static185 Stationary.Do-17Z-2 nn 351860.53 145706.80 -120.00 
+  Static186 Stationary.Do-17Z-2 nn 351906.56 145693.17 -105.00 
+  Static187 Stationary.Do-17Z-2 nn 351949.25 145678.52 -120.00 
+  Static527 Artillery.4_cm_Flak_28 nn 351042.72 145992.41 -15.00 /timeout 0/radius_hide 0
+  Static525 Artillery.4_cm_Flak_28 nn 306876.84 159982.55 -15.00 /timeout 0/radius_hide 0
+  Static526 Artillery.4_cm_Flak_28 nn 307141.22 160634.42 -15.00 /timeout 0/radius_hide 0
+  Static523 Artillery.4_cm_Flak_28 nn 305919.88 161198.80 -15.00 /timeout 0/radius_hide 0
+  Static181 Stationary.Ju-87B-2 nn 306461.63 161468.38 -135.00 
+  Static182 Stationary.Ju-87B-2 nn 306548.84 161440.84 -90.00 
+  Static183 Stationary.Ju-87B-2 nn 306593.41 161436.42 -105.00 
+  Static184 Stationary.Ju-87B-2 nn 306624.19 161419.73 -135.00 
+  Static177 Stationary.Ju-87B-2 nn 306285.19 161535.36 -120.00 
+  Static178 Stationary.Ju-87B-2 nn 306314.91 161515.81 -135.00 
+  Static179 Stationary.Ju-87B-2 nn 306381.63 161488.19 -90.00 
+  Static180 Stationary.Ju-87B-2 nn 306426.97 161488.97 -105.00 
+  Static176 Stationary.Ju-87B-2 nn 306252.94 161546.00 -105.00 
+  Static524 Artillery.4_cm_Flak_28 nn 306494.75 161556.53 -15.00 /timeout 0/radius_hide 0
+  Static517 Artillery.4_cm_Flak_28 nn 278154.97 181629.81 -15.00 /timeout 0/radius_hide 0
+  Static518 Artillery.4_cm_Flak_28 nn 278619.06 182026.81 -15.00 /timeout 0/radius_hide 0
+  Static163 Stationary.Bf-109E-4 nn 277719.53 182284.61 -75.00 
+  Static162 Stationary.Bf-109E-4 nn 277790.38 182325.17 -30.00 
+  Static160 Stationary.Bf-109E-4 nn 278040.78 182334.36 -105.00 
+  Static154 Stationary.Bf-109E-4 nn 278144.84 182335.89 -60.00 
+  Static161 Stationary.Bf-109E-4 nn 277926.66 182351.63 -90.00 
+  Static515 Artillery.4_cm_Flak_28 nn 277837.34 182419.84 -15.00 /timeout 0/radius_hide 0
+  Static155 Stationary.Bf-109E-4 nn 278237.16 182402.19 -60.00 
+  Static156 Stationary.Bf-109E-4 nn 278324.97 182448.50 -75.00 
+  Static157 Stationary.Bf-109E-4 nn 278406.69 182478.17 -75.00 
+  Static158 Stationary.Bf-109E-4 nn 278492.06 182512.08 -45.00 
+  Static159 Stationary.Bf-109E-4 nn 278589.34 182518.30 -120.00 
+  Static516 Artillery.4_cm_Flak_28 nn 278496.06 182560.09 -15.00 /timeout 0/radius_hide 0
+  Static522 Artillery.4_cm_Flak_28 nn 284478.25 182489.63 -15.00 /timeout 0/radius_hide 0
+  Static521 Artillery.4_cm_Flak_28 nn 285654.50 182677.67 -15.00 /timeout 0/radius_hide 0
+  Static166 Stationary.Bf-109E-4 nn 285373.19 182837.20 -120.00 
+  Static167 Stationary.Bf-109E-4 nn 285407.06 182819.67 -105.00 
+  Static164 Stationary.Bf-109E-4 nn 285317.38 182869.36 -120.00 
+  Static165 Stationary.Bf-109E-4 nn 285343.38 182853.58 -120.00 
+  Static173 Stationary.Bf-109E-4 nn 284674.75 182957.61 -135.00 
+  Static172 Stationary.Bf-109E-4 nn 284715.09 182931.59 -120.00 
+  Static171 Stationary.Bf-109E-4 nn 284858.56 182916.11 -90.00 
+  Static170 Stationary.Bf-109E-4 nn 284903.88 182923.13 -75.00 
+  Static169 Stationary.Bf-109E-4 nn 284946.81 182928.67 -90.00 
+  Static168 Stationary.Bf-109E-4 nn 284990.66 182934.52 -75.00 
+  Static519 Artillery.4_cm_Flak_28 nn 284409.50 183002.89 -15.00 /timeout 0/radius_hide 0
+  Static175 Stationary.Bf-109E-4 nn 284588.88 183002.03 -90.00 
+  Static174 Stationary.Bf-109E-4 nn 284639.69 182984.50 -120.00 
+  Static520 Artillery.4_cm_Flak_28 nn 285235.19 183008.91 -15.00 /timeout 0/radius_hide 0
+  Static514 Artillery.4_cm_Flak_28 nn 311152.91 189997.95 -15.00 /timeout 0/radius_hide 0
+  Static513 Artillery.4_cm_Flak_28 nn 312177.88 190259.02 -15.00 /timeout 0/radius_hide 0
+  Static146 Stationary.Bf-109E-4 nn 311308.03 190572.50 -105.00 
+  Static147 Stationary.Bf-109E-4 nn 311344.66 190566.34 -90.00 
+  Static148 Stationary.Bf-109E-4 nn 311375.78 190567.11 -90.00 
+  Static149 Stationary.Bf-109E-4 nn 311409.88 190567.06 -90.00 
+  Static153 Stationary.Bf-109E-4 nn 311473.38 190569.08 -105.00 
+  Static150 Stationary.Bf-109E-4 nn 311503.47 190569.58 -90.00 
+  Static151 Stationary.Bf-109E-4 nn 311532.19 190571.81 -75.00 
+  Static152 Stationary.Bf-109E-4 nn 311561.84 190573.73 -90.00 
+  Static144 Stationary.Bf-109E-4 nn 311217.16 190613.83 -135.00 
+  Static143 Stationary.Bf-109E-4 nn 311204.63 190631.47 -165.00 
+  Static142 Stationary.Bf-109E-4 nn 311194.03 190652.31 -150.00 
+  Static145 Stationary.Bf-109E-4 nn 311239.88 190595.89 -120.00 
+  Static512 Artillery.4_cm_Flak_28 nn 311404.66 190636.64 -15.00 /timeout 0/radius_hide 0
+  Static511 Artillery.4_cm_Flak_28 nn 310973.41 190701.48 -15.00 /timeout 0/radius_hide 0
+  Static871 Artillery.Bofors nn 89995.06 195725.75 -15.00 /timeout 0/radius_hide 0
+  Static870 Artillery.Bofors nn 89193.23 196009.73 -15.00 /timeout 0/radius_hide 0
+  Static607 Stationary.BlenheimMkIVF nn 89187.45 196173.16 0.00 
+  Static608 Stationary.BlenheimMkIVF nn 89185.16 196217.13 0.00 
+  Static609 Stationary.BlenheimMkIVF nn 89183.73 196259.47 0.00 
+  Static869 Artillery.Bofors nn 89157.82 196368.11 -15.00 /timeout 0/radius_hide 0
+  Static610 Stationary.BlenheimMkIVF nn 89181.59 196405.72 0.00 
+  Static611 Stationary.BlenheimMkIVF nn 89180.97 196446.31 0.00 
+  Static612 Stationary.BlenheimMkIVF nn 89181.66 196487.30 0.00 
+  Static872 Artillery.Bofors nn 89561.30 196876.11 -15.00 /timeout 0/radius_hide 0
+  Static883 Stationary.Radar.EnglishRadar1 nn 267703.59 195007.22 -45.00 
+  Static863 Artillery.Bofors nn 104495.09 198785.39 -15.00 /timeout 0/radius_hide 0
+  Static613 Stationary.HurricaneMkI_100oct nn 104507.94 198845.20 -295.00 
+  Static614 Stationary.HurricaneMkI_100oct nn 104537.77 198830.03 -295.00 
+  Static615 Stationary.HurricaneMkI_100oct nn 104573.18 198815.11 -285.00 
+  Static616 Stationary.HurricaneMkI_100oct nn 104364.54 198906.41 -310.00 
+  Static617 Stationary.HurricaneMkI_100oct nn 104408.04 198886.94 -280.00 
+  Static618 Stationary.HurricaneMkI_100oct nn 104446.23 198874.14 -295.00 
+  Static862 Artillery.Bofors nn 105131.20 198956.38 -15.00 /timeout 0/radius_hide 0
+  Static619 Stationary.HurricaneMkI_100oct nn 104176.92 199292.16 -330.00 
+  Static864 Artillery.Bofors nn 104022.77 199311.16 -15.00 /timeout 0/radius_hide 0
+  Static620 Stationary.HurricaneMkI_100oct nn 104161.50 199326.55 -330.00 
+  Static621 Stationary.HurricaneMkI_100oct nn 104141.02 199360.19 -325.00 
+  Static622 Stationary.HurricaneMkI_100oct nn 101319.73 199487.73 100.00 
+  Static623 Stationary.HurricaneMkI_100oct nn 104117.74 199438.33 -360.00 
+  Static624 Stationary.HurricaneMkI_100oct nn 104112.94 199475.50 -345.00 
+  Static625 Stationary.HurricaneMkI_100oct nn 101164.41 199539.78 -315.00 
+  Static626 Stationary.HurricaneMkI_100oct nn 101190.84 199514.58 -300.00 
+  Static866 Artillery.Bofors nn 101249.55 199527.22 -15.00 /timeout 0/radius_hide 0
+  Static627 Stationary.HurricaneMkI_100oct nn 101353.34 199492.64 95.00 
+  Static628 Stationary.HurricaneMkI_100oct nn 101386.13 199495.31 100.00 
+  Static629 Stationary.HurricaneMkI_100oct nn 104110.41 199513.44 -360.00 
+  Static630 Stationary.HurricaneMkI_100oct nn 101152.90 199573.64 -330.00 
+  Static867 Artillery.Bofors nn 101815.39 199791.94 -15.00 /timeout 0/radius_hide 0
+  Static861 Artillery.Bofors nn 104277.51 199886.17 -15.00 /timeout 0/radius_hide 0
+  Static865 Artillery.Bofors nn 101482.02 200105.88 -15.00 /timeout 0/radius_hide 0
+  Static868 Artillery.Bofors nn 101101.40 200138.44 -15.00 /timeout 0/radius_hide 0
+  Static509 Artillery.4_cm_Flak_28 nn 272574.44 199678.52 -15.00 /timeout 0/radius_hide 0
+  Static505 Artillery.4_cm_Flak_28 nn 285888.53 199645.95 -15.00 /timeout 0/radius_hide 0
+  Static74 Stationary.Bf-109E-4 nn 273007.44 199923.89 180.00 
+  Static73 Stationary.Bf-109E-4 nn 273006.19 199961.34 195.00 
+  Static506 Artillery.4_cm_Flak_28 nn 285601.72 199861.88 -15.00 /timeout 0/radius_hide 0
+  Static72 Stationary.Bf-109E-4 nn 272999.16 200073.41 195.00 
+  Static71 Stationary.Bf-109E-4 nn 273000.84 200112.00 165.00 
+  Static76 Stationary.Bf-109E-4 nn 273029.66 200220.33 195.00 
+  Static77 Stationary.Bf-109E-4 nn 273027.19 200253.91 180.00 
+  Static78 Stationary.Bf-109E-4 nn 273031.81 200284.45 165.00 
+  Static79 Stationary.Bf-109E-4 nn 273039.59 200313.22 150.00 
+  Static510 Artillery.4_cm_Flak_28 nn 271735.03 200355.45 -15.00 /timeout 0/radius_hide 0
+  Static70 Stationary.Bf-109E-4 nn 273071.06 200422.28 165.00 
+  Static75 Stationary.Bf-109E-4 nn 273080.78 200457.27 165.00 
+  Static80 Stationary.Bf-109E-4 nn 273092.22 200497.59 180.00 
+  Static137 Stationary.Bf-109E-4 nn 285455.75 200314.97 -120.00 
+  Static136 Stationary.Bf-109E-4 nn 285483.25 200300.25 -105.00 
+  Static135 Stationary.Bf-109E-4 nn 285516.34 200306.22 -60.00 
+  Static134 Stationary.Bf-109E-4 nn 285541.97 200319.67 -75.00 
+  Static133 Stationary.Bf-109E-4 nn 285610.88 200300.89 -105.00 
+  Static132 Stationary.Bf-109E-4 nn 285646.09 200287.02 -120.00 
+  Static131 Stationary.Bf-109E-4 nn 285684.72 200279.55 -90.00 
+  Static130 Stationary.Bf-109E-4 nn 285728.72 200287.31 -60.00 
+  Static504 Artillery.4_cm_Flak_28 nn 285795.84 200308.34 -15.00 /timeout 0/radius_hide 0
+  Static503 Artillery.4_cm_Flak_28 nn 285284.88 200357.13 -15.00 /timeout 0/radius_hide 0
+  Static141 Stationary.Bf-109E-4 nn 285326.50 200365.61 -105.00 
+  Static140 Stationary.Bf-109E-4 nn 285355.31 200356.22 -120.00 
+  Static139 Stationary.Bf-109E-4 nn 285380.50 200344.27 -150.00 
+  Static138 Stationary.Bf-109E-4 nn 285403.13 200330.61 -105.00 
+  Static81 Stationary.Bf-109E-4 nn 273102.34 200541.77 150.00 
+  Static508 Artillery.4_cm_Flak_28 nn 273135.97 200691.53 -15.00 /timeout 0/radius_hide 0
+  Static507 Artillery.4_cm_Flak_28 nn 271949.72 200729.83 -15.00 /timeout 0/radius_hide 0
+  Static82 Stationary.Bf-109E-4 nn 272513.13 200827.59 -45.00 
+  Static83 Stationary.Bf-109E-4 nn 272534.69 200857.30 -30.00 
+  Static84 Stationary.Bf-109E-4 nn 272560.13 200885.63 -45.00 
+  Static85 Stationary.Bf-109E-4 nn 272587.47 200913.20 -60.00 
+  Static117 Stationary.Bf-109E-4 nn 286915.63 201528.59 90.00 
+  Static118 Stationary.Bf-109E-4 nn 286991.34 201529.34 90.00 
+  Static119 Stationary.Bf-109E-4 nn 287029.34 201532.73 105.00 
+  Static501 Artillery.4_cm_Flak_28 nn 287098.47 201491.64 -15.00 /timeout 0/radius_hide 0
+  Static120 Stationary.Bf-109E-4 nn 287061.59 201533.44 75.00 
+  Static121 Stationary.Bf-109E-4 nn 287102.72 201527.13 90.00 
+  Static114 Stationary.Bf-109E-4 nn 286821.91 201562.92 45.00 
+  Static115 Stationary.Bf-109E-4 nn 286846.69 201548.58 60.00 
+  Static116 Stationary.Bf-109E-4 nn 286875.78 201538.86 75.00 
+  Static123 Stationary.Bf-109E-4 nn 286601.03 201801.11 45.00 
+  Static124 Stationary.Bf-109E-4 nn 286592.31 201836.70 0.00 
+  Static122 Stationary.Bf-109E-4 nn 286643.41 201794.13 90.00 
+  Static502 Artillery.4_cm_Flak_28 nn 287617.38 201810.77 -15.00 /timeout 0/radius_hide 0
+  Static125 Stationary.Bf-109E-4 nn 286592.22 201878.72 0.00 
+  Static126 Stationary.Bf-109E-4 nn 286601.63 201919.94 -30.00 
+  Static127 Stationary.Bf-109E-4 nn 286621.19 201950.98 -45.00 
+  Static128 Stationary.Bf-109E-4 nn 286641.16 201977.67 -30.00 
+  Static129 Stationary.Bf-109E-4 nn 286649.97 202009.45 -15.00 
+  Static499 Artillery.4_cm_Flak_28 nn 286766.13 202250.44 -15.00 /timeout 0/radius_hide 0
+  Static500 Artillery.4_cm_Flak_28 nn 287412.22 202300.70 -15.00 /timeout 0/radius_hide 0
+  Static493 Artillery.4_cm_Flak_28 nn 282185.41 202809.25 -15.00 /timeout 0/radius_hide 0
+  Static494 Artillery.4_cm_Flak_28 nn 282483.59 203221.47 -15.00 /timeout 0/radius_hide 0
+  Static94 Stationary.Bf-109E-4 nn 281877.06 204019.14 -120.00 
+  Static95 Stationary.Bf-109E-4 nn 281905.09 204011.39 -90.00 
+  Static96 Stationary.Bf-109E-4 nn 281934.19 204005.28 -105.00 
+  Static97 Stationary.Bf-109E-4 nn 281964.31 203996.78 -120.00 
+  Static491 Artillery.4_cm_Flak_28 nn 281415.78 204035.33 -15.00 /timeout 0/radius_hide 0
+  Static89 Stationary.Bf-109E-4 nn 281654.13 204088.78 -120.00 
+  Static90 Stationary.Bf-109E-4 nn 281714.97 204067.02 -105.00 
+  Static91 Stationary.Bf-109E-4 nn 281745.38 204058.06 -120.00 
+  Static92 Stationary.Bf-109E-4 nn 281773.88 204049.13 -105.00 
+  Static93 Stationary.Bf-109E-4 nn 281809.06 204041.66 -120.00 
+  Static86 Stationary.Bf-109E-4 nn 281573.53 204113.48 -90.00 
+  Static87 Stationary.Bf-109E-4 nn 281600.16 204107.13 -120.00 
+  Static88 Stationary.Bf-109E-4 nn 281624.44 204098.78 -105.00 
+  Static492 Artillery.4_cm_Flak_28 nn 281756.19 204212.09 -15.00 /timeout 0/radius_hide 0
+  Static489 Artillery.4_cm_Flak_28 nn 271702.28 204671.50 -15.00 /timeout 0/radius_hide 0
+  Static65 Stationary.Bf-109E-4 nn 271687.66 204721.75 -330.00 
+  Static63 Stationary.Bf-109E-4 nn 271674.22 204779.91 -345.00 
+  Static64 Stationary.Bf-109E-4 nn 271684.13 204746.63 -360.00 
+  Static490 Artillery.4_cm_Flak_28 nn 272246.59 204761.58 -15.00 /timeout 0/radius_hide 0
+  Static62 Stationary.Bf-109E-4 nn 271669.72 204813.27 -360.00 
+  Static61 Stationary.Bf-109E-4 nn 271746.03 204973.09 -420.00 
+  Static60 Stationary.Bf-109E-4 nn 271773.53 204994.34 -405.00 
+  Static498 Artillery.4_cm_Flak_28 nn 284050.47 204823.02 -15.00 /timeout 0/radius_hide 0
+  Static59 Stationary.Bf-109E-4 nn 271788.09 205025.58 -375.00 
+  Static58 Stationary.Bf-109E-4 nn 271793.06 205058.72 -330.00 
+  Static497 Artillery.4_cm_Flak_28 nn 283764.53 204966.34 -15.00 /timeout 0/radius_hide 0
+  Static98 Stationary.Bf-109E-4 nn 283895.00 205112.69 -30.00 
+  Static57 Stationary.Bf-109E-4 nn 271796.13 205252.25 -360.00 
+  Static56 Stationary.Bf-109E-4 nn 271792.19 205283.13 -330.00 
+  Static55 Stationary.Bf-109E-4 nn 271779.38 205303.70 -345.00 
+  Static99 Stationary.Bf-109E-4 nn 283906.22 205136.56 -45.00 
+  Static100 Stationary.Bf-109E-4 nn 283920.69 205155.25 -30.00 
+  Static101 Stationary.Bf-109E-4 nn 283941.75 205173.08 -60.00 
+  Static54 Stationary.Bf-109E-4 nn 271767.78 205322.39 -330.00 
+  Static102 Stationary.Bf-109E-4 nn 283985.66 205233.06 -15.00 
+  Static103 Stationary.Bf-109E-4 nn 284002.63 205254.36 -45.00 
+  Static104 Stationary.Bf-109E-4 nn 284026.84 205265.02 -75.00 
+  Static105 Stationary.Bf-109E-4 nn 284055.53 205267.30 -90.00 
+  Static496 Artillery.4_cm_Flak_28 nn 284530.13 205269.05 -15.00 /timeout 0/radius_hide 0
+  Static110 Stationary.Bf-109E-4 nn 284095.31 205313.28 -15.00 
+  Static111 Stationary.Bf-109E-4 nn 284106.41 205335.89 -30.00 
+  Static112 Stationary.Bf-109E-4 nn 284128.47 205355.34 -60.00 
+  Static487 Artillery.4_cm_Flak_28 nn 271737.50 205574.56 -15.00 /timeout 0/radius_hide 0
+  Static113 Stationary.Bf-109E-4 nn 284151.28 205380.66 -30.00 
+  Static66 Stationary.Bf-109E-4 nn 271893.25 205618.05 -60.00 
+  Static67 Stationary.Bf-109E-4 nn 271910.78 205639.20 -30.00 
+  Static68 Stationary.Bf-109E-4 nn 271930.16 205667.19 -45.00 
+  Static69 Stationary.Bf-109E-4 nn 271950.75 205697.63 -15.00 
+  Static106 Stationary.Bf-109E-4 nn 284278.59 205509.33 0.00 
+  Static107 Stationary.Bf-109E-4 nn 284283.94 205538.05 -30.00 
+  Static108 Stationary.Bf-109E-4 nn 284309.28 205561.41 -60.00 
+  Static495 Artillery.4_cm_Flak_28 nn 284278.34 205574.94 -15.00 /timeout 0/radius_hide 0
+  Static109 Stationary.Bf-109E-4 nn 284340.19 205573.53 -75.00 
+  Static488 Artillery.4_cm_Flak_28 nn 272111.44 205922.67 -15.00 /timeout 0/radius_hide 0
+  Static50 Stationary.Bf-109E-4 nn 269927.47 206990.11 -225.00 
+  Static51 Stationary.Bf-109E-4 nn 269941.94 207010.66 -195.00 
+  Static52 Stationary.Bf-109E-4 nn 269954.81 207029.58 -225.00 
+  Static484 Artillery.4_cm_Flak_28 nn 269548.22 207078.94 -15.00 /timeout 0/radius_hide 0
+  Static483 Artillery.4_cm_Flak_28 nn 269840.97 207049.55 -15.00 /timeout 0/radius_hide 0
+  Static53 Stationary.Bf-109E-4 nn 269978.44 207041.69 -255.00 
+  Static49 Stationary.Bf-109E-4 nn 270038.09 207072.55 -225.00 
+  Static48 Stationary.Bf-109E-4 nn 270060.25 207087.17 -270.00 
+  Static47 Stationary.Bf-109E-4 nn 270086.84 207091.02 -255.00 
+  Static46 Stationary.Bf-109E-4 nn 270106.22 207104.17 -240.00 
+  Static45 Stationary.Bf-109E-4 nn 270134.84 207125.52 -195.00 
+  Static44 Stationary.Bf-109E-4 nn 270149.88 207153.47 -225.00 
+  Static43 Stationary.Bf-109E-4 nn 270200.28 207177.47 -210.00 
+  Static42 Stationary.Bf-109E-4 nn 270219.25 207197.88 -255.00 
+  Static485 Artillery.4_cm_Flak_28 nn 269424.41 207239.80 -15.00 /timeout 0/radius_hide 0
+  Static486 Artillery.4_cm_Flak_28 nn 269585.13 207344.02 -15.00 /timeout 0/radius_hide 0
+  Static481 Artillery.4_cm_Flak_28 nn 276870.03 208932.58 -15.00 /timeout 0/radius_hide 0
+  Static480 Artillery.4_cm_Flak_28 nn 277534.22 208914.44 -15.00 /timeout 0/radius_hide 0
+  Static482 Artillery.4_cm_Flak_28 nn 276627.44 209445.53 -15.00 /timeout 0/radius_hide 0
+  Static479 Artillery.4_cm_Flak_28 nn 277441.75 209456.78 -15.00 /timeout 0/radius_hide 0
+  Static28 Stationary.Bf-109E-4 nn 277259.69 209597.25 -90.00 
+  Static29 Stationary.Bf-109E-4 nn 277288.50 209584.86 -120.00 
+  Static26 Stationary.Bf-109E-4 nn 277199.34 209617.64 -120.00 
+  Static27 Stationary.Bf-109E-4 nn 277216.91 209604.22 -150.00 
+  Static30 Stationary.Bf-109E-4 nn 277200.56 209674.66 -195.00 
+  Static31 Stationary.Bf-109E-4 nn 277202.31 209717.70 -180.00 
+  Static32 Stationary.Bf-109E-4 nn 277195.34 209744.72 -165.00 
+  Static33 Stationary.Bf-109E-4 nn 277156.84 209813.73 -135.00 
+  Static475 Artillery.4_cm_Flak_28 nn 281648.66 212452.56 -15.00 /timeout 0/radius_hide 0
+  Static476 Artillery.4_cm_Flak_28 nn 280682.34 212643.17 -15.00 /timeout 0/radius_hide 0
+  Static41 Stationary.Bf-109E-4 nn 281925.09 213422.17 -150.00 
+  Static40 Stationary.Bf-109E-4 nn 281891.91 213451.33 -120.00 
+  Static39 Stationary.Bf-109E-4 nn 281860.72 213484.92 -150.00 
+  Static37 Stationary.Bf-109E-4 nn 281778.16 213549.45 -105.00 
+  Static38 Stationary.Bf-109E-4 nn 281825.13 213516.08 -135.00 
+  Static25 Stationary.Bf-109E-4 nn 281630.91 213586.70 -120.00 
+  Static24 Stationary.Bf-109E-4 nn 281610.09 213608.95 -150.00 
+  Static22 Stationary.Bf-109E-4 nn 281608.28 213630.41 -180.00 
+  Static34 Stationary.Bf-109E-4 nn 281676.84 213586.11 -90.00 
+  Static35 Stationary.Bf-109E-4 nn 281714.09 213588.41 -105.00 
+  Static36 Stationary.Bf-109E-4 nn 281745.25 213572.75 -135.00 
+  Static477 Artillery.4_cm_Flak_28 nn 281042.34 213639.78 -15.00 /timeout 0/radius_hide 0
+  Static20 Stationary.Bf-109E-4 nn 281353.72 213692.20 -90.00 
+  Static18 Stationary.Bf-109E-4 nn 281400.16 213669.30 -135.00 
+  Static19 Stationary.Bf-109E-4 nn 281423.63 213644.97 -120.00 
+  Static23 Stationary.Bf-109E-4 nn 281550.78 213648.05 -60.00 
+  Static21 Stationary.Bf-109E-4 nn 281312.63 213699.50 -75.00 
+  Static478 Artillery.4_cm_Flak_28 nn 281618.84 213700.89 -15.00 /timeout 0/radius_hide 0
+  Static884 Stationary.Radar.EnglishRadar1 nn 280714.41 215189.13 -70.00 
+  Static14 Stationary.Bf-110C-4 nn 291514.13 215863.06 -240.00 
+  Static15 Stationary.Bf-110C-4 nn 291552.34 215877.89 -255.00 
+  Static16 Stationary.Bf-110C-4 nn 291601.41 215894.17 -225.00 
+  Static17 Stationary.Bf-110C-4 nn 291636.53 215909.28 -255.00 
+  Static472 Artillery.4_cm_Flak_28 nn 290466.91 216042.63 -15.00 /timeout 0/radius_hide 0
+  Static473 Artillery.4_cm_Flak_28 nn 291777.72 216067.50 -15.00 /timeout 0/radius_hide 0
+  Static471 Artillery.4_cm_Flak_28 nn 290481.50 216677.75 -15.00 /timeout 0/radius_hide 0
+  Static12 Stationary.Bf-109E-4 nn 291769.84 216700.75 -150.00 
+  Static13 Stationary.Bf-109E-4 nn 291787.41 216654.14 -180.00 
+  Static10 Stationary.Bf-109E-4 nn 291705.22 216740.31 -105.00 
+  Static11 Stationary.Bf-109E-4 nn 291738.22 216724.08 -120.00 
+  Static6 Stationary.Bf-109E-4 nn 291589.88 216810.73 -90.00 
+  Static7 Stationary.Bf-109E-4 nn 291628.16 216813.41 -105.00 
+  Static9 Stationary.Bf-109E-4 nn 291683.28 216776.81 -180.00 
+  Static8 Stationary.Bf-109E-4 nn 291665.88 216801.50 -135.00 
+  Static0 Stationary.Ju-87B-2 nn 291010.44 216878.77 -90.00 
+  Static1 Stationary.Ju-87B-2 nn 291059.75 216882.48 -105.00 
+  Static2 Stationary.Ju-87B-2 nn 291115.03 216885.41 -90.00 
+  Static3 Stationary.Ju-87B-2 nn 291147.44 216882.06 -15.00 
+  Static4 Stationary.Ju-87B-2 nn 291187.94 216889.42 -60.00 
+  Static5 Stationary.Ju-87B-2 nn 291222.88 216883.28 -105.00 
+  Static474 Artillery.4_cm_Flak_28 nn 291525.34 216843.75 -15.00 /timeout 0/radius_hide 0
+  Static878 Artillery.Bofors nn 31185.79 232786.13 -15.00 /timeout 0/radius_hide 0
+  Static631 Stationary.WellingtonMkIc nn 31261.68 232812.53 70.00 
+  Static880 Artillery.Bofors nn 31872.27 232771.88 -15.00 /timeout 0/radius_hide 0
+  Static632 Stationary.WellingtonMkIc nn 31177.18 232874.83 40.00 
+  Static633 Stationary.WellingtonMkIc nn 31212.88 232840.06 55.00 
+  Static634 Stationary.WellingtonMkIc nn 31949.71 232868.86 -230.00 
+  Static635 Stationary.WellingtonMkIc nn 31975.65 232895.33 -215.00 
+  Static636 Stationary.WellingtonMkIc nn 31111.40 232931.39 50.00 
+  Static637 Stationary.WellingtonMkIc nn 31990.74 232928.41 -195.00 
+  Static638 Stationary.WellingtonMkIc nn 31033.77 232994.14 40.00 
+  Static639 Stationary.WellingtonMkIc nn 31068.17 232961.63 55.00 
+  Static640 Stationary.WellingtonMkIc nn 31996.82 232977.91 -195.00 
+  Static641 Stationary.WellingtonMkIc nn 32004.50 233010.98 -195.00 
+  Static642 Stationary.WellingtonMkIc nn 32011.91 233044.34 -190.00 
+  Static877 Artillery.Bofors nn 32080.63 233026.03 -15.00 /timeout 0/radius_hide 0
+  Static879 Artillery.Bofors nn 32092.16 233293.30 -15.00 /timeout 0/radius_hide 0
+  Static881 Stationary.Radar.EnglishRadar1 nn 240285.50 232154.58 -60.00 
+  Static874 Artillery.Bofors nn 46131.91 238676.78 -15.00 /timeout 0/radius_hide 0
+  Static643 Stationary.BlenheimMkIVF nn 46193.65 238772.33 120.00 
+  Static644 Stationary.BlenheimMkIVF nn 46229.99 238791.72 120.00 
+  Static645 Stationary.BlenheimMkIVF nn 46265.27 238808.27 120.00 
+  Static646 Stationary.BlenheimMkIVF nn 46317.97 238835.70 120.00 
+  Static647 Stationary.BlenheimMkIVF nn 46351.50 238852.05 120.00 
+  Static648 Stationary.BlenheimMkIVF nn 46387.43 238870.77 120.00 
+  Static875 Artillery.Bofors nn 46522.10 238899.88 -15.00 /timeout 0/radius_hide 0
+  Static649 Stationary.HurricaneMkI_100oct nn 45551.63 239052.86 -30.00 
+  Static650 Stationary.HurricaneMkI_100oct nn 45565.35 239076.81 -30.00 
+  Static651 Stationary.HurricaneMkI_100oct nn 45579.29 239101.20 -30.00 
+  Static876 Artillery.Bofors nn 45499.79 239152.91 -15.00 /timeout 0/radius_hide 0
+  Static652 Stationary.HurricaneMkI_100oct nn 45576.48 239160.67 15.00 
+  Static653 Stationary.HurricaneMkI_100oct nn 45562.70 239210.22 15.00 
+  Static654 Stationary.HurricaneMkI_100oct nn 45568.42 239185.28 15.00 
+  Static655 Stationary.SpitfireMkIa_100oct nn 46454.29 239356.86 -135.00 
+  Static656 Stationary.SpitfireMkIa_100oct nn 46515.92 239342.48 -110.00 
+  Static657 Stationary.SpitfireMkIa_100oct nn 46541.84 239336.39 -110.00 
+  Static658 Stationary.SpitfireMkIa_100oct nn 46564.92 239328.55 -110.00 
+  Static659 Stationary.SpitfireMkIa_100oct nn 46403.77 239379.06 -105.00 
+  Static660 Stationary.SpitfireMkIa_100oct nn 46429.69 239369.70 -110.00 
+  Static873 Artillery.Bofors nn 45804.44 239454.67 -15.00 /timeout 0/radius_hide 0
+  Static841 Artillery.Bofors nn 146806.22 250586.33 -15.00 /timeout 0/radius_hide 0
+  Static844 Artillery.Bofors nn 146190.22 250867.70 -15.00 /timeout 0/radius_hide 0
+  Static661 Stationary.HurricaneMkI_100oct nn 146961.13 250983.70 175.00 
+  Static662 Stationary.HurricaneMkI_100oct nn 146964.83 251017.64 175.00 
+  Static663 Stationary.HurricaneMkI_100oct nn 146968.28 251048.25 175.00 
+  Static664 Stationary.HurricaneMkI_100oct nn 146967.66 251094.30 175.00 
+  Static665 Stationary.HurricaneMkI_100oct nn 146969.88 251119.69 175.00 
+  Static842 Artillery.Bofors nn 147001.92 251129.28 -15.00 /timeout 0/radius_hide 0
+  Static666 Stationary.HurricaneMkI_100oct nn 146970.52 251147.95 190.00 
+  Static667 Stationary.SpitfireMkIa_100oct nn 146349.13 251375.77 -70.00 
+  Static668 Stationary.SpitfireMkIa_100oct nn 146374.95 251384.47 -70.00 
+  Static669 Stationary.SpitfireMkIa_100oct nn 146400.33 251393.34 -70.00 
+  Static670 Stationary.SpitfireMkIa_100oct nn 146515.84 251439.39 -70.00 
+  Static671 Stationary.SpitfireMkIa_100oct nn 146547.69 251448.67 -70.00 
+  Static672 Stationary.SpitfireMkIa_100oct nn 146577.80 251461.80 -55.00 
+  Static843 Artillery.Bofors nn 146723.56 251576.45 -15.00 /timeout 0/radius_hide 0
+  Static839 Artillery.Bofors nn 155359.28 253289.83 -15.00 /timeout 0/radius_hide 0
+  Static673 Stationary.SpitfireMkIa_100oct nn 155551.25 253615.95 -120.00 
+  Static674 Stationary.SpitfireMkIa_100oct nn 155578.47 253602.81 -120.00 
+  Static675 Stationary.SpitfireMkIa_100oct nn 155610.11 253584.42 -120.00 
+  Static840 Artillery.Bofors nn 154837.42 253640.31 -15.00 /timeout 0/radius_hide 0
+  Static676 Stationary.SpitfireMkIa_100oct nn 155527.30 253660.95 -180.00 
+  Static677 Stationary.HurricaneMkI_100oct nn 154810.36 253696.16 -365.00 
+  Static678 Stationary.HurricaneMkI_100oct nn 154810.36 253730.47 -360.00 
+  Static679 Stationary.SpitfireMkIa_100oct nn 155528.98 253698.05 -190.00 
+  Static680 Stationary.SpitfireMkIa_100oct nn 155536.72 253735.31 -195.00 
+  Static681 Stationary.HurricaneMkI_100oct nn 154803.55 253761.63 -345.00 
+  Static682 Stationary.HurricaneMkI_100oct nn 154852.33 253841.16 -435.00 
+  Static683 Stationary.HurricaneMkI_100oct nn 154888.67 253853.98 -425.00 
+  Static684 Stationary.HurricaneMkI_100oct nn 154918.34 253869.61 -415.00 
+  Static838 Artillery.Bofors nn 155714.78 254473.75 -15.00 /timeout 0/radius_hide 0
+  Static837 Artillery.Bofors nn 155370.59 254657.13 -15.00 /timeout 0/radius_hide 0
+  Static846 Artillery.Bofors nn 143943.13 255869.36 -15.00 /timeout 0/radius_hide 0
+  Static847 Artillery.Bofors nn 144555.48 255855.97 -15.00 /timeout 0/radius_hide 0
+  Static685 Stationary.HurricaneMkI_100oct nn 143860.94 256381.61 -25.00 
+  Static686 Stationary.HurricaneMkI_100oct nn 143877.59 256415.14 -25.00 
+  Static687 Stationary.HurricaneMkI_100oct nn 143892.03 256445.73 -25.00 
+  Static688 Stationary.HurricaneMkI_100oct nn 143912.69 256489.34 -25.00 
+  Static689 Stationary.HurricaneMkI_100oct nn 143926.08 256516.52 -25.00 
+  Static690 Stationary.HurricaneMkI_100oct nn 143936.78 256541.77 -25.00 
+  Static691 Stationary.HurricaneMkI_100oct nn 143976.41 256633.91 -25.00 
+  Static692 Stationary.HurricaneMkI_100oct nn 143989.03 256663.36 -25.00 
+  Static693 Stationary.HurricaneMkI_100oct nn 144001.28 256690.52 -25.00 
+  Static694 Stationary.HurricaneMkI_100oct nn 144026.50 256751.00 -25.00 
+  Static695 Stationary.HurricaneMkI_100oct nn 144041.05 256781.22 -25.00 
+  Static696 Stationary.HurricaneMkI_100oct nn 144052.77 256809.63 -25.00 
+  Static848 Artillery.Bofors nn 144555.08 256798.41 -15.00 /timeout 0/radius_hide 0
+  Static845 Artillery.Bofors nn 144134.27 257060.44 -15.00 /timeout 0/radius_hide 0
+  Static882 Stationary.Radar.EnglishRadar1 nn 247319.28 256934.52 -15.00 
+  Static817 Artillery.Bofors nn 248873.31 258795.48 -15.00 /timeout 0/radius_hide 0
+  Static697 Stationary.BlenheimMkIVF nn 248836.50 258909.30 -185.00 
+  Static698 Stationary.BlenheimMkIVF nn 248841.31 258947.31 -190.00 
+  Static699 Stationary.BlenheimMkIVF nn 248847.92 258980.81 -195.00 
+  Static700 Stationary.BlenheimMkIVF nn 248867.91 259084.33 -195.00 
+  Static701 Stationary.BlenheimMkIVF nn 248875.27 259118.89 -195.00 
+  Static819 Artillery.Bofors nn 247463.03 259158.23 -15.00 /timeout 0/radius_hide 0
+  Static702 Stationary.BlenheimMkIVF nn 247517.59 259145.28 -360.00 
+  Static703 Stationary.BlenheimMkIVF nn 247520.30 259192.00 -370.00 
+  Static704 Stationary.BlenheimMkIVF nn 248883.39 259147.84 -200.00 
+  Static705 Stationary.BlenheimMkIVF nn 247527.94 259240.64 -370.00 
+  Static818 Artillery.Bofors nn 248704.53 259463.63 -15.00 /timeout 0/radius_hide 0
+  Static706 Stationary.BlenheimMkIVF nn 248453.84 259576.80 -495.00 
+  Static707 Stationary.BlenheimMkIVF nn 248315.33 259623.38 -465.00 
+  Static708 Stationary.BlenheimMkIVF nn 248377.06 259605.94 -465.00 
+  Static820 Artillery.Bofors nn 248152.34 259650.36 -15.00 /timeout 0/radius_hide 0
+  Static709 Stationary.HurricaneMkI_100oct nn 180216.44 264239.03 45.00 
+  Static710 Stationary.HurricaneMkI_100oct nn 180240.33 264218.88 45.00 
+  Static836 Artillery.Bofors nn 180158.09 264270.56 -15.00 /timeout 0/radius_hide 0
+  Static711 Stationary.HurricaneMkI_100oct nn 180138.88 264302.97 45.00 
+  Static712 Stationary.HurricaneMkI_100oct nn 180190.25 264263.03 45.00 
+  Static713 Stationary.HurricaneMkI_100oct nn 180085.59 264347.41 45.00 
+  Static714 Stationary.HurricaneMkI_100oct nn 180112.70 264324.56 45.00 
+  Static858 Artillery.Bofors nn 90565.16 266020.22 -15.00 /timeout 0/radius_hide 0
+  Static715 Stationary.WellingtonMkIc nn 91217.70 266235.97 -185.00 
+  Static716 Stationary.HurricaneMkI_100oct nn 179849.73 264894.66 -420.00 
+  Static835 Artillery.Bofors nn 180578.19 264837.09 -15.00 /timeout 0/radius_hide 0
+  Static717 Stationary.WellingtonMkIc nn 91227.83 266302.22 -190.00 
+  Static718 Stationary.HurricaneMkI_100oct nn 179872.28 264919.16 -390.00 
+  Static719 Stationary.HurricaneMkI_100oct nn 179887.67 264955.00 -360.00 
+  Static720 Stationary.WellingtonMkIc nn 91231.34 266367.94 -185.00 
+  Static721 Stationary.HurricaneMkI_100oct nn 179901.52 264999.91 -390.00 
+  Static859 Artillery.Bofors nn 91297.30 266393.22 -15.00 /timeout 0/radius_hide 0
+  Static722 Stationary.HurricaneMkI_100oct nn 179923.13 265031.84 -420.00 
+  Static723 Stationary.HurricaneMkI_100oct nn 179961.23 265045.78 -450.00 
+  Static724 Stationary.WellingtonMkIc nn 91216.55 266508.50 -165.00 
+  Static725 Stationary.WellingtonMkIc nn 90494.80 266574.75 -75.00 
+  Static726 Stationary.WellingtonMkIc nn 90623.29 266601.06 -75.00 
+  Static727 Stationary.WellingtonMkIc nn 90664.34 266617.56 -60.00 
+  Static833 Artillery.Bofors nn 180017.00 265229.53 -15.00 /timeout 0/radius_hide 0
+  Static728 Stationary.WellingtonMkIc nn 90785.56 266679.75 -60.00 
+  Static729 Stationary.WellingtonMkIc nn 91223.78 266628.84 -195.00 
+  Static857 Artillery.Bofors nn 90608.97 266703.09 -15.00 /timeout 0/radius_hide 0
+  Static730 Stationary.WellingtonMkIc nn 90839.66 266711.59 -45.00 
+  Static731 Stationary.WellingtonMkIc nn 91247.79 266741.13 -165.00 
+  Static732 Stationary.WellingtonMkIc nn 90960.59 266794.31 -60.00 
+  Static860 Artillery.Bofors nn 91004.91 266856.91 -15.00 /timeout 0/radius_hide 0
+  Static834 Artillery.Bofors nn 180563.86 265625.59 -15.00 /timeout 0/radius_hide 0
+  Static733 Stationary.BlenheimMkIV_Late nn 121896.28 268958.28 180.00 
+  Static734 Stationary.BlenheimMkIV_Late nn 121896.00 268996.38 165.00 
+  Static854 Artillery.Bofors nn 122012.90 269037.38 -15.00 /timeout 0/radius_hide 0
+  Static735 Stationary.BlenheimMkIV_Late nn 121921.59 269139.44 180.00 
+  Static736 Stationary.BlenheimMkIV_Late nn 121922.62 269185.09 165.00 
+  Static737 Stationary.BlenheimMkIV_Late nn 121973.07 269308.94 165.00 
+  Static738 Stationary.BlenheimMkIV_Late nn 121984.16 269357.84 165.00 
+  Static853 Artillery.Bofors nn 122027.14 269408.34 -15.00 /timeout 0/radius_hide 0
+  Static739 Stationary.BlenheimMkIV_Late nn 122019.25 269499.25 165.00 
+  Static740 Stationary.BlenheimMkIV_Late nn 122026.65 269533.66 165.00 
+  Static741 Stationary.BlenheimMkIV_Late nn 122032.90 269565.22 165.00 
+  Static855 Artillery.Bofors nn 120820.87 269603.59 -15.00 /timeout 0/radius_hide 0
+  Static742 Stationary.BlenheimMkIV_Late nn 122037.17 269636.63 180.00 
+  Static743 Stationary.BlenheimMkIV_Late nn 122026.08 269673.31 195.00 
+  Static744 Stationary.BlenheimMkIV_Late nn 121395.41 269733.78 -30.00 
+  Static745 Stationary.BlenheimMkIV_Late nn 122007.98 269710.50 225.00 
+  Static746 Stationary.BlenheimMkIV_Late nn 121419.29 269762.22 -45.00 
+  Static747 Stationary.BlenheimMkIV_Late nn 121443.47 269785.25 -45.00 
+  Static856 Artillery.Bofors nn 121397.45 269840.34 -15.00 /timeout 0/radius_hide 0
+  Static748 Stationary.BlenheimMkIV_Late nn 121483.85 269825.06 -30.00 
+  Static749 Stationary.BlenheimMkIV_Late nn 121506.03 269853.78 -30.00 
+  Static750 Stationary.BlenheimMkIV_Late nn 121528.79 269877.97 -45.00 
+  Static829 Artillery.Bofors nn 166927.81 277057.66 -15.00 /timeout 0/radius_hide 0
+  Static751 Stationary.DefiantMkI nn 166393.97 277312.72 0.00 
+  Static752 Stationary.DefiantMkI nn 166394.69 277350.03 0.00 
+  Static849 Artillery.Bofors nn 124060.49 278063.97 -15.00 /timeout 0/radius_hide 0
+  Static753 Stationary.DefiantMkI nn 166391.36 277392.00 5.00 
+  Static831 Artillery.Bofors nn 166078.34 277503.16 -15.00 /timeout 0/radius_hide 0
+  Static754 Stationary.DefiantMkI nn 166370.19 277460.63 10.00 
+  Static755 Stationary.DefiantMkI nn 166357.63 277496.91 20.00 
+  Static756 Stationary.HurricaneMkI_100oct nn 124012.74 278173.47 170.00 
+  Static757 Stationary.DefiantMkI nn 166343.41 277529.44 30.00 
+  Static852 Artillery.Bofors nn 122509.82 278211.50 -15.00 /timeout 0/radius_hide 0
+  Static758 Stationary.HurricaneMkI_100oct nn 122566.92 278238.50 -65.00 
+  Static759 Stationary.HurricaneMkI_100oct nn 122607.00 278258.41 -65.00 
+  Static760 Stationary.HurricaneMkI_100oct nn 124016.33 278208.91 170.00 
+  Static761 Stationary.HurricaneMkI_100oct nn 124020.06 278239.66 170.00 
+  Static762 Stationary.HurricaneMkI_100oct nn 122646.44 278274.88 -65.00 
+  Static763 Stationary.HurricaneMkI_100oct nn 122682.76 278320.16 -5.00 
+  Static764 Stationary.HurricaneMkI_100oct nn 122684.41 278356.69 -5.00 
+  Static765 Stationary.HurricaneMkI_100oct nn 122687.15 278389.72 -5.00 
+  Static766 Stationary.HurricaneMkI_100oct nn 124024.80 278337.69 170.00 
+  Static767 Stationary.HurricaneMkI_100oct nn 124029.11 278369.50 170.00 
+  Static768 Stationary.DefiantMkI nn 166101.03 277759.72 45.00 
+  Static769 Stationary.DefiantMkI nn 166128.78 277736.03 45.00 
+  Static770 Stationary.DefiantMkI nn 166161.34 277708.25 45.00 
+  Static771 Stationary.HurricaneMkI_100oct nn 124033.41 278406.94 170.00 
+  Static772 Stationary.DefiantMkI nn 166070.33 277786.75 40.00 
+  Static773 Stationary.DefiantMkI nn 166044.63 277818.25 40.00 
+  Static774 Stationary.DefiantMkI nn 166021.48 277845.44 40.00 
+  Static850 Artillery.Bofors nn 124067.41 278640.84 -15.00 /timeout 0/radius_hide 0
+  Static851 Artillery.Bofors nn 122988.58 278700.69 -15.00 /timeout 0/radius_hide 0
+  Static830 Artillery.Bofors nn 166735.27 278053.22 -15.00 /timeout 0/radius_hide 0
+  Static775 Stationary.SpitfireMkIa_100oct nn 166816.03 278238.09 -25.00 
+  Static776 Stationary.SpitfireMkIa_100oct nn 166833.50 278267.84 -35.00 
+  Static777 Stationary.SpitfireMkIa_100oct nn 167415.45 278241.16 -155.00 
+  Static778 Stationary.SpitfireMkIa_100oct nn 167399.02 278268.28 -145.00 
+  Static779 Stationary.SpitfireMkIa_100oct nn 167428.47 278211.13 -170.00 
+  Static780 Stationary.SpitfireMkIa_100oct nn 166855.70 278303.13 -20.00 
+  Static781 Stationary.SpitfireMkIa_100oct nn 166874.72 278326.69 -50.00 
+  Static832 Artillery.Bofors nn 167445.75 278315.84 -15.00 /timeout 0/radius_hide 0
+  Static782 Stationary.SpitfireMkIa_100oct nn 166900.38 278352.69 -35.00 
+  Static783 Stationary.SpitfireMkIa_100oct nn 166925.45 278382.25 -35.00 
+  Static784 Stationary.SpitfireMkIa_100oct nn 167275.53 278382.06 -120.00 
+  Static785 Stationary.SpitfireMkIa_100oct nn 167299.20 278360.78 -125.00 
+  Static786 Stationary.SpitfireMkIa_100oct nn 167246.56 278401.38 -120.00 
+  Static822 Artillery.Bofors nn 201288.50 282250.53 -15.00 /timeout 0/radius_hide 0
+  Static787 Stationary.BlenheimMkIV_Late nn 200679.31 282375.38 90.00 
+  Static788 Stationary.BlenheimMkIV_Late nn 200719.52 282381.81 100.00 
+  Static789 Stationary.BlenheimMkIV_Late nn 200852.02 282402.53 90.00 
+  Static790 Stationary.BlenheimMkIV_Late nn 200911.95 282399.53 80.00 
+  Static791 Stationary.BlenheimMkIV_Late nn 201053.69 282376.06 80.00 
+  Static792 Stationary.BlenheimMkIV_Late nn 201092.55 282370.31 80.00 
+  Static793 Stationary.BlenheimMkIV_Late nn 201515.88 282629.06 180.00 
+  Static794 Stationary.BlenheimMkIV_Late nn 201502.73 282673.66 195.00 
+  Static823 Artillery.Bofors nn 200528.50 282735.34 -15.00 /timeout 0/radius_hide 0
+  Static795 Stationary.BlenheimMkIV_Late nn 201479.19 282709.81 225.00 
+  Static796 Stationary.BlenheimMkIV_Late nn 201342.31 282794.56 225.00 
+  Static797 Stationary.BlenheimMkIV_Late nn 201375.97 282778.69 240.00 
+  Static798 Stationary.BlenheimMkIV_Late nn 200673.11 282865.16 -30.00 
+  Static799 Stationary.BlenheimMkIV_Late nn 201334.42 282827.69 180.00 
+  Static800 Stationary.BlenheimMkIV_Late nn 200692.55 282892.78 -30.00 
+  Static801 Stationary.BlenheimMkIV_Late nn 200710.33 282916.88 -30.00 
+  Static821 Artillery.Bofors nn 201429.13 282885.53 -15.00 /timeout 0/radius_hide 0
+  Static802 Stationary.BlenheimMkIV_Late nn 200738.80 282948.91 -30.00 
+  Static803 Stationary.BlenheimMkIV_Late nn 200754.13 282971.63 -30.00 
+  Static804 Stationary.BlenheimMkIV_Late nn 200769.17 282994.06 -30.00 
+  Static824 Artillery.Bofors nn 200713.16 283020.19 -15.00 /timeout 0/radius_hide 0
+  Static825 Artillery.Bofors nn 162808.45 297214.84 -15.00 /timeout 0/radius_hide 0
+  Static826 Artillery.Bofors nn 161866.23 297470.13 -15.00 /timeout 0/radius_hide 0
+  Static805 Stationary.HurricaneMkI_100oct nn 161946.70 297979.22 -105.00 
+  Static806 Stationary.HurricaneMkI_100oct nn 161972.64 297970.72 -105.00 
+  Static807 Stationary.HurricaneMkI_100oct nn 162041.59 297952.19 -105.00 
+  Static808 Stationary.HurricaneMkI_100oct nn 162073.75 297944.81 -105.00 
+  Static809 Stationary.HurricaneMkI_100oct nn 162103.63 297935.75 -105.00 
+  Static827 Artillery.Bofors nn 162249.20 297971.16 -15.00 /timeout 0/radius_hide 0
+  Static810 Stationary.HurricaneMkI_100oct nn 162337.11 297963.03 -10.00 
+  Static811 Stationary.HurricaneMkI_100oct nn 161913.98 297989.69 -105.00 
+  Static812 Stationary.HurricaneMkI_100oct nn 162342.28 297989.78 -10.00 
+  Static813 Stationary.HurricaneMkI_100oct nn 162347.92 298018.47 -10.00 
+  Static814 Stationary.HurricaneMkI_100oct nn 162366.27 298099.63 -10.00 
+  Static815 Stationary.HurricaneMkI_100oct nn 162372.61 298131.25 -10.00 
+  Static816 Stationary.HurricaneMkI_100oct nn 162377.98 298163.06 -10.00 
+  Static828 Artillery.Bofors nn 162967.33 298272.44 -15.00 /timeout 0/radius_hide 0
+[Buildings]
+  0_bld buildings.House$Oil_Bunker-Middle 1 235159.52 230290.81 0.00
+  1_bld buildings.House$Oil_Bunker-Middle 1 246397.30 236502.62 0.00
+  2_bld buildings.House$Oil_Bunker-Middle 1 286015.31 216827.13 0.00
+  3_bld buildings.House$Oil_Bunker-Middle 1 266764.55 192070.50 0.00
+  4_bld buildings.House$Oil_Bunker-Middle 1 235071.49 230344.76 0.00
+  5_bld buildings.House$Oil_Bunker-Middle 1 235155.51 230400.98 0.00
+  6_bld buildings.House$Oil_Bunker-Middle 1 235248.56 230326.04 0.00
+  7_bld buildings.House$Oil_Bunker-Middle 1 235228.75 230205.06 0.00
+  8_bld buildings.House$Oil_Bunker-Middle 1 235111.93 230208.89 0.00
+  9_bld buildings.House$Oil_Bunker-Middle 1 246302.21 236521.56 0.00
+  10_bld buildings.House$Oil_Bunker-Middle 1 246400.11 236592.04 0.00
+  11_bld buildings.House$Oil_Bunker-Middle 1 246498.00 236505.89 0.00
+  12_bld buildings.House$Oil_Bunker-Middle 1 246406.37 236421.31 0.00
+  13_bld buildings.House$Oil_Bunker-Middle 1 285922.26 216831.61 0.00
+  14_bld buildings.House$Oil_Bunker-Middle 1 286029.78 216913.41 0.00
+  15_bld buildings.House$Oil_Bunker-Middle 1 286117.51 216831.61 0.00
+  16_bld buildings.House$Oil_Bunker-Middle 1 285994.16 216754.44 0.00
+  17_bld buildings.House$Oil_Bunker-Middle 1 266652.53 192082.79 0.00
+  18_bld buildings.House$Oil_Bunker-Middle 1 266678.09 192000.84 0.00
+  19_bld buildings.House$Oil_Bunker-Middle 1 266825.40 192138.70 0.00
+  20_bld buildings.House$Oil_Bunker-Middle 1 266840.07 192073.27 0.00
+[BuildingsLinks]
+[FrontMarker]
+  FrontMarker0 315282.87 211890.34 2
+  FrontMarker1 281183.77 153939.54 2
+  FrontMarker2 233657.05 262597.28 1
+  FrontMarker3 189310.56 223551.17 1
+  FrontMarker4 208319.56 72802.55 2
+  FrontMarker5 38210.67 52799.04 2
+  FrontMarker6 102337.50 218876.00 1
+  FrontMarker7 23042.95 203324.28 1
