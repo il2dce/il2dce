@@ -66,21 +66,22 @@ namespace IL2DCE
 
             if (availableGroundGroups.Count > 1)
             {
-                availableGroundGroups.Sort(new DistanceComparer(offensiveAirGroup.Position));
+                var copy = new List<GroundGroup>(availableGroundGroups);
+                copy.Sort(new DistanceComparer(offensiveAirGroup.Position));
 
                 Point2d position = new Point2d(offensiveAirGroup.Position.x, offensiveAirGroup.Position.y);
 
                 // TODO: Use range of the aircraft instead of the maxDistance.
                 // Problem is that range depends on loadout, so depending on loadout different targets would be available.
 
-                Point2d last = availableGroundGroups[availableGroundGroups.Count - 1].Position;
+                Point2d last = copy[copy.Count - 1].Position;
                 double maxDistance = last.distance(ref position);
 
                 List<KeyValuePair<GroundGroup, int>> elements = new List<KeyValuePair<GroundGroup, int>>();
 
                 int previousWeight = 0;
 
-                foreach (GroundGroup groundGroup in availableGroundGroups)
+                foreach (GroundGroup groundGroup in copy)
                 {
                     double distance = groundGroup.Position.distance(ref position);
                     int weight = Convert.ToInt32(Math.Ceiling(maxDistance - distance));
@@ -117,21 +118,22 @@ namespace IL2DCE
 
             if (availableStationaries.Count > 1)
             {
-                availableStationaries.Sort(new DistanceComparer(offensiveAirGroup.Position));
+                var copy = new List<Stationary>(availableStationaries);
+                copy.Sort(new DistanceComparer(offensiveAirGroup.Position));
 
                 Point2d position = new Point2d(offensiveAirGroup.Position.x, offensiveAirGroup.Position.y);
 
                 // TODO: Use range of the aircraft instead of the maxDistance.
                 // Problem is that range depends on loadout, so depending on loadout different targets would be available.
 
-                Point2d last = availableStationaries[availableStationaries.Count - 1].Position;
+                Point2d last = copy[copy.Count - 1].Position;
                 double maxDistance = last.distance(ref position);
 
                 List<KeyValuePair<Stationary, int>> elements = new List<KeyValuePair<Stationary, int>>();
 
                 int previousWeight = 0;
 
-                foreach (Stationary stationary in availableStationaries)
+                foreach (Stationary stationary in copy)
                 {
                     double distance = stationary.Position.distance(ref position);
                     int weight = Convert.ToInt32(Math.Ceiling(maxDistance - distance));
